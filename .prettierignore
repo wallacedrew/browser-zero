@@ -1,0 +1,6 @@
+dist/
+node_modules/
+pnpm-lock.yaml
+.husky/_/
+coverage/
+AGENTS-general.md

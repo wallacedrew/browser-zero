@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "browser-zero",
+  "version": "0.0.1",
+  "description": "Read-only dashboard of every Chrome tab across every window.",
+  "permissions": ["tabs"],
+  "background": {
+    "service_worker": "src/background/serviceWorker.ts",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Open browser-zero dashboard"
+  }
+}
