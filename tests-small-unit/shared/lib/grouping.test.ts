@@ -100,6 +100,47 @@ describe('groupTabs by category', () => {
     );
     expect(result.map((group) => group.label)).toEqual(['Comms', 'Dev', 'Entertainment']);
   });
+
+  it("uses the tab group's title as the category when a tab is in a named group", () => {
+    const result = groupTabs(
+      [
+        makeTab({
+          id: 1,
+          intent: 'Dev',
+          group: { id: 10, title: 'ai audio, voice', color: 'blue' },
+        }),
+        makeTab({
+          id: 2,
+          intent: 'Other',
+          group: { id: 10, title: 'ai audio, voice', color: 'blue' },
+        }),
+        makeTab({ id: 3, intent: 'Other', group: null }),
+      ],
+      'category',
+    );
+    expect(result.map((group) => group.label)).toEqual(['ai audio, voice', 'Other']);
+    expect(result[0]?.tabs.map((tab) => tab.id)).toEqual([1, 2]);
+    expect(result[1]?.tabs.map((tab) => tab.id)).toEqual([3]);
+  });
+
+  it("falls back to the tab's intent when it isn't in any group", () => {
+    const result = groupTabs(
+      [
+        makeTab({ id: 1, intent: 'Dev', group: null }),
+        makeTab({ id: 2, intent: 'Comms', group: null }),
+      ],
+      'category',
+    );
+    expect(result.map((group) => group.label)).toEqual(['Comms', 'Dev']);
+  });
+
+  it('labels untitled-group tabs as "Untitled" rather than their intent', () => {
+    const result = groupTabs(
+      [makeTab({ id: 1, intent: 'Dev', group: { id: 10, title: '', color: 'grey' } })],
+      'category',
+    );
+    expect(result.map((group) => group.label)).toEqual(['Untitled']);
+  });
 });
 
 describe('groupTabs by tab group', () => {

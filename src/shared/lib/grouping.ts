@@ -97,9 +97,10 @@ function labelForTabGroup(key: string, firstTab: Tab | undefined): string {
 function groupByCategory(tabs: readonly Tab[]): TabGroup[] {
   const byCategory = new Map<string, Tab[]>();
   for (const tab of tabs) {
-    const existing = byCategory.get(tab.intent);
+    const key = categoryFor(tab);
+    const existing = byCategory.get(key);
     if (existing) existing.push(tab);
-    else byCategory.set(tab.intent, [tab]);
+    else byCategory.set(key, [tab]);
   }
   return [...byCategory.entries()]
     .sort(([leftCategory, leftTabs], [rightCategory, rightTabs]) => {
@@ -112,4 +113,14 @@ function groupByCategory(tabs: readonly Tab[]): TabGroup[] {
       label: category,
       tabs: categoryTabs,
     }));
+}
+
+// A tab's "category" prefers the user's own Chrome tab group title (their
+// hand-curated taxonomy), falling back to the heuristic intent classification
+// when the tab isn't in a group. Untitled groups still take precedence over
+// intent so the user's organisation stays intact.
+function categoryFor(tab: Tab): string {
+  if (tab.group === null) return tab.intent;
+  if (tab.group.title.length > 0) return tab.group.title;
+  return 'Untitled';
 }
