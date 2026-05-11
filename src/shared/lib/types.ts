@@ -1,5 +1,11 @@
 import type { Intent } from './intents';
 
+export interface TabGroupInfo {
+  readonly id: number;
+  readonly title: string;
+  readonly color: string;
+}
+
 export interface Tab {
   readonly id: number;
   readonly windowId: number;
@@ -8,4 +14,5 @@ export interface Tab {
   readonly domain: string;
   readonly intent: Intent;
   readonly lastAccessed: number;
+  readonly group: TabGroupInfo | null;
 }

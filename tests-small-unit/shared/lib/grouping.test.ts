@@ -10,6 +10,7 @@ const makeTab = (overrides: Partial<Tab>): Tab => ({
   domain: 'example.com',
   intent: 'Other',
   lastAccessed: 0,
+  group: null,
   ...overrides,
 });
 
@@ -98,5 +99,47 @@ describe('groupTabs by category', () => {
       'category',
     );
     expect(result.map((group) => group.label)).toEqual(['Comms', 'Dev', 'Entertainment']);
+  });
+});
+
+describe('groupTabs by tab group', () => {
+  it('returns an empty array when given no tabs', () => {
+    expect(groupTabs([], 'tabgroup')).toEqual([]);
+  });
+
+  it('groups tabs by Chrome tab group id and labels by the group title', () => {
+    const result = groupTabs(
+      [
+        makeTab({ id: 1, group: { id: 10, title: 'Q3 planning', color: 'blue' } }),
+        makeTab({ id: 2, group: { id: 20, title: 'shopping', color: 'red' } }),
+        makeTab({ id: 3, group: { id: 10, title: 'Q3 planning', color: 'blue' } }),
+      ],
+      'tabgroup',
+    );
+    expect(result.map((group) => group.label)).toEqual(['Q3 planning', 'shopping']);
+    expect(result[0]?.tabs.map((tab) => tab.id)).toEqual([1, 3]);
+    expect(result[1]?.tabs.map((tab) => tab.id)).toEqual([2]);
+  });
+
+  it('puts ungrouped tabs into an "Ungrouped" bucket sorted last', () => {
+    const result = groupTabs(
+      [
+        makeTab({ id: 1, group: null }),
+        makeTab({ id: 2, group: { id: 10, title: 'planning', color: 'blue' } }),
+        makeTab({ id: 3, group: null }),
+        makeTab({ id: 4, group: { id: 10, title: 'planning', color: 'blue' } }),
+      ],
+      'tabgroup',
+    );
+    expect(result.map((group) => group.label)).toEqual(['planning', 'Ungrouped']);
+    expect(result[1]?.tabs.map((tab) => tab.id)).toEqual([1, 3]);
+  });
+
+  it('labels untitled groups as "Untitled"', () => {
+    const result = groupTabs(
+      [makeTab({ id: 1, group: { id: 10, title: '', color: 'grey' } })],
+      'tabgroup',
+    );
+    expect(result.map((group) => group.label)).toEqual(['Untitled']);
   });
 });

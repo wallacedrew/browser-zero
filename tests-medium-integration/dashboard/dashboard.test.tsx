@@ -18,6 +18,7 @@ const sampleTabs: readonly Tab[] = [
     domain: 'github.com',
     intent: 'Dev',
     lastAccessed: fiveMinAgo,
+    group: null,
   },
   {
     id: 2,
@@ -27,6 +28,7 @@ const sampleTabs: readonly Tab[] = [
     domain: 'mail.google.com',
     intent: 'Comms',
     lastAccessed: oneHourAgo,
+    group: null,
   },
   {
     id: 3,
@@ -36,6 +38,7 @@ const sampleTabs: readonly Tab[] = [
     domain: 'youtube.com',
     intent: 'Entertainment',
     lastAccessed: fiveMinAgo,
+    group: null,
   },
 ];
 
@@ -93,6 +96,7 @@ describe('dashboard', () => {
         domain: 'example.com',
         intent: 'Other',
         lastAccessed: now,
+        group: null,
       },
     ]);
 
@@ -157,5 +161,56 @@ describe('dashboard', () => {
     expect(screen.queryByRole('link', { name: 'pull/123' })).not.toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Inbox' })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'cats' })).toBeInTheDocument();
+  });
+
+  it('regroups by Chrome tab group when the user clicks the By tab group toggle', async () => {
+    const groupedSample: readonly Tab[] = [
+      {
+        id: 10,
+        windowId: 100,
+        title: 'spec',
+        url: 'https://github.com/me/repo/issues/9',
+        domain: 'github.com',
+        intent: 'Dev',
+        lastAccessed: fiveMinAgo,
+        group: { id: 1, title: 'Q3 planning', color: 'blue' },
+      },
+      {
+        id: 11,
+        windowId: 100,
+        title: 'review',
+        url: 'https://github.com/me/repo/pull/10',
+        domain: 'github.com',
+        intent: 'Dev',
+        lastAccessed: fiveMinAgo,
+        group: { id: 1, title: 'Q3 planning', color: 'blue' },
+      },
+      {
+        id: 12,
+        windowId: 100,
+        title: 'random',
+        url: 'https://example.com/',
+        domain: 'example.com',
+        intent: 'Other',
+        lastAccessed: fiveMinAgo,
+        group: null,
+      },
+    ];
+    const port = new FakeTabsPort(groupedSample);
+    const user = userEvent.setup();
+
+    render(<App tabsPort={port} now={now} />);
+    await screen.findByRole('region', { name: /window 1/i });
+
+    await user.click(screen.getByRole('radio', { name: /by tab group/i }));
+
+    const planningGroup = screen.getByRole('region', { name: 'Q3 planning' });
+    const ungroupedGroup = screen.getByRole('region', { name: 'Ungrouped' });
+
+    expect(within(planningGroup).getByRole('link', { name: 'spec' })).toBeInTheDocument();
+    expect(within(planningGroup).getByRole('link', { name: 'review' })).toBeInTheDocument();
+    expect(within(ungroupedGroup).getByRole('link', { name: 'random' })).toBeInTheDocument();
+
+    expect(screen.queryByRole('region', { name: /window 1/i })).not.toBeInTheDocument();
   });
 });

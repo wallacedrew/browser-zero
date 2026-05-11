@@ -1,6 +1,6 @@
 import type { Tab } from './types';
 
-export type GroupBy = 'window' | 'domain' | 'category';
+export type GroupBy = 'window' | 'domain' | 'category' | 'tabgroup';
 
 export interface TabGroup {
   readonly key: string;
@@ -16,6 +16,8 @@ export function groupTabs(tabs: readonly Tab[], by: GroupBy): TabGroup[] {
       return groupByDomain(tabs);
     case 'category':
       return groupByCategory(tabs);
+    case 'tabgroup':
+      return groupByTabGroup(tabs);
   }
 }
 
@@ -53,6 +55,43 @@ function groupByDomain(tabs: readonly Tab[]): TabGroup[] {
       label: domain,
       tabs: domainTabs,
     }));
+}
+
+const UNGROUPED_KEY = 'ungrouped';
+
+function groupByTabGroup(tabs: readonly Tab[]): TabGroup[] {
+  const byTabGroup = new Map<string, Tab[]>();
+  for (const tab of tabs) {
+    const key = tab.group ? `g-${String(tab.group.id)}` : UNGROUPED_KEY;
+    const existing = byTabGroup.get(key);
+    if (existing) existing.push(tab);
+    else byTabGroup.set(key, [tab]);
+  }
+  return [...byTabGroup.entries()]
+    .sort(([leftKey, leftTabs], [rightKey, rightTabs]) => {
+      const leftIsUngrouped = leftKey === UNGROUPED_KEY;
+      const rightIsUngrouped = rightKey === UNGROUPED_KEY;
+      if (leftIsUngrouped !== rightIsUngrouped) return leftIsUngrouped ? 1 : -1;
+      const countDelta = rightTabs.length - leftTabs.length;
+      if (countDelta !== 0) return countDelta;
+      const leftTitle = leftTabs[0]?.group?.title ?? '';
+      const rightTitle = rightTabs[0]?.group?.title ?? '';
+      return leftTitle.localeCompare(rightTitle);
+    })
+    .map(([key, groupTabs]) => {
+      const label = labelForTabGroup(key, groupTabs[0]);
+      return {
+        key: `tabgroup-${key}`,
+        label,
+        tabs: groupTabs,
+      };
+    });
+}
+
+function labelForTabGroup(key: string, firstTab: Tab | undefined): string {
+  if (key === UNGROUPED_KEY) return 'Ungrouped';
+  const title = firstTab?.group?.title ?? '';
+  return title.length > 0 ? title : 'Untitled';
 }
 
 function groupByCategory(tabs: readonly Tab[]): TabGroup[] {
