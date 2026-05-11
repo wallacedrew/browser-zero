@@ -14,15 +14,6 @@ interface Props {
 export function TabRow({ tab, now, isSelected, onSelectionToggle, onFocus, onClose }: Props) {
   return (
     <li className="flex items-center gap-3 px-3 py-2 hover:bg-slate-50">
-      <input
-        type="checkbox"
-        aria-label={`Select ${tab.title}`}
-        checked={isSelected}
-        onChange={() => {
-          onSelectionToggle(tab.id);
-        }}
-        className="h-4 w-4 shrink-0 rounded border-slate-300 text-slate-900 focus:ring-slate-500"
-      />
       {tab.group && <GroupChip group={tab.group} />}
       <a
         href={tab.url}
@@ -38,6 +29,15 @@ export function TabRow({ tab, now, isSelected, onSelectionToggle, onFocus, onClo
       <span className="shrink-0 text-xs tabular-nums text-slate-400">
         {formatRelativeTime(tab.lastAccessed, now)}
       </span>
+      <input
+        type="checkbox"
+        aria-label={`Select ${tab.title}`}
+        checked={isSelected}
+        onChange={() => {
+          onSelectionToggle(tab.id);
+        }}
+        className="h-4 w-4 shrink-0 rounded border-slate-300 text-slate-900 focus:ring-slate-500"
+      />
       <button
         type="button"
         aria-label={`Close ${tab.title}`}
