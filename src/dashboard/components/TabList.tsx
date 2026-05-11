@@ -1,19 +1,16 @@
 import type { Tab } from '../../shared/lib/types';
+import { groupTabs, type GroupBy } from '../../shared/lib/grouping';
 import { TabRow } from './TabRow';
 
 interface Props {
   tabs: readonly Tab[];
   now: number;
+  groupBy: GroupBy;
   onFocus: (tabId: number, windowId: number) => void;
 }
 
-interface WindowGroup {
-  windowId: number;
-  tabs: readonly Tab[];
-}
-
-export function TabList({ tabs, now, onFocus }: Props) {
-  const groups = groupByWindow(tabs);
+export function TabList({ tabs, now, groupBy, onFocus }: Props) {
+  const groups = groupTabs(tabs, groupBy);
 
   if (groups.length === 0) {
     return <p className="text-slate-500">No open tabs.</p>;
@@ -21,14 +18,14 @@ export function TabList({ tabs, now, onFocus }: Props) {
 
   return (
     <div className="space-y-6">
-      {groups.map((group, index) => (
+      {groups.map((group) => (
         <section
-          key={group.windowId}
-          aria-label={`Window ${String(index + 1)}`}
+          key={group.key}
+          aria-label={group.label}
           className="rounded-lg border border-slate-200 bg-white p-3 shadow-sm"
         >
           <header className="mb-2 flex items-baseline justify-between px-3">
-            <h2 className="text-sm font-semibold text-slate-700">Window {index + 1}</h2>
+            <h2 className="text-sm font-semibold text-slate-700">{group.label}</h2>
             <span className="text-xs text-slate-400">
               {group.tabs.length} tab{group.tabs.length === 1 ? '' : 's'}
             </span>
@@ -42,16 +39,4 @@ export function TabList({ tabs, now, onFocus }: Props) {
       ))}
     </div>
   );
-}
-
-function groupByWindow(tabs: readonly Tab[]): WindowGroup[] {
-  const byWindow = new Map<number, Tab[]>();
-  for (const tab of tabs) {
-    const existing = byWindow.get(tab.windowId);
-    if (existing) existing.push(tab);
-    else byWindow.set(tab.windowId, [tab]);
-  }
-  return [...byWindow.entries()]
-    .sort(([leftWindowId], [rightWindowId]) => leftWindowId - rightWindowId)
-    .map(([windowId, windowTabs]) => ({ windowId, tabs: windowTabs }));
 }

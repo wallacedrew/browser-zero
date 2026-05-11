@@ -101,4 +101,25 @@ describe('dashboard', () => {
     expect(await screen.findByRole('link', { name: 'new tab' })).toBeInTheDocument();
     expect(screen.queryByRole('link', { name: 'pull/123' })).not.toBeInTheDocument();
   });
+
+  it('regroups by domain when the user clicks the By domain toggle', async () => {
+    const port = new FakeTabsPort(sampleTabs);
+    const user = userEvent.setup();
+
+    render(<App tabsPort={port} now={now} />);
+    await screen.findByRole('region', { name: /window 1/i });
+
+    await user.click(screen.getByRole('radio', { name: /by domain/i }));
+
+    const githubGroup = screen.getByRole('region', { name: 'github.com' });
+    const mailGroup = screen.getByRole('region', { name: 'mail.google.com' });
+    const youtubeGroup = screen.getByRole('region', { name: 'youtube.com' });
+
+    expect(within(githubGroup).getByRole('link', { name: 'pull/123' })).toBeInTheDocument();
+    expect(within(mailGroup).getByRole('link', { name: 'Inbox' })).toBeInTheDocument();
+    expect(within(youtubeGroup).getByRole('link', { name: 'cats' })).toBeInTheDocument();
+
+    expect(screen.queryByRole('region', { name: /window 1/i })).not.toBeInTheDocument();
+    expect(screen.queryByRole('region', { name: /window 2/i })).not.toBeInTheDocument();
+  });
 });
