@@ -58,11 +58,17 @@ function toDomainTab(
   };
 }
 
+// Inlined from chrome.tabGroups.TAB_GROUP_ID_NONE. The constant is -1 per the
+// Chrome API spec and never changes; inlining avoids a runtime crash if
+// chrome.tabGroups is absent (e.g. the extension hasn't been reloaded since
+// the "tabGroups" permission was added to the manifest).
+const TAB_GROUP_ID_NONE = -1;
+
 function resolveGroup(
   groupId: number | undefined,
   groupsById: Map<number, chrome.tabGroups.TabGroup>,
 ): TabGroupInfo | null {
-  if (groupId === undefined || groupId === chrome.tabGroups.TAB_GROUP_ID_NONE) {
+  if (groupId === undefined || groupId === TAB_GROUP_ID_NONE) {
     return null;
   }
   const chromeGroup = groupsById.get(groupId);
