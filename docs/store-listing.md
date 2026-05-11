@@ -127,14 +127,14 @@ Confirm the certification statements:
 
 ## Privacy policy URL
 
-After enabling GitHub Pages on the repo (Settings → Pages → "Deploy from
-a branch" → `main` branch, `/docs` folder), paste:
+Paste:
 
 ```
-https://<github-username>.github.io/browser-zero/privacy-policy/
+https://wallacedrew.github.io/browser-zero/privacy-policy/
 ```
 
-Replace `<github-username>` with your actual GitHub handle.
+(Already live — served by GitHub Pages from this repo's `main` branch,
+`/docs` folder.)
 
 ## Assets to upload
 
