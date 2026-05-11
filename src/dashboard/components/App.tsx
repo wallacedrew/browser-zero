@@ -20,6 +20,13 @@ export function App({ tabsPort, now: nowOverride }: Props) {
   const [search, setSearch] = useState('');
   const [selected, setSelected] = useState<ReadonlySet<number>>(() => new Set());
 
+  const isFiltering = search.trim().length > 0;
+  const visibleTabs = useMemo(() => filterTabs(tabs, search), [tabs, search]);
+  const summaryTabs = isFiltering ? visibleTabs : tabs;
+  const groupedCount = summaryTabs.filter((tab) => tab.group !== null).length;
+  const distinctGroups = new Set(summaryTabs.flatMap((tab) => (tab.group ? [tab.group.id] : [])))
+    .size;
+
   const refresh = useCallback(async () => {
     setNow(nowOverride ?? Date.now());
     const next = await tabsPort.queryAll();
@@ -77,12 +84,13 @@ export function App({ tabsPort, now: nowOverride }: Props) {
     void tabsPort.closeMany(ids);
   }, [selected, tabsPort]);
 
-  const isFiltering = search.trim().length > 0;
-  const visibleTabs = useMemo(() => filterTabs(tabs, search), [tabs, search]);
-  const summaryTabs = isFiltering ? visibleTabs : tabs;
-  const groupedCount = summaryTabs.filter((tab) => tab.group !== null).length;
-  const distinctGroups = new Set(summaryTabs.flatMap((tab) => (tab.group ? [tab.group.id] : [])))
-    .size;
+  const handleSelectAllVisible = useCallback(() => {
+    setSelected((prev) => {
+      const next = new Set(prev);
+      for (const tab of visibleTabs) next.add(tab.id);
+      return next;
+    });
+  }, [visibleTabs]);
 
   return (
     <main className="min-h-screen bg-slate-50 p-8">
@@ -118,9 +126,11 @@ export function App({ tabsPort, now: nowOverride }: Props) {
         }}
         className="mb-4 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm placeholder:text-slate-400 focus:border-slate-500 focus:outline-none focus:ring-1 focus:ring-slate-500"
       />
-      {selected.size > 0 && (
+      {loaded && visibleTabs.length > 0 && (
         <SelectionBar
-          count={selected.size}
+          selectedCount={selected.size}
+          visibleCount={visibleTabs.length}
+          onSelectAll={handleSelectAllVisible}
           onDelete={handleDeleteSelected}
           onClear={handleClearSelection}
         />

@@ -221,14 +221,13 @@ describe('dashboard', () => {
     render(<App tabsPort={port} now={now} />);
     await screen.findByRole('link', { name: 'pull/123' });
 
-    // Selection bar is hidden until at least one row is checked.
-    expect(screen.queryByRole('region', { name: /selection actions/i })).not.toBeInTheDocument();
+    const selectionBar = screen.getByRole('region', { name: /selection actions/i });
+    expect(within(selectionBar).getByText(/0 of 3 tabs selected/i)).toBeInTheDocument();
 
     await user.click(screen.getByRole('checkbox', { name: 'Select pull/123' }));
     await user.click(screen.getByRole('checkbox', { name: 'Select cats' }));
 
-    const selectionBar = screen.getByRole('region', { name: /selection actions/i });
-    expect(within(selectionBar).getByText(/2 tabs selected/i)).toBeInTheDocument();
+    expect(within(selectionBar).getByText(/2 of 3 tabs selected/i)).toBeInTheDocument();
 
     await user.click(within(selectionBar).getByRole('button', { name: /delete selected/i }));
 
@@ -236,7 +235,7 @@ describe('dashboard', () => {
     expect(screen.queryByRole('link', { name: 'pull/123' })).not.toBeInTheDocument();
     expect(screen.queryByRole('link', { name: 'cats' })).not.toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Inbox' })).toBeInTheDocument();
-    expect(screen.queryByRole('region', { name: /selection actions/i })).not.toBeInTheDocument();
+    expect(within(selectionBar).getByText(/0 of 1 tab selected/i)).toBeInTheDocument();
   });
 
   it('clears a tab from the selection when its × button is clicked', async () => {
@@ -249,11 +248,57 @@ describe('dashboard', () => {
     await user.click(screen.getByRole('checkbox', { name: 'Select pull/123' }));
     await user.click(screen.getByRole('checkbox', { name: 'Select Inbox' }));
 
-    expect(screen.getByText(/2 tabs selected/i)).toBeInTheDocument();
+    expect(screen.getByText(/2 of 3 tabs selected/i)).toBeInTheDocument();
 
     await user.click(screen.getByRole('button', { name: 'Close pull/123' }));
 
     expect(port.closeCalls).toEqual([1]);
-    expect(screen.getByText(/1 tab selected/i)).toBeInTheDocument();
+    expect(screen.getByText(/1 of 2 tabs selected/i)).toBeInTheDocument();
+  });
+
+  it('selects every visible tab when Select all visible is clicked, then bulk-deletes them', async () => {
+    const port = new FakeTabsPort(sampleTabs);
+    const user = userEvent.setup();
+
+    render(<App tabsPort={port} now={now} />);
+    await screen.findByRole('link', { name: 'pull/123' });
+
+    const selectionBar = screen.getByRole('region', { name: /selection actions/i });
+    expect(within(selectionBar).getByText(/0 of 3 tabs selected/i)).toBeInTheDocument();
+
+    await user.click(within(selectionBar).getByRole('button', { name: /select all visible/i }));
+
+    expect(within(selectionBar).getByText(/3 of 3 tabs selected/i)).toBeInTheDocument();
+    expect(
+      within(selectionBar).queryByRole('button', { name: /select all visible/i }),
+    ).not.toBeInTheDocument();
+
+    await user.click(within(selectionBar).getByRole('button', { name: /delete selected/i }));
+
+    expect(port.closeManyCalls).toEqual([[1, 2, 3]]);
+    expect(screen.queryByRole('link', { name: 'pull/123' })).not.toBeInTheDocument();
+    expect(screen.queryByRole('link', { name: 'Inbox' })).not.toBeInTheDocument();
+    expect(screen.queryByRole('link', { name: 'cats' })).not.toBeInTheDocument();
+  });
+
+  it('Select all visible respects the search filter', async () => {
+    const port = new FakeTabsPort(sampleTabs);
+    const user = userEvent.setup();
+
+    render(<App tabsPort={port} now={now} />);
+    await screen.findByRole('link', { name: 'pull/123' });
+
+    await user.type(screen.getByRole('searchbox', { name: /filter tabs/i }), 'github');
+
+    const selectionBar = screen.getByRole('region', { name: /selection actions/i });
+    expect(within(selectionBar).getByText(/0 of 1 tab selected/i)).toBeInTheDocument();
+
+    await user.click(within(selectionBar).getByRole('button', { name: /select all visible/i }));
+
+    expect(within(selectionBar).getByText(/1 of 1 tab selected/i)).toBeInTheDocument();
+
+    await user.click(within(selectionBar).getByRole('button', { name: /delete selected/i }));
+
+    expect(port.closeManyCalls).toEqual([[1]]);
   });
 });
