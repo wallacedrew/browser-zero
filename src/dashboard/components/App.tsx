@@ -52,6 +52,14 @@ export function App({ tabsPort, now: nowOverride }: Props) {
           <h1 className="text-3xl font-semibold text-slate-900">browser-zero</h1>
           <p className="text-sm text-slate-500">
             {tabs.length} tab{tabs.length === 1 ? '' : 's'} across all windows
+            {(() => {
+              const groupedCount = tabs.filter((tab) => tab.group !== null).length;
+              const distinctGroups = new Set(
+                tabs.flatMap((tab) => (tab.group ? [tab.group.id] : [])),
+              ).size;
+              if (groupedCount === 0) return null;
+              return ` · ${groupedCount} in ${distinctGroups} group${distinctGroups === 1 ? '' : 's'}`;
+            })()}
           </p>
         </div>
         <div className="flex items-center gap-3">
