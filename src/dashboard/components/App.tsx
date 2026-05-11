@@ -178,7 +178,7 @@ export function App({ tabsPort, now: nowOverride }: Props) {
       <header className="mb-4 flex items-center justify-between gap-4">
         <div>
           <h1 className="text-3xl font-semibold text-slate-900">browser-zero</h1>
-          <p className="text-sm text-slate-500">
+          <p className="text-base text-slate-500">
             {isFiltering
               ? `${visibleTabs.length} of ${tabs.length} tab${tabs.length === 1 ? '' : 's'} match`
               : `${tabs.length} tab${tabs.length === 1 ? '' : 's'}`}
@@ -191,7 +191,7 @@ export function App({ tabsPort, now: nowOverride }: Props) {
           <button
             type="button"
             onClick={() => void refresh()}
-            className="rounded-md bg-slate-900 px-3 py-1.5 text-sm font-medium text-white shadow-sm hover:bg-slate-700"
+            className="rounded-md bg-slate-900 px-3 py-1.5 text-base font-medium text-white shadow-sm hover:bg-slate-700"
           >
             Refresh
           </button>
@@ -205,7 +205,7 @@ export function App({ tabsPort, now: nowOverride }: Props) {
         onChange={(event) => {
           setSearch(event.target.value);
         }}
-        className="mb-4 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm placeholder:text-slate-400 focus:border-slate-500 focus:outline-none focus:ring-1 focus:ring-slate-500"
+        className="mb-4 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-base placeholder:text-slate-400 focus:border-slate-500 focus:outline-none focus:ring-1 focus:ring-slate-500"
       />
       {loaded ? (
         <TabList

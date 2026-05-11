@@ -21,7 +21,7 @@ export function ViewToggle({ value, onChange }: Props) {
     <div
       role="radiogroup"
       aria-label="Group tabs"
-      className="inline-flex rounded-md border border-slate-200 bg-white p-0.5 text-xs"
+      className="inline-flex rounded-md border border-slate-200 bg-white p-0.5 text-sm"
     >
       {OPTIONS.map((option) => {
         const isActive = option.value === value;

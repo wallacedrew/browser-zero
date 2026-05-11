@@ -50,12 +50,12 @@ export function TabRow({
           event.preventDefault();
           onFocus(tab.id, tab.windowId);
         }}
-        className="min-w-0 flex-1 truncate text-sm text-slate-800 hover:underline"
+        className="min-w-0 flex-1 truncate text-base text-slate-800 hover:underline"
       >
         {tab.title}
       </a>
-      <span className="shrink-0 text-xs text-slate-500">{tab.domain}</span>
-      <span className="shrink-0 text-xs tabular-nums text-slate-400">
+      <span className="shrink-0 text-sm text-slate-500">{tab.domain}</span>
+      <span className="shrink-0 text-sm tabular-nums text-slate-400">
         {formatRelativeTime(tab.lastAccessed, now)}
       </span>
       <input
@@ -65,7 +65,7 @@ export function TabRow({
         onChange={() => {
           onSelectionToggle(tab.id);
         }}
-        className="h-4 w-4 shrink-0 rounded border-slate-300 text-slate-900 focus:ring-slate-500"
+        className="h-5 w-5 shrink-0 rounded border-slate-300 text-slate-900 focus:ring-slate-500"
       />
       {armedForDelete ? (
         <>
@@ -76,7 +76,7 @@ export function TabRow({
             onClick={() => {
               onClose(tab.id);
             }}
-            className="shrink-0 rounded-full bg-red-600 px-2.5 py-0.5 text-xs font-medium text-white shadow-sm hover:bg-red-700"
+            className="shrink-0 rounded-full bg-red-600 px-2.5 py-0.5 text-sm font-medium text-white shadow-sm hover:bg-red-700"
           >
             Close?
           </button>
@@ -85,7 +85,7 @@ export function TabRow({
             aria-label={`Keep ${tab.title}`}
             data-armed-delete="true"
             onClick={onDisarm}
-            className="shrink-0 rounded-full border border-slate-300 bg-white px-2.5 py-0.5 text-xs font-medium text-slate-700 shadow-sm hover:bg-slate-50"
+            className="shrink-0 rounded-full border border-slate-300 bg-white px-2.5 py-0.5 text-sm font-medium text-slate-700 shadow-sm hover:bg-slate-50"
           >
             Keep
           </button>
@@ -97,7 +97,7 @@ export function TabRow({
           onClick={() => {
             onArmDelete(tab.id);
           }}
-          className="shrink-0 rounded p-1 text-base leading-none text-slate-400 transition-colors hover:bg-red-50 hover:text-red-600"
+          className="shrink-0 rounded p-1 text-lg leading-none text-slate-400 transition-colors hover:bg-red-50 hover:text-red-600"
         >
           ×
         </button>

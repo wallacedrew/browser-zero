@@ -107,8 +107,8 @@ export function TabList({
           >
             <header className="mb-2 space-y-1 px-3">
               <div className="flex items-baseline justify-between gap-3">
-                <h2 className="text-sm font-semibold text-slate-700">{group.label}</h2>
-                <div className="flex items-center gap-3 text-xs text-slate-400">
+                <h2 className="text-base font-semibold text-slate-700">{group.label}</h2>
+                <div className="flex items-center gap-3 text-sm text-slate-400">
                   <span>
                     {group.tabs.length} tab{group.tabs.length === 1 ? '' : 's'}
                   </span>
@@ -140,7 +140,7 @@ export function TabList({
                 <div
                   role="region"
                   aria-label={`${group.label} selection actions`}
-                  className="flex flex-wrap items-center justify-end gap-3 text-xs"
+                  className="flex flex-wrap items-center justify-end gap-3 text-sm"
                 >
                   <span className="font-medium text-slate-700">
                     {selectedInGroup} tab{selectedInGroup === 1 ? '' : 's'} selected
@@ -150,7 +150,7 @@ export function TabList({
                     onClick={() => {
                       onDeleteIds(selectedIdsInGroup);
                     }}
-                    className="rounded-md bg-red-600 px-2.5 py-0.5 text-xs font-medium text-white shadow-sm hover:bg-red-700"
+                    className="rounded-md bg-red-600 px-2.5 py-0.5 text-sm font-medium text-white shadow-sm hover:bg-red-700"
                   >
                     Close?
                   </button>
