@@ -211,6 +211,17 @@ describe('dashboard', () => {
     expect(within(planningGroup).getByRole('link', { name: 'review' })).toBeInTheDocument();
     expect(within(ungroupedGroup).getByRole('link', { name: 'random' })).toBeInTheDocument();
 
+    // Per-row group chip: the row containing the 'spec' link must also surface
+    // the group title 'Q3 planning' (independent of the section header).
+    const specRow = within(planningGroup).getByRole('link', { name: 'spec' }).closest('li');
+    expect(specRow).not.toBeNull();
+    expect(within(specRow as HTMLElement).getByText('Q3 planning')).toBeInTheDocument();
+
+    // Ungrouped tabs render no chip — only the intent badge.
+    const randomRow = within(ungroupedGroup).getByRole('link', { name: 'random' }).closest('li');
+    expect(randomRow).not.toBeNull();
+    expect(within(randomRow as HTMLElement).queryByText('Q3 planning')).not.toBeInTheDocument();
+
     expect(screen.queryByRole('region', { name: /window 1/i })).not.toBeInTheDocument();
   });
 });
