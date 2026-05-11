@@ -7,7 +7,7 @@ export class ChromeTabsAdapter implements TabsPort {
   async queryAll(): Promise<readonly Tab[]> {
     const [chromeTabs, chromeGroups] = await Promise.all([
       chrome.tabs.query({}),
-      chrome.tabGroups.query({}),
+      queryTabGroupsSafe(),
     ]);
     const groupsById = new Map<number, chrome.tabGroups.TabGroup>(
       chromeGroups.map((group) => [group.id, group]),
@@ -25,6 +25,14 @@ export class ChromeTabsAdapter implements TabsPort {
   async close(tabId: number): Promise<void> {
     await chrome.tabs.remove(tabId);
   }
+}
+
+async function queryTabGroupsSafe(): Promise<readonly chrome.tabGroups.TabGroup[]> {
+  // chrome.tabGroups is undefined until the user reloads the extension after
+  // the "tabGroups" permission was added to the manifest. Fall back to an empty
+  // list so the dashboard still loads — every tab simply lands in "Ungrouped".
+  if (!chrome.tabGroups) return [];
+  return chrome.tabGroups.query({});
 }
 
 type ResolvableChromeTab = chrome.tabs.Tab & { id: number };
