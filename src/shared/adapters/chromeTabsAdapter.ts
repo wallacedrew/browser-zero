@@ -42,6 +42,30 @@ export class ChromeTabsAdapter implements TabsPort {
   async removeFromGroup(tabId: number): Promise<void> {
     await chrome.tabs.ungroup(tabId);
   }
+
+  async createGroup(tabIds: readonly number[], title: string): Promise<void> {
+    const nonEmpty = toNonEmptyTuple(tabIds);
+    if (!nonEmpty) return;
+    const groupId = await chrome.tabs.group({ tabIds: nonEmpty });
+    if (title.length > 0) {
+      await chrome.tabGroups.update(groupId, { title });
+    }
+  }
+
+  async assignManyToGroup(tabIds: readonly number[], groupId: number): Promise<void> {
+    const nonEmpty = toNonEmptyTuple(tabIds);
+    if (!nonEmpty) return;
+    await chrome.tabs.group({ groupId, tabIds: nonEmpty });
+  }
+}
+
+// chrome.tabs.group's typings require a non-empty tuple `[number, ...number[]]`.
+// We runtime-check for emptiness in each port method; this helper bridges
+// the runtime guard to the type system so the cast lives in one place.
+function toNonEmptyTuple(tabIds: readonly number[]): [number, ...number[]] | null {
+  if (tabIds.length === 0) return null;
+  const [first, ...rest] = tabIds;
+  return [first as number, ...rest];
 }
 
 async function queryTabGroupsSafe(): Promise<readonly chrome.tabGroups.TabGroup[]> {

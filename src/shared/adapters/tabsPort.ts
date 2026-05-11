@@ -8,4 +8,6 @@ export interface TabsPort {
   moveToWindow(tabId: number, windowId: number): Promise<void>;
   assignToGroup(tabId: number, groupId: number): Promise<void>;
   removeFromGroup(tabId: number): Promise<void>;
+  createGroup(tabIds: readonly number[], title: string): Promise<void>;
+  assignManyToGroup(tabIds: readonly number[], groupId: number): Promise<void>;
 }

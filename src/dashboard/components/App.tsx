@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import type { Tab } from '../../shared/lib/types';
+import type { Tab, TabGroupInfo } from '../../shared/lib/types';
 import type { TabsPort } from '../../shared/adapters/tabsPort';
 import type { GroupBy } from '../../shared/lib/grouping';
 import { filterTabs } from '../../shared/lib/filterTabs';
@@ -25,6 +25,13 @@ export function App({ tabsPort, now: nowOverride }: Props) {
   const summaryTabs = isFiltering ? visibleTabs : tabs;
   const groupedCount = summaryTabs.filter((tab) => tab.group !== null).length;
   const ungroupedCount = summaryTabs.length - groupedCount;
+  const existingGroups = useMemo<TabGroupInfo[]>(() => {
+    const seen = new Map<number, TabGroupInfo>();
+    for (const tab of tabs) {
+      if (tab.group && !seen.has(tab.group.id)) seen.set(tab.group.id, tab.group);
+    }
+    return [...seen.values()];
+  }, [tabs]);
 
   const refresh = useCallback(async () => {
     setNow(nowOverride ?? Date.now());
@@ -154,6 +161,26 @@ export function App({ tabsPort, now: nowOverride }: Props) {
     [tabs, tabsPort, refresh],
   );
 
+  const handleCreateGroup = useCallback(
+    async (tabIds: readonly number[], title: string) => {
+      if (tabIds.length === 0) return;
+      await tabsPort.createGroup(tabIds, title);
+      setSelected(new Set());
+      await refresh();
+    },
+    [tabsPort, refresh],
+  );
+
+  const handleAssignManyToGroup = useCallback(
+    async (tabIds: readonly number[], groupId: number) => {
+      if (tabIds.length === 0) return;
+      await tabsPort.assignManyToGroup(tabIds, groupId);
+      setSelected(new Set());
+      await refresh();
+    },
+    [tabsPort, refresh],
+  );
+
   const handleDeleteIds = useCallback(
     (idsToDelete: readonly number[]) => {
       if (idsToDelete.length === 0) return;
@@ -224,6 +251,9 @@ export function App({ tabsPort, now: nowOverride }: Props) {
           onClose={handleClose}
           onDropOnWindow={handleDropOnWindow}
           onDropOnTabGroup={handleDropOnTabGroup}
+          existingGroups={existingGroups}
+          onCreateGroup={handleCreateGroup}
+          onAssignManyToGroup={handleAssignManyToGroup}
         />
       ) : (
         <p className="text-slate-400">Loading…</p>

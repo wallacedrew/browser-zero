@@ -7,6 +7,8 @@ export class FakeTabsPort implements TabsPort {
   readonly moveToWindowCalls: Array<{ tabId: number; windowId: number }> = [];
   readonly assignToGroupCalls: Array<{ tabId: number; groupId: number }> = [];
   readonly removeFromGroupCalls: number[] = [];
+  readonly createGroupCalls: Array<{ tabIds: number[]; title: string }> = [];
+  readonly assignManyToGroupCalls: Array<{ tabIds: number[]; groupId: number }> = [];
   newTabCalls = 0;
   private tabs: readonly Tab[];
 
@@ -51,6 +53,16 @@ export class FakeTabsPort implements TabsPort {
 
   removeFromGroup(tabId: number): Promise<void> {
     this.removeFromGroupCalls.push(tabId);
+    return Promise.resolve();
+  }
+
+  createGroup(tabIds: readonly number[], title: string): Promise<void> {
+    this.createGroupCalls.push({ tabIds: [...tabIds], title });
+    return Promise.resolve();
+  }
+
+  assignManyToGroup(tabIds: readonly number[], groupId: number): Promise<void> {
+    this.assignManyToGroupCalls.push({ tabIds: [...tabIds], groupId });
     return Promise.resolve();
   }
 }

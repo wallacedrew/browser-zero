@@ -1,5 +1,5 @@
 import { useState, type DragEvent } from 'react';
-import type { Tab } from '../../shared/lib/types';
+import type { Tab, TabGroupInfo } from '../../shared/lib/types';
 import { groupTabs, type GroupBy, type TabGroup } from '../../shared/lib/grouping';
 import { SectionActionPanel } from './SectionActionPanel';
 import { TabRow } from './TabRow';
@@ -10,6 +10,7 @@ interface Props {
   groupBy: GroupBy;
   selected: ReadonlySet<number>;
   armedDeleteId: number | null;
+  existingGroups: ReadonlyArray<TabGroupInfo>;
   onSelectionToggle: (tabId: number) => void;
   onSelectGroup: (tabIds: readonly number[]) => void;
   onClearGroup: (tabIds: readonly number[]) => void;
@@ -20,6 +21,8 @@ interface Props {
   onClose: (tabId: number) => void;
   onDropOnWindow: (tabId: number, targetWindowId: number) => void;
   onDropOnTabGroup: (tabId: number, targetGroupId: number | null) => void;
+  onCreateGroup: (tabIds: readonly number[], title: string) => void;
+  onAssignManyToGroup: (tabIds: readonly number[], groupId: number) => void;
 }
 
 export function TabList({
@@ -28,6 +31,7 @@ export function TabList({
   groupBy,
   selected,
   armedDeleteId,
+  existingGroups,
   onSelectionToggle,
   onSelectGroup,
   onClearGroup,
@@ -38,10 +42,13 @@ export function TabList({
   onClose,
   onDropOnWindow,
   onDropOnTabGroup,
+  onCreateGroup,
+  onAssignManyToGroup,
 }: Props) {
   const [dragOverKey, setDragOverKey] = useState<string | null>(null);
   const groups = groupTabs(tabs, groupBy);
   const dropEnabled = groupBy === 'window' || groupBy === 'tabgroup';
+  const allowGrouping = groupBy !== 'domain';
 
   if (groups.length === 0) {
     return <p className="text-slate-500">No open tabs.</p>;
@@ -141,8 +148,12 @@ export function TabList({
                 groupLabel={group.label}
                 groupIds={groupIds}
                 selectedIds={selectedIdsInGroup}
+                allowGrouping={allowGrouping}
+                existingGroups={existingGroups}
                 onClearGroup={onClearGroup}
                 onDeleteIds={onDeleteIds}
+                onCreateGroup={onCreateGroup}
+                onAssignManyToGroup={onAssignManyToGroup}
               />
             </header>
             <ul className="divide-y divide-slate-100">

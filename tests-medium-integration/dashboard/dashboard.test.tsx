@@ -596,4 +596,89 @@ describe('dashboard', () => {
     if (!row) throw new Error('expected to find the row');
     expect(row).toHaveAttribute('draggable', 'false');
   });
+
+  it('creates a new group when the user names one in the Add to group picker', async () => {
+    const port = new FakeTabsPort(sampleTabs);
+    const user = userEvent.setup();
+
+    render(<App tabsPort={port} now={now} />);
+    await screen.findByRole('link', { name: 'pull/123' });
+
+    await user.click(screen.getByRole('checkbox', { name: 'Select pull/123' }));
+    await user.click(screen.getByRole('checkbox', { name: 'Select Inbox' }));
+
+    const window1Actions = screen.getByRole('region', { name: /window 1 selection actions/i });
+    await user.click(within(window1Actions).getByRole('button', { name: /add to group/i }));
+
+    const menu = screen.getByRole('menu', { name: /add to group menu/i });
+    const nameInput = within(menu).getByRole('textbox', { name: /name new group/i });
+    await user.type(nameInput, 'Q4 things');
+    await user.keyboard('{Enter}');
+
+    await waitFor(() => {
+      expect(port.createGroupCalls).toEqual([{ tabIds: [1, 2], title: 'Q4 things' }]);
+    });
+    expect(port.assignManyToGroupCalls).toEqual([]);
+  });
+
+  it('assigns selected tabs to an existing group when the user picks it from the menu', async () => {
+    const groupedSample: readonly Tab[] = [
+      {
+        id: 10,
+        windowId: 100,
+        title: 'spec',
+        url: 'https://github.com/me/repo/issues/9',
+        domain: 'github.com',
+        lastAccessed: fiveMinAgo,
+        group: { id: 1, title: 'Q3 planning', color: 'blue' },
+      },
+      {
+        id: 12,
+        windowId: 100,
+        title: 'random',
+        url: 'https://example.com/',
+        domain: 'example.com',
+        lastAccessed: fiveMinAgo,
+        group: null,
+      },
+    ];
+    const port = new FakeTabsPort(groupedSample);
+    const user = userEvent.setup();
+
+    render(<App tabsPort={port} now={now} />);
+    await screen.findByRole('link', { name: 'spec' });
+
+    await user.click(screen.getByRole('radio', { name: /by tab group/i }));
+    await user.click(screen.getByRole('checkbox', { name: 'Select random' }));
+
+    const ungroupedActions = screen.getByRole('region', { name: /ungrouped selection actions/i });
+    await user.click(within(ungroupedActions).getByRole('button', { name: /add to group/i }));
+
+    const menu = screen.getByRole('menu', { name: /add to group menu/i });
+    await user.click(within(menu).getByRole('menuitem', { name: /q3 planning/i }));
+
+    await waitFor(() => {
+      expect(port.assignManyToGroupCalls).toEqual([{ tabIds: [12], groupId: 1 }]);
+    });
+    expect(port.createGroupCalls).toEqual([]);
+  });
+
+  it('hides the Add to group action in By domain in url view', async () => {
+    const port = new FakeTabsPort(sampleTabs);
+    const user = userEvent.setup();
+
+    render(<App tabsPort={port} now={now} />);
+    await screen.findByRole('link', { name: 'pull/123' });
+
+    await user.click(screen.getByRole('radio', { name: /by domain in url/i }));
+    await user.click(screen.getByRole('checkbox', { name: 'Select pull/123' }));
+
+    // SectionActionPanel still renders the count + Close? + Keep, but the
+    // grouping button is gated out.
+    const section = screen.getByRole('region', { name: 'github.com' });
+    expect(within(section).getByText(/1 tab selected/i)).toBeInTheDocument();
+    expect(
+      within(section).queryByRole('button', { name: /add to group/i }),
+    ).not.toBeInTheDocument();
+  });
 });
