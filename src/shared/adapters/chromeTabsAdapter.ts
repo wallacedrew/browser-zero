@@ -21,10 +21,6 @@ export class ChromeTabsAdapter implements TabsPort {
     await chrome.windows.update(windowId, { focused: true });
   }
 
-  async close(tabId: number): Promise<void> {
-    await chrome.tabs.remove(tabId);
-  }
-
   async closeMany(tabIds: readonly number[]): Promise<void> {
     if (tabIds.length === 0) return;
     await chrome.tabs.remove([...tabIds]);

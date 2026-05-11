@@ -3,7 +3,6 @@ import type { Tab } from '../../shared/lib/types';
 import type { TabsPort } from '../../shared/adapters/tabsPort';
 import type { GroupBy } from '../../shared/lib/grouping';
 import { filterTabs } from '../../shared/lib/filterTabs';
-import { SelectionBar } from './SelectionBar';
 import { TabList } from './TabList';
 import { ViewToggle } from './ViewToggle';
 
@@ -54,14 +53,11 @@ export function App({ tabsPort, now: nowOverride }: Props) {
   // browser always has somewhere to land.
   const closeWithLastTabGuard = useCallback(
     async (idsToClose: readonly number[], remainingAfter: number): Promise<void> => {
-      if (remainingAfter === 0 && idsToClose.length > 0) {
+      if (idsToClose.length === 0) return;
+      if (remainingAfter === 0) {
         await tabsPort.openNewTab();
       }
-      if (idsToClose.length === 1) {
-        await tabsPort.close(idsToClose[0] as number);
-      } else if (idsToClose.length > 1) {
-        await tabsPort.closeMany(idsToClose);
-      }
+      await tabsPort.closeMany(idsToClose);
     },
     [tabsPort],
   );
@@ -90,10 +86,6 @@ export function App({ tabsPort, now: nowOverride }: Props) {
     });
   }, []);
 
-  const handleClearSelection = useCallback(() => {
-    setSelected(new Set());
-  }, []);
-
   const handleSelectGroup = useCallback((tabIds: readonly number[]) => {
     setSelected((prev) => {
       const next = new Set(prev);
@@ -111,14 +103,21 @@ export function App({ tabsPort, now: nowOverride }: Props) {
     });
   }, []);
 
-  const handleDeleteSelected = useCallback(() => {
-    if (selected.size === 0) return;
-    const ids = [...selected];
-    const remainingAfter = tabs.filter((tab) => !selected.has(tab.id)).length;
-    setTabs((prev) => prev.filter((tab) => !selected.has(tab.id)));
-    setSelected(new Set());
-    void closeWithLastTabGuard(ids, remainingAfter);
-  }, [selected, tabs, closeWithLastTabGuard]);
+  const handleDeleteIds = useCallback(
+    (idsToDelete: readonly number[]) => {
+      if (idsToDelete.length === 0) return;
+      const idSet = new Set(idsToDelete);
+      const remainingAfter = tabs.filter((tab) => !idSet.has(tab.id)).length;
+      setTabs((prev) => prev.filter((tab) => !idSet.has(tab.id)));
+      setSelected((prev) => {
+        const next = new Set(prev);
+        for (const id of idsToDelete) next.delete(id);
+        return next;
+      });
+      void closeWithLastTabGuard(idsToDelete, remainingAfter);
+    },
+    [tabs, closeWithLastTabGuard],
+  );
 
   return (
     <main className="min-h-screen bg-slate-50 p-8">
@@ -154,13 +153,6 @@ export function App({ tabsPort, now: nowOverride }: Props) {
         }}
         className="mb-4 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm placeholder:text-slate-400 focus:border-slate-500 focus:outline-none focus:ring-1 focus:ring-slate-500"
       />
-      {selected.size > 0 && (
-        <SelectionBar
-          count={selected.size}
-          onDelete={handleDeleteSelected}
-          onClear={handleClearSelection}
-        />
-      )}
       {loaded ? (
         <TabList
           tabs={visibleTabs}
@@ -170,6 +162,7 @@ export function App({ tabsPort, now: nowOverride }: Props) {
           onSelectionToggle={handleSelectionToggle}
           onSelectGroup={handleSelectGroup}
           onClearGroup={handleClearGroup}
+          onDeleteIds={handleDeleteIds}
           onFocus={handleFocus}
           onClose={handleClose}
         />

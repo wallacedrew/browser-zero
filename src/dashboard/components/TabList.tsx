@@ -10,6 +10,7 @@ interface Props {
   onSelectionToggle: (tabId: number) => void;
   onSelectGroup: (tabIds: readonly number[]) => void;
   onClearGroup: (tabIds: readonly number[]) => void;
+  onDeleteIds: (tabIds: readonly number[]) => void;
   onFocus: (tabId: number, windowId: number) => void;
   onClose: (tabId: number) => void;
 }
@@ -22,6 +23,7 @@ export function TabList({
   onSelectionToggle,
   onSelectGroup,
   onClearGroup,
+  onDeleteIds,
   onFocus,
   onClose,
 }: Props) {
@@ -35,10 +37,10 @@ export function TabList({
     <div className="space-y-6">
       {groups.map((group) => {
         const groupIds = group.tabs.map((tab) => tab.id);
-        const selectedInGroup = group.tabs.reduce(
-          (count, tab) => (selected.has(tab.id) ? count + 1 : count),
-          0,
+        const selectedIdsInGroup = group.tabs.flatMap((tab) =>
+          selected.has(tab.id) ? [tab.id] : [],
         );
+        const selectedInGroup = selectedIdsInGroup.length;
         const hasUnselected = selectedInGroup < group.tabs.length;
         const hasAnySelected = selectedInGroup > 0;
 
@@ -48,35 +50,66 @@ export function TabList({
             aria-label={group.label}
             className="rounded-lg border border-slate-200 bg-white p-3 shadow-sm"
           >
-            <header className="mb-2 flex items-baseline justify-between gap-3 px-3">
-              <h2 className="text-sm font-semibold text-slate-700">{group.label}</h2>
-              <div className="flex items-center gap-3 text-xs text-slate-400">
-                <span>
-                  {group.tabs.length} tab{group.tabs.length === 1 ? '' : 's'}
-                </span>
-                {hasUnselected && (
+            <header className="mb-2 space-y-1 px-3">
+              <div className="flex items-baseline justify-between gap-3">
+                <h2 className="text-sm font-semibold text-slate-700">{group.label}</h2>
+                <div className="flex items-center gap-3 text-xs text-slate-400">
+                  <span>
+                    {group.tabs.length} tab{group.tabs.length === 1 ? '' : 's'}
+                  </span>
+                  {hasUnselected && (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        onSelectGroup(groupIds);
+                      }}
+                      className="text-slate-600 hover:text-slate-900 hover:underline"
+                    >
+                      Select all
+                    </button>
+                  )}
+                  {hasAnySelected && (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        onClearGroup(groupIds);
+                      }}
+                      className="text-slate-600 hover:text-slate-900 hover:underline"
+                    >
+                      Clear all
+                    </button>
+                  )}
+                </div>
+              </div>
+              {hasAnySelected && (
+                <div
+                  role="region"
+                  aria-label={`${group.label} selection actions`}
+                  className="flex flex-wrap items-center justify-end gap-3 text-xs"
+                >
+                  <span className="font-medium text-slate-700">
+                    {selectedInGroup} tab{selectedInGroup === 1 ? '' : 's'} selected
+                  </span>
                   <button
                     type="button"
                     onClick={() => {
-                      onSelectGroup(groupIds);
+                      onDeleteIds(selectedIdsInGroup);
                     }}
-                    className="text-slate-600 hover:text-slate-900 hover:underline"
+                    className="rounded-md bg-red-600 px-2.5 py-0.5 text-xs font-medium text-white shadow-sm hover:bg-red-700"
                   >
-                    Select all
+                    Delete
                   </button>
-                )}
-                {hasAnySelected && (
                   <button
                     type="button"
                     onClick={() => {
                       onClearGroup(groupIds);
                     }}
-                    className="text-slate-600 hover:text-slate-900 hover:underline"
+                    className="text-slate-500 hover:text-slate-700 hover:underline"
                   >
-                    Clear all
+                    Clear
                   </button>
-                )}
-              </div>
+                </div>
+              )}
             </header>
             <ul className="divide-y divide-slate-100">
               {group.tabs.map((tab) => (
