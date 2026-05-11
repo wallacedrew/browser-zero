@@ -29,6 +29,10 @@ export class ChromeTabsAdapter implements TabsPort {
     if (tabIds.length === 0) return;
     await chrome.tabs.remove([...tabIds]);
   }
+
+  async openNewTab(): Promise<void> {
+    await chrome.tabs.create({});
+  }
 }
 
 async function queryTabGroupsSafe(): Promise<readonly chrome.tabGroups.TabGroup[]> {

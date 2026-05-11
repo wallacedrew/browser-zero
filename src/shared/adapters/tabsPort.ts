@@ -5,4 +5,5 @@ export interface TabsPort {
   focus(tabId: number, windowId: number): Promise<void>;
   close(tabId: number): Promise<void>;
   closeMany(tabIds: readonly number[]): Promise<void>;
+  openNewTab(): Promise<void>;
 }
