@@ -24,8 +24,7 @@ export function App({ tabsPort, now: nowOverride }: Props) {
   const visibleTabs = useMemo(() => filterTabs(tabs, search), [tabs, search]);
   const summaryTabs = isFiltering ? visibleTabs : tabs;
   const groupedCount = summaryTabs.filter((tab) => tab.group !== null).length;
-  const distinctGroups = new Set(summaryTabs.flatMap((tab) => (tab.group ? [tab.group.id] : [])))
-    .size;
+  const ungroupedCount = summaryTabs.length - groupedCount;
 
   const refresh = useCallback(async () => {
     setNow(nowOverride ?? Date.now());
@@ -152,9 +151,9 @@ export function App({ tabsPort, now: nowOverride }: Props) {
           <p className="text-sm text-slate-500">
             {isFiltering
               ? `${visibleTabs.length} of ${tabs.length} tab${tabs.length === 1 ? '' : 's'} match`
-              : `${tabs.length} tab${tabs.length === 1 ? '' : 's'} across all windows`}
-            {groupedCount > 0 &&
-              ` · ${groupedCount} in ${distinctGroups} group${distinctGroups === 1 ? '' : 's'}`}
+              : `${tabs.length} tab${tabs.length === 1 ? '' : 's'}`}
+            {groupedCount > 0 && ` · ${groupedCount} in groups`}
+            {ungroupedCount > 0 && ` · ${ungroupedCount} ungrouped`}
           </p>
         </div>
         <div className="flex items-center gap-3">
