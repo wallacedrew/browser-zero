@@ -1,1 +1,17 @@
 @import 'tailwindcss';
+
+/*
+ * OS UI font stack so browser-zero matches the chrome around it (literally —
+ * Chrome's own surfaces use the system UI font). Tailwind v4: override the
+ * `--font-sans` theme token so every `font-sans` utility picks it up.
+ */
+@theme {
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Helvetica Neue', Arial, sans-serif;
+}
+
+html,
+body {
+  font-family: var(--font-sans);
+}
