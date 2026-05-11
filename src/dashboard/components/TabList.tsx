@@ -1,6 +1,7 @@
 import { useState, type DragEvent } from 'react';
 import type { Tab } from '../../shared/lib/types';
 import { groupTabs, type GroupBy, type TabGroup } from '../../shared/lib/grouping';
+import { SectionActionPanel } from './SectionActionPanel';
 import { TabRow } from './TabRow';
 
 interface Props {
@@ -136,35 +137,13 @@ export function TabList({
                   )}
                 </div>
               </div>
-              {hasAnySelected && (
-                <div
-                  role="region"
-                  aria-label={`${group.label} selection actions`}
-                  className="flex flex-wrap items-center justify-end gap-3 text-sm"
-                >
-                  <span className="font-medium text-slate-700">
-                    {selectedInGroup} tab{selectedInGroup === 1 ? '' : 's'} selected
-                  </span>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      onDeleteIds(selectedIdsInGroup);
-                    }}
-                    className="rounded-md bg-red-600 px-2.5 py-0.5 text-sm font-medium text-white shadow-sm hover:bg-red-700"
-                  >
-                    Close?
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      onClearGroup(groupIds);
-                    }}
-                    className="text-slate-500 hover:text-slate-700 hover:underline"
-                  >
-                    Keep
-                  </button>
-                </div>
-              )}
+              <SectionActionPanel
+                groupLabel={group.label}
+                groupIds={groupIds}
+                selectedIds={selectedIdsInGroup}
+                onClearGroup={onClearGroup}
+                onDeleteIds={onDeleteIds}
+              />
             </header>
             <ul className="divide-y divide-slate-100">
               {group.tabs.map((tab) => (
