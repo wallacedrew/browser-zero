@@ -66,3 +66,37 @@ describe('groupTabs by domain', () => {
     expect(result.map((group) => group.label)).toEqual(['amazon.com', 'github.com', 'youtube.com']);
   });
 });
+
+describe('groupTabs by category', () => {
+  it('returns an empty array when given no tabs', () => {
+    expect(groupTabs([], 'category')).toEqual([]);
+  });
+
+  it('groups tabs by intent and sorts groups by count descending', () => {
+    const result = groupTabs(
+      [
+        makeTab({ id: 1, intent: 'Entertainment' }),
+        makeTab({ id: 2, intent: 'Dev' }),
+        makeTab({ id: 3, intent: 'Dev' }),
+        makeTab({ id: 4, intent: 'Entertainment' }),
+        makeTab({ id: 5, intent: 'Dev' }),
+      ],
+      'category',
+    );
+    expect(result.map((group) => group.label)).toEqual(['Dev', 'Entertainment']);
+    expect(result[0]?.tabs).toHaveLength(3);
+    expect(result[1]?.tabs).toHaveLength(2);
+  });
+
+  it('breaks count ties alphabetically by category ascending', () => {
+    const result = groupTabs(
+      [
+        makeTab({ id: 1, intent: 'Entertainment' }),
+        makeTab({ id: 2, intent: 'Dev' }),
+        makeTab({ id: 3, intent: 'Comms' }),
+      ],
+      'category',
+    );
+    expect(result.map((group) => group.label)).toEqual(['Comms', 'Dev', 'Entertainment']);
+  });
+});

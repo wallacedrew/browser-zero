@@ -1,6 +1,6 @@
 import type { Tab } from './types';
 
-export type GroupBy = 'window' | 'domain';
+export type GroupBy = 'window' | 'domain' | 'category';
 
 export interface TabGroup {
   readonly key: string;
@@ -9,7 +9,14 @@ export interface TabGroup {
 }
 
 export function groupTabs(tabs: readonly Tab[], by: GroupBy): TabGroup[] {
-  return by === 'window' ? groupByWindow(tabs) : groupByDomain(tabs);
+  switch (by) {
+    case 'window':
+      return groupByWindow(tabs);
+    case 'domain':
+      return groupByDomain(tabs);
+    case 'category':
+      return groupByCategory(tabs);
+  }
 }
 
 function groupByWindow(tabs: readonly Tab[]): TabGroup[] {
@@ -45,5 +52,25 @@ function groupByDomain(tabs: readonly Tab[]): TabGroup[] {
       key: `domain-${domain}`,
       label: domain,
       tabs: domainTabs,
+    }));
+}
+
+function groupByCategory(tabs: readonly Tab[]): TabGroup[] {
+  const byCategory = new Map<string, Tab[]>();
+  for (const tab of tabs) {
+    const existing = byCategory.get(tab.intent);
+    if (existing) existing.push(tab);
+    else byCategory.set(tab.intent, [tab]);
+  }
+  return [...byCategory.entries()]
+    .sort(([leftCategory, leftTabs], [rightCategory, rightTabs]) => {
+      const countDelta = rightTabs.length - leftTabs.length;
+      if (countDelta !== 0) return countDelta;
+      return leftCategory.localeCompare(rightCategory);
+    })
+    .map(([category, categoryTabs]) => ({
+      key: `category-${category}`,
+      label: category,
+      tabs: categoryTabs,
     }));
 }
