@@ -2,13 +2,25 @@
   "manifest_version": 3,
   "name": "browser-zero",
   "version": "0.0.1",
-  "description": "Read-only dashboard of every Chrome tab across every window.",
+  "description": "Every open tab across every Chrome window on one screen — search, group, drag between windows, bulk close.",
   "permissions": ["tabs", "tabGroups"],
+  "icons": {
+    "16": "src/dashboard/assets/icon-16.png",
+    "32": "src/dashboard/assets/icon-32.png",
+    "48": "src/dashboard/assets/icon-48.png",
+    "128": "src/dashboard/assets/icon-128.png"
+  },
   "background": {
     "service_worker": "src/background/serviceWorker.ts",
     "type": "module"
   },
   "action": {
-    "default_title": "Open browser-zero dashboard"
+    "default_title": "Open browser-zero dashboard",
+    "default_icon": {
+      "16": "src/dashboard/assets/icon-16.png",
+      "32": "src/dashboard/assets/icon-32.png",
+      "48": "src/dashboard/assets/icon-48.png",
+      "128": "src/dashboard/assets/icon-128.png"
+    }
   }
 }
