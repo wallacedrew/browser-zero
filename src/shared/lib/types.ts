@@ -1,5 +1,3 @@
-import type { Intent } from './intents';
-
 export interface TabGroupInfo {
   readonly id: number;
   readonly title: string;
@@ -12,7 +10,6 @@ export interface Tab {
   readonly title: string;
   readonly url: string;
   readonly domain: string;
-  readonly intent: Intent;
   readonly lastAccessed: number;
   readonly group: TabGroupInfo | null;
 }

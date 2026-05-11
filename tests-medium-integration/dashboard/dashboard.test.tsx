@@ -16,7 +16,6 @@ const sampleTabs: readonly Tab[] = [
     title: 'pull/123',
     url: 'https://github.com/me/repo/pull/123',
     domain: 'github.com',
-    intent: 'Dev',
     lastAccessed: fiveMinAgo,
     group: null,
   },
@@ -26,7 +25,6 @@ const sampleTabs: readonly Tab[] = [
     title: 'Inbox',
     url: 'https://mail.google.com/mail/u/0',
     domain: 'mail.google.com',
-    intent: 'Comms',
     lastAccessed: oneHourAgo,
     group: null,
   },
@@ -36,14 +34,13 @@ const sampleTabs: readonly Tab[] = [
     title: 'cats',
     url: 'https://www.youtube.com/watch?v=abc',
     domain: 'youtube.com',
-    intent: 'Entertainment',
     lastAccessed: fiveMinAgo,
     group: null,
   },
 ];
 
 describe('dashboard', () => {
-  it('lists every tab grouped by window with title, domain, intent, and relative time', async () => {
+  it('lists every tab grouped by window with title, domain, and relative time', async () => {
     const port = new FakeTabsPort(sampleTabs);
 
     render(<App tabsPort={port} now={now} />);
@@ -55,17 +52,14 @@ describe('dashboard', () => {
 
     expect(within(window1).getByRole('link', { name: 'pull/123' })).toBeInTheDocument();
     expect(within(window1).getByText('github.com')).toBeInTheDocument();
-    expect(within(window1).getByText('Dev')).toBeInTheDocument();
     expect(within(window1).getByText('5 min ago')).toBeInTheDocument();
 
     expect(within(window1).getByRole('link', { name: 'Inbox' })).toBeInTheDocument();
     expect(within(window1).getByText('mail.google.com')).toBeInTheDocument();
-    expect(within(window1).getByText('Comms')).toBeInTheDocument();
     expect(within(window1).getByText('1 hr ago')).toBeInTheDocument();
 
     expect(within(window2).getByRole('link', { name: 'cats' })).toBeInTheDocument();
     expect(within(window2).getByText('youtube.com')).toBeInTheDocument();
-    expect(within(window2).getByText('Entertainment')).toBeInTheDocument();
   });
 
   it('focuses the tab when its title link is clicked', async () => {
@@ -94,7 +88,6 @@ describe('dashboard', () => {
         title: 'new tab',
         url: 'https://example.com/',
         domain: 'example.com',
-        intent: 'Other',
         lastAccessed: now,
         group: null,
       },
@@ -150,7 +143,6 @@ describe('dashboard', () => {
         title: 'spec',
         url: 'https://github.com/me/repo/issues/9',
         domain: 'github.com',
-        intent: 'Dev',
         lastAccessed: fiveMinAgo,
         group: { id: 1, title: 'Q3 planning', color: 'blue' },
       },
@@ -160,7 +152,6 @@ describe('dashboard', () => {
         title: 'review',
         url: 'https://github.com/me/repo/pull/10',
         domain: 'github.com',
-        intent: 'Dev',
         lastAccessed: fiveMinAgo,
         group: { id: 1, title: 'Q3 planning', color: 'blue' },
       },
@@ -170,7 +161,6 @@ describe('dashboard', () => {
         title: 'random',
         url: 'https://example.com/',
         domain: 'example.com',
-        intent: 'Other',
         lastAccessed: fiveMinAgo,
         group: null,
       },

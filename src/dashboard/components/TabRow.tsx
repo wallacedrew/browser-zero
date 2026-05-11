@@ -1,5 +1,4 @@
 import type { Tab } from '../../shared/lib/types';
-import { IntentBadge } from './IntentBadge';
 import { GroupChip } from './GroupChip';
 import { formatRelativeTime } from '../../shared/lib/formatRelativeTime';
 
@@ -13,7 +12,6 @@ interface Props {
 export function TabRow({ tab, now, onFocus, onClose }: Props) {
   return (
     <li className="flex items-center gap-3 px-3 py-2 hover:bg-slate-50">
-      <IntentBadge intent={tab.intent} />
       {tab.group && <GroupChip group={tab.group} />}
       <a
         href={tab.url}

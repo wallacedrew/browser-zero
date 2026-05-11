@@ -1,7 +1,6 @@
 import type { Tab, TabGroupInfo } from '../lib/types';
 import type { TabsPort } from './tabsPort';
 import { extractDomain } from '../lib/extractDomain';
-import { inferIntent } from '../lib/intents';
 
 export class ChromeTabsAdapter implements TabsPort {
   async queryAll(): Promise<readonly Tab[]> {
@@ -52,7 +51,6 @@ function toDomainTab(
     title: chromeTab.title ?? '(no title)',
     url,
     domain: extractDomain(url),
-    intent: inferIntent(url),
     lastAccessed: chromeTab.lastAccessed ?? Date.now(),
     group: resolveGroup(chromeTab.groupId, groupsById),
   };
