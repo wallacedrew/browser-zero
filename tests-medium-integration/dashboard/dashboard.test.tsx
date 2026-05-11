@@ -1,6 +1,23 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
-import { render, screen, within } from '@testing-library/react';
+import { render, screen, within, fireEvent, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+
+/**
+ * jsdom's DataTransfer is fiddly; this minimal stand-in shares state across
+ * dragStart / dragOver / drop synthesised via fireEvent so the React handlers
+ * see consistent setData / getData semantics.
+ */
+const createDataTransfer = () => {
+  const store: Record<string, string> = {};
+  return {
+    setData: (key: string, value: string) => {
+      store[key] = value;
+    },
+    getData: (key: string) => store[key] ?? '',
+    dropEffect: 'none' as DataTransfer['dropEffect'],
+    effectAllowed: 'all' as DataTransfer['effectAllowed'],
+  } as unknown as DataTransfer;
+};
 import { App } from '../../src/dashboard/components/App';
 import { FakeTabsPort } from './_support/FakeTabsPort';
 import type { Tab } from '../../src/shared/lib/types';
@@ -452,5 +469,131 @@ describe('dashboard', () => {
     expect(port.closeManyCalls).toEqual([]);
     expect(screen.getByRole('link', { name: 'pull/123' })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Inbox' })).toBeInTheDocument();
+  });
+
+  it('moves a tab to another window when dragged onto a different window section', async () => {
+    const port = new FakeTabsPort(sampleTabs);
+
+    render(<App tabsPort={port} now={now} />);
+    await screen.findByRole('link', { name: 'pull/123' });
+
+    const sourceRow = screen.getByRole('link', { name: 'pull/123' }).closest('li');
+    const targetSection = screen.getByRole('region', { name: /^window 2$/i });
+    if (!sourceRow) throw new Error('expected to find the source row');
+
+    const dataTransfer = createDataTransfer();
+    fireEvent.dragStart(sourceRow, { dataTransfer });
+    fireEvent.dragOver(targetSection, { dataTransfer });
+    fireEvent.drop(targetSection, { dataTransfer });
+
+    await waitFor(() => {
+      expect(port.moveToWindowCalls).toEqual([{ tabId: 1, windowId: 200 }]);
+    });
+    expect(port.assignToGroupCalls).toEqual([]);
+    expect(port.removeFromGroupCalls).toEqual([]);
+  });
+
+  it('assigns a tab to a Chrome tab group when dropped on that group in By tab group view', async () => {
+    const groupedSample: readonly Tab[] = [
+      {
+        id: 10,
+        windowId: 100,
+        title: 'spec',
+        url: 'https://github.com/me/repo/issues/9',
+        domain: 'github.com',
+        lastAccessed: fiveMinAgo,
+        group: { id: 1, title: 'Q3 planning', color: 'blue' },
+      },
+      {
+        id: 12,
+        windowId: 100,
+        title: 'random',
+        url: 'https://example.com/',
+        domain: 'example.com',
+        lastAccessed: fiveMinAgo,
+        group: null,
+      },
+    ];
+    const port = new FakeTabsPort(groupedSample);
+    const user = userEvent.setup();
+
+    render(<App tabsPort={port} now={now} />);
+    await screen.findByRole('link', { name: 'spec' });
+
+    await user.click(screen.getByRole('radio', { name: /by tab group/i }));
+
+    const sourceRow = screen.getByRole('link', { name: 'random' }).closest('li');
+    const targetSection = screen.getByRole('region', { name: 'Q3 planning' });
+    if (!sourceRow) throw new Error('expected to find the source row');
+
+    const dataTransfer = createDataTransfer();
+    fireEvent.dragStart(sourceRow, { dataTransfer });
+    fireEvent.dragOver(targetSection, { dataTransfer });
+    fireEvent.drop(targetSection, { dataTransfer });
+
+    await waitFor(() => {
+      expect(port.assignToGroupCalls).toEqual([{ tabId: 12, groupId: 1 }]);
+    });
+    expect(port.moveToWindowCalls).toEqual([]);
+    expect(port.removeFromGroupCalls).toEqual([]);
+  });
+
+  it('removes a tab from its group when dropped on the Ungrouped section', async () => {
+    const groupedSample: readonly Tab[] = [
+      {
+        id: 10,
+        windowId: 100,
+        title: 'spec',
+        url: 'https://github.com/me/repo/issues/9',
+        domain: 'github.com',
+        lastAccessed: fiveMinAgo,
+        group: { id: 1, title: 'Q3 planning', color: 'blue' },
+      },
+      {
+        id: 12,
+        windowId: 100,
+        title: 'random',
+        url: 'https://example.com/',
+        domain: 'example.com',
+        lastAccessed: fiveMinAgo,
+        group: null,
+      },
+    ];
+    const port = new FakeTabsPort(groupedSample);
+    const user = userEvent.setup();
+
+    render(<App tabsPort={port} now={now} />);
+    await screen.findByRole('link', { name: 'spec' });
+
+    await user.click(screen.getByRole('radio', { name: /by tab group/i }));
+
+    const sourceRow = screen.getByRole('link', { name: 'spec' }).closest('li');
+    const targetSection = screen.getByRole('region', { name: 'Ungrouped' });
+    if (!sourceRow) throw new Error('expected to find the source row');
+
+    const dataTransfer = createDataTransfer();
+    fireEvent.dragStart(sourceRow, { dataTransfer });
+    fireEvent.dragOver(targetSection, { dataTransfer });
+    fireEvent.drop(targetSection, { dataTransfer });
+
+    await waitFor(() => {
+      expect(port.removeFromGroupCalls).toEqual([10]);
+    });
+    expect(port.assignToGroupCalls).toEqual([]);
+    expect(port.moveToWindowCalls).toEqual([]);
+  });
+
+  it('disables drag on rows when in By domain in url view (read-only)', async () => {
+    const port = new FakeTabsPort(sampleTabs);
+    const user = userEvent.setup();
+
+    render(<App tabsPort={port} now={now} />);
+    await screen.findByRole('link', { name: 'pull/123' });
+
+    await user.click(screen.getByRole('radio', { name: /by domain in url/i }));
+
+    const row = screen.getByRole('link', { name: 'pull/123' }).closest('li');
+    if (!row) throw new Error('expected to find the row');
+    expect(row).toHaveAttribute('draggable', 'false');
   });
 });

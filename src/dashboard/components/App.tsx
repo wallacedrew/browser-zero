@@ -128,6 +128,32 @@ export function App({ tabsPort, now: nowOverride }: Props) {
     });
   }, []);
 
+  const handleDropOnWindow = useCallback(
+    async (tabId: number, targetWindowId: number) => {
+      const tab = tabs.find((each) => each.id === tabId);
+      if (!tab || tab.windowId === targetWindowId) return;
+      await tabsPort.moveToWindow(tabId, targetWindowId);
+      await refresh();
+    },
+    [tabs, tabsPort, refresh],
+  );
+
+  const handleDropOnTabGroup = useCallback(
+    async (tabId: number, targetGroupId: number | null) => {
+      const tab = tabs.find((each) => each.id === tabId);
+      if (!tab) return;
+      const currentGroupId = tab.group?.id ?? null;
+      if (currentGroupId === targetGroupId) return;
+      if (targetGroupId === null) {
+        await tabsPort.removeFromGroup(tabId);
+      } else {
+        await tabsPort.assignToGroup(tabId, targetGroupId);
+      }
+      await refresh();
+    },
+    [tabs, tabsPort, refresh],
+  );
+
   const handleDeleteIds = useCallback(
     (idsToDelete: readonly number[]) => {
       if (idsToDelete.length === 0) return;
@@ -196,6 +222,8 @@ export function App({ tabsPort, now: nowOverride }: Props) {
           onArmDelete={handleArmDelete}
           onDisarm={handleDisarm}
           onClose={handleClose}
+          onDropOnWindow={handleDropOnWindow}
+          onDropOnTabGroup={handleDropOnTabGroup}
         />
       ) : (
         <p className="text-slate-400">Loading…</p>

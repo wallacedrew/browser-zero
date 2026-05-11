@@ -29,6 +29,19 @@ export class ChromeTabsAdapter implements TabsPort {
   async openNewTab(): Promise<void> {
     await chrome.tabs.create({});
   }
+
+  async moveToWindow(tabId: number, windowId: number): Promise<void> {
+    // index: -1 appends to the end of the target window's tab strip.
+    await chrome.tabs.move(tabId, { windowId, index: -1 });
+  }
+
+  async assignToGroup(tabId: number, groupId: number): Promise<void> {
+    await chrome.tabs.group({ groupId, tabIds: [tabId] });
+  }
+
+  async removeFromGroup(tabId: number): Promise<void> {
+    await chrome.tabs.ungroup(tabId);
+  }
 }
 
 async function queryTabGroupsSafe(): Promise<readonly chrome.tabGroups.TabGroup[]> {

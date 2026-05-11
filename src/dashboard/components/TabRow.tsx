@@ -7,6 +7,7 @@ interface Props {
   now: number;
   isSelected: boolean;
   armedForDelete: boolean;
+  isDraggable: boolean;
   onSelectionToggle: (tabId: number) => void;
   onFocus: (tabId: number, windowId: number) => void;
   onArmDelete: (tabId: number) => void;
@@ -19,6 +20,7 @@ export function TabRow({
   now,
   isSelected,
   armedForDelete,
+  isDraggable,
   onSelectionToggle,
   onFocus,
   onArmDelete,
@@ -26,10 +28,24 @@ export function TabRow({
   onClose,
 }: Props) {
   return (
-    <li className="flex items-center gap-3 px-3 py-2 hover:bg-slate-50">
+    <li
+      draggable={isDraggable}
+      onDragStart={
+        isDraggable
+          ? (event) => {
+              event.dataTransfer.setData('text/plain', String(tab.id));
+              event.dataTransfer.effectAllowed = 'move';
+            }
+          : undefined
+      }
+      className={`flex items-center gap-3 px-3 py-2 hover:bg-slate-50 ${
+        isDraggable ? 'cursor-grab active:cursor-grabbing' : ''
+      }`}
+    >
       {tab.group && <GroupChip group={tab.group} />}
       <a
         href={tab.url}
+        draggable={false}
         onClick={(event) => {
           event.preventDefault();
           onFocus(tab.id, tab.windowId);

@@ -4,6 +4,9 @@ import type { TabsPort } from '../../../src/shared/adapters/tabsPort';
 export class FakeTabsPort implements TabsPort {
   readonly focusCalls: Array<{ tabId: number; windowId: number }> = [];
   readonly closeManyCalls: number[][] = [];
+  readonly moveToWindowCalls: Array<{ tabId: number; windowId: number }> = [];
+  readonly assignToGroupCalls: Array<{ tabId: number; groupId: number }> = [];
+  readonly removeFromGroupCalls: number[] = [];
   newTabCalls = 0;
   private tabs: readonly Tab[];
 
@@ -33,6 +36,21 @@ export class FakeTabsPort implements TabsPort {
 
   openNewTab(): Promise<void> {
     this.newTabCalls += 1;
+    return Promise.resolve();
+  }
+
+  moveToWindow(tabId: number, windowId: number): Promise<void> {
+    this.moveToWindowCalls.push({ tabId, windowId });
+    return Promise.resolve();
+  }
+
+  assignToGroup(tabId: number, groupId: number): Promise<void> {
+    this.assignToGroupCalls.push({ tabId, groupId });
+    return Promise.resolve();
+  }
+
+  removeFromGroup(tabId: number): Promise<void> {
+    this.removeFromGroupCalls.push(tabId);
     return Promise.resolve();
   }
 }
