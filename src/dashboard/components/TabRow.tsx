@@ -5,13 +5,24 @@ import { formatRelativeTime } from '../../shared/lib/formatRelativeTime';
 interface Props {
   tab: Tab;
   now: number;
+  isSelected: boolean;
+  onSelectionToggle: (tabId: number) => void;
   onFocus: (tabId: number, windowId: number) => void;
   onClose: (tabId: number) => void;
 }
 
-export function TabRow({ tab, now, onFocus, onClose }: Props) {
+export function TabRow({ tab, now, isSelected, onSelectionToggle, onFocus, onClose }: Props) {
   return (
     <li className="flex items-center gap-3 px-3 py-2 hover:bg-slate-50">
+      <input
+        type="checkbox"
+        aria-label={`Select ${tab.title}`}
+        checked={isSelected}
+        onChange={() => {
+          onSelectionToggle(tab.id);
+        }}
+        className="h-4 w-4 shrink-0 rounded border-slate-300 text-slate-900 focus:ring-slate-500"
+      />
       {tab.group && <GroupChip group={tab.group} />}
       <a
         href={tab.url}

@@ -213,4 +213,47 @@ describe('dashboard', () => {
     expect(screen.getByRole('link', { name: 'Inbox' })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'cats' })).toBeInTheDocument();
   });
+
+  it('bulk-deletes selected tabs when the user checks rows and clicks Delete selected', async () => {
+    const port = new FakeTabsPort(sampleTabs);
+    const user = userEvent.setup();
+
+    render(<App tabsPort={port} now={now} />);
+    await screen.findByRole('link', { name: 'pull/123' });
+
+    // Selection bar is hidden until at least one row is checked.
+    expect(screen.queryByRole('region', { name: /selection actions/i })).not.toBeInTheDocument();
+
+    await user.click(screen.getByRole('checkbox', { name: 'Select pull/123' }));
+    await user.click(screen.getByRole('checkbox', { name: 'Select cats' }));
+
+    const selectionBar = screen.getByRole('region', { name: /selection actions/i });
+    expect(within(selectionBar).getByText(/2 tabs selected/i)).toBeInTheDocument();
+
+    await user.click(within(selectionBar).getByRole('button', { name: /delete selected/i }));
+
+    expect(port.closeManyCalls).toEqual([[1, 3]]);
+    expect(screen.queryByRole('link', { name: 'pull/123' })).not.toBeInTheDocument();
+    expect(screen.queryByRole('link', { name: 'cats' })).not.toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Inbox' })).toBeInTheDocument();
+    expect(screen.queryByRole('region', { name: /selection actions/i })).not.toBeInTheDocument();
+  });
+
+  it('clears a tab from the selection when its × button is clicked', async () => {
+    const port = new FakeTabsPort(sampleTabs);
+    const user = userEvent.setup();
+
+    render(<App tabsPort={port} now={now} />);
+    await screen.findByRole('link', { name: 'pull/123' });
+
+    await user.click(screen.getByRole('checkbox', { name: 'Select pull/123' }));
+    await user.click(screen.getByRole('checkbox', { name: 'Select Inbox' }));
+
+    expect(screen.getByText(/2 tabs selected/i)).toBeInTheDocument();
+
+    await user.click(screen.getByRole('button', { name: 'Close pull/123' }));
+
+    expect(port.closeCalls).toEqual([1]);
+    expect(screen.getByText(/1 tab selected/i)).toBeInTheDocument();
+  });
 });

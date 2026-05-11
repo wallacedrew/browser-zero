@@ -6,11 +6,21 @@ interface Props {
   tabs: readonly Tab[];
   now: number;
   groupBy: GroupBy;
+  selected: ReadonlySet<number>;
+  onSelectionToggle: (tabId: number) => void;
   onFocus: (tabId: number, windowId: number) => void;
   onClose: (tabId: number) => void;
 }
 
-export function TabList({ tabs, now, groupBy, onFocus, onClose }: Props) {
+export function TabList({
+  tabs,
+  now,
+  groupBy,
+  selected,
+  onSelectionToggle,
+  onFocus,
+  onClose,
+}: Props) {
   const groups = groupTabs(tabs, groupBy);
 
   if (groups.length === 0) {
@@ -33,7 +43,15 @@ export function TabList({ tabs, now, groupBy, onFocus, onClose }: Props) {
           </header>
           <ul className="divide-y divide-slate-100">
             {group.tabs.map((tab) => (
-              <TabRow key={tab.id} tab={tab} now={now} onFocus={onFocus} onClose={onClose} />
+              <TabRow
+                key={tab.id}
+                tab={tab}
+                now={now}
+                isSelected={selected.has(tab.id)}
+                onSelectionToggle={onSelectionToggle}
+                onFocus={onFocus}
+                onClose={onClose}
+              />
             ))}
           </ul>
         </section>

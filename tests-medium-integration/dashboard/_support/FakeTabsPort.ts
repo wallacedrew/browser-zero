@@ -4,6 +4,7 @@ import type { TabsPort } from '../../../src/shared/adapters/tabsPort';
 export class FakeTabsPort implements TabsPort {
   readonly focusCalls: Array<{ tabId: number; windowId: number }> = [];
   readonly closeCalls: number[] = [];
+  readonly closeManyCalls: number[][] = [];
   private tabs: readonly Tab[];
 
   constructor(initialTabs: readonly Tab[]) {
@@ -26,6 +27,13 @@ export class FakeTabsPort implements TabsPort {
   close(tabId: number): Promise<void> {
     this.closeCalls.push(tabId);
     this.tabs = this.tabs.filter((tab) => tab.id !== tabId);
+    return Promise.resolve();
+  }
+
+  closeMany(tabIds: readonly number[]): Promise<void> {
+    this.closeManyCalls.push([...tabIds]);
+    const toClose = new Set(tabIds);
+    this.tabs = this.tabs.filter((tab) => !toClose.has(tab.id));
     return Promise.resolve();
   }
 }

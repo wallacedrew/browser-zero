@@ -3,6 +3,7 @@ import type { Tab } from '../../shared/lib/types';
 import type { TabsPort } from '../../shared/adapters/tabsPort';
 import type { GroupBy } from '../../shared/lib/grouping';
 import { filterTabs } from '../../shared/lib/filterTabs';
+import { SelectionBar } from './SelectionBar';
 import { TabList } from './TabList';
 import { ViewToggle } from './ViewToggle';
 
@@ -17,11 +18,13 @@ export function App({ tabsPort, now: nowOverride }: Props) {
   const [now, setNow] = useState<number>(() => nowOverride ?? Date.now());
   const [groupBy, setGroupBy] = useState<GroupBy>('window');
   const [search, setSearch] = useState('');
+  const [selected, setSelected] = useState<ReadonlySet<number>>(() => new Set());
 
   const refresh = useCallback(async () => {
     setNow(nowOverride ?? Date.now());
     const next = await tabsPort.queryAll();
     setTabs(next);
+    setSelected(new Set());
     setLoaded(true);
   }, [tabsPort, nowOverride]);
 
@@ -42,10 +45,37 @@ export function App({ tabsPort, now: nowOverride }: Props) {
   const handleClose = useCallback(
     (tabId: number) => {
       setTabs((prev) => prev.filter((tab) => tab.id !== tabId));
+      setSelected((prev) => {
+        if (!prev.has(tabId)) return prev;
+        const next = new Set(prev);
+        next.delete(tabId);
+        return next;
+      });
       void tabsPort.close(tabId);
     },
     [tabsPort],
   );
+
+  const handleSelectionToggle = useCallback((tabId: number) => {
+    setSelected((prev) => {
+      const next = new Set(prev);
+      if (next.has(tabId)) next.delete(tabId);
+      else next.add(tabId);
+      return next;
+    });
+  }, []);
+
+  const handleClearSelection = useCallback(() => {
+    setSelected(new Set());
+  }, []);
+
+  const handleDeleteSelected = useCallback(() => {
+    if (selected.size === 0) return;
+    const ids = [...selected];
+    setTabs((prev) => prev.filter((tab) => !selected.has(tab.id)));
+    setSelected(new Set());
+    void tabsPort.closeMany(ids);
+  }, [selected, tabsPort]);
 
   const isFiltering = search.trim().length > 0;
   const visibleTabs = useMemo(() => filterTabs(tabs, search), [tabs, search]);
@@ -86,13 +116,22 @@ export function App({ tabsPort, now: nowOverride }: Props) {
         onChange={(event) => {
           setSearch(event.target.value);
         }}
-        className="mb-6 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm placeholder:text-slate-400 focus:border-slate-500 focus:outline-none focus:ring-1 focus:ring-slate-500"
+        className="mb-4 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm placeholder:text-slate-400 focus:border-slate-500 focus:outline-none focus:ring-1 focus:ring-slate-500"
       />
+      {selected.size > 0 && (
+        <SelectionBar
+          count={selected.size}
+          onDelete={handleDeleteSelected}
+          onClear={handleClearSelection}
+        />
+      )}
       {loaded ? (
         <TabList
           tabs={visibleTabs}
           now={now}
           groupBy={groupBy}
+          selected={selected}
+          onSelectionToggle={handleSelectionToggle}
           onFocus={handleFocus}
           onClose={handleClose}
         />
