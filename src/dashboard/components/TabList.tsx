@@ -71,7 +71,7 @@ export function TabList({
   };
 
   return (
-    <div className="space-y-6">
+    <div className="divide-y divide-slate-200">
       {groups.map((group) => {
         const groupIds = group.tabs.map((tab) => tab.id);
         const selectedIdsInGroup = group.tabs.flatMap((tab) =>
@@ -109,9 +109,7 @@ export function TabList({
                   }
                 : undefined
             }
-            className={`rounded-lg border bg-white p-3 shadow-sm transition-colors ${
-              isDragOver ? 'border-blue-400 ring-2 ring-blue-200' : 'border-slate-200'
-            }`}
+            className={`py-3 transition-colors ${isDragOver ? 'bg-blue-50' : ''}`}
           >
             <header className="mb-2 space-y-1 px-3">
               <div className="flex items-baseline justify-between gap-3">

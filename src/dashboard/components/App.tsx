@@ -201,7 +201,7 @@ export function App({ tabsPort, now: nowOverride }: Props) {
   );
 
   return (
-    <main className="min-h-screen bg-slate-50 p-8">
+    <main className="min-h-screen bg-white p-8">
       <header className="mb-4 flex items-center justify-between gap-4">
         <div>
           <h1 className="text-3xl font-semibold text-slate-900">browser-zero</h1>
