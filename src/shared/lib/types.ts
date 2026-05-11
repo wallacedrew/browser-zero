@@ -10,6 +10,7 @@ export interface Tab {
   readonly title: string;
   readonly url: string;
   readonly domain: string;
+  readonly favIconUrl: string | null;
   readonly lastAccessed: number;
   readonly group: TabGroupInfo | null;
 }

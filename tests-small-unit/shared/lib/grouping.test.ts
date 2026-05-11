@@ -8,6 +8,7 @@ const makeTab = (overrides: Partial<Tab>): Tab => ({
   title: 't',
   url: 'https://example.com',
   domain: 'example.com',
+  favIconUrl: null,
   lastAccessed: 0,
   group: null,
   ...overrides,

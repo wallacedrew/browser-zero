@@ -87,12 +87,14 @@ function toDomainTab(
   groupsById: Map<number, chrome.tabGroups.TabGroup>,
 ): Tab {
   const url = chromeTab.url ?? chromeTab.pendingUrl ?? '';
+  const rawFavIconUrl = chromeTab.favIconUrl ?? '';
   return {
     id: chromeTab.id,
     windowId: chromeTab.windowId,
     title: chromeTab.title ?? '(no title)',
     url,
     domain: extractDomain(url),
+    favIconUrl: rawFavIconUrl.length > 0 ? rawFavIconUrl : null,
     lastAccessed: chromeTab.lastAccessed ?? Date.now(),
     group: resolveGroup(chromeTab.groupId, groupsById),
   };

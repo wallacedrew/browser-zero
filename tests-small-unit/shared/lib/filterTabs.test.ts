@@ -8,6 +8,7 @@ const makeTab = (overrides: Partial<Tab>): Tab => ({
   title: 'GitHub Pull Request',
   url: 'https://github.com/me/repo/pull/123',
   domain: 'github.com',
+  favIconUrl: null,
   lastAccessed: 0,
   group: null,
   ...overrides,
