@@ -10,6 +10,7 @@ interface Props {
   onSelectionToggle: (tabId: number) => void;
   onFocus: (tabId: number, windowId: number) => void;
   onArmDelete: (tabId: number) => void;
+  onDisarm: () => void;
   onClose: (tabId: number) => void;
 }
 
@@ -21,6 +22,7 @@ export function TabRow({
   onSelectionToggle,
   onFocus,
   onArmDelete,
+  onDisarm,
   onClose,
 }: Props) {
   return (
@@ -50,17 +52,28 @@ export function TabRow({
         className="h-4 w-4 shrink-0 rounded border-slate-300 text-slate-900 focus:ring-slate-500"
       />
       {armedForDelete ? (
-        <button
-          type="button"
-          aria-label={`Confirm delete ${tab.title}`}
-          data-armed-delete="true"
-          onClick={() => {
-            onClose(tab.id);
-          }}
-          className="shrink-0 rounded-full bg-red-600 px-2.5 py-0.5 text-xs font-medium text-white shadow-sm hover:bg-red-700"
-        >
-          Delete?
-        </button>
+        <>
+          <button
+            type="button"
+            aria-label={`Confirm close ${tab.title}`}
+            data-armed-delete="true"
+            onClick={() => {
+              onClose(tab.id);
+            }}
+            className="shrink-0 rounded-full bg-red-600 px-2.5 py-0.5 text-xs font-medium text-white shadow-sm hover:bg-red-700"
+          >
+            Close?
+          </button>
+          <button
+            type="button"
+            aria-label={`Keep ${tab.title}`}
+            data-armed-delete="true"
+            onClick={onDisarm}
+            className="shrink-0 rounded-full border border-slate-300 bg-white px-2.5 py-0.5 text-xs font-medium text-slate-700 shadow-sm hover:bg-slate-50"
+          >
+            Keep
+          </button>
+        </>
       ) : (
         <button
           type="button"

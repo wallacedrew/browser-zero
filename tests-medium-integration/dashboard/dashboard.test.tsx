@@ -134,14 +134,15 @@ describe('dashboard', () => {
     render(<App tabsPort={port} now={now} />);
     await screen.findByRole('link', { name: 'pull/123' });
 
-    // First click: arm — × becomes the red "Delete?" pill.
+    // First click: arm — × becomes the red "Close?" pill (plus a Keep cancel).
     await user.click(screen.getByRole('button', { name: 'Close pull/123' }));
-    expect(screen.getByRole('button', { name: 'Confirm delete pull/123' })).toHaveTextContent(
-      'Delete?',
+    expect(screen.getByRole('button', { name: 'Confirm close pull/123' })).toHaveTextContent(
+      'Close?',
     );
+    expect(screen.getByRole('button', { name: 'Keep pull/123' })).toBeInTheDocument();
 
     // Second click on the armed pill: actually close.
-    await user.click(screen.getByRole('button', { name: 'Confirm delete pull/123' }));
+    await user.click(screen.getByRole('button', { name: 'Confirm close pull/123' }));
 
     expect(port.closeManyCalls).toEqual([[1]]);
     expect(screen.queryByRole('link', { name: 'pull/123' })).not.toBeInTheDocument();
@@ -272,7 +273,7 @@ describe('dashboard', () => {
     expect(within(window1Actions).getByText(/2 tabs selected/i)).toBeInTheDocument();
 
     await user.click(screen.getByRole('button', { name: 'Close pull/123' }));
-    await user.click(screen.getByRole('button', { name: 'Confirm delete pull/123' }));
+    await user.click(screen.getByRole('button', { name: 'Confirm close pull/123' }));
 
     expect(port.closeManyCalls).toEqual([[1]]);
     expect(within(window1Actions).getByText(/1 tab selected/i)).toBeInTheDocument();
@@ -381,7 +382,7 @@ describe('dashboard', () => {
     await screen.findByRole('link', { name: 'pull/123' });
 
     await user.click(screen.getByRole('button', { name: 'Close pull/123' }));
-    await user.click(screen.getByRole('button', { name: 'Confirm delete pull/123' }));
+    await user.click(screen.getByRole('button', { name: 'Confirm close pull/123' }));
 
     expect(port.closeManyCalls).toEqual([[1]]);
     expect(port.newTabCalls).toBe(1);
@@ -395,15 +396,35 @@ describe('dashboard', () => {
     await screen.findByRole('link', { name: 'pull/123' });
 
     await user.click(screen.getByRole('button', { name: 'Close pull/123' }));
-    expect(screen.getByRole('button', { name: 'Confirm delete pull/123' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Confirm close pull/123' })).toBeInTheDocument();
 
     // Click anywhere outside the armed pill — the page heading is a fine
     // "anywhere else" target. The mousedown listener fires and disarms.
     await user.click(screen.getByRole('heading', { name: /browser-zero/i }));
 
     expect(
-      screen.queryByRole('button', { name: 'Confirm delete pull/123' }),
+      screen.queryByRole('button', { name: 'Confirm close pull/123' }),
     ).not.toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Close pull/123' })).toBeInTheDocument();
+    expect(port.closeManyCalls).toEqual([]);
+  });
+
+  it('reverts the armed × pill back to × when the Keep button is clicked', async () => {
+    const port = new FakeTabsPort(sampleTabs);
+    const user = userEvent.setup();
+
+    render(<App tabsPort={port} now={now} />);
+    await screen.findByRole('link', { name: 'pull/123' });
+
+    await user.click(screen.getByRole('button', { name: 'Close pull/123' }));
+    expect(screen.getByRole('button', { name: 'Confirm close pull/123' })).toBeInTheDocument();
+
+    await user.click(screen.getByRole('button', { name: 'Keep pull/123' }));
+
+    expect(
+      screen.queryByRole('button', { name: 'Confirm close pull/123' }),
+    ).not.toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: 'Keep pull/123' })).not.toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'Close pull/123' })).toBeInTheDocument();
     expect(port.closeManyCalls).toEqual([]);
   });

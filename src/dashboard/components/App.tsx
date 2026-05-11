@@ -82,6 +82,10 @@ export function App({ tabsPort, now: nowOverride }: Props) {
     setArmedDeleteId(tabId);
   }, []);
 
+  const handleDisarm = useCallback(() => {
+    setArmedDeleteId(null);
+  }, []);
+
   const handleClose = useCallback(
     (tabId: number) => {
       setArmedDeleteId(null);
@@ -190,6 +194,7 @@ export function App({ tabsPort, now: nowOverride }: Props) {
           onDeleteIds={handleDeleteIds}
           onFocus={handleFocus}
           onArmDelete={handleArmDelete}
+          onDisarm={handleDisarm}
           onClose={handleClose}
         />
       ) : (

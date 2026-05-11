@@ -14,6 +14,7 @@ interface Props {
   onDeleteIds: (tabIds: readonly number[]) => void;
   onFocus: (tabId: number, windowId: number) => void;
   onArmDelete: (tabId: number) => void;
+  onDisarm: () => void;
   onClose: (tabId: number) => void;
 }
 
@@ -29,6 +30,7 @@ export function TabList({
   onDeleteIds,
   onFocus,
   onArmDelete,
+  onDisarm,
   onClose,
 }: Props) {
   const groups = groupTabs(tabs, groupBy);
@@ -126,6 +128,7 @@ export function TabList({
                   onSelectionToggle={onSelectionToggle}
                   onFocus={onFocus}
                   onArmDelete={onArmDelete}
+                  onDisarm={onDisarm}
                   onClose={onClose}
                 />
               ))}
