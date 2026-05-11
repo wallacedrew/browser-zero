@@ -676,6 +676,48 @@ describe('dashboard', () => {
     expect(port.createGroupCalls).toEqual([]);
   });
 
+  it("renders each tab's favicon when the tab carries a favIconUrl", async () => {
+    const tabsWithFavicons: readonly Tab[] = [
+      {
+        id: 1,
+        windowId: 100,
+        title: 'pull/123',
+        url: 'https://github.com/me/repo/pull/123',
+        domain: 'github.com',
+        favIconUrl: 'https://github.githubassets.com/favicons/favicon.svg',
+        lastAccessed: fiveMinAgo,
+        group: null,
+      },
+      {
+        id: 2,
+        windowId: 100,
+        title: 'no favicon',
+        url: 'https://example.com',
+        domain: 'example.com',
+        favIconUrl: null,
+        lastAccessed: fiveMinAgo,
+        group: null,
+      },
+    ];
+    const port = new FakeTabsPort(tabsWithFavicons);
+
+    render(<App tabsPort={port} now={now} />);
+    await screen.findByRole('link', { name: 'pull/123' });
+
+    const githubRow = screen.getByRole('link', { name: 'pull/123' }).closest('li');
+    const exampleRow = screen.getByRole('link', { name: 'no favicon' }).closest('li');
+    if (!githubRow || !exampleRow) throw new Error('expected to find both rows');
+
+    const favicon = within(githubRow as HTMLElement).getByTestId('tab-favicon');
+    expect(favicon).toHaveAttribute('src', 'https://github.githubassets.com/favicons/favicon.svg');
+
+    // No favIconUrl → placeholder, not a broken <img>.
+    expect(
+      within(exampleRow as HTMLElement).getByTestId('favicon-placeholder'),
+    ).toBeInTheDocument();
+    expect(within(exampleRow as HTMLElement).queryByTestId('tab-favicon')).not.toBeInTheDocument();
+  });
+
   it('hides the Add to group action in By domain in url view', async () => {
     const port = new FakeTabsPort(sampleTabs);
     const user = userEvent.setup();

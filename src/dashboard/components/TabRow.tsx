@@ -1,4 +1,5 @@
 import type { Tab } from '../../shared/lib/types';
+import { Favicon } from './Favicon';
 import { GroupChip } from './GroupChip';
 import { formatRelativeTime } from '../../shared/lib/formatRelativeTime';
 
@@ -42,6 +43,7 @@ export function TabRow({
         isDraggable ? 'cursor-grab active:cursor-grabbing' : ''
       }`}
     >
+      <Favicon favIconUrl={tab.favIconUrl} />
       {tab.group && <GroupChip group={tab.group} />}
       <a
         href={tab.url}
