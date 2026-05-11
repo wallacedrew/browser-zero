@@ -6,7 +6,7 @@
 
 `browser-zero` is a Chrome Manifest V3 extension that surfaces every open tab across every Chrome window in a single dashboard, with title, URL, last-accessed time, and an inferred intent label. The first slice is read-only — listing only. Closing tabs (one-at-a-time, then bulk-by-domain) lands in later slices.
 
-Distribution shape: load `dist/` unpacked from `chrome://extensions` during development. Web Store publication is deferred.
+Distribution shape: load `dist/` unpacked from `chrome://extensions` during development. Published to the Chrome Web Store from v0.0.1 onwards — see `docs/store-listing.md` for the listing copy and permission justifications, and `docs/privacy-policy.md` (rendered at the GitHub Pages site) for the canonical privacy policy.
 
 ## Stack
 

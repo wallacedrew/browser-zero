@@ -1,0 +1,10 @@
+title: browser-zero
+description: A Chrome extension that shows every open tab across every window on one screen.
+theme: jekyll-theme-minimal
+
+# Render only public-facing docs. ADR/INDEX, inspiration, and the listing
+# notes stay un-rendered (they're for repo readers, not Web Store visitors).
+exclude:
+  - architecture/
+  - inspiration/
+  - store-listing.md
