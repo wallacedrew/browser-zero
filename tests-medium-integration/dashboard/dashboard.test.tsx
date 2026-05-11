@@ -193,4 +193,24 @@ describe('dashboard', () => {
 
     expect(screen.queryByRole('region', { name: /window 1/i })).not.toBeInTheDocument();
   });
+
+  it('filters the list as the user types in the search input', async () => {
+    const port = new FakeTabsPort(sampleTabs);
+    const user = userEvent.setup();
+
+    render(<App tabsPort={port} now={now} />);
+    await screen.findByRole('link', { name: 'pull/123' });
+
+    await user.type(screen.getByRole('searchbox', { name: /filter tabs/i }), 'inbox');
+
+    expect(screen.getByRole('link', { name: 'Inbox' })).toBeInTheDocument();
+    expect(screen.queryByRole('link', { name: 'pull/123' })).not.toBeInTheDocument();
+    expect(screen.queryByRole('link', { name: 'cats' })).not.toBeInTheDocument();
+
+    await user.clear(screen.getByRole('searchbox', { name: /filter tabs/i }));
+
+    expect(screen.getByRole('link', { name: 'pull/123' })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Inbox' })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'cats' })).toBeInTheDocument();
+  });
 });

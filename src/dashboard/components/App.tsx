@@ -1,7 +1,8 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import type { Tab } from '../../shared/lib/types';
 import type { TabsPort } from '../../shared/adapters/tabsPort';
 import type { GroupBy } from '../../shared/lib/grouping';
+import { filterTabs } from '../../shared/lib/filterTabs';
 import { TabList } from './TabList';
 import { ViewToggle } from './ViewToggle';
 
@@ -15,6 +16,7 @@ export function App({ tabsPort, now: nowOverride }: Props) {
   const [loaded, setLoaded] = useState(false);
   const [now, setNow] = useState<number>(() => nowOverride ?? Date.now());
   const [groupBy, setGroupBy] = useState<GroupBy>('window');
+  const [search, setSearch] = useState('');
 
   const refresh = useCallback(async () => {
     setNow(nowOverride ?? Date.now());
@@ -45,21 +47,24 @@ export function App({ tabsPort, now: nowOverride }: Props) {
     [tabsPort],
   );
 
+  const isFiltering = search.trim().length > 0;
+  const visibleTabs = useMemo(() => filterTabs(tabs, search), [tabs, search]);
+  const summaryTabs = isFiltering ? visibleTabs : tabs;
+  const groupedCount = summaryTabs.filter((tab) => tab.group !== null).length;
+  const distinctGroups = new Set(summaryTabs.flatMap((tab) => (tab.group ? [tab.group.id] : [])))
+    .size;
+
   return (
     <main className="min-h-screen bg-slate-50 p-8">
-      <header className="mb-6 flex items-center justify-between gap-4">
+      <header className="mb-4 flex items-center justify-between gap-4">
         <div>
           <h1 className="text-3xl font-semibold text-slate-900">browser-zero</h1>
           <p className="text-sm text-slate-500">
-            {tabs.length} tab{tabs.length === 1 ? '' : 's'} across all windows
-            {(() => {
-              const groupedCount = tabs.filter((tab) => tab.group !== null).length;
-              const distinctGroups = new Set(
-                tabs.flatMap((tab) => (tab.group ? [tab.group.id] : [])),
-              ).size;
-              if (groupedCount === 0) return null;
-              return ` · ${groupedCount} in ${distinctGroups} group${distinctGroups === 1 ? '' : 's'}`;
-            })()}
+            {isFiltering
+              ? `${visibleTabs.length} of ${tabs.length} tab${tabs.length === 1 ? '' : 's'} match`
+              : `${tabs.length} tab${tabs.length === 1 ? '' : 's'} across all windows`}
+            {groupedCount > 0 &&
+              ` · ${groupedCount} in ${distinctGroups} group${distinctGroups === 1 ? '' : 's'}`}
           </p>
         </div>
         <div className="flex items-center gap-3">
@@ -73,9 +78,19 @@ export function App({ tabsPort, now: nowOverride }: Props) {
           </button>
         </div>
       </header>
+      <input
+        type="search"
+        aria-label="Filter tabs"
+        placeholder="Filter by title, URL, domain, or group…"
+        value={search}
+        onChange={(event) => {
+          setSearch(event.target.value);
+        }}
+        className="mb-6 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm placeholder:text-slate-400 focus:border-slate-500 focus:outline-none focus:ring-1 focus:ring-slate-500"
+      />
       {loaded ? (
         <TabList
-          tabs={tabs}
+          tabs={visibleTabs}
           now={now}
           groupBy={groupBy}
           onFocus={handleFocus}
