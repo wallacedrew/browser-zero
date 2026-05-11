@@ -12,9 +12,8 @@ interface Option {
 
 const OPTIONS: ReadonlyArray<Option> = [
   { value: 'window', label: 'By window' },
-  { value: 'domain', label: 'By domain' },
-  { value: 'category', label: 'By category' },
   { value: 'tabgroup', label: 'By tab group' },
+  { value: 'domain', label: 'By domain in url' },
 ];
 
 export function ViewToggle({ value, onChange }: Props) {

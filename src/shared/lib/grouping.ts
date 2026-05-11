@@ -1,6 +1,6 @@
 import type { Tab } from './types';
 
-export type GroupBy = 'window' | 'domain' | 'category' | 'tabgroup';
+export type GroupBy = 'window' | 'tabgroup' | 'domain';
 
 export interface TabGroup {
   readonly key: string;
@@ -12,12 +12,10 @@ export function groupTabs(tabs: readonly Tab[], by: GroupBy): TabGroup[] {
   switch (by) {
     case 'window':
       return groupByWindow(tabs);
-    case 'domain':
-      return groupByDomain(tabs);
-    case 'category':
-      return groupByCategory(tabs);
     case 'tabgroup':
       return groupByTabGroup(tabs);
+    case 'domain':
+      return groupByDomain(tabs);
   }
 }
 
@@ -92,35 +90,4 @@ function labelForTabGroup(key: string, firstTab: Tab | undefined): string {
   if (key === UNGROUPED_KEY) return 'Ungrouped';
   const title = firstTab?.group?.title ?? '';
   return title.length > 0 ? title : 'Untitled';
-}
-
-function groupByCategory(tabs: readonly Tab[]): TabGroup[] {
-  const byCategory = new Map<string, Tab[]>();
-  for (const tab of tabs) {
-    const key = categoryFor(tab);
-    const existing = byCategory.get(key);
-    if (existing) existing.push(tab);
-    else byCategory.set(key, [tab]);
-  }
-  return [...byCategory.entries()]
-    .sort(([leftCategory, leftTabs], [rightCategory, rightTabs]) => {
-      const countDelta = rightTabs.length - leftTabs.length;
-      if (countDelta !== 0) return countDelta;
-      return leftCategory.localeCompare(rightCategory);
-    })
-    .map(([category, categoryTabs]) => ({
-      key: `category-${category}`,
-      label: category,
-      tabs: categoryTabs,
-    }));
-}
-
-// A tab's "category" prefers the user's own Chrome tab group title (their
-// hand-curated taxonomy), falling back to the heuristic intent classification
-// when the tab isn't in a group. Untitled groups still take precedence over
-// intent so the user's organisation stays intact.
-function categoryFor(tab: Tab): string {
-  if (tab.group === null) return tab.intent;
-  if (tab.group.title.length > 0) return tab.group.title;
-  return 'Untitled';
 }

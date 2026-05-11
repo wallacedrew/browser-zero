@@ -106,14 +106,14 @@ describe('dashboard', () => {
     expect(screen.queryByRole('link', { name: 'pull/123' })).not.toBeInTheDocument();
   });
 
-  it('regroups by domain when the user clicks the By domain toggle', async () => {
+  it('regroups by domain when the user clicks the By domain in url toggle', async () => {
     const port = new FakeTabsPort(sampleTabs);
     const user = userEvent.setup();
 
     render(<App tabsPort={port} now={now} />);
     await screen.findByRole('region', { name: /window 1/i });
 
-    await user.click(screen.getByRole('radio', { name: /by domain/i }));
+    await user.click(screen.getByRole('radio', { name: /by domain in url/i }));
 
     const githubGroup = screen.getByRole('region', { name: 'github.com' });
     const mailGroup = screen.getByRole('region', { name: 'mail.google.com' });
@@ -125,27 +125,6 @@ describe('dashboard', () => {
 
     expect(screen.queryByRole('region', { name: /window 1/i })).not.toBeInTheDocument();
     expect(screen.queryByRole('region', { name: /window 2/i })).not.toBeInTheDocument();
-  });
-
-  it('regroups by category when the user clicks the By category toggle', async () => {
-    const port = new FakeTabsPort(sampleTabs);
-    const user = userEvent.setup();
-
-    render(<App tabsPort={port} now={now} />);
-    await screen.findByRole('region', { name: /window 1/i });
-
-    await user.click(screen.getByRole('radio', { name: /by category/i }));
-
-    const devGroup = screen.getByRole('region', { name: 'Dev' });
-    const commsGroup = screen.getByRole('region', { name: 'Comms' });
-    const entertainmentGroup = screen.getByRole('region', { name: 'Entertainment' });
-
-    expect(within(devGroup).getByRole('link', { name: 'pull/123' })).toBeInTheDocument();
-    expect(within(commsGroup).getByRole('link', { name: 'Inbox' })).toBeInTheDocument();
-    expect(within(entertainmentGroup).getByRole('link', { name: 'cats' })).toBeInTheDocument();
-
-    expect(screen.queryByRole('region', { name: /window 1/i })).not.toBeInTheDocument();
-    expect(screen.queryByRole('region', { name: 'github.com' })).not.toBeInTheDocument();
   });
 
   it('closes a tab when its × button is clicked', async () => {
