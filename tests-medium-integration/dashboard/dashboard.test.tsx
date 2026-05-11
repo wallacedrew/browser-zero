@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { App } from '../../src/dashboard/components/App';
@@ -40,6 +40,13 @@ const sampleTabs: readonly Tab[] = [
 ];
 
 describe('dashboard', () => {
+  beforeEach(() => {
+    // window.confirm gates the bulk-delete path; default to "OK" so existing
+    // tests that exercise that path don't get blocked. Cancellation is tested
+    // explicitly by re-spying inside the relevant test.
+    vi.spyOn(window, 'confirm').mockReturnValue(true);
+  });
+
   it('lists every tab grouped by window with title, domain, and relative time', async () => {
     const port = new FakeTabsPort(sampleTabs);
 
@@ -120,14 +127,21 @@ describe('dashboard', () => {
     expect(screen.queryByRole('region', { name: /window 2/i })).not.toBeInTheDocument();
   });
 
-  it('closes a tab when its × button is clicked', async () => {
+  it('closes a tab when its × is armed and then clicked a second time', async () => {
     const port = new FakeTabsPort(sampleTabs);
     const user = userEvent.setup();
 
     render(<App tabsPort={port} now={now} />);
     await screen.findByRole('link', { name: 'pull/123' });
 
+    // First click: arm — × becomes the red "Delete?" pill.
     await user.click(screen.getByRole('button', { name: 'Close pull/123' }));
+    expect(screen.getByRole('button', { name: 'Confirm delete pull/123' })).toHaveTextContent(
+      'Delete?',
+    );
+
+    // Second click on the armed pill: actually close.
+    await user.click(screen.getByRole('button', { name: 'Confirm delete pull/123' }));
 
     expect(port.closeManyCalls).toEqual([[1]]);
     expect(screen.queryByRole('link', { name: 'pull/123' })).not.toBeInTheDocument();
@@ -244,7 +258,7 @@ describe('dashboard', () => {
     ).not.toBeInTheDocument();
   });
 
-  it('clears a tab from the selection when its × button is clicked', async () => {
+  it('clears a tab from the selection when its × is armed and confirmed', async () => {
     const port = new FakeTabsPort(sampleTabs);
     const user = userEvent.setup();
 
@@ -258,6 +272,7 @@ describe('dashboard', () => {
     expect(within(window1Actions).getByText(/2 tabs selected/i)).toBeInTheDocument();
 
     await user.click(screen.getByRole('button', { name: 'Close pull/123' }));
+    await user.click(screen.getByRole('button', { name: 'Confirm delete pull/123' }));
 
     expect(port.closeManyCalls).toEqual([[1]]);
     expect(within(window1Actions).getByText(/1 tab selected/i)).toBeInTheDocument();
@@ -358,7 +373,7 @@ describe('dashboard', () => {
     expect(port.newTabCalls).toBe(1);
   });
 
-  it('opens a new tab when closing the very last open tab via the × button', async () => {
+  it('opens a new tab when confirming a × delete on the very last open tab', async () => {
     const port = new FakeTabsPort([sampleTabs[0]!]);
     const user = userEvent.setup();
 
@@ -366,8 +381,55 @@ describe('dashboard', () => {
     await screen.findByRole('link', { name: 'pull/123' });
 
     await user.click(screen.getByRole('button', { name: 'Close pull/123' }));
+    await user.click(screen.getByRole('button', { name: 'Confirm delete pull/123' }));
 
     expect(port.closeManyCalls).toEqual([[1]]);
     expect(port.newTabCalls).toBe(1);
+  });
+
+  it('reverts the armed × pill back to × when the user clicks elsewhere', async () => {
+    const port = new FakeTabsPort(sampleTabs);
+    const user = userEvent.setup();
+
+    render(<App tabsPort={port} now={now} />);
+    await screen.findByRole('link', { name: 'pull/123' });
+
+    await user.click(screen.getByRole('button', { name: 'Close pull/123' }));
+    expect(screen.getByRole('button', { name: 'Confirm delete pull/123' })).toBeInTheDocument();
+
+    // Click anywhere outside the armed pill — the page heading is a fine
+    // "anywhere else" target. The mousedown listener fires and disarms.
+    await user.click(screen.getByRole('heading', { name: /browser-zero/i }));
+
+    expect(
+      screen.queryByRole('button', { name: 'Confirm delete pull/123' }),
+    ).not.toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Close pull/123' })).toBeInTheDocument();
+    expect(port.closeManyCalls).toEqual([]);
+  });
+
+  it('cancels a bulk delete if the user dismisses the confirmation', async () => {
+    vi.spyOn(window, 'confirm').mockReturnValue(false);
+
+    const port = new FakeTabsPort(sampleTabs);
+    const user = userEvent.setup();
+
+    render(<App tabsPort={port} now={now} />);
+    await screen.findByRole('link', { name: 'pull/123' });
+
+    await user.click(screen.getByRole('checkbox', { name: 'Select pull/123' }));
+    await user.click(screen.getByRole('checkbox', { name: 'Select Inbox' }));
+
+    await user.click(
+      within(screen.getByRole('region', { name: /window 1 selection actions/i })).getByRole(
+        'button',
+        { name: 'Delete' },
+      ),
+    );
+
+    expect(window.confirm).toHaveBeenCalledWith('Close 2 tabs?');
+    expect(port.closeManyCalls).toEqual([]);
+    expect(screen.getByRole('link', { name: 'pull/123' })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Inbox' })).toBeInTheDocument();
   });
 });

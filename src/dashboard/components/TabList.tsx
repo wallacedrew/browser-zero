@@ -7,11 +7,13 @@ interface Props {
   now: number;
   groupBy: GroupBy;
   selected: ReadonlySet<number>;
+  armedDeleteId: number | null;
   onSelectionToggle: (tabId: number) => void;
   onSelectGroup: (tabIds: readonly number[]) => void;
   onClearGroup: (tabIds: readonly number[]) => void;
   onDeleteIds: (tabIds: readonly number[]) => void;
   onFocus: (tabId: number, windowId: number) => void;
+  onArmDelete: (tabId: number) => void;
   onClose: (tabId: number) => void;
 }
 
@@ -20,11 +22,13 @@ export function TabList({
   now,
   groupBy,
   selected,
+  armedDeleteId,
   onSelectionToggle,
   onSelectGroup,
   onClearGroup,
   onDeleteIds,
   onFocus,
+  onArmDelete,
   onClose,
 }: Props) {
   const groups = groupTabs(tabs, groupBy);
@@ -118,8 +122,10 @@ export function TabList({
                   tab={tab}
                   now={now}
                   isSelected={selected.has(tab.id)}
+                  armedForDelete={tab.id === armedDeleteId}
                   onSelectionToggle={onSelectionToggle}
                   onFocus={onFocus}
+                  onArmDelete={onArmDelete}
                   onClose={onClose}
                 />
               ))}
