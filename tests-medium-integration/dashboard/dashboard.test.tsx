@@ -143,4 +143,19 @@ describe('dashboard', () => {
     expect(screen.queryByRole('region', { name: /window 1/i })).not.toBeInTheDocument();
     expect(screen.queryByRole('region', { name: 'github.com' })).not.toBeInTheDocument();
   });
+
+  it('closes a tab when its × button is clicked', async () => {
+    const port = new FakeTabsPort(sampleTabs);
+    const user = userEvent.setup();
+
+    render(<App tabsPort={port} now={now} />);
+    await screen.findByRole('link', { name: 'pull/123' });
+
+    await user.click(screen.getByRole('button', { name: 'Close pull/123' }));
+
+    expect(port.closeCalls).toEqual([1]);
+    expect(screen.queryByRole('link', { name: 'pull/123' })).not.toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Inbox' })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'cats' })).toBeInTheDocument();
+  });
 });

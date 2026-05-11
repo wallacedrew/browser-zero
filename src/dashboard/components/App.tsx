@@ -37,6 +37,14 @@ export function App({ tabsPort, now: nowOverride }: Props) {
     [tabsPort],
   );
 
+  const handleClose = useCallback(
+    (tabId: number) => {
+      setTabs((prev) => prev.filter((tab) => tab.id !== tabId));
+      void tabsPort.close(tabId);
+    },
+    [tabsPort],
+  );
+
   return (
     <main className="min-h-screen bg-slate-50 p-8">
       <header className="mb-6 flex items-center justify-between gap-4">
@@ -58,7 +66,13 @@ export function App({ tabsPort, now: nowOverride }: Props) {
         </div>
       </header>
       {loaded ? (
-        <TabList tabs={tabs} now={now} groupBy={groupBy} onFocus={handleFocus} />
+        <TabList
+          tabs={tabs}
+          now={now}
+          groupBy={groupBy}
+          onFocus={handleFocus}
+          onClose={handleClose}
+        />
       ) : (
         <p className="text-slate-400">Loading…</p>
       )}

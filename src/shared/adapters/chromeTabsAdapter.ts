@@ -13,6 +13,10 @@ export class ChromeTabsAdapter implements TabsPort {
     await chrome.tabs.update(tabId, { active: true });
     await chrome.windows.update(windowId, { focused: true });
   }
+
+  async close(tabId: number): Promise<void> {
+    await chrome.tabs.remove(tabId);
+  }
 }
 
 type ResolvableChromeTab = chrome.tabs.Tab & { id: number };

@@ -7,9 +7,10 @@ interface Props {
   now: number;
   groupBy: GroupBy;
   onFocus: (tabId: number, windowId: number) => void;
+  onClose: (tabId: number) => void;
 }
 
-export function TabList({ tabs, now, groupBy, onFocus }: Props) {
+export function TabList({ tabs, now, groupBy, onFocus, onClose }: Props) {
   const groups = groupTabs(tabs, groupBy);
 
   if (groups.length === 0) {
@@ -32,7 +33,7 @@ export function TabList({ tabs, now, groupBy, onFocus }: Props) {
           </header>
           <ul className="divide-y divide-slate-100">
             {group.tabs.map((tab) => (
-              <TabRow key={tab.id} tab={tab} now={now} onFocus={onFocus} />
+              <TabRow key={tab.id} tab={tab} now={now} onFocus={onFocus} onClose={onClose} />
             ))}
           </ul>
         </section>
