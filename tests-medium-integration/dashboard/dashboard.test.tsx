@@ -247,7 +247,7 @@ describe('dashboard', () => {
     const window1Actions = screen.getByRole('region', { name: /window 1 selection actions/i });
     expect(within(window1Actions).getByText(/2 tabs selected/i)).toBeInTheDocument();
 
-    await user.click(within(window1Actions).getByRole('button', { name: 'Delete' }));
+    await user.click(within(window1Actions).getByRole('button', { name: 'Close?' }));
 
     expect(port.closeManyCalls).toEqual([[1, 2]]);
     expect(port.newTabCalls).toBe(0);
@@ -325,7 +325,7 @@ describe('dashboard', () => {
     ).toBeInTheDocument();
 
     // Clear Window 1 only — Window 2's tab stays selected.
-    await user.click(within(window1).getByRole('button', { name: /clear all/i }));
+    await user.click(within(window1).getByRole('button', { name: /keep all/i }));
 
     expect(
       screen.queryByRole('region', { name: /window 1 selection actions/i }),
@@ -351,7 +351,7 @@ describe('dashboard', () => {
     await user.click(
       within(screen.getByRole('region', { name: /window 1 selection actions/i })).getByRole(
         'button',
-        { name: 'Delete' },
+        { name: 'Close?' },
       ),
     );
     expect(port.closeManyCalls).toEqual([[1, 2]]);
@@ -367,7 +367,7 @@ describe('dashboard', () => {
     await user.click(
       within(screen.getByRole('region', { name: /window 1 selection actions/i })).getByRole(
         'button',
-        { name: 'Delete' },
+        { name: 'Close?' },
       ),
     );
     expect(port.closeManyCalls).toEqual([[1, 2], [3]]);
@@ -444,7 +444,7 @@ describe('dashboard', () => {
     await user.click(
       within(screen.getByRole('region', { name: /window 1 selection actions/i })).getByRole(
         'button',
-        { name: 'Delete' },
+        { name: 'Close?' },
       ),
     );
 

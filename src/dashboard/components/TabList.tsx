@@ -82,7 +82,7 @@ export function TabList({
                       }}
                       className="text-slate-600 hover:text-slate-900 hover:underline"
                     >
-                      Clear all
+                      Keep all
                     </button>
                   )}
                 </div>
@@ -103,7 +103,7 @@ export function TabList({
                     }}
                     className="rounded-md bg-red-600 px-2.5 py-0.5 text-xs font-medium text-white shadow-sm hover:bg-red-700"
                   >
-                    Delete
+                    Close?
                   </button>
                   <button
                     type="button"
@@ -112,7 +112,7 @@ export function TabList({
                     }}
                     className="text-slate-500 hover:text-slate-700 hover:underline"
                   >
-                    Clear
+                    Keep
                   </button>
                 </div>
               )}
