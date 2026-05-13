@@ -737,6 +737,25 @@ describe('dashboard', () => {
     expect(scrollSpy).toHaveBeenCalledWith({ behavior: 'smooth', block: 'start' });
   });
 
+  it('highlights the first group chip on initial load', async () => {
+    const port = new FakeTabsPort(sampleTabs);
+
+    render(<App tabsPort={port} now={now} />);
+    await screen.findByRole('link', { name: 'pull/123' });
+
+    const nav = screen.getByRole('navigation', { name: /jump to group/i });
+    // sampleTabs gives Window 1 (2 tabs) + Window 2 (1 tab); the first
+    // chip should be marked active so the user sees "you're on Window 1"
+    // before they've scrolled.
+    expect(within(nav).getByRole('link', { name: /window 1 \(2\)/i })).toHaveAttribute(
+      'aria-current',
+      'true',
+    );
+    expect(within(nav).getByRole('link', { name: /window 2 \(1\)/i })).not.toHaveAttribute(
+      'aria-current',
+    );
+  });
+
   it('marks the clicked nav chip as aria-current="true"', async () => {
     const port = new FakeTabsPort(sampleTabs);
     const user = userEvent.setup();

@@ -54,6 +54,15 @@ export function TabList({
   const allowGrouping = groupBy !== 'domain';
   const groupKeys = groups.map((group) => group.key).join('|');
 
+  // Default-active the first visible group so the page never loads with
+  // zero chips highlighted, and gracefully fall back if a previously-
+  // active key disappears (e.g. user filters away that section). Computed
+  // every render — cheap, and avoids an extra set-state-in-effect.
+  const resolvedActiveKey =
+    activeKey && groups.some((group) => group.key === activeKey)
+      ? activeKey
+      : (groups[0]?.key ?? null);
+
   // Track which section is currently in the upper portion of the viewport
   // so the sticky GroupNav can highlight its chip. rootMargin shrinks the
   // intersection rect to ~the band just below the sticky nav so the
@@ -116,7 +125,7 @@ export function TabList({
 
   return (
     <div ref={containerRef}>
-      <GroupNav groups={navGroups} activeKey={activeKey} onSelect={scrollToGroup} />
+      <GroupNav groups={navGroups} activeKey={resolvedActiveKey} onSelect={scrollToGroup} />
       <div className="divide-y divide-slate-200">
         {groups.map((group) => {
           const groupIds = group.tabs.map((tab) => tab.id);
