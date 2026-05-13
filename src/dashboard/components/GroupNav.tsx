@@ -1,7 +1,10 @@
+import { activeChipClassForGroupColor, inactiveChipClassForGroupColor } from '../lib/groupColors';
+
 interface NavGroup {
   readonly key: string;
   readonly label: string;
   readonly count: number;
+  readonly color: string | null;
 }
 
 interface Props {
@@ -22,6 +25,9 @@ export function GroupNav({ groups, activeKey, onSelect }: Props) {
     >
       {groups.map((group) => {
         const isActive = group.key === activeKey;
+        const chipClass = isActive
+          ? activeChipClassForGroupColor(group.color)
+          : inactiveChipClassForGroupColor(group.color);
         return (
           <a
             key={group.key}
@@ -31,11 +37,7 @@ export function GroupNav({ groups, activeKey, onSelect }: Props) {
               event.preventDefault();
               onSelect(group.key);
             }}
-            className={`rounded-full px-3 py-1 transition-colors ${
-              isActive
-                ? 'bg-slate-900 text-white shadow-sm'
-                : 'border border-slate-200 bg-white text-slate-700 hover:bg-slate-100'
-            }`}
+            className={`rounded-full px-3 py-1 transition-colors ${chipClass}`}
           >
             {group.label} ({group.count})
           </a>

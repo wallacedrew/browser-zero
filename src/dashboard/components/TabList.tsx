@@ -100,6 +100,10 @@ export function TabList({
     key: group.key,
     label: group.label,
     count: group.tabs.length,
+    // Only by-tab-group has an intrinsic color per group (the Chrome tab
+    // group color). by-window and by-domain have no inherent group color,
+    // so they fall back to the slate default in GroupNav.
+    color: groupBy === 'tabgroup' ? (group.tabs[0]?.group?.color ?? null) : null,
   }));
   const scrollToGroup = (groupKey: string) => {
     const target = document.querySelector(`[data-group-key="${groupKey}"]`);

@@ -4,9 +4,9 @@ import userEvent from '@testing-library/user-event';
 import { GroupNav } from '../../../src/dashboard/components/GroupNav';
 
 const sampleGroups = [
-  { key: 'window-100', label: 'Window 1', count: 15 },
-  { key: 'window-200', label: 'Window 2', count: 15 },
-  { key: 'window-300', label: 'Window 3', count: 4 },
+  { key: 'window-100', label: 'Window 1', count: 15, color: null },
+  { key: 'window-200', label: 'Window 2', count: 15, color: null },
+  { key: 'window-300', label: 'Window 3', count: 4, color: null },
 ];
 
 describe('GroupNav', () => {
@@ -31,7 +31,7 @@ describe('GroupNav', () => {
   it('renders nothing when there are fewer than two groups (nothing to jump between)', () => {
     const { container: singleGroupContainer } = render(
       <GroupNav
-        groups={[{ key: 'window-100', label: 'Window 1', count: 5 }]}
+        groups={[{ key: 'window-100', label: 'Window 1', count: 5, color: null }]}
         activeKey={null}
         onSelect={() => undefined}
       />,
@@ -58,5 +58,29 @@ describe('GroupNav', () => {
     );
     expect(screen.getByRole('link', { name: 'Window 1 (15)' })).not.toHaveAttribute('aria-current');
     expect(screen.getByRole('link', { name: 'Window 3 (4)' })).not.toHaveAttribute('aria-current');
+  });
+
+  it('applies the Chrome tab group color to each chip when provided', () => {
+    const coloredGroups = [
+      { key: 'tabgroup-g-1', label: 'Q3 planning', count: 5, color: 'blue' },
+      { key: 'tabgroup-g-2', label: 'Errands', count: 3, color: 'orange' },
+      { key: 'tabgroup-ungrouped', label: 'Ungrouped', count: 8, color: null },
+    ];
+    render(<GroupNav groups={coloredGroups} activeKey="tabgroup-g-1" onSelect={() => undefined} />);
+
+    // Active blue group → solid blue fill, white text
+    const activeChip = screen.getByRole('link', { name: 'Q3 planning (5)' });
+    expect(activeChip.className).toContain('bg-blue-600');
+    expect(activeChip.className).toContain('text-white');
+
+    // Inactive orange group → light orange tint, orange text
+    const orangeChip = screen.getByRole('link', { name: 'Errands (3)' });
+    expect(orangeChip.className).toContain('bg-orange-50');
+    expect(orangeChip.className).toContain('text-orange-800');
+
+    // Inactive Ungrouped (no color) → slate default
+    const ungroupedChip = screen.getByRole('link', { name: 'Ungrouped (8)' });
+    expect(ungroupedChip.className).toContain('bg-white');
+    expect(ungroupedChip.className).toContain('text-slate-700');
   });
 });
