@@ -1,4 +1,4 @@
-import { useState, type DragEvent } from 'react';
+import { useEffect, useRef, useState, type DragEvent } from 'react';
 import type { Tab, TabGroupInfo } from '../../shared/lib/types';
 import { groupTabs, type GroupBy, type TabGroup } from '../../shared/lib/grouping';
 import { GroupNav } from './GroupNav';
@@ -47,9 +47,41 @@ export function TabList({
   onAssignManyToGroup,
 }: Props) {
   const [dragOverKey, setDragOverKey] = useState<string | null>(null);
+  const [activeKey, setActiveKey] = useState<string | null>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const groups = groupTabs(tabs, groupBy);
   const dropEnabled = groupBy === 'window' || groupBy === 'tabgroup';
   const allowGrouping = groupBy !== 'domain';
+  const groupKeys = groups.map((group) => group.key).join('|');
+
+  // Track which section is currently in the upper portion of the viewport
+  // so the sticky GroupNav can highlight its chip. rootMargin shrinks the
+  // intersection rect to ~the band just below the sticky nav so the
+  // "active" section is the one a reader is actually looking at.
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container || typeof IntersectionObserver === 'undefined') return;
+    const sections = container.querySelectorAll<HTMLElement>('[data-group-key]');
+    if (sections.length === 0) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort(
+            (leftEntry, rightEntry) =>
+              leftEntry.boundingClientRect.top - rightEntry.boundingClientRect.top,
+          );
+        const topMost = visible[0];
+        if (topMost) {
+          const key = topMost.target.getAttribute('data-group-key');
+          if (key) setActiveKey(key);
+        }
+      },
+      { rootMargin: '-72px 0px -55% 0px', threshold: 0 },
+    );
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, [groupKeys]);
 
   if (groups.length === 0) {
     return <p className="text-slate-500">No open tabs.</p>;
@@ -63,6 +95,7 @@ export function TabList({
   const scrollToGroup = (groupKey: string) => {
     const target = document.querySelector(`[data-group-key="${groupKey}"]`);
     target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    setActiveKey(groupKey);
   };
 
   const fireDrop = (event: DragEvent<HTMLElement>, group: TabGroup) => {
@@ -82,8 +115,8 @@ export function TabList({
   };
 
   return (
-    <div>
-      <GroupNav groups={navGroups} onSelect={scrollToGroup} />
+    <div ref={containerRef}>
+      <GroupNav groups={navGroups} activeKey={activeKey} onSelect={scrollToGroup} />
       <div className="divide-y divide-slate-200">
         {groups.map((group) => {
           const groupIds = group.tabs.map((tab) => tab.id);

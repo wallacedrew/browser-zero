@@ -737,6 +737,29 @@ describe('dashboard', () => {
     expect(scrollSpy).toHaveBeenCalledWith({ behavior: 'smooth', block: 'start' });
   });
 
+  it('marks the clicked nav chip as aria-current="true"', async () => {
+    const port = new FakeTabsPort(sampleTabs);
+    const user = userEvent.setup();
+
+    render(<App tabsPort={port} now={now} />);
+    await screen.findByRole('link', { name: 'pull/123' });
+
+    const nav = screen.getByRole('navigation', { name: /jump to group/i });
+    const window2Chip = within(nav).getByRole('link', { name: /window 2 \(1\)/i });
+
+    expect(window2Chip).not.toHaveAttribute('aria-current');
+
+    await user.click(window2Chip);
+
+    expect(within(nav).getByRole('link', { name: /window 2 \(1\)/i })).toHaveAttribute(
+      'aria-current',
+      'true',
+    );
+    expect(within(nav).getByRole('link', { name: /window 1 \(2\)/i })).not.toHaveAttribute(
+      'aria-current',
+    );
+  });
+
   it('hides the jump-to-group nav when only one group is visible', async () => {
     const port = new FakeTabsPort([sampleTabs[0]!]);
 

@@ -11,7 +11,7 @@ const sampleGroups = [
 
 describe('GroupNav', () => {
   it('renders one link per group with label and count', () => {
-    render(<GroupNav groups={sampleGroups} onSelect={() => undefined} />);
+    render(<GroupNav groups={sampleGroups} activeKey={null} onSelect={() => undefined} />);
 
     expect(screen.getByRole('link', { name: 'Window 1 (15)' })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Window 2 (15)' })).toBeInTheDocument();
@@ -21,7 +21,7 @@ describe('GroupNav', () => {
   it('calls onSelect with the clicked group key', async () => {
     const onSelect = vi.fn();
     const user = userEvent.setup();
-    render(<GroupNav groups={sampleGroups} onSelect={onSelect} />);
+    render(<GroupNav groups={sampleGroups} activeKey={null} onSelect={onSelect} />);
 
     await user.click(screen.getByRole('link', { name: 'Window 2 (15)' }));
 
@@ -32,19 +32,31 @@ describe('GroupNav', () => {
     const { container: singleGroupContainer } = render(
       <GroupNav
         groups={[{ key: 'window-100', label: 'Window 1', count: 5 }]}
+        activeKey={null}
         onSelect={() => undefined}
       />,
     );
     expect(singleGroupContainer).toBeEmptyDOMElement();
 
     const { container: zeroGroupContainer } = render(
-      <GroupNav groups={[]} onSelect={() => undefined} />,
+      <GroupNav groups={[]} activeKey={null} onSelect={() => undefined} />,
     );
     expect(zeroGroupContainer).toBeEmptyDOMElement();
   });
 
   it('exposes itself as a navigation landmark named "Jump to group"', () => {
-    render(<GroupNav groups={sampleGroups} onSelect={() => undefined} />);
+    render(<GroupNav groups={sampleGroups} activeKey={null} onSelect={() => undefined} />);
     expect(screen.getByRole('navigation', { name: /jump to group/i })).toBeInTheDocument();
+  });
+
+  it('marks the active chip with aria-current="true" and leaves the others without it', () => {
+    render(<GroupNav groups={sampleGroups} activeKey="window-200" onSelect={() => undefined} />);
+
+    expect(screen.getByRole('link', { name: 'Window 2 (15)' })).toHaveAttribute(
+      'aria-current',
+      'true',
+    );
+    expect(screen.getByRole('link', { name: 'Window 1 (15)' })).not.toHaveAttribute('aria-current');
+    expect(screen.getByRole('link', { name: 'Window 3 (4)' })).not.toHaveAttribute('aria-current');
   });
 });
