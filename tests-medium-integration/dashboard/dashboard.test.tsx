@@ -718,6 +718,34 @@ describe('dashboard', () => {
     expect(within(exampleRow as HTMLElement).queryByTestId('tab-favicon')).not.toBeInTheDocument();
   });
 
+  it('renders a jump-to-group nav and scrolls to the matching section when a link is clicked', async () => {
+    const port = new FakeTabsPort(sampleTabs);
+    const user = userEvent.setup();
+
+    render(<App tabsPort={port} now={now} />);
+    await screen.findByRole('link', { name: 'pull/123' });
+
+    const nav = screen.getByRole('navigation', { name: /jump to group/i });
+    expect(within(nav).getByRole('link', { name: /window 1 \(2\)/i })).toBeInTheDocument();
+    expect(within(nav).getByRole('link', { name: /window 2 \(1\)/i })).toBeInTheDocument();
+
+    const window2Section = screen.getByRole('region', { name: /^window 2$/i });
+    const scrollSpy = vi.spyOn(window2Section, 'scrollIntoView');
+
+    await user.click(within(nav).getByRole('link', { name: /window 2 \(1\)/i }));
+
+    expect(scrollSpy).toHaveBeenCalledWith({ behavior: 'smooth', block: 'start' });
+  });
+
+  it('hides the jump-to-group nav when only one group is visible', async () => {
+    const port = new FakeTabsPort([sampleTabs[0]!]);
+
+    render(<App tabsPort={port} now={now} />);
+    await screen.findByRole('link', { name: 'pull/123' });
+
+    expect(screen.queryByRole('navigation', { name: /jump to group/i })).not.toBeInTheDocument();
+  });
+
   it('hides the Add to group action in By domain in url view', async () => {
     const port = new FakeTabsPort(sampleTabs);
     const user = userEvent.setup();

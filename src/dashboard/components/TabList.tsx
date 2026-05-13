@@ -1,6 +1,7 @@
 import { useState, type DragEvent } from 'react';
 import type { Tab, TabGroupInfo } from '../../shared/lib/types';
 import { groupTabs, type GroupBy, type TabGroup } from '../../shared/lib/grouping';
+import { GroupNav } from './GroupNav';
 import { SectionActionPanel } from './SectionActionPanel';
 import { TabRow } from './TabRow';
 
@@ -54,6 +55,16 @@ export function TabList({
     return <p className="text-slate-500">No open tabs.</p>;
   }
 
+  const navGroups = groups.map((group) => ({
+    key: group.key,
+    label: group.label,
+    count: group.tabs.length,
+  }));
+  const scrollToGroup = (groupKey: string) => {
+    const target = document.querySelector(`[data-group-key="${groupKey}"]`);
+    target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   const fireDrop = (event: DragEvent<HTMLElement>, group: TabGroup) => {
     event.preventDefault();
     setDragOverKey(null);
@@ -71,109 +82,113 @@ export function TabList({
   };
 
   return (
-    <div className="divide-y divide-slate-200">
-      {groups.map((group) => {
-        const groupIds = group.tabs.map((tab) => tab.id);
-        const selectedIdsInGroup = group.tabs.flatMap((tab) =>
-          selected.has(tab.id) ? [tab.id] : [],
-        );
-        const selectedInGroup = selectedIdsInGroup.length;
-        const hasUnselected = selectedInGroup < group.tabs.length;
-        const hasAnySelected = selectedInGroup > 0;
-        const isDragOver = dropEnabled && dragOverKey === group.key;
+    <div>
+      <GroupNav groups={navGroups} onSelect={scrollToGroup} />
+      <div className="divide-y divide-slate-200">
+        {groups.map((group) => {
+          const groupIds = group.tabs.map((tab) => tab.id);
+          const selectedIdsInGroup = group.tabs.flatMap((tab) =>
+            selected.has(tab.id) ? [tab.id] : [],
+          );
+          const selectedInGroup = selectedIdsInGroup.length;
+          const hasUnselected = selectedInGroup < group.tabs.length;
+          const hasAnySelected = selectedInGroup > 0;
+          const isDragOver = dropEnabled && dragOverKey === group.key;
 
-        return (
-          <section
-            key={group.key}
-            aria-label={group.label}
-            onDragOver={
-              dropEnabled
-                ? (event) => {
-                    event.preventDefault();
-                    event.dataTransfer.dropEffect = 'move';
-                    if (dragOverKey !== group.key) setDragOverKey(group.key);
-                  }
-                : undefined
-            }
-            onDragLeave={
-              dropEnabled
-                ? () => {
-                    if (dragOverKey === group.key) setDragOverKey(null);
-                  }
-                : undefined
-            }
-            onDrop={
-              dropEnabled
-                ? (event) => {
-                    fireDrop(event, group);
-                  }
-                : undefined
-            }
-            className={`py-3 transition-colors ${isDragOver ? 'bg-blue-50' : ''}`}
-          >
-            <header className="mb-2 space-y-1 px-3">
-              <div className="flex items-baseline justify-between gap-3">
-                <h2 className="text-base font-semibold text-slate-700">{group.label}</h2>
-                <div className="flex items-center gap-3 text-sm text-slate-400">
-                  <span>
-                    {group.tabs.length} tab{group.tabs.length === 1 ? '' : 's'}
-                  </span>
-                  {hasUnselected && (
-                    <button
-                      type="button"
-                      onClick={() => {
-                        onSelectGroup(groupIds);
-                      }}
-                      className="text-slate-600 hover:text-slate-900 hover:underline"
-                    >
-                      Select all
-                    </button>
-                  )}
-                  {hasAnySelected && (
-                    <button
-                      type="button"
-                      onClick={() => {
-                        onClearGroup(groupIds);
-                      }}
-                      className="text-slate-600 hover:text-slate-900 hover:underline"
-                    >
-                      Keep all
-                    </button>
-                  )}
+          return (
+            <section
+              key={group.key}
+              data-group-key={group.key}
+              aria-label={group.label}
+              onDragOver={
+                dropEnabled
+                  ? (event) => {
+                      event.preventDefault();
+                      event.dataTransfer.dropEffect = 'move';
+                      if (dragOverKey !== group.key) setDragOverKey(group.key);
+                    }
+                  : undefined
+              }
+              onDragLeave={
+                dropEnabled
+                  ? () => {
+                      if (dragOverKey === group.key) setDragOverKey(null);
+                    }
+                  : undefined
+              }
+              onDrop={
+                dropEnabled
+                  ? (event) => {
+                      fireDrop(event, group);
+                    }
+                  : undefined
+              }
+              className={`py-3 transition-colors ${isDragOver ? 'bg-blue-50' : ''}`}
+            >
+              <header className="mb-2 space-y-1 px-3">
+                <div className="flex items-baseline justify-between gap-3">
+                  <h2 className="text-base font-semibold text-slate-700">{group.label}</h2>
+                  <div className="flex items-center gap-3 text-sm text-slate-400">
+                    <span>
+                      {group.tabs.length} tab{group.tabs.length === 1 ? '' : 's'}
+                    </span>
+                    {hasUnselected && (
+                      <button
+                        type="button"
+                        onClick={() => {
+                          onSelectGroup(groupIds);
+                        }}
+                        className="text-slate-600 hover:text-slate-900 hover:underline"
+                      >
+                        Select all
+                      </button>
+                    )}
+                    {hasAnySelected && (
+                      <button
+                        type="button"
+                        onClick={() => {
+                          onClearGroup(groupIds);
+                        }}
+                        className="text-slate-600 hover:text-slate-900 hover:underline"
+                      >
+                        Keep all
+                      </button>
+                    )}
+                  </div>
                 </div>
-              </div>
-              <SectionActionPanel
-                groupLabel={group.label}
-                groupIds={groupIds}
-                selectedIds={selectedIdsInGroup}
-                allowGrouping={allowGrouping}
-                existingGroups={existingGroups}
-                onClearGroup={onClearGroup}
-                onDeleteIds={onDeleteIds}
-                onCreateGroup={onCreateGroup}
-                onAssignManyToGroup={onAssignManyToGroup}
-              />
-            </header>
-            <ul className="divide-y divide-slate-100">
-              {group.tabs.map((tab) => (
-                <TabRow
-                  key={tab.id}
-                  tab={tab}
-                  now={now}
-                  isSelected={selected.has(tab.id)}
-                  armedForDelete={tab.id === armedDeleteId}
-                  isDraggable={dropEnabled}
-                  onSelectionToggle={onSelectionToggle}
-                  onFocus={onFocus}
-                  onArmDelete={onArmDelete}
-                  onDisarm={onDisarm}
-                  onClose={onClose}
+                <SectionActionPanel
+                  groupLabel={group.label}
+                  groupIds={groupIds}
+                  selectedIds={selectedIdsInGroup}
+                  allowGrouping={allowGrouping}
+                  existingGroups={existingGroups}
+                  onClearGroup={onClearGroup}
+                  onDeleteIds={onDeleteIds}
+                  onCreateGroup={onCreateGroup}
+                  onAssignManyToGroup={onAssignManyToGroup}
                 />
-              ))}
-            </ul>
-          </section>
-        );
-      })}
+              </header>
+              <ul className="divide-y divide-slate-100">
+                {group.tabs.map((tab) => (
+                  <TabRow
+                    key={tab.id}
+                    tab={tab}
+                    now={now}
+                    isSelected={selected.has(tab.id)}
+                    armedForDelete={tab.id === armedDeleteId}
+                    isDraggable={dropEnabled}
+                    onSelectionToggle={onSelectionToggle}
+                    onFocus={onFocus}
+                    onArmDelete={onArmDelete}
+                    onDisarm={onDisarm}
+                    onClose={onClose}
+                  />
+                ))}
+              </ul>
+            </section>
+          );
+        })}
+      </div>
     </div>
   );
 }
