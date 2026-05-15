@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type DragEvent } from 'react';
 import type { Tab, TabGroupInfo } from '../../shared/lib/types';
 import { groupTabs, type GroupBy, type TabGroup } from '../../shared/lib/grouping';
+import { sectionHeaderClassesForGroupColor } from '../lib/groupColors';
 import { GroupNav } from './GroupNav';
 import { SectionActionPanel } from './SectionActionPanel';
 import { TabRow } from './TabRow';
@@ -140,6 +141,9 @@ export function TabList({
           const hasUnselected = selectedInGroup < group.tabs.length;
           const hasAnySelected = selectedInGroup > 0;
           const isDragOver = dropEnabled && dragOverKey === group.key;
+          const sectionColor =
+            groupBy === 'tabgroup' ? (group.tabs[0]?.group?.color ?? null) : null;
+          const headerClasses = sectionHeaderClassesForGroupColor(sectionColor);
 
           return (
             <section
@@ -171,10 +175,16 @@ export function TabList({
               }
               className={`py-3 transition-colors ${isDragOver ? 'bg-blue-50' : ''}`}
             >
-              <header className="mb-2 space-y-1 px-3">
-                <div className="flex items-baseline justify-between gap-3">
-                  <h2 className="text-base font-semibold text-slate-700">{group.label}</h2>
-                  <div className="flex items-center gap-3 text-sm text-slate-400">
+              <header className="mb-2 space-y-1">
+                <div
+                  className={`flex items-end justify-between gap-3 border-b-2 px-3 ${headerClasses.shelf}`}
+                >
+                  <h2
+                    className={`-mb-px rounded-t-md border-b-0 px-3 py-1 text-base font-semibold ${headerClasses.tab}`}
+                  >
+                    {group.label}
+                  </h2>
+                  <div className="flex items-center gap-3 pb-1 text-sm text-slate-400">
                     <span>
                       {group.tabs.length} tab{group.tabs.length === 1 ? '' : 's'}
                     </span>
@@ -202,17 +212,19 @@ export function TabList({
                     )}
                   </div>
                 </div>
-                <SectionActionPanel
-                  groupLabel={group.label}
-                  groupIds={groupIds}
-                  selectedIds={selectedIdsInGroup}
-                  allowGrouping={allowGrouping}
-                  existingGroups={existingGroups}
-                  onClearGroup={onClearGroup}
-                  onDeleteIds={onDeleteIds}
-                  onCreateGroup={onCreateGroup}
-                  onAssignManyToGroup={onAssignManyToGroup}
-                />
+                <div className="px-3">
+                  <SectionActionPanel
+                    groupLabel={group.label}
+                    groupIds={groupIds}
+                    selectedIds={selectedIdsInGroup}
+                    allowGrouping={allowGrouping}
+                    existingGroups={existingGroups}
+                    onClearGroup={onClearGroup}
+                    onDeleteIds={onDeleteIds}
+                    onCreateGroup={onCreateGroup}
+                    onAssignManyToGroup={onAssignManyToGroup}
+                  />
+                </div>
               </header>
               <ul className="divide-y divide-slate-100">
                 {group.tabs.map((tab) => (

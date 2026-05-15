@@ -59,3 +59,65 @@ export function inactiveChipClassForGroupColor(color: string | null): string {
   if (color === null) return DEFAULT_INACTIVE_CHIP_CLASS;
   return INACTIVE_CHIP_CLASS_BY_COLOR[color] ?? DEFAULT_INACTIVE_CHIP_CLASS;
 }
+
+// Chrome-tab-shaped section header styling. Two slots:
+// - `tab` colors the rounded-top label that visually represents the
+//   browser-tab shape (light tint background, tinted border on three
+//   sides, dark colored text).
+// - `shelf` colors the horizontal line the tab "sits on" — the
+//   continuous strip running the section's width directly under the tab.
+// Together the two slots produce a Chrome-style tab + bar.
+
+interface SectionHeaderClasses {
+  readonly tab: string;
+  readonly shelf: string;
+}
+
+const SECTION_HEADER_CLASSES_BY_COLOR: Record<string, SectionHeaderClasses> = {
+  grey: {
+    tab: 'border border-slate-300 bg-slate-100 text-slate-800',
+    shelf: 'border-slate-300',
+  },
+  blue: {
+    tab: 'border border-blue-300 bg-blue-100 text-blue-900',
+    shelf: 'border-blue-300',
+  },
+  red: {
+    tab: 'border border-red-300 bg-red-100 text-red-900',
+    shelf: 'border-red-300',
+  },
+  yellow: {
+    tab: 'border border-yellow-400 bg-yellow-100 text-yellow-900',
+    shelf: 'border-yellow-400',
+  },
+  green: {
+    tab: 'border border-green-300 bg-green-100 text-green-900',
+    shelf: 'border-green-300',
+  },
+  pink: {
+    tab: 'border border-pink-300 bg-pink-100 text-pink-900',
+    shelf: 'border-pink-300',
+  },
+  purple: {
+    tab: 'border border-purple-300 bg-purple-100 text-purple-900',
+    shelf: 'border-purple-300',
+  },
+  cyan: {
+    tab: 'border border-cyan-300 bg-cyan-100 text-cyan-900',
+    shelf: 'border-cyan-300',
+  },
+  orange: {
+    tab: 'border border-orange-300 bg-orange-100 text-orange-900',
+    shelf: 'border-orange-300',
+  },
+};
+
+const DEFAULT_SECTION_HEADER_CLASSES: SectionHeaderClasses = {
+  tab: 'border border-slate-200 bg-slate-50 text-slate-700',
+  shelf: 'border-slate-200',
+};
+
+export function sectionHeaderClassesForGroupColor(color: string | null): SectionHeaderClasses {
+  if (color === null) return DEFAULT_SECTION_HEADER_CLASSES;
+  return SECTION_HEADER_CLASSES_BY_COLOR[color] ?? DEFAULT_SECTION_HEADER_CLASSES;
+}
