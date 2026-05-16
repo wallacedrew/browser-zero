@@ -49,7 +49,17 @@ export function TabList({
 }: Props) {
   const [dragOverKey, setDragOverKey] = useState<string | null>(null);
   const [activeKey, setActiveKey] = useState<string | null>(null);
+  const [collapsedKeys, setCollapsedKeys] = useState<ReadonlySet<string>>(() => new Set());
   const containerRef = useRef<HTMLDivElement | null>(null);
+
+  const toggleCollapsed = (groupKey: string) => {
+    setCollapsedKeys((prev) => {
+      const next = new Set(prev);
+      if (next.has(groupKey)) next.delete(groupKey);
+      else next.add(groupKey);
+      return next;
+    });
+  };
   const groups = groupTabs(tabs, groupBy);
   const dropEnabled = groupBy === 'window' || groupBy === 'tabgroup';
   const allowGrouping = groupBy !== 'domain';
@@ -144,6 +154,8 @@ export function TabList({
           const sectionColor =
             groupBy === 'tabgroup' ? (group.tabs[0]?.group?.color ?? null) : null;
           const headerClasses = sectionHeaderClassesForGroupColor(sectionColor);
+          const isCollapsed = collapsedKeys.has(group.key);
+          const listId = `group-list-${group.key}`;
 
           return (
             <section
@@ -179,10 +191,30 @@ export function TabList({
                 <div
                   className={`flex items-end justify-between gap-3 border-b-2 px-3 ${headerClasses.shelf}`}
                 >
-                  <h2
-                    className={`-mb-px rounded-t-md border-b-0 px-3 py-1 text-base font-semibold ${headerClasses.tab}`}
-                  >
-                    {group.label}
+                  <h2 className="-mb-px">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        toggleCollapsed(group.key);
+                      }}
+                      aria-expanded={!isCollapsed}
+                      aria-controls={listId}
+                      className={`flex items-center gap-2 rounded-t-md border-b-0 px-3 py-1 text-base font-semibold ${headerClasses.tab}`}
+                    >
+                      <svg
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        aria-hidden="true"
+                        className={`h-3.5 w-3.5 shrink-0 transition-transform ${isCollapsed ? '-rotate-90' : 'rotate-0'}`}
+                      >
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.06l3.71-3.83a.75.75 0 1 1 1.08 1.04l-4.25 4.39a.75.75 0 0 1-1.08 0L5.21 8.27a.75.75 0 0 1 .02-1.06z"
+                        />
+                      </svg>
+                      <span>{group.label}</span>
+                    </button>
                   </h2>
                   <div className="flex items-center gap-3 pb-1 text-sm text-slate-400">
                     <span>
@@ -226,7 +258,7 @@ export function TabList({
                   />
                 </div>
               </header>
-              <ul className="divide-y divide-slate-100">
+              <ul id={listId} hidden={isCollapsed} className="divide-y divide-slate-100">
                 {group.tabs.map((tab) => (
                   <TabRow
                     key={tab.id}

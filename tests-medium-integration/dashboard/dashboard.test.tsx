@@ -779,6 +779,61 @@ describe('dashboard', () => {
     );
   });
 
+  it('collapses and re-expands a section when its header is clicked', async () => {
+    const port = new FakeTabsPort(sampleTabs);
+    const user = userEvent.setup();
+
+    render(<App tabsPort={port} now={now} />);
+    await screen.findByRole('link', { name: 'pull/123' });
+
+    // Every section header starts expanded.
+    const window1Header = screen.getByRole('button', { name: /^window 1$/i });
+    expect(window1Header).toHaveAttribute('aria-expanded', 'true');
+    expect(screen.getByRole('link', { name: 'pull/123' })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Inbox' })).toBeInTheDocument();
+
+    // Click the Window 1 header — its rows go away, its aria-expanded flips,
+    // and Window 2's "cats" tab stays visible (collapse is per-section).
+    await user.click(window1Header);
+
+    expect(screen.getByRole('button', { name: /^window 1$/i })).toHaveAttribute(
+      'aria-expanded',
+      'false',
+    );
+    expect(screen.queryByRole('link', { name: 'pull/123' })).not.toBeInTheDocument();
+    expect(screen.queryByRole('link', { name: 'Inbox' })).not.toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'cats' })).toBeInTheDocument();
+
+    // Re-click expands it again.
+    await user.click(screen.getByRole('button', { name: /^window 1$/i }));
+
+    expect(screen.getByRole('button', { name: /^window 1$/i })).toHaveAttribute(
+      'aria-expanded',
+      'true',
+    );
+    expect(screen.getByRole('link', { name: 'pull/123' })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Inbox' })).toBeInTheDocument();
+  });
+
+  it('preserves a section selection across a collapse-reopen cycle', async () => {
+    const port = new FakeTabsPort(sampleTabs);
+    const user = userEvent.setup();
+
+    render(<App tabsPort={port} now={now} />);
+    await screen.findByRole('link', { name: 'pull/123' });
+
+    await user.click(screen.getByRole('checkbox', { name: 'Select pull/123' }));
+    expect(screen.getByRole('checkbox', { name: 'Select pull/123' })).toBeChecked();
+
+    // Collapse Window 1.
+    await user.click(screen.getByRole('button', { name: /^window 1$/i }));
+    expect(screen.queryByRole('checkbox', { name: 'Select pull/123' })).not.toBeInTheDocument();
+
+    // Re-expand — the selection is still there.
+    await user.click(screen.getByRole('button', { name: /^window 1$/i }));
+    expect(screen.getByRole('checkbox', { name: 'Select pull/123' })).toBeChecked();
+  });
+
   it('hides the jump-to-group nav when only one group is visible', async () => {
     const port = new FakeTabsPort([sampleTabs[0]!]);
 
