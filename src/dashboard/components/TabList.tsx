@@ -129,9 +129,21 @@ export function TabList({
     // so they fall back to the slate default in GroupNav.
     color: groupBy === 'tabgroup' ? (group.tabs[0]?.group?.color ?? null) : null,
   }));
+  // scrollIntoView({ block: 'start' }) lines the section up with the
+  // viewport top — directly behind our sticky chip nav, occluding the
+  // section header. Measure the sticky nav's actual rendered height
+  // (it can be multi-row when there are many chips, e.g. by-domain) and
+  // scroll so the section header lands a small gap below the nav.
   const scrollToGroup = (groupKey: string) => {
-    const target = document.querySelector(`[data-group-key="${groupKey}"]`);
-    target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const target = containerRef.current?.querySelector<HTMLElement>(
+      `[data-group-key="${groupKey}"]`,
+    );
+    if (!target) return;
+    const nav = containerRef.current?.querySelector<HTMLElement>('nav[aria-label="Jump to group"]');
+    const navHeight = nav?.offsetHeight ?? 0;
+    const breathingRoom = 8;
+    const targetTop = target.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({ top: targetTop - navHeight - breathingRoom, behavior: 'smooth' });
     setActiveKey(groupKey);
   };
 

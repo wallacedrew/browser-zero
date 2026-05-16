@@ -3,9 +3,13 @@ import { afterEach, vi } from 'vitest';
 import { cleanup } from '@testing-library/react';
 
 // jsdom does not implement Element.prototype.scrollIntoView. Stub it
-// globally so any component that calls it (e.g. GroupNav's jump links)
-// doesn't throw during tests. Per-test assertions use vi.spyOn on top.
+// globally so any component that calls it doesn't throw during tests.
+// Per-test assertions use vi.spyOn on top.
 Element.prototype.scrollIntoView = vi.fn();
+
+// jsdom defines window.scrollTo as a no-op, but assigning a vi.fn() lets
+// per-test code spy on it cleanly without polluting the original.
+window.scrollTo = vi.fn();
 
 // jsdom does not implement IntersectionObserver either. Stub it so the
 // TabList active-section observer can attach without throwing during

@@ -729,12 +729,16 @@ describe('dashboard', () => {
     expect(within(nav).getByRole('link', { name: /window 1 \(2\)/i })).toBeInTheDocument();
     expect(within(nav).getByRole('link', { name: /window 2 \(1\)/i })).toBeInTheDocument();
 
-    const window2Section = screen.getByRole('region', { name: /^window 2$/i });
-    const scrollSpy = vi.spyOn(window2Section, 'scrollIntoView');
+    // Spy on the window-level scrollTo — we offset the section by the
+    // sticky nav's measured height so the section header lands BELOW
+    // the nav rather than behind it.
+    const scrollSpy = vi.spyOn(window, 'scrollTo');
 
     await user.click(within(nav).getByRole('link', { name: /window 2 \(1\)/i }));
 
-    expect(scrollSpy).toHaveBeenCalledWith({ behavior: 'smooth', block: 'start' });
+    expect(scrollSpy).toHaveBeenCalled();
+    const lastCall = scrollSpy.mock.calls[scrollSpy.mock.calls.length - 1]?.[0];
+    expect(lastCall).toMatchObject({ behavior: 'smooth' });
   });
 
   it('highlights the first group chip on initial load', async () => {
