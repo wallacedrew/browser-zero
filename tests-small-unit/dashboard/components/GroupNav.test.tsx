@@ -22,17 +22,13 @@ const renderNav = (
   overrides: Partial<{
     groups: ReadonlyArray<NavGroupFixture>;
     activeKey: string | null;
-    allCollapsed: boolean;
     onSelect: (groupKey: string) => void;
-    onToggleAllCollapsed: () => void;
   }> = {},
 ) => {
   const props = {
     groups: sampleGroups,
     activeKey: null as string | null,
-    allCollapsed: false,
     onSelect: noop,
-    onToggleAllCollapsed: noop,
     ...overrides,
   };
   return render(<GroupNav {...props} />);
@@ -102,27 +98,5 @@ describe('GroupNav', () => {
     const ungroupedChip = screen.getByRole('link', { name: 'Ungrouped (8)' });
     expect(ungroupedChip.className).toContain('bg-white');
     expect(ungroupedChip.className).toContain('text-slate-700');
-  });
-
-  it('renders "Collapse all" when at least one section is expanded', () => {
-    renderNav({ allCollapsed: false });
-    expect(screen.getByRole('button', { name: /collapse all/i })).toBeInTheDocument();
-    expect(screen.queryByRole('button', { name: /expand all/i })).not.toBeInTheDocument();
-  });
-
-  it('renders "Expand all" when every section is collapsed', () => {
-    renderNav({ allCollapsed: true });
-    expect(screen.getByRole('button', { name: /expand all/i })).toBeInTheDocument();
-    expect(screen.queryByRole('button', { name: /collapse all/i })).not.toBeInTheDocument();
-  });
-
-  it('calls onToggleAllCollapsed when the master toggle is clicked', async () => {
-    const onToggleAllCollapsed = vi.fn();
-    const user = userEvent.setup();
-    renderNav({ onToggleAllCollapsed });
-
-    await user.click(screen.getByRole('button', { name: /collapse all/i }));
-
-    expect(onToggleAllCollapsed).toHaveBeenCalledTimes(1);
   });
 });

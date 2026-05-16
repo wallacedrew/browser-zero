@@ -153,13 +153,31 @@ export function TabList({
 
   return (
     <div ref={containerRef}>
-      <GroupNav
-        groups={navGroups}
-        activeKey={resolvedActiveKey}
-        allCollapsed={allCollapsed}
-        onSelect={scrollToGroup}
-        onToggleAllCollapsed={toggleAllCollapsed}
-      />
+      <GroupNav groups={navGroups} activeKey={resolvedActiveKey} onSelect={scrollToGroup} />
+      {groups.length > 1 && (
+        <div className="mb-2 px-3">
+          <button
+            type="button"
+            onClick={toggleAllCollapsed}
+            aria-expanded={!allCollapsed}
+            className="inline-flex items-center gap-1.5 text-sm text-slate-600 hover:text-slate-900 hover:underline"
+          >
+            <svg
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+              className={`h-3.5 w-3.5 transition-transform ${allCollapsed ? '-rotate-90' : 'rotate-0'}`}
+            >
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.06l3.71-3.83a.75.75 0 1 1 1.08 1.04l-4.25 4.39a.75.75 0 0 1-1.08 0L5.21 8.27a.75.75 0 0 1 .02-1.06z"
+              />
+            </svg>
+            {allCollapsed ? 'Expand all' : 'Collapse all'}
+          </button>
+        </div>
+      )}
       <div className="divide-y divide-slate-200">
         {groups.map((group) => {
           const groupIds = group.tabs.map((tab) => tab.id);
