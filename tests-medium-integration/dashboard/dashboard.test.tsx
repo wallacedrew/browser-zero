@@ -815,6 +815,40 @@ describe('dashboard', () => {
     expect(screen.getByRole('link', { name: 'Inbox' })).toBeInTheDocument();
   });
 
+  it('collapses every section when "Collapse all" is clicked and expands them back with "Expand all"', async () => {
+    const port = new FakeTabsPort(sampleTabs);
+    const user = userEvent.setup();
+
+    render(<App tabsPort={port} now={now} />);
+    await screen.findByRole('link', { name: 'pull/123' });
+
+    // Initial state: both sections expanded → "Collapse all" is the action.
+    const collapseAll = screen.getByRole('button', { name: /collapse all/i });
+    await user.click(collapseAll);
+
+    expect(screen.getByRole('button', { name: /^window 1$/i })).toHaveAttribute(
+      'aria-expanded',
+      'false',
+    );
+    expect(screen.getByRole('button', { name: /^window 2$/i })).toHaveAttribute(
+      'aria-expanded',
+      'false',
+    );
+    expect(screen.queryByRole('link', { name: 'pull/123' })).not.toBeInTheDocument();
+    expect(screen.queryByRole('link', { name: 'cats' })).not.toBeInTheDocument();
+
+    // Toggle label flips to "Expand all" once everything is collapsed.
+    const expandAll = screen.getByRole('button', { name: /expand all/i });
+    await user.click(expandAll);
+
+    expect(screen.getByRole('button', { name: /^window 1$/i })).toHaveAttribute(
+      'aria-expanded',
+      'true',
+    );
+    expect(screen.getByRole('link', { name: 'pull/123' })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'cats' })).toBeInTheDocument();
+  });
+
   it('preserves a section selection across a collapse-reopen cycle', async () => {
     const port = new FakeTabsPort(sampleTabs);
     const user = userEvent.setup();

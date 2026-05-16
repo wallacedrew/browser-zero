@@ -65,6 +65,19 @@ export function TabList({
   const allowGrouping = groupBy !== 'domain';
   const groupKeys = groups.map((group) => group.key).join('|');
 
+  // "All collapsed" is computed against the currently-visible groups, not
+  // stale keys from a previous groupBy / search state — so e.g. switching
+  // to a brand-new view always reads as "all expanded" from the toggle's
+  // perspective even if collapsedKeys still holds keys from the old view.
+  const allCollapsed = groups.length > 0 && groups.every((group) => collapsedKeys.has(group.key));
+  const toggleAllCollapsed = () => {
+    if (allCollapsed) {
+      setCollapsedKeys(new Set());
+    } else {
+      setCollapsedKeys(new Set(groups.map((group) => group.key)));
+    }
+  };
+
   // Default-active the first visible group so the page never loads with
   // zero chips highlighted, and gracefully fall back if a previously-
   // active key disappears (e.g. user filters away that section). Computed
@@ -140,7 +153,13 @@ export function TabList({
 
   return (
     <div ref={containerRef}>
-      <GroupNav groups={navGroups} activeKey={resolvedActiveKey} onSelect={scrollToGroup} />
+      <GroupNav
+        groups={navGroups}
+        activeKey={resolvedActiveKey}
+        allCollapsed={allCollapsed}
+        onSelect={scrollToGroup}
+        onToggleAllCollapsed={toggleAllCollapsed}
+      />
       <div className="divide-y divide-slate-200">
         {groups.map((group) => {
           const groupIds = group.tabs.map((tab) => tab.id);
