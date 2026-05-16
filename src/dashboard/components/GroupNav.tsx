@@ -29,8 +29,15 @@ export function GroupNav({
   return (
     <nav
       aria-label="Jump to group"
-      className="sticky top-0 z-10 mb-3 flex items-start justify-between gap-3 border-b border-slate-200 bg-white/95 px-3 py-2 text-sm backdrop-blur"
+      className="sticky top-0 z-10 mb-3 flex items-start gap-3 border-b border-slate-200 bg-white/95 px-3 py-2 text-sm backdrop-blur"
     >
+      <button
+        type="button"
+        onClick={onToggleAllCollapsed}
+        className="shrink-0 self-start whitespace-nowrap py-1 text-slate-600 hover:text-slate-900 hover:underline"
+      >
+        {allCollapsed ? 'Expand all' : 'Collapse all'}
+      </button>
       <div className="flex flex-wrap gap-2">
         {groups.map((group) => {
           const isActive = group.key === activeKey;
@@ -53,13 +60,6 @@ export function GroupNav({
           );
         })}
       </div>
-      <button
-        type="button"
-        onClick={onToggleAllCollapsed}
-        className="shrink-0 self-start whitespace-nowrap py-1 text-slate-600 hover:text-slate-900 hover:underline"
-      >
-        {allCollapsed ? 'Expand all' : 'Collapse all'}
-      </button>
     </nav>
   );
 }
