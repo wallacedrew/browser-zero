@@ -52,7 +52,7 @@ export function TabRow({
           event.preventDefault();
           onFocus(tab.id, tab.windowId);
         }}
-        className="min-w-0 flex-1 truncate text-base text-slate-800 hover:underline"
+        className="min-w-0 flex-1 truncate font-serif text-base tracking-tight text-slate-900 hover:underline"
       >
         {tab.title}
       </a>
