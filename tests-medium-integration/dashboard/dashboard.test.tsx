@@ -67,6 +67,26 @@ describe('dashboard', () => {
     vi.spyOn(window, 'confirm').mockReturnValue(true);
   });
 
+  it('shows a live diagnostic subtitle counting tabs, grouped/ungrouped, and windows', async () => {
+    const port = new FakeTabsPort(sampleTabs);
+    const user = userEvent.setup();
+
+    render(<App tabsPort={port} now={now} />);
+    await screen.findByRole('link', { name: 'pull/123' });
+
+    // 3 sample tabs, 0 grouped, 3 ungrouped, across 2 windows (id 100 + 200).
+    expect(screen.getByText(/3 tabs · 3 ungrouped · all across 2 windows/i)).toBeInTheDocument();
+
+    // Close every tab in Window 2 (id 200 → "cats"). Subtitle should
+    // recompute to 2 tabs and drop the windows fragment (only 1 window
+    // left = trivial; we hide the suffix when ≤ 1 window).
+    await user.click(screen.getByRole('button', { name: 'Close cats' }));
+    await user.click(screen.getByRole('button', { name: 'Confirm close cats' }));
+
+    expect(screen.getByText(/^2 tabs · 2 ungrouped$/i)).toBeInTheDocument();
+    expect(screen.queryByText(/all across/i)).not.toBeInTheDocument();
+  });
+
   it('lists every tab grouped by window with title, domain, and relative time', async () => {
     const port = new FakeTabsPort(sampleTabs);
 

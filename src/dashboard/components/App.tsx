@@ -25,6 +25,7 @@ export function App({ tabsPort, now: nowOverride }: Props) {
   const summaryTabs = isFiltering ? visibleTabs : tabs;
   const groupedCount = summaryTabs.filter((tab) => tab.group !== null).length;
   const ungroupedCount = summaryTabs.length - groupedCount;
+  const windowCount = new Set(summaryTabs.map((tab) => tab.windowId)).size;
   const existingGroups = useMemo<TabGroupInfo[]>(() => {
     const seen = new Map<number, TabGroupInfo>();
     for (const tab of tabs) {
@@ -211,6 +212,7 @@ export function App({ tabsPort, now: nowOverride }: Props) {
               : `${tabs.length} tab${tabs.length === 1 ? '' : 's'}`}
             {groupedCount > 0 && ` · ${groupedCount} in groups`}
             {ungroupedCount > 0 && ` · ${ungroupedCount} ungrouped`}
+            {windowCount > 1 && ` · all across ${windowCount} windows`}
           </p>
         </div>
         <div className="flex items-center gap-3">
