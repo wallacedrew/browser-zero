@@ -22,7 +22,8 @@ Distribution shape: load `dist/` unpacked from `chrome://extensions` during deve
 
 ```bash
 pnpm dev            # Vite dev with HMR (watches manifest + sources; reload extension in chrome://extensions to pick up changes)
-pnpm build          # Production build → dist/
+pnpm build          # Production build → dist/ (one-shot)
+pnpm build:watch    # Production build → dist/ + watch for changes (keep dist/ alive while iterating)
 pnpm test           # tests-small-unit/ + tests-medium-integration/ (fast lanes only)
 pnpm test:e2e       # tests-big-e2e/ — none in slice 1; reserved
 pnpm test:full      # all lanes
@@ -42,6 +43,13 @@ Pre-commit hook (Husky): `format-write → typecheck → fast-test`. Any failure
 4. Click the `browser-zero` toolbar icon → dashboard tab opens
 
 After rebuilding, click the refresh icon on the extension card in `chrome://extensions` to pick up the new bundle.
+
+### Avoiding the "Failed to load extension — File path cannot be resolved" error
+
+`dist/` is gitignored, so it disappears between sessions (git clean, branch switches, manual cleanup, `rm -rf` chains during screenshot regens). When that happens Chrome's reload-on-card click shows "File path cannot be resolved". Two options:
+
+- **One-shot**: `pnpm build`. Click Chrome's reload icon. Repeat per change.
+- **Keep dist/ alive while iterating**: `pnpm build:watch` in a long-running terminal. Vite rebuilds `dist/` on every source save; you just click Chrome's reload icon to pick up the change. Stops cleaning between commits + screenshot regens since the watcher reproduces `dist/` immediately.
 
 ## Architecture
 
