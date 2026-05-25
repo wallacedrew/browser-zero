@@ -1,0 +1,1536 @@
+Chrome tabs / session URLs — extracted 2026-05-10 19:31
+Source: Chrome's on-disk session files (Tabs_* and Session_* under each
+profile's Sessions/ subdir, rooted at '/Users/wallacedrew/Library/Application Support/Google/Chrome').
+Includes navigation history per open tab, deduped, with ad/tracking/
+iframe noise filtered out.
+==============================================================================
+
+==============================================================================
+Default — Person 1 (wallace.drew@gmail.com)
+  source files: Tabs_13422928175139872 (470 KB, 2026-05-10 19:10), Session_13422929125129938 (5166 KB, 2026-05-10 19:30)
+  raw URLs: 1126   after filter: 1116
+==============================================================================
+
+[0991ae7b-d42a-45ca-9f68-c1e482cbd3a8.lovableproject.com]  (1)
+  https://0991ae7b-d42a-45ca-9f68-c1e482cbd3a8.lovableproject.com
+
+[400b493052e8ffb63135613ec1beb02d.claudemcpcontent.com]  (1)
+  https://400b493052e8ffb63135613ec1beb02d.claudemcpcontent.com
+
+[693524e4-0fb2-4c34-baef-cb326f99f43f-00-3m6rxa41uift5.picard.replit.dev]  (1)
+  https://693524e4-0fb2-4c34-baef-cb326f99f43f-00-3m6rxa41uift5.picard.replit.dev
+
+[a.claude.ai]  (1)
+  https://a.claude.ai
+
+[about.me]  (5)
+  http://about.me/
+  https://about.me
+  https://about.me/
+  https://about.me/andrew.wallace/edit/details
+  https://about.me/login
+
+[accounts.blogger.com]  (1)
+  https://accounts.blogger.com/
+
+[accounts.google.com]  (19)
+  https://accounts.google.com
+  https://accounts.google.com/
+  https://accounts.google.com/ServiceLogin?access_type=offline&app_domain=https%3A%2F%2Fstudio.auth.synthesia.io&authuser=0&client_id=306624184159-9depmigsvgb467hl86n2fh159enhr8qm.apps.googleusercontent.com&continue=https%3A%2F%2Faccounts.google.com%2Fsignin%2Foauth%2Fconsent%3Fauthuser%3Dunknown%26part%3DAJi8hAME_pqsZtSoy-gRhkoVYLbt8B-cREZq7-DC6K4GoVyhOsMaFyQDhWep3br3JJzv_pb1tenbqDuOh7lL6BV9Mh4ONaZ0aaoXgdXcmFMuf5mV9b5wmS7CLmktcdDvgG6TfHGIbgtKfPU3PCA1X2HsolVWJjOoWcZ1XYBccJ0Ry4qfJrl6iKICIN4zzR6gcVmNML6rrqCYwuf6poBCMvQGFl9BbJkb1-UmSqFjQrYvoIEGbSpL7XwTVS0f0Vv8XMp3ue_jmmmteeriXZB00nDcS_yRnagXeWxkiwQFi9u7SdnxV9a0jFi5dms2-M7iQJlwLf4oKm9AyLdAgZw4R4a5Xpvg4z89bKhEtsIQ-CV8wRFd8m9KpdJHL7LqrOdayuNEg_f2TcXTtoQzTyvQNDPOrg-1htP6XYKzhaxUakLCXttf4BHv3r_0YWH5dJRgRrLBhoSzQg9Q8qAP975puRhPifraGOJbthahKWaaJdNiBe1o6WV1klY%26flowName%3DGeneralOAuthFlow%26as%3DS1677880464%253A1775937632402505%26client_id%3D306624184159-9depmigsvgb467hl86n2fh159enhr8qm.apps.googleusercontent.com%26requestPath%3D%252Fsignin%252Foauth%252Fconsent%23&dsh=S1677880464%3A1775937632402505&flowName=GeneralOAuthFlow&o2v=2&opparams=%253F&passive=true&redirect_uri=https%3A%2F%2Fstudio.auth.synthesia.io%2Foauth2%2Fidpresponse&response_type=code&sacu=1&scope=email%20openid%20profile&service=lso&state=H4sIAAAAAAAAAF1S227iMBT8lzzj1IlvhDduIRWUUiC0ZFVFDs6NgB3iQMqu9t_X9KnaB8uemTNHo-Pzx-LWwEqvoEt1C5yYFVPeCX7yrZ6VGGWmVH5KDTgY4FS3vN-kJMmv3ul4kbI6Kn3FjFWmQJiCom1rPXh64nVt67tsi1SX3C6VkVMjH5R4tMp-9s2twS9L1akshUF1o7Lym-edtg8ql2WrbF2aW9pXnTY2F-dSWp89qzBdRhL2_dxZze4Oy5ezajtMqIb7LdQLfwe5CxilHsWU0IwhgpnHICVIYME84hoWmZMyTH5UudSwGWU0pR7DNCPIaAYxwuC3Bxv-28swEi5BLqYmbmnSlDIYfgTjqrm8dr68x2MnrJv5vYmHI5krf6vzQwWf_RGYPgZyNI6NSx7myjyHX22wiMNnEQMhwo9wPf9Ccr7Q-_3KZ9Po-NyS4BUGsV_v316y2VLsNN0Hm_MyDPHL5YP72e-9aMchuF3ciz97J7Ku9P3t3M52RbCZnx0352M3iuu8DNX2xoYQ0cUoH7331aQPQcXrQoIjLAl6Wa8ompC0nkRRN2STdXSKpAj85Bh5m10AOpP4ZBLr9ipKZfNrW_z_2Wdr4DBGPMQocs2vWoOMn3Tas5rHFiU0cSD2AGMQAzNOF3DqYAAZyjBHCRTssQo3sxiff_8BbN3HyqACAAA.H4sIAAAAAAAAAAEgAN__buJJ3Wv5Pvj_GV4z8zA7yqzC3WvfmMGoSsnKOysoa8T_2cpNIAAAAA.3
+  https://accounts.google.com/ServiceLogin?app_domain=https%3A%2F%2Fapp.base44.com&authuser=0&client_id=185178814199-6a35e9aqcmlm15ig0upncg07c91av8do.apps.googleusercontent.com&continue=https%3A%2F%2Faccounts.google.com%2Fsignin%2Foauth%2Fconsent%3Fauthuser%3Dunknown%26part%3DAJi8hANcuGKeuDn9qcqQM709yq-ypyrU3DwdAJFG_svC4Q2lF-Xn6ZYcOviyZHZ4ta6DfJfmX9bZIhLRUsx7hbLoI1ePoq5St8Bvq59Gtt7YVDGA2ja-RvPqJZsdqgGG1jFbzBpyjnYk9q-Bm_UtU6SSgbzk2aJSmRHPW_DG77EiupjWzm9DwKeoH4PnoLzF9N-6XPFssI3IizyQhX0L829xvxD70BoYN_1rVPdrvATmBwJuS_e711Cfi5_IRKSHwul_2oS77B1RfVi4Bq9zqcMoioKwu4R3a9FKEBFEq0Jkwz2yuVtK9qpYZIwYXJEWGF8QtqXz8DDJwaxPlDc7Uf6AW1VsOYh8gNk059zbWBdKDPPh629SEMzF2D_EI-L53CSn6A_iPRPJgSLqsKdf-SXR9w0cKuXpncO93nV2bi5kvIVHr8NYtF-m6XucLIUn7UfA2j4Xhvs5-t2f_cdLTvZnoMlarB52zw%26flowName%3DGeneralOAuthFlow%26as%3DS-182747057%253A1758999383261199%26client_id%3D185178814199-6a35e9aqcmlm15ig0upncg07c91av8do.apps.googleusercontent.com%23&dsh=S-182747057%3A1758999383261199&flowName=GeneralOAuthFlow&nonce=PcBWQMXsFTMX1TNVwQ1o&o2v=2&opparams=%253F&passive=true&prompt=select_account&redirect_uri=https%3A%2F%2Fapp.base44.com%2Fapi%2Fauth%2Fcallback&response_type=code&sacu=1&scope=openid%20email%20profile&service=lso&state=%7B%22domain%22%3A%20%22https%3A%2F%2Fapp.base44.com%22%2C%20%22from_url%22%3A%20%22https%3A%2F%2Fapp.base44.com%2Fbilling%22%7D
+  https://accounts.google.com/ServiceLogin?app_domain=https%3A%2F%2Fauth.copilot.microsoft.com&authuser=0&client_id=293702255113-5edfm31r2gdeamh7uhlkf6ol4s8vrj1b.apps.googleusercontent.com&continue=https%3A%2F%2Faccounts.google.com%2Fsignin%2Foauth%2Fconsent%3Fauthuser%3Dunknown%26part%3DAJi8hAO-QWnGxiJ0bj0sqXs4S_HW2QBzHFlco6V0q7IT1a5-NEPsgPqEo8WVZQAUCpq4RX_yH_FhEVDjyyNwdUn0IvN9zQgFnIIBSWH45ttbS6zKvz-Su9VQtvckNbt1zWHRGxFVUCR82fSP38qK_xr1_UaEnmwAM5ZoNXRUsLEgRDL6eYTuea450Zp7AwTd_exO7sXhSbQQbylEdtq0h5do7161v85xSfyyEufnu3mtyZk9jRC6aJlp_nvM2ix9t-qy_6sTirBWXAEDyzxkIE-yR3ROvzSNGfkHk4I9sn4SpADLOAtUMRuIvABy5sahq07ytmPrvvyFIOcSTGCMqElBwyWvDDoq2TZGhduAVyi5cj0mtvHiRe4lpVKcHtjah1faRY_bw6NPbEdz1b9ZU8g8TEuvgr49YM7PpNwWFo3My5Uul_YLL7LyYODHUW4NkXSi-n0ziuZi6CMIelvgR21xCseFtY_0O_Qi8B1Am5PmurysAAQ7eT8%26flowName%3DGeneralOAuthFlow%26as%3DS-267419664%253A1764451994270929%26client_id%3D293702255113-5edfm31r2gdeamh7uhlkf6ol4s8vrj1b.apps.googleusercontent.com%26requestPath%3D%252Fsignin%252Foauth%252Fconsent%23&dsh=S-267419664%3A1764451994270929&flowName=GeneralOAuthFlow&o2v=1&opparams=%253F&passive=true&prompt=select_account&redirect_uri=https%3A%2F%2Fauth.copilot.microsoft.com%2Flogin%2Fcallback&response_type=code&sacu=1&scope=email%20profile&service=lso&state=Rcm5xyYyqUyH_ChThlZXLLaWNUW72UN7
+  https://accounts.google.com/ServiceLogin?app_domain=https%3A%2F%2Fauth.openai.com&authuser=0&client_id=799222349882-ne3i0s9jdm5s0p7ll2d7tlsi1vc1halt.apps.googleusercontent.com&continue=https%3A%2F%2Faccounts.google.com%2Fsignin%2Foauth%2Fconsent%3Fauthuser%3Dunknown%26part%3DAJi8hAMqEd-0B_S3BbjcyOg5i8TKO2xplxxaLJ5DAPwsazvY9W7FwSuOMC0BiEeBZxxo4cgu4nK20urRioRsBW1Ixa0kAulRInm1tgQuAAcPo0RPI1M_LLEE9UtQzgOBA_iH_uif3ZmZQFCv0iIpby7yjHq_jLSkDVRLLZOZmqE-m9ciCbWxyidSBQDVWBTM9DDNaA5A71y4tTkA1TFko66P1I_6LTClDLYnsdPmsaT4ls25m81O0hdYS2mvv_pk19RvB7pa2FAICifL7GhahTA6e5VJhXCK4BtVHm0CP61Nin1ES74ksj6JZ2usXDQm9-ntbPM04JkCJN2RkZX58Ff4RQBzQeAKTY7zwPGOnQ8GsofaK-wty7gHWu5BZb0SGXccjATy45V5tBQ1Rc2JaPMGhc3A1wrq_z8TDUKU2hcxxTdSyfgeBc8y8GD4iemQowUHUL-5nIbtagjDl020YYfSY_Ol4VEmww%26flowName%3DGeneralOAuthFlow%26as%3DS925949410%253A1763003304919480%26client_id%3D799222349882-ne3i0s9jdm5s0p7ll2d7tlsi1vc1halt.apps.googleusercontent.com%23&dsh=S925949410%3A1763003304919480&flowName=GeneralOAuthFlow&nonce=8scm7s7rXRRKLkTxVNsx&o2v=2&opparams=%253Faudience%253D799222349882-ne3i0s9jdm5s0p7ll2d7tlsi1vc1halt.apps.googleusercontent.com&passive=true&redirect_uri=https%3A%2F%2Fauth.openai.com%2Fapi%2Faccounts%2Fcallback%2Fgoogle&response_type=code&sacu=1&scope=openid%20profile%20email&service=lso&state=f697ccc8-f78d-4cb5-99f6-7a48874a0d65
+  https://accounts.google.com/ServiceLogin?app_domain=https%3A%2F%2Fwww.capcut.com&authuser=0&client_id=128657643583-as9ej2egc82vfu0u2efr77nmpahej5h0.apps.googleusercontent.com&continue=https%3A%2F%2Faccounts.google.com%2Fsignin%2Foauth%2Fconsent%3Fauthuser%3Dunknown%26part%3DAJi8hAPRM2ddabUyFsBJDmTEPu26RK-i-A3baxNhRlA8riS2z9bcgVsfNqKXrKe46aQ3XSSCf3Xs2sQr4rztzqYEKeq8YO1nwVJj1_dU4aM2m-IKO96izAKiZBg_Pmx6x9YanI232aWl0YWi2VpufH7YCrJE3rF9A_AQGEV7SKfXCI7j4L5zWBsxMkdtO7Xj1rlXOXiRMq8bGh7t_LpmmM2mSkTJ_2MxPmLVbdq-j7Ri1VWCNoAdq-xsrJHvmF5cdF1GHAZKl-p0Ryf6DUuRqg4l0SiTw2eZhqhgZI1Ol9G0g47NbYLQTwTW8Sjjt2cktFSe4uOz2kShPQQaaYzEcL_dJ_0zov8CmpBoIIdSdXfv4TCLByY5koCjKtgbEIZdkTiPNHx7PgcN__bC_lHCDoomsRG68KPiFOeQITIGn6W-b6lbHyDsn7MbKzVwprrmVaxqTEG14EH0ocUjcYzqB9KYset7swHXrg%26flowName%3DGeneralOAuthFlow%26as%3DS-1489981028%253A1763948228623435%26client_id%3D128657643583-as9ej2egc82vfu0u2efr77nmpahej5h0.apps.googleusercontent.com%26requestPath%3D%252Fsignin%252Foauth%252Fconsent%23&dsh=S-1489981028%3A1763948228623435&flowName=GeneralOAuthFlow&nonce=3oblmjlc&o2v=2&opparams=%253F&passive=true&prompt=consent&redirect_uri=https%3A%2F%2Fwww.capcut.com%2Flvpc_web%2Flogin_status&response_type=token%20id_token%20code&sacu=1&scope=openid%20profile%20email&service=lso&state=%7B%22client_id%22%3A%22128657643583-as9ej2egc82vfu0u2efr77nmpahej5h0.apps.googleusercontent.com%22%2C%22network%22%3A%22google%22%2C%22display%22%3A%22page%22%2C%22callback%22%3A%22_hellojs_92xo4sv7%22%2C%22state%22%3A%22%7B%5C%22id%5C%22%3A%5C%22e85b49f8-9268-4f26-90eb-9ecfd09597ec%5C%22%2C%5C%22device_platform%5C%22%3A%5C%22mac%5C%22%7D%22%2C%22redirect_uri%22%3A%22https%3A%2F%2Fwww.capcut.com%2Flvpc_web%2Flogin_status%22%2C%22scope%22%3A%22basic%2Cemail%22%2C%22page_uri%22%3A%22https%3A%2F%2Fwww.capcut.com%2Flvpc_web%2Flogin_proxy%3Fplatform%3Dgoogle%26lng%3Den%26login_id%3De85b49f8-9268-4f26-90eb-9ecfd09597ec%26is_support_looki%3Dtrue%26device_platform%3Dmac%22%7D
+  https://accounts.google.com/ServiceLogin?continue=https%3A%2F%2Fanalytics.google.com%2Fanalytics%2Fweb%2F%23%2Fp500049173%2Freports%2Fintelligenthome&dsh=S-1490819332%3A1762993248306366&followup=https%3A%2F%2Fanalytics.google.com%2Fanalytics%2Fweb%2F&ifkv=ARESoU0I-dAsKB0g1d8611lI0NGPSmEYIFZ44fXMXP_dE3C1487-TpsaDxfZCXKez3myI42e2VeOOw&passive=1209600&service=analytics&flowName=GlifWebSignIn&flowEntry=ServiceLogin
+  https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253D-IzWIf4dAjg%2526t%253D454s%2526themeRefresh%253D1&hl=en&ec=65620&themeRefresh=1
+  https://accounts.google.com/o/oauth2/v2/auth?client_id=128657643583-as9ej2egc82vfu0u2efr77nmpahej5h0.apps.googleusercontent.com&response_type=token%20id_token%20code&redirect_uri=https%3A%2F%2Fwww.capcut.com%2Flvpc_web%2Flogin_status&state=%7B%22client_id%22%3A%22128657643583-as9ej2egc82vfu0u2efr77nmpahej5h0.apps.googleusercontent.com%22%2C%22network%22%3A%22google%22%2C%22display%22%3A%22page%22%2C%22callback%22%3A%22_hellojs_92xo4sv7%22%2C%22state%22%3A%22%7B%5C%22id%5C%22%3A%5C%22e85b49f8-9268-4f26-90eb-9ecfd09597ec%5C%22%2C%5C%22device_platform%5C%22%3A%5C%22mac%5C%22%7D%22%2C%22redirect_uri%22%3A%22https%3A%2F%2Fwww.capcut.com%2Flvpc_web%2Flogin_status%22%2C%22scope%22%3A%22basic%2Cemail%22%2C%22page_uri%22%3A%22https%3A%2F%2Fwww.capcut.com%2Flvpc_web%2Flogin_proxy%3Fplatform%3Dgoogle%26lng%3Den%26login_id%3De85b49f8-9268-4f26-90eb-9ecfd09597ec%26is_support_looki%3Dtrue%26device_platform%3Dmac%22%7D&scope=openid%20profile%20email&nonce=3oblmjlc&prompt=consent
+  https://accounts.google.com/signin/oauth/consent?as=S-1071711541%3A1756073957756677&authuser=0&client_id=116473362620-qrft6fq6n3rnhi7n1b3uhus4352e6opg.apps.googleusercontent.com&flowName=GeneralOAuthFlow&part=AJi8hANWdTqywBDBNnJx3_7nNo8J1GWfJsem6-K6wOkbJ5CTCE8oyBmCIxfVa3pagA3wkH6wlJZ8PypNS3WYWiSZ4UGlqxU48b3t4pQBcPae3AdGdyWdbYwK1XnnoOHfqkx9uJtuqzf2L2Bn1qPo1k17_rkY_2fUSeAb86pjzScEbrLeiJwXONM-5hDGPKws9v8helhBWQiafgInfRssuFXa7GrAg1xOXEc901w653xvxWhQ1_phat78HHvCJ2fSK7LAVwUltbT_MIDW_GhVSku1wgc086np0sUCpqGvbsYGXNIaL6C4eFJUhNshw3e5Tux20m65szel2raS9gbeV4GolE_X1T_uzyIyKdyjIGG0TRSXD3ns3lsPDMfrwPCqg7EEeWRKgbqb7p6zHsvetIhIRobY0oR6F98-8iDy3WK3hiIk-iyfkqsPDsPssbmGYXM_sc2rCTm62TDRV1OKqEuSVsCcZmB7qYgGi9Ms4n6OXE3JA5LjUGq6Af7tFLZHLEZWbq58uJbuR2xW8tsKyHgR9Dfv5jWqFnQAyYBf6sHGiJIo58Y1OBcjuIX7dqEET6HtV9uI23o-zQ-SO-ButPR4wueQsVcSUDT4WMSONhRVnBVorWiVZWLqhnMzSKVyAxhs-oC7yv2SeuJLNYNBBadqJWHxxITqc2NaU2AASqylf67DsAT-xl7xKPOSrhoeZrhsjplb6_3Q2J0WwjGd4l0iSul_KBssZNW8Wes-2tjQhu8Y0KIbCsXt1LQ5WBIbgafWBwnM9cfYjcveUP_uHmLQ8Ruq62dXjpu738FoqAq1noUX6ekNjXK-I_lAPrCzFB998QkxqqXOaq5M6jZnkw2v_5-WIVPJICvcHc6bxxyDuVtZQobJrfwDT82HyixJrho3o7JD5wbaU0ObO3uGib24-zPVjEboz5d05Y_gLNBV3UOttjrgFi6r3JravPz3IL5BUTt3Z95mYqUAR2w7my8WyYTzd_dMdeEN62z9EnrUrOh6P1N3_WY&rapt=AEjHL4N52GbVEGBv8929zkq0OqXvhD-F1bobkSciPVt4epJxpZQzhXHIUjipybKLHPWyRV7GbBHcwfWlkiS5iilUJmjbnxReJg&xsrf=AL5_qF2yaAARsy174CMJDRvJKfft%3A1756073959699
+  https://accounts.google.com/signin/oauth/consent?as=S-1489981028%3A1763948228623435&authuser=0&client_id=128657643583-as9ej2egc82vfu0u2efr77nmpahej5h0.apps.googleusercontent.com&flowName=GeneralOAuthFlow&part=AJi8hAOXRDXkMdY5oeLcePdl963bqTs7PEhoVb6BDCdAJnVynt5k6zJPG1YW-ot-ugPV4o_Ks4y-eog746c4wF81oPiAOjEFQHSeWBrpGIfb_DK4l4W8zCX3P3cBs0P36iLh4Ipp5KIUYHmfzZawTLLaB6q0Oqn6k-865oel7icbiEgBJiI2W_GhhUpmJwUqBOEEWeuzNqA4TsGcTRGvi4bhbEFCEiT5tP5esl1uO4-uVAN8plIk2vCvQ4iQu20BAVW0tPN7z4Ra-OFS5PKIXF9Sd9xX_WKQTvv0_Ctdnncblil-GtEbChn2bY514V50Fl9i6p3hWO1IDJPsEsApxXGHYSIswAL1MMUgjycdydKVwPImXQgq48FmVudLHCghIrit9KrN9rmjaSaL_HCRzJZrtdpPlZsr4D43GuA9RJyX0r-P8LjFdYD39QliXUBQNkgSldVplh0Tsk9562aJJTtitSuVTe5jYjVhoWGk57GUOQw1N_I7ra-NBrPgGe9VYe5tpGACwuyUl7WJmMQWhd2dTI1SciQZmb2EMbt_5uw1LMmQZXb_xZ9xT0OfvqPTPCU37iFx0SlA29h90ioCabdbafILn6mWdHlGP3VTPR_wAMocW66rbEFQ4fkDeYoJ7fBmtQl-8BYozpw4wufJ6YNrenZYlSpvjG0cxWrL_eZTB2oeyWrWrgDFILN0vmsrIo4xXl376l--8HdHIkCe7L8SFGHVqa-CJ5TNvC_2rmlv4ImpnfrYhM04ilXto0rLtghFu9dInc6FsFV3NDcQC4h50ukr1wQmIqeablT4fZwZVkYM9I8bafYnM0AWkGDmc3ttXL84tUWMCIwu_tL6r2UA3oK6C8gLuw&rapt=AEjHL4Pnw4xrkfWPbatZyx2uJkgeAdWAHzcDboGhWxvLHzD8R4XLu-KrLdhBK4sYQgP4NkJlitl4yq2hEXus2VJPGFwg23jnhl2vg8mqlVERE9c7Akn2BEs&xsrf=AHxBXvLX62GMSnlCf7rms_gMDH_c%3A1763948230887
+  https://accounts.google.com/signin/oauth/consent?as=S1677880464%3A1775937632402505&authuser=0&client_id=306624184159-9depmigsvgb467hl86n2fh159enhr8qm.apps.googleusercontent.com&flowName=GeneralOAuthFlow&part=AJi8hAPCEceODa3IALHCUdYDJF7DN8YDKnGPvsbPjcEaerNjXv8XrnWzSnVu-nn4dPRJY3-Q2HBEVOTbXmPMfK96nxWBn63kUOaYTSEsN4CjAy27VRkDLIZMwzrgX8dRI_IVeHVNsSQkABbTK054lIMh-ZgVQ3lGTfzQgtpnN5ZBTotSLcmNI2rtJoRgfLUO4PbPsc_zt5t9qpLu0k3HQv4LIwd2Dzs-16SFjIfwB6C4jqKdShPNDyL5qOuyw77gcVsRH5nK-_lULYMkj296ki8ibpcWcEx3Avi4YIzBZDN7CZ9YP9ZtB5gsMVNXTm-s5PlOsV3gRuuZW_RoQSwdr6zSgGqL64uwmYmC9f0Qu9t8vOqt-3WONHxYcP6id0sNqgqr3YGPCSlaBwGjxTfxZAYZpPW7N_YEXjrT7-tPJbLf98YWIEtM4r4-Os8kbRbBlQ6OczlZ9DaNACZecg8LSnW2Mr41RfpU4Ab4Xloa9xFQrmW96mEp_HN42EZFOczJsOQAtWRMFwR7HUUTOoy5JBdijx7k0Xd1iwlxE2V4b7mp3-DcIENmVPzA7fRw4CfxaMOX3zFgPa9kYSC9DTOSr82PmrPA0ZkAgWZrqecFl_qI6SCeOCFWdwSvMfVkNwlTmKLluqsk8eR0yYdSRP7cH-Z_ZD1QSTvf_wxpod9J-ue5EaCCuN5VPHnHWTWXsF0aHsYX6w826_vN83-oddDA75lpWy7_ooHmFjcBFGQgUMiH5v62xq1QOC9DIJfIJxUZLeh09Yvord8jQGo0uXd2J37Xc-3CU1dfQv9s6KEfPjAC6p9i-KPUfJM5DO2z3kn1jv5FuWY9by7ynbzFUNyMzdOTj01Fo1W-3vXplzEiWQUwsSQ7ydVnzQs&rapt=AEjHL4OAqlAb88ClaFlj2wxD0Pqro73tPlXkuu8qB1kfh-4gl4vvQW61R1cmxireOFWH1Fsj7PK_nxgKwNTg7isR6fAPShU3k3cOaoWaMjfzck97dOvD7xA&xsrf=ACyENv--haZufjy2fbt_BZAEcrBs%3A1775937635348
+  https://accounts.google.com/signin/oauth/id?authuser=0&part=AJi8hAMdBJjlnW3Tmi0oTCq3-SKc53-dX_HtvQLDZKqc-HRgst6V8w8m6vl86ecH4pGKhiRTR1iwSYvlipPni-BHbUZjkILZWCKi2p_BM5HUPjmm8HThAiVC7uZ3pVUnoCExpKM7b099DnybUc-z8FD2TRTKlpkyhDA0fhEDcyQo6GvI7L3ZoX1LZFNMlS4P6VX-mwqwAt5PeADJzoWKvDpxILVVXIne8lQNRj1PZrCW4EVAmoC47SexszkMiCs9NNyRkPKOMGady83DwyKZrFyto9ldFOaTVUy4z7jHUjS9dp0z4opPVV664Aj73t0GzSdQ0F2jPeSnMpFXC1burQz7-Z_ovwxTksTXEllQUdIL_UZP5gVEgZAsDVh6fR8rvLJlywWbFLB_Yy-1h4SVcML-mnam4CosxYO1TLjxwDKsAZUESQ1WXyuTpDdijFQsS8NpV0IQZ1BJBKM9X1epuxxBoQmdMbyv-r8Oij2lDP1LWLDRNcnw0Qzt11Q-AP3_CPoge4vk71F19QpRtXE4qyBc6E8pRuSPLfOEJgLFUBegEQr1tY09h-gvntetWAS7c-L6q1K4GWZAUHZBsg5IwJxlpC4m3xRf5HR44yh9Pnsvqh0RujUnAoWRcaQzT1C6L54DsOyzo7zDEdISzVBKUqw5la7Cg5x_InjV0pG74TtbIVCqN1x49FHT020C4XgPBmJ0NLILyCKeFy3MCLoJMuNkWZ-lIYjQhtdURx3UijWAWtYA1z2G1-QMJgO5pt4I-NZxqvDzzS0XAueF_o6s6DBre6SkQTqbZ3rNuZzsNsm60qRc6kx26a-DpwBLg-ILi1S_NGXbLlmcmAQ1AGiZERqLnMOOVC51_A&flowName=GeneralOAuthFlow&as=S1677880464%3A1775937632402505&client_id=306624184159-9depmigsvgb467hl86n2fh159enhr8qm.apps.googleusercontent.com&rapt=AEjHL4OAqlAb88ClaFlj2wxD0Pqro73tPlXkuu8qB1kfh-4gl4vvQW61R1cmxireOFWH1Fsj7PK_nxgKwNTg7isR6fAPShU3k3cOaoWaMjfzck97dOvD7xA#
+  https://accounts.google.com/signin/oauth/id?authuser=0&part=AJi8hANyeU8pXpb8c2jm-eE2W-1yxELwSEcrhpVTS_IrPYx-oyXlZAkpcCq2s9X_D2HFl5fedRN5NGQl9536fkYH_E_-Hy97fGfhx81neuzKwpbAAmWEwcFf3305jMswAguhlZHEwa3qnjIUzp9B6kN4yMZqd3De7C0vmf8OFlPO5gI-ekmkpTgV7gghisnlG2jv5u6nmqjVSdJt9Lg04EGFOw44xQe-eQ3iT1DExeupOkshxNhh2oK-8bLe8qTnblaOb40evYsETrUYFaBY4JRNSpT648jEcPT3carE8s56n8egyTCragiH3FxIuIodXzYR5q_BJi25cOkozyMPieZZ0t26KJI1Oi7_510kMSZg9-DaHsI8_frc9-EeLsZnBRJZjcuZmZfC_i3Nw_4z3jwd_YI08oAlRv0uq1NFNJgEKZ_-Wa0KN6KUxqjc7PV1wAP2NGJrW2_YzPoTTZqY8EuIhVRrEZhIgBi3mhqtBi-KWtagIg4_wLTNL4zdjqxwxusuZcFcufm8Vom6sUddVZwjsT68IJwFkOCkkZWn0tn6AVgUkW0ZwW4MFdiVhZFtr8FJ7IJt1SARqx6BWQ6xpl3DpASmrkOoefAivZ5kCzal6y2q7EFt49LvAogiStdrs8nYe7-GeCQPduyEsgZuvdQPc_cBG0BpAFsyNmfE6v12v7IBfa7qAj3-n8MXDL3IjAT5ikiaWBr01oj7-7cbJ1wwT2T9loIz7XIu8HvgDNNznPq4J7077poxPLzIfOLSBQkOm7svQ3M7Ssew66aUbwt0RP3xR-Th5ytw9y9Jg-9Yn6-LjmK6akVfVC5e52E4qo7D0ceIH1IrLSN4Hkm4lGLtaBqhIkbDBA&flowName=GeneralOAuthFlow&as=S-1489981028%3A1763948228623435&client_id=128657643583-as9ej2egc82vfu0u2efr77nmpahej5h0.apps.googleusercontent.com&rapt=AEjHL4Pnw4xrkfWPbatZyx2uJkgeAdWAHzcDboGhWxvLHzD8R4XLu-KrLdhBK4sYQgP4NkJlitl4yq2hEXus2VJPGFwg23jnhl2vg8mqlVERE9c7Akn2BEs&requestPath=%2Fsignin%2Foauth%2Fconsent#
+  https://accounts.google.com/v3/signin/accountchooser?access_type=offline&client_id=306624184159-9depmigsvgb467hl86n2fh159enhr8qm.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fstudio.auth.synthesia.io%2Foauth2%2Fidpresponse&response_type=code&scope=email+openid+profile&state=H4sIAAAAAAAAAF1S227iMBT8lzzj1IlvhDduIRWUUiC0ZFVFDs6NgB3iQMqu9t_X9KnaB8uemTNHo-Pzx-LWwEqvoEt1C5yYFVPeCX7yrZ6VGGWmVH5KDTgY4FS3vN-kJMmv3ul4kbI6Kn3FjFWmQJiCom1rPXh64nVt67tsi1SX3C6VkVMjH5R4tMp-9s2twS9L1akshUF1o7Lym-edtg8ql2WrbF2aW9pXnTY2F-dSWp89qzBdRhL2_dxZze4Oy5ezajtMqIb7LdQLfwe5CxilHsWU0IwhgpnHICVIYME84hoWmZMyTH5UudSwGWU0pR7DNCPIaAYxwuC3Bxv-28swEi5BLqYmbmnSlDIYfgTjqrm8dr68x2MnrJv5vYmHI5krf6vzQwWf_RGYPgZyNI6NSx7myjyHX22wiMNnEQMhwo9wPf9Ccr7Q-_3KZ9Po-NyS4BUGsV_v316y2VLsNN0Hm_MyDPHL5YP72e-9aMchuF3ciz97J7Ku9P3t3M52RbCZnx0352M3iuu8DNX2xoYQ0cUoH7331aQPQcXrQoIjLAl6Wa8ompC0nkRRN2STdXSKpAj85Bh5m10AOpP4ZBLr9ipKZfNrW_z_2Wdr4DBGPMQocs2vWoOMn3Tas5rHFiU0cSD2AGMQAzNOF3DqYAAZyjBHCRTssQo3sxiff_8BbN3HyqACAAA.H4sIAAAAAAAAAAEgAN__buJJ3Wv5Pvj_GV4z8zA7yqzC3WvfmMGoSsnKOysoa8T_2cpNIAAAAA.3&dsh=S1677880464%3A1775937632402505&o2v=2&service=lso&flowName=GeneralOAuthFlow&opparams=%253F&continue=https%3A%2F%2Faccounts.google.com%2Fsignin%2Foauth%2Fconsent%3Fauthuser%3Dunknown%26part%3DAJi8hAME_pqsZtSoy-gRhkoVYLbt8B-cREZq7-DC6K4GoVyhOsMaFyQDhWep3br3JJzv_pb1tenbqDuOh7lL6BV9Mh4ONaZ0aaoXgdXcmFMuf5mV9b5wmS7CLmktcdDvgG6TfHGIbgtKfPU3PCA1X2HsolVWJjOoWcZ1XYBccJ0Ry4qfJrl6iKICIN4zzR6gcVmNML6rrqCYwuf6poBCMvQGFl9BbJkb1-UmSqFjQrYvoIEGbSpL7XwTVS0f0Vv8XMp3ue_jmmmteeriXZB00nDcS_yRnagXeWxkiwQFi9u7SdnxV9a0jFi5dms2-M7iQJlwLf4oKm9AyLdAgZw4R4a5Xpvg4z89bKhEtsIQ-CV8wRFd8m9KpdJHL7LqrOdayuNEg_f2TcXTtoQzTyvQNDPOrg-1htP6XYKzhaxUakLCXttf4BHv3r_0YWH5dJRgRrLBhoSzQg9Q8qAP975puRhPifraGOJbthahKWaaJdNiBe1o6WV1klY%26flowName%3DGeneralOAuthFlow%26as%3DS1677880464%253A1775937632402505%26client_id%3D306624184159-9depmigsvgb467hl86n2fh159enhr8qm.apps.googleusercontent.com%26requestPath%3D%252Fsignin%252Foauth%252Fconsent%23&app_domain=https%3A%2F%2Fstudio.auth.synthesia.io
+  https://accounts.google.com/v3/signin/accountchooser?audience=799222349882-ne3i0s9jdm5s0p7ll2d7tlsi1vc1halt.apps.googleusercontent.com&client_id=799222349882-ne3i0s9jdm5s0p7ll2d7tlsi1vc1halt.apps.googleusercontent.com&nonce=8scm7s7rXRRKLkTxVNsx&redirect_uri=https%3A%2F%2Fauth.openai.com%2Fapi%2Faccounts%2Fcallback%2Fgoogle&response_type=code&scope=openid+profile+email&state=f697ccc8-f78d-4cb5-99f6-7a48874a0d65&dsh=S925949410%3A1763003304919480&o2v=2&service=lso&flowName=GeneralOAuthFlow&opparams=%253Faudience%253D799222349882-ne3i0s9jdm5s0p7ll2d7tlsi1vc1halt.apps.googleusercontent.com&continue=https%3A%2F%2Faccounts.google.com%2Fsignin%2Foauth%2Fconsent%3Fauthuser%3Dunknown%26part%3DAJi8hAMqEd-0B_S3BbjcyOg5i8TKO2xplxxaLJ5DAPwsazvY9W7FwSuOMC0BiEeBZxxo4cgu4nK20urRioRsBW1Ixa0kAulRInm1tgQuAAcPo0RPI1M_LLEE9UtQzgOBA_iH_uif3ZmZQFCv0iIpby7yjHq_jLSkDVRLLZOZmqE-m9ciCbWxyidSBQDVWBTM9DDNaA5A71y4tTkA1TFko66P1I_6LTClDLYnsdPmsaT4ls25m81O0hdYS2mvv_pk19RvB7pa2FAICifL7GhahTA6e5VJhXCK4BtVHm0CP61Nin1ES74ksj6JZ2usXDQm9-ntbPM04JkCJN2RkZX58Ff4RQBzQeAKTY7zwPGOnQ8GsofaK-wty7gHWu5BZb0SGXccjATy45V5tBQ1Rc2JaPMGhc3A1wrq_z8TDUKU2hcxxTdSyfgeBc8y8GD4iemQowUHUL-5nIbtagjDl020YYfSY_Ol4VEmww%26flowName%3DGeneralOAuthFlow%26as%3DS925949410%253A1763003304919480%26client_id%3D799222349882-ne3i0s9jdm5s0p7ll2d7tlsi1vc1halt.apps.googleusercontent.com%23&app_domain=https%3A%2F%2Fauth.openai.com
+  https://accounts.google.com/v3/signin/accountchooser?client_id=128657643583-as9ej2egc82vfu0u2efr77nmpahej5h0.apps.googleusercontent.com&nonce=3oblmjlc&prompt=consent&redirect_uri=https%3A%2F%2Fwww.capcut.com%2Flvpc_web%2Flogin_status&response_type=token+id_token+code&scope=openid+profile+email&state=%7B%22client_id%22%3A%22128657643583-as9ej2egc82vfu0u2efr77nmpahej5h0.apps.googleusercontent.com%22%2C%22network%22%3A%22google%22%2C%22display%22%3A%22page%22%2C%22callback%22%3A%22_hellojs_92xo4sv7%22%2C%22state%22%3A%22%7B%5C%22id%5C%22%3A%5C%22e85b49f8-9268-4f26-90eb-9ecfd09597ec%5C%22%2C%5C%22device_platform%5C%22%3A%5C%22mac%5C%22%7D%22%2C%22redirect_uri%22%3A%22https%3A%2F%2Fwww.capcut.com%2Flvpc_web%2Flogin_status%22%2C%22scope%22%3A%22basic%2Cemail%22%2C%22page_uri%22%3A%22https%3A%2F%2Fwww.capcut.com%2Flvpc_web%2Flogin_proxy%3Fplatform%3Dgoogle%26lng%3Den%26login_id%3De85b49f8-9268-4f26-90eb-9ecfd09597ec%26is_support_looki%3Dtrue%26device_platform%3Dmac%22%7D&dsh=S-1489981028%3A1763948228623435&o2v=2&service=lso&flowName=GeneralOAuthFlow&opparams=%253F&continue=https%3A%2F%2Faccounts.google.com%2Fsignin%2Foauth%2Fconsent%3Fauthuser%3Dunknown%26part%3DAJi8hAPRM2ddabUyFsBJDmTEPu26RK-i-A3baxNhRlA8riS2z9bcgVsfNqKXrKe46aQ3XSSCf3Xs2sQr4rztzqYEKeq8YO1nwVJj1_dU4aM2m-IKO96izAKiZBg_Pmx6x9YanI232aWl0YWi2VpufH7YCrJE3rF9A_AQGEV7SKfXCI7j4L5zWBsxMkdtO7Xj1rlXOXiRMq8bGh7t_LpmmM2mSkTJ_2MxPmLVbdq-j7Ri1VWCNoAdq-xsrJHvmF5cdF1GHAZKl-p0Ryf6DUuRqg4l0SiTw2eZhqhgZI1Ol9G0g47NbYLQTwTW8Sjjt2cktFSe4uOz2kShPQQaaYzEcL_dJ_0zov8CmpBoIIdSdXfv4TCLByY5koCjKtgbEIZdkTiPNHx7PgcN__bC_lHCDoomsRG68KPiFOeQITIGn6W-b6lbHyDsn7MbKzVwprrmVaxqTEG14EH0ocUjcYzqB9KYset7swHXrg%26flowName%3DGeneralOAuthFlow%26as%3DS-1489981028%253A1763948228623435%26client_id%3D128657643583-as9ej2egc82vfu0u2efr77nmpahej5h0.apps.googleusercontent.com%26requestPath%3D%252Fsignin%252Foauth%252Fconsent%23&app_domain=https%3A%2F%2Fwww.capcut.com
+  https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fanalytics.google.com%2Fanalytics%2Fweb%2F%23%2Fp500049173%2Freports%2Fintelligenthome&dsh=S-1490819332%3A1762993248306366&followup=https%3A%2F%2Fanalytics.google.com%2Fanalytics%2Fweb%2F&ifkv=ARESoU0I-dAsKB0g1d8611lI0NGPSmEYIFZ44fXMXP_dE3C1487-TpsaDxfZCXKez3myI42e2VeOOw&passive=1209600&service=analytics&flowName=GlifWebSignIn&flowEntry=ServiceLogin
+
+[accounts.intuit.com]  (3)
+  https://accounts.intuit.com
+  https://accounts.intuit.com/app/sign-in?app_group=QBSE&asset_alias=Intuit.smallbusiness.qbse&country_code=US
+  https://accounts.intuit.com/app/sign-in?app_group=QBSE&asset_alias=Intuit.smallbusiness.qbse&country_code=US#
+
+[accounts.nike.com]  (5)
+  https://accounts.nike.com
+  https://accounts.nike.com/
+  https://accounts.nike.com/authorize/v1?client_id=4fd2d5e7db76e0f85a6bb56721bd51df&redirect_uri=https%3A%2F%2Fwww.nike.com%2Fauth%2Flogin&response_type=code&scope=openid%20nike.digital%20profile%20email%20phone%20flow%20country&state=4e9bb7d219e44f76a67feff3ed17f27b&code_challenge=v2aW75bFgItSHgOmEFks1_UiE7WzVEzGfOqyX-S9zh0&code_challenge_method=S256&ui_locales=en-US&response_mode=query
+  https://accounts.nike.com/challenge-code?client_id=4fd2d5e7db76e0f85a6bb56721bd51df&redirect_uri=https://www.nike.com/auth/login&response_type=code&scope=openid%20nike.digital%20profile%20email%20phone%20flow%20country&state=4e9bb7d219e44f76a67feff3ed17f27b&ui_locales=en-US&code_challenge=v2aW75bFgItSHgOmEFks1_UiE7WzVEzGfOqyX-S9zh0&code_challenge_method=S256
+  https://accounts.nike.com/lookup?client_id=4fd2d5e7db76e0f85a6bb56721bd51df&redirect_uri=https://www.nike.com/auth/login&response_type=code&scope=openid%20nike.digital%20profile%20email%20phone%20flow%20country&state=4e9bb7d219e44f76a67feff3ed17f27b&ui_locales=en-US&code_challenge=v2aW75bFgItSHgOmEFks1_UiE7WzVEzGfOqyX-S9zh0&code_challenge_method=S256
+
+[ad-cdn.technoratimedia.com]  (1)
+  https://ad-cdn.technoratimedia.com
+
+[ai.invideo.io]  (7)
+  https://ai.invideo.io
+  https://ai.invideo.io/signup?ux_source=top_right_header_button
+  https://ai.invideo.io/workspace/80f1d603-de4c-4f55-a3c7-f613e3e7aebb/home
+  https://ai.invideo.io/workspace/80f1d603-de4c-4f55-a3c7-f613e3e7aebb/v40-copilot
+  https://ai.invideo.io/workspace/80f1d603-de4c-4f55-a3c7-f613e3e7aebb/v40-copilot/68aedd0f-7f7b-4cad-bc93-a2e49efa89bb
+  https://ai.invideo.io/workspace/80f1d603-de4c-4f55-a3c7-f613e3e7aebb/v40-copilot/e079313a-2b53-4ed1-b672-d3ff0ba77047
+  https://ai.invideo.io/workspace/80f1d603-de4c-4f55-a3c7-f613e3e7aebb/v40-copilot6
+
+[aistudio.google.com]  (8)
+  https://aistudio.google.com
+  https://aistudio.google.com/apps/temp/1?source=start&showAssistant=true&showCode=false&showPreview=true
+  https://aistudio.google.com/apps/temp/1?source=start&showAssistant=true&showPreview=true
+  https://aistudio.google.com/apps?source=
+  https://aistudio.google.com/apps?source=showcase
+  https://aistudio.google.com/apps?source=showcase&showcaseTag=featured
+  https://aistudio.google.com/apps?source=start
+  https://aistudio.google.com/apps?source=user
+
+[analytics.google.com]  (13)
+  https://analytics.google.com
+  https://analytics.google.com/
+  https://analytics.google.com/analytics/web/#/a364234574p500049173/reports/intelligenthome
+  https://analytics.google.com/analytics/web/#/p500049173/reports/intelligenthome
+  https://analytics.google.com/analytics/web/#/p500049173/reports/intelligenthome?params=_u..nav%3Dmaui
+  https://analytics.google.com/analytics/web/?pli=1#/a364234574p500049173/reports/intelligenthome
+  https://analytics.google.com/analytics/web/?pli=1&authuser=3#/a137021242p451178621/reports/intelligenthome?params=_u..nav%3Dmaui
+  https://analytics.google.com/analytics/web/?pli=1&authuser=3#/a137021242p451178621/reports/reportinghub?params=_u..nav%3Dmaui
+  https://analytics.google.com/analytics/web/?pli=1&authuser=3#/a137021242p451178621/reports/start?params=_u..nav%3Dmaui
+  https://analytics.google.com/analytics/web/?pli=1&authuser=3#/analysis/a137021242p451178621
+  https://analytics.google.com/analytics/web/?pli=1&authuser=3#/analysis/a137021242p451178621/edit/_hcmq5VKRjKMpD8I7JnSYg
+  https://analytics.google.com/analytics/web/provision/#/a364234574p500049173/reports/intelligenthome
+  https://analytics.google.com/analytics/web/provision/#/provision/create
+
+[api.convergepay.com]  (4)
+  https://api.convergepay.com
+  https://api.convergepay.com/
+  https://api.convergepay.com/hosted-payments/?ssl_txn_auth_token=0vjFSmHLRfeGSussfTvlCAAAAZesciEv#!/payment-form
+  https://api.convergepay.com/hosted-payments/?ssl_txn_auth_token=0vjFSmHLRfeGSussfTvlCAAAAZesciEv#!/payment-response
+
+[api.github.com]  (1)
+  https://api.github.com/repos/wallacedrew/noget
+
+[app.base44.com]  (8)
+  https://app.base44.com
+  https://app.base44.com/
+  https://app.base44.com/billing
+  https://app.base44.com/billing?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ3YWxsYWNlLmRyZXdAZ21haWwuY29tIiwiZXhwIjoxNzc1NTEwMjA3LCJpYXQiOjE3NzI5MTgyMDd9.j5LxZh7W9MrcLfYcAmE_111m1GBrBTj8PD0rP2pbr98
+  https://app.base44.com/login?from_url=https%3A%2F%2Fapp.base44.com%2Fbilling
+  https://app.base44.com/workspace/687d12b37cc1e325ddd6d29c/settings/account
+  https://app.base44.com/workspace/687d12b37cc1e325ddd6d29c/settings/plan-billing
+  https://app.base44.com/workspace/687d12b37cc1e325ddd6d29c/settings/plan-billing-manage
+
+[app.heygen.com]  (2)
+  https://app.heygen.com
+  https://app.heygen.com/home
+
+[app.synthesia.io]  (4)
+  https://app.synthesia.io
+  https://app.synthesia.io/
+  https://app.synthesia.io/#/?videosType=MyRecentVideos
+  https://app.synthesia.io/#/welcome?videosType=MyRecentVideos
+
+[auth.openai.com]  (1)
+  https://auth.openai.com/api/accounts/authorize?client_id=app_X8zY6vW2pQ9tR3dE7nK1jL5gH&scope=openid%20email%20profile%20offline_access%20model.request%20model.read%20organization.read%20organization.write&response_type=code&redirect_uri=https%3A%2F%2Fchatgpt.com%2Fapi%2Fauth%2Fcallback%2Fopenai&audience=https%3A%2F%2Fapi.openai.com%2Fv1&device_id=27032e9e-5639-4b61-adc9-38ef74fbc3a2&prompt=login&ext-oai-did=27032e9e-5639-4b61-adc9-38ef74fbc3a2&auth_session_logging_id=ae6dab2d-63c3-4729-83fa-6e498ffe875d&screen_hint=login_or_signup&connection=google-oauth2&state=G8Je-zi0B3LbQY6HKZPw7pNc_leXI_9hfKe_Dah6ink
+
+[authorization-service.apps.prd.aws-01.legalzoom.com]  (2)
+  https://authorization-service.apps.prd.aws-01.legalzoom.com/oauth2/authorize?audience=urn:apigee:api&scope=openid&response_type=code&client_id=w5ejGIxu0VPUQrLPDpYWl1cS9MXPNd1o&redirect_uri=https://sso-proxy.apigw.legalzoom.com/api/v1/auth/code/lz&state=awrD0fCnEcTUPFgmyy2SU4nXENxRH1v8bxDB8Cp5V022UTVHvCoRC5GnhNM7MYOAS98coUvU7WfvY4kcI48xND6niMOO7itrepG4VD16mJ4UDr9t7Fj5WLMPNRaYdZRd
+  https://authorization-service.apps.prd.aws-01.legalzoom.com/oauth2/authorize?response_type=code&client_id=w5ejGIxu0VPUQrLPDpYWl1cS9MXPNd1o&redirect_uri=https%3A%2F%2Fsso-proxy.apigw.legalzoom.com%2Fapi%2Fv1%2Fauth%2Fcode%2Flz&scope=openid+profile&state=awrD0fCnEcTUPFgmyy2SU4nXENxRH1v8bxDB8Cp5V02WIBYHPWbcgmGEY%2FqhJtaDhOaVQfYmBFT2e4vEdgiE6sbQeYjfJrs5Zf63nCNJM5f7yVRgYrlsmVdWb%2FYeEgrvQYB9oj6ehokqTQzGFU8Znc4WW6%2FJ%2BuyGA1XlNp8Nz0k6PWveMI7v%2F8OvecF0wj3P&continue
+
+[b.stripecdn.com]  (1)
+  https://b.stripecdn.com
+
+[backtontr13.files.wordpress.com]  (1)
+  https://backtontr13.files.wordpress.com/2014/09/120s-noble-drew-ali.pdf
+
+[backtontr13.wordpress.com]  (1)
+  https://backtontr13.wordpress.com/wp-content/uploads/2014/09/120s-noble-drew-ali.pdf
+
+[billing.stripe.com]  (5)
+  https://billing.stripe.com
+  https://billing.stripe.com/p/session/live_YWNjdF8xNVlwTnNKQW1uWVZPdmZuLF9VNmZoSkh6dkdITFFkelUzc0tVTVJveVZjQ3A2UWFY0100TJRmTRuO
+  https://billing.stripe.com/p/session/live_YWNjdF8xNVlwTnNKQW1uWVZPdmZuLF9VNmZoSkh6dkdITFFkelUzc0tVTVJveVZjQ3A2UWFY0100TJRmTRuO/subscriptions/sub_1Rph4oJAmnYVOvfnroKPwTv2/cancel
+  https://billing.stripe.com/p/session/live_YWNjdF8xUUswNWxENUtnbkxRM0RhLF9UOEp4bmd5ektZUHVHOW5id2VpZ0VQVE5Fc0lqWWZ20100rEYELI10
+  https://billing.stripe.com/p/session/live_YWNjdF8xUUswNWxENUtnbkxRM0RhLF9UOEp4bmd5ektZUHVHOW5id2VpZ0VQVE5Fc0lqWWZ20100rEYELI10/payment-methods
+
+[bodyrecomposition.com]  (4)
+  https://bodyrecomposition.com
+  https://bodyrecomposition.com/muscle-gain/popular-hypertrophy-programs
+  https://bodyrecomposition.com/training/hypertrophy-zone
+  https://bodyrecomposition.com/training/hypertrophy-zone#6-15_Reps_is_the_Sweet_Spot
+
+[bsky.app]  (6)
+  https://bsky.app
+  https://bsky.app/
+  https://bsky.app/profile/wallacedrew.bsky.social
+  https://bsky.app/profile/wallacedrew.bsky.social*
+  https://bsky.app/profile/wallacedrew.bsky.social/post/3lwmxs46us22a
+  https://bsky.app/profile/wallacedrew.bsky.social4
+
+[carlhendrick.substack.com]  (3)
+  https://carlhendrick.substack.com
+  https://carlhendrick.substack.com/p/why-does-thinking-feel-so-hard
+  https://carlhendrick.substack.com/subscribe?next=https%3A%2F%2Fcarlhendrick.substack.com%2Fp%2Fwhy-does-thinking-feel-so-hard&later=true&just_signed_up=true&subscription_id=1135036096&referral_token=2i5ul&requires_confirmation=&utm_source=cover_page&email=wallace.drew%40gmail.com&skip_redirect_check=true
+
+[cdn.flashtalking.com]  (1)
+  https://cdn.flashtalking.com
+
+[cdn.shopify.com]  (1)
+  https://cdn.shopify.com/s/files/1/0615/4030/2896/files/Acceptable_Discreet_Alternative_DNA_Samples.png?v=1744817964
+
+[challenges.cloudflare.com]  (1)
+  https://challenges.cloudflare.com
+
+[chatgpt.com]  (26)
+  https://chatgpt.com
+  https://chatgpt.com/
+  https://chatgpt.com/#pricing
+  https://chatgpt.com/?refresh_account=true
+  https://chatgpt.com/?temporary-chat=true
+  https://chatgpt.com/c/66ddfd83-8738-800b-9871-77bc41ad1569
+  https://chatgpt.com/c/66ddfd83-8738-800b-9871-77bc41ad1569?src=history_search
+  https://chatgpt.com/c/68b5fcdb-3790-8326-a3c4-bc105a9140f4
+  https://chatgpt.com/c/68b5fcdb-3790-8326-a3c4-bc105a9140f4?src=history_search
+  https://chatgpt.com/c/68d7fd58-59c8-8326-ac1c-64a4d5b26e69
+  https://chatgpt.com/c/68d7fd58-59c8-8326-ac1c-64a4d5b26e69?src=history_search
+  https://chatgpt.com/c/69039504-0934-8329-9735-74c15271e938
+  https://chatgpt.com/c/69039504-0934-8329-9735-74c15271e938?src=history_search
+  https://chatgpt.com/c/691254ca-fb68-832e-9014-47f2e03379d6
+  https://chatgpt.com/c/69155b95-b320-8329-ab43-48b2a98d93ba
+  https://chatgpt.com/c/69155b95-b320-8329-ab43-48b2a98d93ba?src=history_search
+  https://chatgpt.com/c/6917b890-4394-8328-84af-f99f6251eb3b
+  https://chatgpt.com/c/6927ef52-93bc-8330-82d2-a0d8dee08209
+  https://chatgpt.com/c/692b1e96-53cc-832a-bfaf-b401781d3253
+  https://chatgpt.com/c/692b6683-e130-832f-9cc6-859819f7a53d
+  https://chatgpt.com/c/69378ae6-b1e8-8327-8eb7-1836bd168572
+  https://chatgpt.com/c/69378b8b-e074-8328-99e9-90975c812116
+  https://chatgpt.com/c/6937998c-40cc-832f-a028-3ae93e299188
+  https://chatgpt.com/c/694452ee-5c80-8325-9a9e-98804d4b1072
+  https://chatgpt.com/c/694486e7-fc80-832f-8752-dbeab764b857
+  https://chatgpt.com/c/69ada1b0-d4c4-832d-9de6-d10e1210a1bd
+
+[claude.ai]  (59)
+  https://claude.ai
+  https://claude.ai/chat/014e4b9d-9e50-4efb-b1c5-b18529332f20
+  https://claude.ai/chat/02d5efaa-0855-4a69-843a-7839d6031c89
+  https://claude.ai/chat/039ec3b8-f4c6-411d-b1c5-c253c6b16752
+  https://claude.ai/chat/11c74972-2edb-4ac8-aa36-b592631af15d
+  https://claude.ai/chat/122efebb-52f8-4c62-b60b-79afff4388ec
+  https://claude.ai/chat/152d7d77-f4e8-4f9a-b885-8695e346b4bf
+  https://claude.ai/chat/29f4b817-bb39-4982-8435-a141643789b1
+  https://claude.ai/chat/2ad74511-7bef-4364-bafd-4a4eaabab147
+  https://claude.ai/chat/30d1eaad-0e40-42f9-80a7-e6f3fc8899de
+  https://claude.ai/chat/3295a4f9-ef1c-4f29-a6a4-d35d98655af6
+  https://claude.ai/chat/37168867-bf63-4caa-9180-c66ea36c3a8e
+  https://claude.ai/chat/3aaa6c4f-74e6-44f2-94ad-d961c8332c65
+  https://claude.ai/chat/3b08953f-ed8a-4e76-930f-b2d5a4650da9
+  https://claude.ai/chat/404b4f05-9780-4568-a815-f9ada6de1f6f
+  https://claude.ai/chat/4170c694-b567-4275-a8c4-6bd72d4006ce
+  https://claude.ai/chat/45bc8496-3433-4c83-ab91-8e25ecc2ff1b
+  https://claude.ai/chat/4ab7abc1-67f3-48e5-b67f-aca65c6d2218
+  https://claude.ai/chat/4e97db1b-c950-4a55-bff5-dd8f8e21bcec
+  https://claude.ai/chat/5819e7da-f310-46c8-b269-a155a6c8b522
+  https://claude.ai/chat/5b47bdcd-7888-478e-9f69-eb18277d1cca
+  https://claude.ai/chat/62f47b33-8c78-4d1a-848e-06b108c76b68
+  https://claude.ai/chat/639dd932-86bd-4126-a8b4-08158b68b713
+  https://claude.ai/chat/6c85fe0c-bd3b-4c8f-a856-67b690a95b88
+  https://claude.ai/chat/78224b98-506d-4222-999a-fa0694738754
+  https://claude.ai/chat/7fbceb71-5a57-4f48-b03e-106b6ce6cc0e
+  https://claude.ai/chat/87b5a8e7-8b8f-406d-91d5-7a208a5ca748
+  https://claude.ai/chat/8965de6d-7fb4-406e-b9dd-52ba075bb8dc
+  https://claude.ai/chat/8ee69e32-703e-4afc-bdf3-9bbf7c95ecd4
+  https://claude.ai/chat/931dfb77-b114-49f9-a746-23f7ac2b81f4
+  https://claude.ai/chat/9cac53c4-2ff8-4dd3-a4fa-374e28ac492b
+  https://claude.ai/chat/b6ccc487-e085-4545-b386-075b450f5d43
+  https://claude.ai/chat/bc2ccc38-9eb9-4ce8-a03f-2665e7e1244a
+  https://claude.ai/chat/be7c6daa-6279-487c-8f4d-bd96c173f0dd
+  https://claude.ai/chat/c44bf521-ee12-4931-9a5c-02a7afb027b4
+  https://claude.ai/chat/d5dbf014-81a3-4203-8358-f5ca94e06b3c
+  https://claude.ai/chat/d830e7cd-c752-4f7f-ad7d-d50a42a12536
+  https://claude.ai/chat/df2796cc-2208-4fc0-af88-5e24c7445172
+  https://claude.ai/chat/e77abd65-ffdf-4508-b949-12766ebbd6e4
+  https://claude.ai/chat/f4c5fb38-4f18-4d8d-9bae-d4c3430ef21a
+  https://claude.ai/chat/f5963c32-c8e4-44f8-87b3-98130e5ca71a
+  https://claude.ai/chat/f6dd83a1-99e8-4bd3-a77f-c4740f7fb04c
+  https://claude.ai/chat/f7a5a2c4-7347-46c4-ba8c-4cff1d4e74f0
+  https://claude.ai/chat/f815c107-fe1d-4f7c-b174-39614a04528a
+  https://claude.ai/chat/f90b3847-cfad-4ba6-b724-aaa225039c45
+  https://claude.ai/chat/fe53dedb-091c-4577-9772-99a7540b2751
+  https://claude.ai/customize
+  https://claude.ai/customize/skills
+  https://claude.ai/login?selectAccount=true&returnTo=%2Fchat%2F62f47b33-8c78-4d1a-848e-06b108c76b68%3F
+  https://claude.ai/new
+  https://claude.ai/new?q=Help+me+edit+the+%22
+  https://claude.ai/project/019b391e-5bfe-72c4-a7c8-abdded24678c
+  https://claude.ai/recents
+  https://claude.ai/recents?search=REBEL
+  https://claude.ai/recents?search=WC
+  https://claude.ai/recents?search=rebelinfinite
+  https://claude.ai/recents?search=starks
+  https://claude.ai/upgrade
+  https://claude.ai/upgrade/pro
+
+[cloud.google.com]  (3)
+  https://cloud.google.com
+  https://cloud.google.com/app-hub/docs/overview
+  https://cloud.google.com/free?utm_source=google&utm_medium=cpc&utm_campaign=na-US-all-en-dr-bkws-all-all-trial-e-dr-1710134&utm_content=text-ad-none-any-DEV_c-CRE_665735450627-ADGP_Hybrid+%7C+BKWS+-+EXA+%7C+Txt-Core-Google+Cloud-KWID_43700077223807304-kwd-6458750523&utm_term=KW_google+cloud-ST_google+cloud&gad_source=1&gad_campaignid=20363682672&gclid=Cj0KCQjw953DBhCyARIsANhIZoacq_TMkC8VhblxTDw6xpUKr3hEHWFrQqW0HqjuUsIJkHhOxaveK_YaAtb_EALw_wcB&gclsrc=aw.ds&hl=en#gad_source_1
+
+[clutch.co]  (2)
+  https://clutch.co
+  https://clutch.co/accounting/black-owned?geona_id=50667
+
+[coherentcampaign.com]  (5)
+  https://coherentcampaign.com
+  https://coherentcampaign.com/
+  https://coherentcampaign.com/#how-it-works
+  https://coherentcampaign.com/login
+  https://coherentcampaign.com/try-it-out
+
+[console.cloud.google.com]  (67)
+  https://console.cloud.google.com
+  https://console.cloud.google.com/
+  https://console.cloud.google.com/?authuser=0&project=todays-mathematics&supportedpurview=project
+  https://console.cloud.google.com/?hl=en
+  https://console.cloud.google.com/?inv=1&invt=Ab4Aig&project=memo-time-467401
+  https://console.cloud.google.com/?inv=1&invt=Ab4MTw&project=memo-time-467401
+  https://console.cloud.google.com/apis/api/people.googleapis.com/metrics?inv=1&invt=Ab4Aig&project=memo-time-467401
+  https://console.cloud.google.com/apis/api/people.googleapis.com/overview?inv=1&invt=Ab4Aig&project=memo-time-467401
+  https://console.cloud.google.com/apis/credentials?inv=1&invt=Ab4Aig&project=memo-time-467401
+  https://console.cloud.google.com/apis/credentials?inv=1&invt=Ab5aVg&project=memo-time-467401B
+  https://console.cloud.google.com/apis/credentials?referrer=search&inv=1&invt=Ab4MIg&project=macrotrack-466802
+  https://console.cloud.google.com/apis/credentials?referrer=search&inv=1&invt=Ab4MIg&project=memo-time-467401
+  https://console.cloud.google.com/apis/credentials?referrer=search&inv=1&invt=Ab4MIg&project=memo-time-467401@
+  https://console.cloud.google.com/apis/dashboard?inv=1&invt=Ab4MTw&project=memo-time-467401
+  https://console.cloud.google.com/apis/library/browse?authuser=0&project=todays-mathematics&supportedpurview=project
+  https://console.cloud.google.com/apis/library/browse?filter=visibility:public&authuser=0&supportedpurview=project
+  https://console.cloud.google.com/apis/library?supportedpurview=project&authuser=0
+  https://console.cloud.google.com/apis/library?supportedpurview=project&authuser=0&project=&folder=&organizationId=
+  https://console.cloud.google.com/auth/clients/116473362620-qrft6fq6n3rnhi7n1b3uhus4352e6opg.apps.googleusercontent.com?inv=1&invt=Ab4Aig&project=memo-time-467401
+  https://console.cloud.google.com/auth/clients/116473362620-qrft6fq6n3rnhi7n1b3uhus4352e6opg.apps.googleusercontent.com?inv=1&invt=Ab4MIg&project=memo-time-467401
+  https://console.cloud.google.com/auth/clients/116473362620-qrft6fq6n3rnhi7n1b3uhus4352e6opg.apps.googleusercontent.com?inv=1&invt=Ab4fxw&project=memo-time-467401
+  https://console.cloud.google.com/auth/clients/116473362620-qrft6fq6n3rnhi7n1b3uhus4352e6opg.apps.googleusercontent.com?inv=1&invt=Ab5aVw&project=memo-time-467401
+  https://console.cloud.google.com/auth/clients/29447014565-8d19p4ueuge7qpk378o3qo915i5417cb.apps.googleusercontent.com?inv=1&invt=Ab4fgw&project=test-8ad19
+  https://console.cloud.google.com/auth/clients/29447014565-8d19p4ueuge7qpk378o3qo915i5417cb.apps.googleusercontent.com?inv=1&invt=Ab5aWQ&project=test-8ad19
+  https://console.cloud.google.com/auth/clients/808255747539-rrh68454vfhvcknvlghesq13esuh1nsn.apps.googleusercontent.com?inv=1&invt=Ab4MIg&project=macrotrack-466802
+  https://console.cloud.google.com/auth/clients?inv=1&invt=Ab4MTw&project=memo-time-467401
+  https://console.cloud.google.com/auth/clients?inv=1&invt=Ab5aVw&project=memo-time-467401C
+  https://console.cloud.google.com/auth/clients?project=macrotrack-466802&inv=1&invt=Ab4MIg
+  https://console.cloud.google.com/auth/clients?project=test-8ad19&inv=1&invt=Ab4MIg
+  https://console.cloud.google.com/auth/clients?project=todays-mathematics&inv=1&invt=Ab4MIg
+  https://console.cloud.google.com/auth/overview?inv=1&invt=Ab4Aig&project=memo-time-467401
+  https://console.cloud.google.com/auth/overview?inv=1&invt=Ab4MTw&project=memo-time-467401
+  https://console.cloud.google.com/cloud-hub/home;board-filter=type:APP_HUB,key:application_name?inv=1&invt=Ab4MTw&project=memo-time-467401
+  https://console.cloud.google.com/cloud-hub?inv=1&invt=Ab4MTw&project=memo-time-467401
+  https://console.cloud.google.com/cloud-resource-manager?pendingDeletion=true&inv=1&invt=Ab4fug
+  https://console.cloud.google.com/cloud-resource-manager?pendingDeletion=true&inv=1&invt=Ab5aVw
+  https://console.cloud.google.com/compute/instances?authuser=0&project=todays-mathematics&supportedpurview=project
+  https://console.cloud.google.com/compute/instances?hl=en&inv=1&invt=Ab14Ig&project=todays-mathematics
+  https://console.cloud.google.com/compute/instances?hl=en&inv=1&invt=Ab5aVw&project=todays-mathematics
+  https://console.cloud.google.com/compute/instances?inv=1&invt=Ab3fDQ&project=autobio-466802
+  https://console.cloud.google.com/compute/instances?inv=1&invt=Ab3y7A&project=macrotrack-466802
+  https://console.cloud.google.com/compute/instances?inv=1&invt=Ab4fug&project=macrotrack-466802
+  https://console.cloud.google.com/compute/instances?project=autobio-466802&inv=1&invt=Ab3fDQ
+  https://console.cloud.google.com/compute/instancesDetail/zones/us-central1-a/instances/instance-1?authuser=0&project=todays-mathematics&supportedpurview=project
+  https://console.cloud.google.com/compute/instancesDetail/zones/us-central1-a/instances/instance-1?authuser=0&project=todays-mathematics&supportedpurview=projectH
+  https://console.cloud.google.com/compute/instancesDetail/zones/us-central1-a/instances/instance-1?hl=en&inv=1&invt=Ab14Ig&project=todays-mathematics
+  https://console.cloud.google.com/compute/instancesDetail/zones/us-central1-a/instances/instance-1?hl=en&inv=1&invt=Ab3vqg&project=todays-mathematics
+  https://console.cloud.google.com/compute/instancesDetail/zones/us-central1-a/instances/instance-1?hl=en&inv=1&invt=Ab3vqg&project=todays-mathematicsH
+  https://console.cloud.google.com/compute/instancesDetail/zones/us-central1-a/instances/instance-1?project=todays-mathematics
+  https://console.cloud.google.com/compute/instancesDetail/zones/us-central1-a/instances/instance-1?project=todays-mathematics&inv=1&invt=Ab5aWQ
+  https://console.cloud.google.com/compute/overview?authuser=0&project=todays-mathematics&supportedpurview=projectF
+  https://console.cloud.google.com/compute/overview?hl=en&inv=1&invt=Ab14Ig&project=todays-mathematicsF
+  https://console.cloud.google.com/compute/overview?inv=1&invt=Ab3fDQ&project=autobio-466802
+  https://console.cloud.google.com/compute/overview?inv=1&invt=Ab3y7A&project=autobio-466802
+  https://console.cloud.google.com/compute/overview?inv=1&invt=Ab3y7A&project=macrotrack-466802
+  https://console.cloud.google.com/compute?authuser=0&project=todays-mathematics&supportedpurview=project
+  https://console.cloud.google.com/compute?hl=en&inv=1&invt=Ab14Ig&project=todays-mathematics
+  https://console.cloud.google.com/home/dashboard?inv=1&invt=Ab4Aig&project=memo-time-467401
+  https://console.cloud.google.com/home/dashboard?project=memo-time-467401&inv=1&invt=Ab4Aig
+  https://console.cloud.google.com/iam-admin/cloudidentity/consumer?inv=1&invt=Ab4MTw&project=memo-time-467401
+  https://console.cloud.google.com/iam-admin/serviceaccounts/details/113590195499593225959;edit=true?previousPage=%2Fapis%2Fcredentials%3Freferrer%3Dsearch%26inv%3D1%26invt%3DAb4MIg%26project%3Dmacrotrack-466802&inv=1&invt=Ab4MIg&project=macrotrack-466802
+  https://console.cloud.google.com/marketplace/product/google/people.googleapis.com?q=search&referrer=search&inv=1&invt=Ab4Aig&project=memo-time-467401
+  https://console.cloud.google.com/welcome?authuser=0&project=todays-mathematics&supportedpurview=project
+  https://console.cloud.google.com/welcome?hl=en&inv=1&invt=Ab14Ig&project=todays-mathematics
+  https://console.cloud.google.com/welcome?hl=en&pli=1&inv=1&invt=Ab14Ig&project=todays-mathematics
+  https://console.cloud.google.com/welcome?inv=1&invt=Ab4Aig&project=memo-time-467401
+  https://console.cloud.google.com/welcome?inv=1&invt=Ab4MTw&project=memo-time-467401
+
+[contacts.google.com]  (13)
+  https://contacts.google.com
+  https://contacts.google.com/widget/hovercard/v/2?hl=en&origin=https%3A%2F%2Fmail.google.com&usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.gapi.en.FZb77tO2YW4.O%2Fd%3D1%2Frs%3DAHpOoo8lqavmo6ayfVxZovyDiP6g3TOVSQ%2Fm%3D__features__#id=I__HC_94253229&_gfid=I__HC_94253229&parent=https%3A%2F%2Fmail.google.com&pfname=&rpctoken=10535682
+  https://contacts.google.com/widget/hovercard/v/2?hl=en&origin=https%3A%2F%2Fmail.google.com&usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.gapi.en.rNgcOYWV4n8.O%2Fd%3D1%2Frs%3DAHpOoo_n6Jr79Mc7etY1MPkBcu7K0H6sGw%2Fm%3D__features__#id=I__HC_94253229&_gfid=I__HC_94253229&parent=https%3A%2F%2Fmail.google.com&pfname=&rpctoken=40349679
+  https://contacts.google.com/widget/hovercard/v/2?origin=https%3A%2F%2Fdocs.google.com&usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.gapi.en.AKdz2vhcyW0.O%2Fd%3D1%2Frs%3DAHpOoo_GPfyZPmTuYcbMXzJr0yr8Akk4Tw%2Fm%3D__features__#id=I__HC_94253229&_gfid=I__HC_94253229&parent=https%3A%2F%2Fdocs.google.com&pfname=&rpctoken=33053235
+  https://contacts.google.com/widget/hovercard/v/2?origin=https%3A%2F%2Fdocs.google.com&usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.gapi.en.FZb77tO2YW4.O%2Fd%3D1%2Frs%3DAHpOoo8lqavmo6ayfVxZovyDiP6g3TOVSQ%2Fm%3D__features__#id=I__HC_94253229&_gfid=I__HC_94253229&parent=https%3A%2F%2Fdocs.google.com&pfname=&rpctoken=38378191
+  https://contacts.google.com/widget/hovercard/v/2?origin=https%3A%2F%2Fdocs.google.com&usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.gapi.en.GJa4oir6WlA.O%2Fd%3D1%2Frs%3DAHpOoo-oT18V72om9ubISB9Na8GvbQT5cg%2Fm%3D__features__#id=I__HC_94253229&_gfid=I__HC_94253229&parent=https%3A%2F%2Fdocs.google.com&pfname=&rpctoken=22966204
+  https://contacts.google.com/widget/hovercard/v/2?origin=https%3A%2F%2Fdocs.google.com&usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.gapi.en.UXDNXkgCDpE.O%2Fd%3D1%2Frs%3DAHpOoo_3ykjRTrvlIBv6vfu43Rx7CYUQSA%2Fm%3D__features__#id=I__HC_94253229&_gfid=I__HC_94253229&parent=https%3A%2F%2Fdocs.google.com&pfname=&rpctoken=11711532
+  https://contacts.google.com/widget/hovercard/v/2?origin=https%3A%2F%2Fdocs.google.com&usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.gapi.en.UXDNXkgCDpE.O%2Fd%3D1%2Frs%3DAHpOoo_3ykjRTrvlIBv6vfu43Rx7CYUQSA%2Fm%3D__features__#id=I__HC_94253229&_gfid=I__HC_94253229&parent=https%3A%2F%2Fdocs.google.com&pfname=&rpctoken=18267811
+  https://contacts.google.com/widget/hovercard/v/2?origin=https%3A%2F%2Fdocs.google.com&usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.gapi.en.UXDNXkgCDpE.O%2Fd%3D1%2Frs%3DAHpOoo_3ykjRTrvlIBv6vfu43Rx7CYUQSA%2Fm%3D__features__#id=I__HC_94253229&_gfid=I__HC_94253229&parent=https%3A%2F%2Fdocs.google.com&pfname=&rpctoken=37097530
+  https://contacts.google.com/widget/hovercard/v/2?origin=https%3A%2F%2Fdocs.google.com&usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.gapi.en.x7CxCIZpks8.O%2Fam%3DAAAg%2Fd%3D1%2Frs%3DAHpOoo8czmnaLIncRgBQP7N2THncpDJ9mQ%2Fm%3D__features__#id=I__HC_94253229&_gfid=I__HC_94253229&parent=https%3A%2F%2Fdocs.google.com&pfname=&rpctoken=17557579
+  https://contacts.google.com/widget/hovercard/v/2?origin=https%3A%2F%2Fdocs.google.com&usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.gapi.en.x7CxCIZpks8.O%2Fam%3DAAAg%2Fd%3D1%2Frs%3DAHpOoo8czmnaLIncRgBQP7N2THncpDJ9mQ%2Fm%3D__features__#id=I__HC_94253229&_gfid=I__HC_94253229&parent=https%3A%2F%2Fdocs.google.com&pfname=&rpctoken=46813625
+  https://contacts.google.com/widget/hovercard/v/2?origin=https%3A%2F%2Fdocs.google.com&usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.PJsh2cctCQI.O%2Fd%3D1%2Frs%3DAHpOoo_QlMhY2cycn60Rs8eI1WInRwuahw%2Fm%3D__features__#id=I__HC_94253229&_gfid=I__HC_94253229&parent=https%3A%2F%2Fdocs.google.com&pfname=&rpctoken=31837571
+  https://contacts.google.com/widget/hovercard/v/2?origin=https%3A%2F%2Fdocs.google.com&usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.gSqfLc8WnvU.O%2Fd%3D1%2Frs%3DAHpOoo_cXXGArE2dtw6vkGR2NQ_1f5L3AQ%2Fm%3D__features__#id=I__HC_94253229&_gfid=I__HC_94253229&parent=https%3A%2F%2Fdocs.google.com&pfname=&rpctoken=13869880
+
+[copilot.microsoft.com]  (10)
+  https://copilot.microsoft.com
+  https://copilot.microsoft.com/
+  https://copilot.microsoft.com/?
+  https://copilot.microsoft.com/?code=74Kp6-dtYWh-Tl_mWky4NuijnxEQdKvozJ7_9JhQlWXOB&state=SHAuWXpnVW53Vmx%2BZXdDeTZNUFRzaUpSMUM2cHRyd1R6RlV0SmliaVJWTA%3D%3D
+  https://copilot.microsoft.com/?code=cTyp_7V2Xvo5zytGPNk_f4wZPJrcyr1-HaYcdgsLWiRU0&state=UXc1cjFWdU1ZdVFUVUxaS0cuQTNXWlVIOU9UaUZQQTdINWpjVXJKUHJ6Mw%3D%3D$
+  https://copilot.microsoft.com/chats/Qj2jZaTfA3MX7KboXrKom
+  https://copilot.microsoft.com/chats/o4iyjDpMhUpTzzWJqrTYv
+  https://copilot.microsoft.com/chats/pTXH9hsLCVhRF2cQnpwVh
+  https://copilot.microsoft.com/chats/zaWY92ABaS7MyCVaqTohE
+  https://copilot.microsoft.com/labs
+
+[count.perplexity.ai]  (1)
+  https://count.perplexity.ai
+
+[crossaccountingsolutions.com]  (3)
+  https://crossaccountingsolutions.com
+  https://crossaccountingsolutions.com/
+  https://crossaccountingsolutions.com/g/api/cart&websiteUrl=https://crossaccountingsolutions.com
+
+[datawrapper.dwcdn.net]  (1)
+  https://datawrapper.dwcdn.net
+
+[devcolor.org]  (1)
+  https://devcolor.org/
+
+[developer.whoop.com]  (1)
+  https://developer.whoop.com/
+
+[developers.google.com]  (1)
+  https://developers.google.com/
+
+[dmv.dc.gov]  (2)
+  https://dmv.dc.gov
+  https://dmv.dc.gov/
+
+[dmvnow.com]  (1)
+  http://dmvnow.com/vehicle-registration-renewal
+
+[docs.cloud.google.com]  (1)
+  https://docs.cloud.google.com/app-hub/docs/overview
+
+[docs.google.com]  (20)
+  https://docs.google.com
+  https://docs.google.com/
+  https://docs.google.com/document/d/1f6OfCm3tL9FqLTkrcdUjgeqd_BzOui9o5GinOCQbf5k/edit?tab=t.0
+  https://docs.google.com/document/d/1f6OfCm3tL9FqLTkrcdUjgeqd_BzOui9o5GinOCQbf5k/edit?usp=drive_web&ouid=105241977608244208639
+  https://docs.google.com/document/d/1tfQa1SR1_t1xgQWN-qcuNQ15-FKtsLChEOLKaCfgOC4/edit?tab=t.0
+  https://docs.google.com/document/d/1tfQa1SR1_t1xgQWN-qcuNQ15-FKtsLChEOLKaCfgOC4/edit?usp=drive_web&ouid=105241977608244208639
+  https://docs.google.com/spreadsheets/d/1JIn-OVlwxFmdAEeHKWDxXDU2L-JdhjxSWerOi2k7vJo/edit?gid=72064244&pli=1#gid=72064244@
+  https://docs.google.com/spreadsheets/d/1JIn-OVlwxFmdAEeHKWDxXDU2L-JdhjxSWerOi2k7vJo/edit?ouid=105241977608244208639&usp=sheets_home&ths=true
+  https://docs.google.com/spreadsheets/d/1JIn-OVlwxFmdAEeHKWDxXDU2L-JdhjxSWerOi2k7vJo/edit?pli=1&gid=72064244#gid=72064244
+  https://docs.google.com/spreadsheets/d/1JIn-OVlwxFmdAEeHKWDxXDU2L-JdhjxSWerOi2k7vJo/edit?pli=1&gid=72064244#gid=72064244@
+  https://docs.google.com/spreadsheets/d/1OfADMH5adlevd1RJDoqA1GM12rYUHkC6zOUattQm8VM/edit?gid=1875044640
+  https://docs.google.com/spreadsheets/d/1OfADMH5adlevd1RJDoqA1GM12rYUHkC6zOUattQm8VM/edit?gid=1875044640#gid=1875044640
+  https://docs.google.com/spreadsheets/d/1OfADMH5adlevd1RJDoqA1GM12rYUHkC6zOUattQm8VM/edit?gid=941737759#gid=941737759
+  https://docs.google.com/spreadsheets/d/1OfADMH5adlevd1RJDoqA1GM12rYUHkC6zOUattQm8VM/edit?gid=941737759#gid=9417377594
+  https://docs.google.com/spreadsheets/d/1OfADMH5adlevd1RJDoqA1GM12rYUHkC6zOUattQm8VM/edit?ouid=105241977608244208639&usp=sheets_home&ths=true
+  https://docs.google.com/spreadsheets/d/1Q1JV6JclEstxvfSGk3yNQCOd5mIO-4xosO99wEsF8Qc/edit?gid=0#gid=0
+  https://docs.google.com/spreadsheets/d/1Q1JV6JclEstxvfSGk3yNQCOd5mIO-4xosO99wEsF8Qc/edit?gid=1451280550
+  https://docs.google.com/spreadsheets/d/1Q1JV6JclEstxvfSGk3yNQCOd5mIO-4xosO99wEsF8Qc/edit?gid=1451280550#gid=1451280550
+  https://docs.google.com/spreadsheets/d/1Q1JV6JclEstxvfSGk3yNQCOd5mIO-4xosO99wEsF8Qc/edit?gid=4#gid=4
+  https://docs.google.com/spreadsheets/d/1Q1JV6JclEstxvfSGk3yNQCOd5mIO-4xosO99wEsF8Qc/edit?gid=5#gid=5
+
+[dora.dev]  (2)
+  https://dora.dev/insights/balancing-ai-tensions/
+  https://dora.dev/insights/balancing-ai-tensions/K
+
+[draft.blogger.com]  (3)
+  https://draft.blogger.com
+  https://draft.blogger.com/u/4/blog/post/edit/5548821535306686538/5666771413561847093
+  https://draft.blogger.com/u/4/blog/posts/5548821535306686538?pli=1
+
+[elb.the-ozone-project.com]  (1)
+  https://elb.the-ozone-project.com
+
+[elevenlabs.io]  (4)
+  https://elevenlabs.io
+  https://elevenlabs.io/app/home
+  https://elevenlabs.io/app/sign-in?redirect=%2Fapp%2Fhome
+  https://elevenlabs.io/app/sign-in?redirect=%2Fapp%2Fhome0
+
+[f58a47368ba892feeeda6abd6f7a5543.claudemcpcontent.com]  (1)
+  https://f58a47368ba892feeeda6abd6f7a5543.claudemcpcontent.com
+
+[financiallytone.com]  (2)
+  https://financiallytone.com/services
+  https://financiallytone.com/services2
+
+[framer.com]  (7)
+  https://framer.com
+  https://framer.com/login/download/
+  https://framer.com/login/survey/
+  https://framer.com/projects/Trinity-Financial-Framer-Template-copy--hvfEy3jOWiQyi2Gu4SnA-fO1iB?duplicate=DvAwlkYT9mAAc9WIP4rQ&node=augiA20Il1
+  https://framer.com/projects/Untitled--feLYlJn3E3ZO0bZKqZwD-f3yGh?node=augiA20Il
+  https://framer.com/projects/new?duplicate=DvAwlkYT9mAAc9WIP4rQ&via=4qgu2no&dub_id=OFK6lbzbJApqSyhA&duplicateType=canvasTemplateModal&team=ddcd1c56-b6b7-3e5e-bb2e-6ebeeabc6867
+  https://framer.com/projects/new?welcome=1&templates=1
+
+[fuelition.com]  (5)
+  https://fuelition.com
+  https://fuelition.com/
+  https://fuelition.com/notes
+  https://fuelition.com/record
+  https://fuelition.com/record5
+
+[gemini.google.com]  (46)
+  https://gemini.google.com
+  https://gemini.google.com/
+  https://gemini.google.com/app
+  https://gemini.google.com/app/0763a2a0fc67e14b
+  https://gemini.google.com/app/0e7931eabc7e245e
+  https://gemini.google.com/app/1833bb9849f77a85
+  https://gemini.google.com/app/1ac5fdcb9e428f32
+  https://gemini.google.com/app/1cab0b0300eefa6c
+  https://gemini.google.com/app/1d74af504749a62b?pli=1
+  https://gemini.google.com/app/230a2136246f2c3d
+  https://gemini.google.com/app/38d5ba9efd011194
+  https://gemini.google.com/app/3a06b3f4650381b1?pli=1
+  https://gemini.google.com/app/3fa50a2cae2ad536
+  https://gemini.google.com/app/477c125a73d90557
+  https://gemini.google.com/app/53a378b61a418386?pli=1
+  https://gemini.google.com/app/56348bff0d274883
+  https://gemini.google.com/app/57149c2e81d34ef5
+  https://gemini.google.com/app/599029bd5d8ca00a
+  https://gemini.google.com/app/5b84926d8fc19701
+  https://gemini.google.com/app/619f985070e667ba
+  https://gemini.google.com/app/674f5861bb20fa74
+  https://gemini.google.com/app/6f45f43b38dd6ce3?pli=1
+  https://gemini.google.com/app/712bfa994ea66181
+  https://gemini.google.com/app/713562f2004d0420?pli=1
+  https://gemini.google.com/app/74e91689a6ee06e3?pli=1
+  https://gemini.google.com/app/80994929a995afc6
+  https://gemini.google.com/app/9456b451283ec206
+  https://gemini.google.com/app/99e845d028898ce0
+  https://gemini.google.com/app/9bc4592ea34c2810
+  https://gemini.google.com/app/a072cab6bbf009c2?pli=1
+  https://gemini.google.com/app/a188968aaab27aa1
+  https://gemini.google.com/app/a405a4561dc40ad3
+  https://gemini.google.com/app/aae49301f093b02e?pli=1
+  https://gemini.google.com/app/c841d5e950b7a53a
+  https://gemini.google.com/app/c9ae07ecd332ff04
+  https://gemini.google.com/app/d308e63970f72e74
+  https://gemini.google.com/app/d6561b419d4c8567
+  https://gemini.google.com/app/de5df7a1cdf11bbb
+  https://gemini.google.com/app/e08a7c8ce9b58b90?pli=1
+  https://gemini.google.com/app/e1a9ae3c96f91424
+  https://gemini.google.com/app/edd618f4fb491366?pli=1
+  https://gemini.google.com/app/f285f86daf8eefbe
+  https://gemini.google.com/gem/ae27ff301ae0
+  https://gemini.google.com/gem/ae27ff301ae0/bfaa0d86ebfcc3b6
+  https://gemini.google.com/gems/view
+  https://gemini.google.com/search
+
+[genius.com]  (1)
+  https://genius.com/Nation-of-gods-and-earths-supreme-alphabet-annotated
+
+[gh.io]  (1)
+  https://gh.io/all-npm-classic-tokens-revoked
+
+[github.com]  (24)
+  https://github.com
+  https://github.com/
+  https://github.com/login
+  https://github.com/logout
+  https://github.com/npm/feedback
+  https://github.com/session
+  https://github.com/sessions/two-factor
+  https://github.com/sessions/two-factor/sms
+  https://github.com/sessions/two-factor/sms/confirm
+  https://github.com/settings/emails
+  https://github.com/settings/emails?notice=one_verified_email
+  https://github.com/users/wallacedrew/emails
+  https://github.com/wallacedrew/fuelition
+  https://github.com/wallacedrew/fuelition/blob/main/cookies.txt
+  https://github.com/wallacedrew/fuelition/blob/main/package.json
+  https://github.com/wallacedrew/fuelition/tree/main
+  https://github.com/wallacedrew/noget
+  https://github.com/wallacedrew/noget#readme
+  https://github.com/wallacedrew/todaysmathematicsbot
+  https://github.com/wallacedrew/todaysmathematicsbot/actions
+  https://github.com/wallacedrew/todaysmathematicsbot/actions/runs/16270910595
+  https://github.com/wallacedrew/todaysmathematicsbot/actions/runs/16270910595/job/45938029657
+  https://github.com/wallacedrew/todaysmathematicsbot/actions/runs/162709105958
+  https://github.com/wallacedrew/todaysmathematicsbot/commit/1d2c12cfb3e9865e6f1da078e7968ca3021c9608
+
+[go.bsky.app]  (2)
+  https://go.bsky.app/
+  https://go.bsky.app/redirect?u=https%3A%2F%2Ftidyfirst.substack.com%2Fp%2Fwhy-does-development-slow
+
+[grok.com]  (18)
+  https://grok.com
+  https://grok.com/
+  https://grok.com/c/06f8396a-b3b5-44db-8c0c-05e73227ca32
+  https://grok.com/c/06f8396a-b3b5-44db-8c0c-05e73227ca32?rid=ac585a2a-a6d7-45fa-beac-3a52ea92b089
+  https://grok.com/c/06f8396a-b3b5-44db-8c0c-05e73227ca32?rid=ac585a2a-a6d7-45fa-beac-3a52ea92b089?
+  https://grok.com/c/15a6966f-045a-46ab-899a-9176b156566c
+  https://grok.com/c/15a6966f-045a-46ab-899a-9176b156566c?rid=e45d06b1-0ff2-4d72-85f4-8164dc09fc1e
+  https://grok.com/c/a374bed4-5581-4a33-8550-01b1fd08b760
+  https://grok.com/c/a374bed4-5581-4a33-8550-01b1fd08b760?rid=ac31700d-68dd-4d24-9116-ff66a91fd64d
+  https://grok.com/c/ad315bc6-45a1-44b4-becc-a2ff53dec079
+  https://grok.com/c/ad315bc6-45a1-44b4-becc-a2ff53dec079?rid=9d8029f7-36f0-4cb5-a098-4742c048e8d4
+  https://grok.com/c/b0cf57cc-1f72-49a7-8f40-b5651d672165
+  https://grok.com/c/c7b772cd-32cc-47c8-acdb-f354ccdd2e87
+  https://grok.com/c/c7b772cd-32cc-47c8-acdb-f354ccdd2e87?rid=6f2fa147-7d95-418b-8614-a6211a3d9059
+  https://grok.com/chat/2da7c277-87de-454c-bd64-5e91c86abba2
+  https://grok.com/chat/bf814b2d-f47b-4224-97d6-6a02a2525d8a
+  https://grok.com/share/c2hhcmQtMw_9c135e49-1841-472b-8915-ffb91f5cfe6d
+  https://grok.com/share/c2hhcmQtMw_9c135e49-1841-472b-8915-ffb91f5cfe6d?rid=9d8029f7-36f0-4cb5-a098-4742c048e8d4
+
+[helloaudio.fm]  (2)
+  https://helloaudio.fm
+  https://helloaudio.fm/
+
+[images-na.ssl-images-amazon.com]  (1)
+  https://images-na.ssl-images-amazon.com
+
+[invideo.io]  (2)
+  https://invideo.io
+  https://invideo.io/
+
+[issuu.com]  (4)
+  https://issuu.com
+  https://issuu.com/rochdalebulletinonline
+  https://issuu.com/rochdalebulletinonline/docs/rochdale_village_bulletin_-_november_2025_edition
+  https://issuu.com/rochdalebulletinonline5
+
+[jayelectronica.com]  (3)
+  https://jayelectronica.com
+  https://jayelectronica.com/
+  https://jayelectronica.com/lander
+
+[js.stripe.com]  (1)
+  https://js.stripe.com
+
+[jumpshare.com]  (5)
+  https://jumpshare.com
+  https://jumpshare.com/file-sharing/m4a
+  https://jumpshare.com/get-started
+  https://jumpshare.com/google_auth?code=4/0Ab32j90ZBV5cRna709ielmcgu3X0nIQCIo3SFLLVb8CTeeDpPyOS3vzdTeHhAJYEZMxNbQ&state=6gauv9r
+  https://jumpshare.com/signup
+
+[li.protechts.net]  (1)
+  https://li.protechts.net
+
+[littlefishaccounting.com]  (1)
+  https://littlefishaccounting.com/
+
+[lnkd.in]  (1)
+  https://lnkd.in/ewAK8AfK
+
+[lovable.dev]  (9)
+  https://lovable.dev
+  https://lovable.dev/
+  https://lovable.dev/?settings=account
+  https://lovable.dev/?settings=billing
+  https://lovable.dev/?settings=workspace
+  https://lovable.dev/login?redirect=https%3A%2F%2Flovable.dev%2Fsettings%3Ftab%3Dbilling
+  https://lovable.dev/projects/0991ae7b-d42a-45ca-9f68-c1e482cbd3a8
+  https://lovable.dev/settings?tab=billing
+  https://lovable.dev/settings?tab=billing&should-refresh-credentials=1
+
+[m.youtube.com]  (2)
+  https://m.youtube.com/watch?v=-IzWIf4dAjg&t=454s
+  https://m.youtube.com/watch?v=Sz7c2i-9Xm4
+
+[mail.google.com]  (8)
+  https://mail.google.com
+  https://mail.google.com/mail/u/0/#inbox
+  https://mail.google.com/mail/u/0/#inbox/CllgCJTHWJQJlGWsBpcwsGMwQrtGrXXvnZbRdvSXLpjQVqkQKgQLcGvZjLWsPDrgDpDvGQsHQzL
+  https://mail.google.com/mail/u/0/#inbox/WhctKLbmhzhNRfBhHgDzhfgbcwmQtxtzJwwkVLJLXscgnKbwxqDhfjPXDdPnfqlrWRthkzB
+  https://mail.google.com/mail/u/0/#search/kawasaki+license+plate/CqMvqmclKwjgQLCbRCVSjhvXGBvdRBKGTvLFCCfKWxFMdxGJrWNlzrJsgQSkBgLSsjsgHgbJLsV
+  https://mail.google.com/mail/u/0/#search/ninja+harriet
+  https://mail.google.com/mail/u/0/#search/ninja+harriet/GTvVlcSBpRjzZtDCgWBVBkCHTSzPpCdbThLjSQbrmZBdcwKBwnlMpTXvTRQVWrqndVdxSnHQmbsvd
+  https://mail.google.com/mail/u/0/#search/ninja+harriet/GTvVlcSBpRjzZtDCgWBVBkCHTSzPpCdbThLjSQbrmZBdcwKBwnlMpTXvTRQVWrqndVdxSnHQmbsvdK
+
+[manus.im]  (4)
+  https://manus.im
+  https://manus.im/
+  https://manus.im/app
+  https://manus.im/app/SrUddoPd30bo0KnAI5Xwts
+
+[martinfowler.com]  (9)
+  http://martinfowler.com/active
+  https://martinfowler.com
+  https://martinfowler.com/
+  https://martinfowler.com/active
+  https://martinfowler.com/articles/badri-hexagonal/
+  https://martinfowler.com/articles/exploring-gen-ai/humans-and-agents.html
+  https://martinfowler.com/articles/reduce-friction-ai/
+  https://martinfowler.com/articles/reduce-friction-ai/design-first-collaboration.html
+  https://martinfowler.com/articles/reduce-friction-ai/knowledge-priming.html
+
+[marvelcinematicuniverse.fandom.com]  (5)
+  https://marvelcinematicuniverse.fandom.com
+  https://marvelcinematicuniverse.fandom.com/wiki/F.R.I.D.A.Y
+  https://marvelcinematicuniverse.fandom.com/wiki/F.R.I.D.A.Y.6
+  https://marvelcinematicuniverse.fandom.com/wiki/Veronica
+  https://marvelcinematicuniverse.fandom.com/wiki/Veronica2
+
+[meta.ai]  (1)
+  https://meta.ai/
+
+[myforeverdna.com]  (2)
+  https://myforeverdna.com
+  https://myforeverdna.com/
+
+[n4bservices.com]  (2)
+  https://n4bservices.com
+  https://n4bservices.com/
+
+[obsidian.md]  (4)
+  https://obsidian.md
+  https://obsidian.md/
+  https://obsidian.md/account/
+  https://obsidian.md/auth?returnto=%2Faccount%2F
+
+[one.google.com]  (6)
+  https://one.google.com
+  https://one.google.com/
+  https://one.google.com/ai?g1_last_touchpoint=61
+  https://one.google.com/ai?g1_last_touchpoint=61&g1_landing_page=75
+  https://one.google.com/explore-plan/gemini-advanced?utm_source=gemini&utm_medium=web&utm_campaign=mode_switcher
+  https://one.google.com/explore-plan/gemini-advanced?utm_source=gemini&utm_medium=web&utm_campaign=mode_switcher&g1_landing_page=65
+
+[open.spotify.com]  (1)
+  https://open.spotify.com
+
+[open.substack.com]  (2)
+  https://open.substack.com/
+  https://open.substack.com/pub/tidyfirst/p/one-pile?utm_source=post-email-title&publication_id=256838&post_id=161117391&utm_campaign=email-post-title&isFreemail=true&r=2i5ul&token=eyJ1c2VyX2lkIjo0MjA2NjIxLCJwb3N0X2lkIjoxNjExMTczOTEsImlhdCI6MTc0NDk4NjYxNywiZXhwIjoxNzQ3NTc4NjE3LCJpc3MiOiJwdWItMjU2ODM4Iiwic3ViIjoicG9zdC1yZWFjdGlvbiJ9.v_EwBagT60W_a_TnHfygRYLPHpWfASC31PueDiEZPoY
+
+[pachirafinancials.com]  (1)
+  https://pachirafinancials.com/
+
+[pay.openai.com]  (5)
+  https://pay.openai.com
+  https://pay.openai.com/
+  https://pay.openai.com/p/session/live_YWNjdF8xSE9yU3dDNmgxbnhHb0kzLF9UV1NKZ1Q0WTJmaWJSOWhySjdGTHlEcDJNc0N5OVBz01006ucCr1n0
+  https://pay.openai.com/p/session/live_YWNjdF8xSE9yU3dDNmgxbnhHb0kzLF9UV2tWVDBVUkx2MHptMDA3ZWxSYTdHc0VJUHBCT3E40100SR7GUU2Y
+  https://pay.openai.com/p/session/live_YWNjdF8xSE9yU3dDNmgxbnhHb0kzLF9UV2tWVDBVUkx2MHptMDA3ZWxSYTdHc0VJUHBCT3E40100SR7GUU2Y/subscriptions/sub_1SCPsRC6h1nxGoI3hwoY4IKl/update-payment-method/payOpenInvoiceForSubscription
+
+[platform.twitter.com]  (1)
+  https://platform.twitter.com
+
+[prdwmq.etimspayments.com]  (6)
+  https://prdwmq.etimspayments.com
+  https://prdwmq.etimspayments.com/pbw/hearingContactPhotoParking.doh
+  https://prdwmq.etimspayments.com/pbw/hearingContactPhotoParking.doh?checkbox=check&clientcode=09&requestType=upload
+  https://prdwmq.etimspayments.com/pbw/hearingPhotoParking.doh
+  https://prdwmq.etimspayments.com/pbw/hearingSelectTicket.doh
+  https://prdwmq.etimspayments.com/pbw/include/dc_parking/search_photoparking.jsp?ticketType=PH
+
+[projects.propublica.org]  (1)
+  https://projects.propublica.org/nonprofits/organizations/113397470
+
+[public.cite-web.com]  (1)
+  https://public.cite-web.com/
+
+[publish.buffer.com]  (1)
+  https://publish.buffer.com/
+
+[quickbooks.intuit.com]  (7)
+  https://quickbooks.intuit.com
+  https://quickbooks.intuit.com/
+  https://quickbooks.intuit.com/oa/get-quickbooks/
+  https://quickbooks.intuit.com/oa/get-quickbooks/?cid=ppc_G_e_US_.QBO_US_GGL_Brand_Core_Search_Desktop_WP._quickbooks_txt&agid=145753529724&infinity=ict2~net~gaw~ar~723123483585~kw~quickbooks~mt~e~cmp~QBO_US_GGL_Brand_Core_Search_Desktop_WP~ag~Core&gclsrc=aw.ds&gad_source=1&gad_campaignid=19118505593&gbraid=0AAAAAD1w8J8sGw3a9s2yAf0XoezgK9e6H&gclid=CjwKCAiA24XJBhBXEiwAXElO34tB_3AJjOkCnzjZLVN09YxLQDLTScIEu1D8Veoic4QrKKiGl-kEpRoCitYQAvD_BwE
+  https://quickbooks.intuit.com/oa/get-quickbooks/?cid=ppc_G_e_US_.QBO_US_GGL_Brand_Core_Search_Desktop_WP._quickbooks_txt&agid=145753529724&infinity=ict2~net~gaw~ar~723123483585~kw~quickbooks~mt~e~cmp~QBO_US_GGL_Brand_Core_Search_Desktop_WP~ag~Core&gclsrc=aw.ds&gad_source=1&gad_campaignid=19118505593&gbraid=0AAAAAD1w8J8sGw3a9s2yAf0XoezgK9e6H&gclid=CjwKCAiA24XJBhBXEiwAXElO34tB_3AJjOkCnzjZLVN09YxLQDLTScIEu1D8Veoic4QrKKiGl-kEpRoCitYQAvD_BwEC
+  https://quickbooks.intuit.com/oa/get-quickbooks/C
+  https://quickbooks.intuit.com/r/product-update/quickbooks-self-employed-vs-quickbooks-solopreneur/
+
+[rasiimshabazz.blogspot.com]  (11)
+  https://rasiimshabazz.blogspot.com
+  https://rasiimshabazz.blogspot.com/2021/06/
+  https://rasiimshabazz.blogspot.com/2021/07/
+  https://rasiimshabazz.blogspot.com/2022/01/
+  https://rasiimshabazz.blogspot.com/2022/03/
+  https://rasiimshabazz.blogspot.com/2022/04/
+  https://rasiimshabazz.blogspot.com/2022/04/no-give-me-proof.html
+  https://rasiimshabazz.blogspot.com/2022/04/no-give-me-proof.html&
+  https://rasiimshabazz.blogspot.com/2022/12/
+  https://rasiimshabazz.blogspot.com/search?q=wolf
+  https://rasiimshabazz.blogspot.com/search?q=wolf*
+
+[recorder.google.com]  (4)
+  http://recorder.google.com/
+  https://recorder.google.com
+  https://recorder.google.com/16c20fbd-a652-47ef-8ff3-92040dfe89a7
+  https://recorder.google.com/a93aa6a8-7c24-4847-b393-f52746bd7420?pli=1
+
+[registry.npmjs.org]  (24)
+  https://registry.npmjs.org/noget/-/noget-1.0.0.tgz
+  https://registry.npmjs.org/noget/-/noget-1.0.1.tgz
+  https://registry.npmjs.org/noget/-/noget-1.0.10.tgz
+  https://registry.npmjs.org/noget/-/noget-1.0.11.tgz
+  https://registry.npmjs.org/noget/-/noget-1.0.12.tgz
+  https://registry.npmjs.org/noget/-/noget-1.0.13.tgz
+  https://registry.npmjs.org/noget/-/noget-1.0.15.tgz
+  https://registry.npmjs.org/noget/-/noget-1.0.16.tgz
+  https://registry.npmjs.org/noget/-/noget-1.0.17.tgz
+  https://registry.npmjs.org/noget/-/noget-1.0.18.tgz
+  https://registry.npmjs.org/noget/-/noget-1.0.2.tgz
+  https://registry.npmjs.org/noget/-/noget-1.0.3.tgz
+  https://registry.npmjs.org/noget/-/noget-1.0.4.tgz
+  https://registry.npmjs.org/noget/-/noget-1.0.5.tgz
+  https://registry.npmjs.org/noget/-/noget-1.0.6.tgz
+  https://registry.npmjs.org/noget/-/noget-1.0.7.tgz
+  https://registry.npmjs.org/noget/-/noget-1.0.8.tgz
+  https://registry.npmjs.org/noget/-/noget-1.0.9.tgz
+  https://registry.npmjs.org/noget/-/noget-1.1.0.tgz
+  https://registry.npmjs.org/noget/-/noget-1.1.1.tgz
+  https://registry.npmjs.org/noget/-/noget-1.1.2.tgz
+  https://registry.npmjs.org/noget/-/noget-1.1.3.tgz
+  https://registry.npmjs.org/noget/-/noget-1.1.4.tgz
+  https://registry.npmjs.org/noget/-/noget-1.1.5.tgz
+
+[replit.com]  (20)
+  https://replit.com
+  https://replit.com/
+  https://replit.com/@AndrewWallace16
+  https://replit.com/@AndrewWallace16/Product-Planner
+  https://replit.com/integrations
+  https://replit.com/login?goto=%2F%40AndrewWallace16%2FProduct-Planner&error=unauthorized
+  https://replit.com/login?goto=%2Flogin%3Fgoto%3D%252F%2540AndrewWallace16%252FProduct-Planner%26error%3Dunauthorized&error=unauthorized
+  https://replit.com/login?goto=%2F~%3Fsettings.show%3Dtrue%26settings.tab%3Dbilling&error=unauthorized
+  https://replit.com/login?goto=%2F~%3Fsettings.tab%3Dbilling%26settings.show%3Dtrue&error=unauthorized
+  https://replit.com/pricing
+  https://replit.com/signup
+  https://replit.com/stripe-customer-portal/customer/3791062
+  https://replit.com/usage?paymentMethod=true&authModal=login
+  https://replit.com/~
+  https://replit.com/~?settings.show=true
+  https://replit.com/~?settings.show=true&settings.tab=billing
+  https://replit.com/~?settings.show=true&settings.tab=integrations
+  https://replit.com/~?settings.tab=billing&settings.show=true
+  https://replit.com/~?settings.tab=integrations
+  https://replit.com/~?settings.tab=integrations&settings.show=true
+
+[robinhood.com]  (7)
+  https://robinhood.com
+  https://robinhood.com/?classic=1
+  https://robinhood.com/account/history
+  https://robinhood.com/account/reports-statements
+  https://robinhood.com/account/reports-statements/activity-reports
+  https://robinhood.com/account/settings/investing?target=section
+  https://robinhood.com/account/tax-center
+
+[rochdalevillage.com]  (10)
+  https://rochdalevillage.com
+  https://rochdalevillage.com/
+  https://rochdalevillage.com/-
+  https://rochdalevillage.com/about/
+  https://rochdalevillage.com/contact-us/
+  https://rochdalevillage.com/live-here/senior-center/
+  https://rochdalevillage.com/live-here/senior-center/#
+  https://rochdalevillage.com/live-here/senior-center/#iLightbox[postimages]/0
+  https://rochdalevillage.com/n-o-r-c-office/
+  https://rochdalevillage.com/senior-center/
+
+[rr1---sn-8xgp1vo-gpje.googlevideo.com]  (1)
+  https://rr1---sn-8xgp1vo-gpje.googlevideo.com/initplayback?source=youtube&oeis=1&c=WEB&oad=3200&ovd=3200&oaad=11000&oavd=11000&ocs=700&oewis=1&oputc=1&ofpcc=1&siu=1&msp=1&odepv=1&id=214c3325a9c329f4&ip=2600%3A4040%3A49e8%3A2b00%3Ab91f%3Ab220%3A98ea%3Aa93d&initcwndbps=4155000&mt=1769557491&oweuc=
+
+[rr11---sn-8xgp1vo-p5qee.googlevideo.com]  (1)
+  https://rr11---sn-8xgp1vo-p5qee.googlevideo.com/initplayback?source=youtube&oeis=1&c=WEB&oad=3200&ovd=3200&oaad=11000&oavd=11000&ocs=700&oewis=1&oputc=1&ofpcc=1&siu=1&msp=1&odepv=1&id=74b396731050c97f&ip=2600%3A4040%3A49e8%3A2b00%3A8c5b%3Aa1be%3A548c%3A1c78&initcwndbps=4187500&mt=1757712081&oweuc=
+
+[rr2---sn-8xgp1vo-p5qes.googlevideo.com]  (1)
+  https://rr2---sn-8xgp1vo-p5qes.googlevideo.com/initplayback?source=youtube&oeis=1&c=WEB&oad=3200&ovd=3200&oaad=11000&oavd=11000&ocs=700&oewis=1&oputc=1&ofpcc=1&siu=1&msp=1&odepv=1&onvi=1&id=0126e021536e015d&ip=2600%3A4040%3A49e8%3A2b00%3Abc05%3Afe9b%3Aab32%3A60e5&initcwndbps=4165000&mt=1753560084&oweuc=
+
+[rr3---sn-8xgp1vo-p5qes.googlevideo.com]  (1)
+  https://rr3---sn-8xgp1vo-p5qes.googlevideo.com/initplayback?source=youtube&oeis=1&c=WEB&oad=3200&ovd=3200&oaad=11000&oavd=11000&ocs=700&oewis=1&oputc=1&ofpcc=1&siu=1&msp=1&odepv=1&id=6217c57913098f5e&ip=2600%3A4040%3A49e8%3A2b00%3A8c5b%3Aa1be%3A548c%3A1c78&initcwndbps=3870000&mt=1757735845&oweuc=
+
+[rr5---sn-8xgp1vo-p5qe.googlevideo.com]  (1)
+  https://rr5---sn-8xgp1vo-p5qe.googlevideo.com/initplayback?source=youtube&oeis=1&c=WEB&oad=3200&ovd=3200&oaad=11000&oavd=11000&ocs=700&oewis=1&oputc=1&ofpcc=1&siu=1&msp=1&odepv=1&oreouc=1&id=6541a1d4e557d786&ip=2600%3A4040%3A49e8%3A2b00%3A5830%3Ad9c5%3A7288%3A28e2&initcwndbps=4101250&mt=1743215595&oweuc=
+
+[rr5---sn-8xgp1vo-p5qee.googlevideo.com]  (2)
+  https://rr5---sn-8xgp1vo-p5qee.googlevideo.com/initplayback?source=youtube&oeis=1&c=WEB&oad=3200&ovd=3200&oaad=11000&oavd=11000&ocs=700&oewis=1&oputc=1&ofpcc=1&siu=1&msp=1&odepv=1&id=929dfdc7f8280de9&ip=138.88.249.178&osts=1209&initcwndbps=1542500&mt=1732243509&oweuc=
+  https://rr5---sn-8xgp1vo-p5qee.googlevideo.com/initplayback?source=youtube&oeis=1&c=WEB&oad=3200&ovd=3200&oaad=11000&oavd=11000&ocs=700&oewis=1&oputc=1&ofpcc=1&siu=1&msp=1&odepv=1&oreouc=1&id=dad4fee3791d7af1&ip=2600%3A4040%3A49e8%3A2b00%3A5830%3Ad9c5%3A7288%3A28e2&initcwndbps=4221250&mt=1743214635&oweuc=
+
+[rr5---sn-8xgp1vo-p5ql.googlevideo.com]  (1)
+  https://rr5---sn-8xgp1vo-p5ql.googlevideo.com/initplayback?source=youtube&oeis=1&c=WEB&oad=3200&ovd=3200&oaad=11000&oavd=11000&ocs=700&oewis=1&oputc=1&ofpcc=1&siu=1&msp=1&odepv=1&oreouc=1&id=7eebf3a5a5ad0a6a&ip=2600%3A4040%3A49e8%3A2b00%3A5830%3Ad9c5%3A7288%3A28e2&initcwndbps=3285000&mt=1743215595&oweuc=
+
+[rr8---sn-8xgp1vo-p5qs.googlevideo.com]  (1)
+  https://rr8---sn-8xgp1vo-p5qs.googlevideo.com/initplayback?source=youtube&oeis=1&c=WEB&oad=3200&ovd=3200&oaad=11000&oavd=11000&ocs=700&oewis=1&oputc=1&ofpcc=1&siu=1&msp=1&odepv=1&oreouc=1&id=1ca1c407d1ede923&ip=2600%3A4040%3A49e8%3A2b00%3A5830%3Ad9c5%3A7288%3A28e2&initcwndbps=2953750&mt=1743214879&oweuc=
+
+[selfemployed.intuit.com]  (1)
+  https://selfemployed.intuit.com/login?utm_source=QBO&utm_medium=Web&utm_content=SignIn/
+
+[server.cpmstar.com]  (1)
+  https://server.cpmstar.com
+
+[ssh.cloud.google.com]  (1)
+  https://ssh.cloud.google.com/
+
+[start-page.buffer.com]  (3)
+  https://start-page.buffer.com
+  https://start-page.buffer.com/
+  https://start-page.buffer.com/onboarding
+
+[studio.auth.synthesia.io]  (1)
+  https://studio.auth.synthesia.io/oauth2/authorize?redirect_uri=https%3A%2F%2Fapp.synthesia.io&response_type=code&client_id=1kvg8re5bgu9ljqnnkjosu477k&identity_provider=Google&scope=openid%20profile%20aws.cognito.signin.user.admin&state=Bn08Fg1PGy17gNGkTAb6s0YT0sLFV0a2-766964656f73547970653d4d79526563656e74566964656f7326636f676e69746f5369676e757052656469726563743d253246&code_challenge=inHAXHCkrqOwFny_C1UprKyr_ABngoFTsgck0IFB-Eo&code_challenge_method=S256
+
+[studio.youtube.com]  (4)
+  https://studio.youtube.com
+  https://studio.youtube.com/channel/UCEcKq4bs9xgaMLiKIBFlXjg/videos/upload?d=ud&filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D
+  https://studio.youtube.com/channel/UCEcKq4bs9xgaMLiKIBFlXjg/videos/upload?filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D
+  https://studio.youtube.com/channel/UCEcKq4bs9xgaMLiKIBFlXjg/videos?d=ud
+
+[substack.com]  (3)
+  https://substack.com
+  https://substack.com/
+  https://substack.com/sign-in?redirect=%2Fp%2Fwhy-does-development-slow&for_pub=tidyfirst
+
+[suno.com]  (9)
+  https://suno.com
+  https://suno.com/
+  https://suno.com/auth/success?signup_source=splashpage&referrer=%2Fhome&pre_signup_url_params=%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3D22661157825%26utm_term%3Dai%2520song%2520creator%26utm_content%3D757868209175%26wpsrc%3DGoogle%2520AdWords%26wpcid%3D22661157825%26wpscid%3D180917853276%26wpcrid%3D757868209175%26wpkwid%3Dkwd-1931423547111%26wpkwn%3Dai%2520song%2520creator%26wpkmatch%3Dp%26wpsnetn%3Dg%26gad_source%3D1%26gad_campaignid%3D22661157825%26gbraid%3D0AAAAA9pWpduF5YKNfl-5vV05XoyfGarjf%26gclid%3DCjwKCAiAjojLBhAlEiwAcjhrDqjWA7_I1awlPTTmOJvHx4mSiiPnC73y1Asfqt1f_ZdVFoaoXI5cQBoC0XkQAvD_BwE&redirected_from=signup&final_destination=%2Fcreate
+  https://suno.com/chat
+  https://suno.com/collect-birthday?__clerk_handshake=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdW5vLmNvbS9jbGFpbXMvdG9rZW5fdHlwZSI6ImhhbmRzaGFrZSIsImlzcyI6Imh0dHBzOi8vYXV0aC5zdW5vLmNvbSIsImhhbmRzaGFrZSI6WyJfX3Nlc3Npb249ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNkluTjFibTh0WVhCcExYSnpNalUyTFd0bGVTMHhJaXdpZEhsd0lqb2lTbGRVSW4wLmV5SnpkVzV2TG1OdmJTOWpiR0ZwYlhNdmRYTmxjbDlwWkNJNklqbGlNV1JoT0dNNExURmxOREF0TkdVeFl5MDVZelk1TFRJMk5tWmpaR1kwTnpBMlppSXNJbWgwZEhCek9pOHZjM1Z1Ynk1aGFTOWpiR0ZwYlhNdlkyeGxjbXRmYVdRaU9pSTVZakZrWVRoak9DMHhaVFF3TFRSbE1XTXRPV00yT1MweU5qWm1ZMlJtTkRjd05tWWlMQ0p6ZFc1dkxtTnZiUzlqYkdGcGJYTXZkRzlyWlc1ZmRIbHdaU0k2SW1GalkyVnpjeUlzSW5OMWJtOHZaR2xrSWpveE1ERXdPRE0xTURBc0ltVjRjQ0k2TVRjM056YzRPRE0zTlN3aVlYVmtJam9pYzNWdWJ5MWhjR2tpTENKemRXSWlPaUk1WWpGa1lUaGpPQzB4WlRRd0xUUmxNV010T1dNMk9TMHlOalptWTJSbU5EY3dObVlpTENKaGVuQWlPaUpvZEhSd2N6b3ZMM04xYm04dVkyOXRJaXdpWm5aaElqcGJNQ3d0TVYwc0ltbGhkQ0k2TVRjM056YzRORGMzTlN3aWFYTnpJam9pYUhSMGNITTZMeTloZFhSb0xuTjFibTh1WTI5dElpd2lhbWwwSWpvaU5EWTNZemN4WkRNdE9UaG1aaTAwTkdaa0xUazJaR1F0Wm1ZMk5qVTRaVGczWVRZeklpd2ljR3hoYmlJNklqbzZJaXdpYzNWdWJ5OXFiMmx1WldRaU9qRTNOamd3Tnpnd05qa3NJbk4xYm04dVkyOXRMMk5zWVdsdGN5OWxiV0ZwYkNJNkluZGhiR3hoWTJVdVpISmxkMEJuYldGcGJDNWpiMjBpTENKb2RIUndjem92TDNOMWJtOHVZV2t2WTJ4aGFXMXpMMlZ0WVdsc0lqb2lkMkZzYkdGalpTNWtjbVYzUUdkdFlXbHNMbU52YlNJc0luTjFibTh2YUdGdVpHeGxJam9pZDJGc2JHRmpaVjlrY21WM0lpd2ljM1Z1Ynk5MWMyVnlYMmxrSWpvaU1UTXhOelk1TmpZeklpd2ljM1Z1Ynk5MWMyVnlibUZ0WlNJNkluZGhiR3hoWTJVdVpISmxkMEJuYldGcGJDNWpiMjBpZlEuc0ktc3h4OVp3MWE0UFp3dFZzZ3J1bFY5VWJFeXdMZF9ib2hxczl6TmVWTmFkSk1DbXdPZFk2dmtBY0RRVzJsaVpyZmVZWWVCV1haQnpXN3Jjb1lnbTFJVDBmVFNzY1QzUjlDYTl6VXp6Y2ZSdE5CSWw3U05xSWc3eVI2bVV3RjFISTc2YnJXTEl3VmdpZjFuVWRIVVM2TmxuWE9xYU55Q2lUVlEwMmZVTTQ1bnBUTnh1aGc3RTRHTXRpRVUtOHBJTF9EVGgzeUZma3FVTndNRGtJRm9CaVl4c0RUMWxNaklqZDc2ZGxoekhsVXhPLWFHRUE2VXhfVkt4b0tQZW1lNk9vOVNid3NhenBXZ2RvQmptRHloWXg5STlrYkxyZzU5ZHZNMHFQcC1FYkRBWk9wUDhBNVBZVVNhcUJyX2dlMmdtNHVtWGR2bU5ycjZOYURCcHIyV0ZBOyBEb21haW49c3Vuby5jb207IGV4cGlyZXM9U3VuLCAwMyBNYXkgMjAyNiAwNjowNjoxNSBHTVQ7IFNhbWVTaXRlPUxheDsgU2VjdXJlIiwiX19jbGllbnRfdWF0PTE3Njg
+  https://suno.com/create
+  https://suno.com/me
+  https://suno.com/onboarding?__clerk_handshake=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdW5vLmNvbS9jbGFpbXMvdG9rZW5fdHlwZSI6ImhhbmRzaGFrZSIsImlzcyI6Imh0dHBzOi8vYXV0aC5zdW5vLmNvbSIsImhhbmRzaGFrZSI6WyJfX3Nlc3Npb249ZXlKaGJHY2lPaUpTVXpJMU5pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SnpkVzV2TG1OdmJTOWpiR0ZwYlhNdmRYTmxjbDlwWkNJNklqbGlNV1JoT0dNNExURmxOREF0TkdVeFl5MDVZelk1TFRJMk5tWmpaR1kwTnpBMlppSXNJbWgwZEhCek9pOHZjM1Z1Ynk1aGFTOWpiR0ZwYlhNdlkyeGxjbXRmYVdRaU9pSTVZakZrWVRoak9DMHhaVFF3TFRSbE1XTXRPV00yT1MweU5qWm1ZMlJtTkRjd05tWWlMQ0p6ZFc1dkxtTnZiUzlqYkdGcGJYTXZkRzlyWlc1ZmRIbHdaU0k2SW1GalkyVnpjeUlzSW1WNGNDSTZNVGMyT0RnMU5EZzJPU3dpWVhWa0lqb2ljM1Z1YnkxaGNHa2lMQ0p6ZFdJaU9pSTVZakZrWVRoak9DMHhaVFF3TFRSbE1XTXRPV00yT1MweU5qWm1ZMlJtTkRjd05tWWlMQ0poZW5BaU9pSm9kSFJ3Y3pvdkwzTjFibTh1WTI5dElpd2lablpoSWpwYk1Dd3RNVjBzSW1saGRDSTZNVGMyT0RnMU1USTJPU3dpYVhOeklqb2lhSFIwY0hNNkx5OWhkWFJvTG5OMWJtOHVZMjl0SWl3aWFtbDBJam9pWkdOaVlXUmxPVEV0TUdJNFl5MDBORFprTFdJeU5UZ3RPRGMwWmpCaE1EUm1PREZqSWl3aWRtbDZJanBtWVd4elpTd2ljM1Z1Ynk1amIyMHZZMnhoYVcxekwyVnRZV2xzSWpvaWQyRnNiR0ZqWlM1a2NtVjNRR2R0WVdsc0xtTnZiU0lzSW1oMGRIQnpPaTh2YzNWdWJ5NWhhUzlqYkdGcGJYTXZaVzFoYVd3aU9pSjNZV3hzWVdObExtUnlaWGRBWjIxaGFXd3VZMjl0SW4wLnQtcEpwV2ZKbXFXTjZ3cV93UXJ4VWExLW9UYlpkcEtSZEJSVWR2MjFCTFNOT0RDZHN4V1BJc2d6N2JRX3VQeWFINUpPVk1JTUg5c0hEUTBYRTRacjR4aFFhaGVTbXZKa1gtTXV3UE9icW1kWjlrNWxyUnFOUnZrYkxQbU1GSDFFcUVfdHpMd1c1Y3p3QlB6U0t0SzRvMUQxUE5NMjA0TkpfVUZsSHhZeFJFVFY2WGt6LVEteVFMWXBiUmdqNTk5Yi1xSHRFV1lHYUZtZTA0enhneEVjbzJFeE40NXFMd2YyOTA2VmhqY0ZhdnRobmdnV3NuYmJ1dS1LWXZoQWRxbnZJUFlIdjVIeFhJTktKdWhCdGVVTEUxd2tFaTByZlM2XzRmR3VSZTFFN0NxTGRLd21PR2ZDZkdZNTlSb0JhWHVkMnNydmRCWXAxbFZGa0IxcVlJd0xQQTsgRG9tYWluPXN1bm8uY29tOyBNYXgtQWdlPTMxNTM2MDAwOyBTYW1lU2l0ZT1MYXg7IFNlY3VyZSIsIl9fY2xpZW50X3VhdD0xNzY4MDc4MTY0OyBEb21haW49c3Vuby5jb207IE1heC1BZ2U9MzE1MzYwMDA7IFNhbWVTaXRlPUxheDsgU2VjdXJlIiwiX19jbGVya19oYW5kc2hha2U9OyBleHBpcmVzPVRodSwgMDEgSmFuIDE5NzAgMDA6MDA6MDAgR01UOyBIdHRwT25seTsgTWF4LUFnZT0wOyBTYW1lU2l0ZT1MYXg7IFNlY3VyZSJdfQ.EmGKOxr98fQqfSTTOietGr2m1Xw2tjg65-aVOv4uHVux_d4OR77fMZ3OWfWBwPP4PZWWfgBRI5ofLpqLWMrSVy7KPyjtqbGJ-QNjJ5twbAKkqu2NJy
+  https://suno.com/onboarding?redirect_url=%2Fcreate
+
+[t.co]  (4)
+  https://t.co
+  https://t.co/
+  https://t.co/axw3dnhjhI
+  https://t.co/t2qOgtcvvF
+
+[thoughtworks.wistia.com]  (5)
+  http://thoughtworks.wistia.com/medias/jhdk2wa37j
+  http://thoughtworks.wistia.com/medias/uxjb0lwrcz
+  https://thoughtworks.wistia.com
+  https://thoughtworks.wistia.com/medias/jhdk2wa37j
+  https://thoughtworks.wistia.com/medias/uxjb0lwrcz
+
+[tidewave.ai]  (2)
+  https://tidewave.ai
+  https://tidewave.ai/
+
+[tidyfirst.substack.com]  (4)
+  https://tidyfirst.substack.com
+  https://tidyfirst.substack.com/
+  https://tidyfirst.substack.com/p/one-pile?utm_source=post-email-title&publication_id=256838&post_id=161117391&utm_campaign=email-post-title&isFreemail=true&r=2i5ul&triedRedirect=true&utm_medium=email
+  https://tidyfirst.substack.com/p/why-does-development-slow
+
+[todaysmathematics.com]  (1)
+  https://todaysmathematics.com/
+
+[transactions.dmv.virginia.gov]  (9)
+  https://transactions.dmv.virginia.gov
+  https://transactions.dmv.virginia.gov/
+  https://transactions.dmv.virginia.gov/apps/PaymentRouter/PmtReplyHandler.aspx
+  https://transactions.dmv.virginia.gov/apps/webtrans/Vehicle_Registration/intro.aspx
+  https://transactions.dmv.virginia.gov/apps/webtrans/driverlicense/receipt.aspx
+  https://transactions.dmv.virginia.gov/apps/webtrans/driverlicense/tdp.aspx
+  https://transactions.dmv.virginia.gov/apps/webtrans/pin_maint/pin_logon.aspx
+  https://transactions.dmv.virginia.gov/apps/webtrans/vehicle_registration/intro.aspx
+  https://transactions.dmv.virginia.gov/apps/webtrans/vehicle_registration/regist_entry.aspx
+
+[twitter.com]  (1)
+  https://twitter.com/
+
+[usync.vrtcal.com]  (1)
+  https://usync.vrtcal.com
+
+[validitygenetics.com]  (3)
+  https://validitygenetics.com
+  https://validitygenetics.com/dna-testing-kits/home-paternity-dna-test
+  https://validitygenetics.com/paternity-dna-test
+
+[voicepods-stream.vercel.app]  (1)
+  https://voicepods-stream.vercel.app
+
+[wealthteainc.com]  (1)
+  https://wealthteainc.com/
+
+[www.aarp.org]  (4)
+  https://www.aarp.org
+  https://www.aarp.org/
+  https://www.aarp.org/#
+  https://www.aarp.org/ask-aarp/
+
+[www.accountantsofcolor.co]  (2)
+  https://www.accountantsofcolor.co
+  https://www.accountantsofcolor.co/
+
+[www.aljazeera.com]  (1)
+  https://www.aljazeera.com/news/2026/3/5/map-shows-how-big-iran-is-compared-with-the-50-us-states#:~:text=How%20big%20is%20Iran?,(Al%20Jazeera
+
+[www.altrarunning.com]  (3)
+  https://www.altrarunning.com
+  https://www.altrarunning.com/en-us/products/mens-torin-8-al0a85qe
+  https://www.altrarunning.com/en-us/products/mens-torin-8-al0a85qe?variant=47944048935079T
+
+[www.amazon.com]  (40)
+  https://www.amazon.com
+  https://www.amazon.com/A-Rage-in-Harlem-Chester-Himes-audiobook/dp/B007IEHKH2/ref=sr_1_1?crid=3V7OQWVMCL1RP&dib=eyJ2IjoiMSJ9.3IkFiNSnDeomoA_voBzZfD3AcAWF9YW72AxCZQpGBqJupDX1UOaOZHWIEoaShILe8IqmDDqLiiZVXyet4rmaZitPzhCibIBT9zM1_cqj8Uk.ogYvhclZo7rGIZLINQWY9CGVF-IhFLTJzJ7osGl5xAk&dib_tag=se&keywords=chester+hines&qid=1758334122&sprefix=chester+hines%2Caps%2C117&sr=8-1
+  https://www.amazon.com/Airtight-Willie-Me-Iceberg-Slim-audiobook/dp/B00OBT89VS/ref=sr_1_1?crid=F5E85Q1TUI8L&dib=eyJ2IjoiMSJ9.6q4JBgu3qDPR-YE2aMo4P52XuSKxOce7u4YvZkR_9Y7GjHj071QN20LucGBJIEps.hfdvrj0fpT37c-C7e1rfQry6skalF72he4dZZ44DuKw&dib_tag=se&keywords=iceberg+slim+air+tight&qid=1758334104&s=audible&sprefix=iceberg+slim+air+tight%2Caudible%2C68&sr=1-1
+  https://www.amazon.com/Black-Girl-Lost-Donald-Goines-audiobook/dp/B00JWXD7Z6/ref=sr_1_3?crid=9F8T6H5MXCF1&dib=eyJ2IjoiMSJ9.f3DW_J4stckkRFZ43P_rpHdnkMwHjywU3ZX4Ez7taQOgGDj2gSzvgAILrbZlyyhUO9wiJOZDkr4PAn3B1yD1K1WlVD53EDepLA6nGamu2vg2jBtM9r4EzfFOb322BA4w38_jRTaUqtKrFD5pr5NGaDtbeCHA9tfIiYgbxsSpzHoqzjyvVJwbRifPY86HN5tiCSs3xBnieTfdt85iWoSKsG4h5IrZcfdT6aUmCgbYHW_Qm274Qwfby9ps4PZZYl8geJ7Y5GUTAZQSfy2ksCqG0Zz16F9CjukKcF6an0SFJT8.lSlTsf5i-BhIY69wKPwOYxT-IvaHMjSD3Fwbu0j0kT0&dib_tag=se&keywords=Donald+Goines&qid=1758375759&sprefix=donald+goines%2Caps%2C87&sr=8-3
+  https://www.amazon.com/Cal-Newport/e/B001IGNR0U
+  https://www.amazon.com/Good-They-Cant-Ignore-You-ebook/dp/B0076DDBJ6?ref_=ast_author_dp_rw&th=1&psc=1&dib=eyJ2IjoiMSJ9.5WiSz2pZzz8R8NhmiiHTQgDqpP457vI-XWDHDoKsEKDFJu81Mo5SEhzpcKH4rDRJGAfRe87uGmHsuOhyFKgmBp-usBFgic-R30lqPFgld7MaKI5KwkIn8VOxYptmFGySIF5jHpd9ceCJY2OhqIWy9zmHzno6RbXjjQYsb9BZ151iOy6TjVq1zNnCPWx-eXBjP_MKdJhGMlgn2wyDhZflNDcb91VdvVJX0ty79azWIU0.V-Nd3h6ILguEMTtUF-TRXloXAeHIhPWAiKBdN68X3PM&dib_tag=AUTHOR
+  https://www.amazon.com/Hubert-Selby-Jr/e/B000AP9TKC/ref=dp_byline_cont_book_1
+  https://www.amazon.com/IDENTIGENE-Paternity-Test-Collection-Residents/dp/B0077RAEAK/ref=sr_1_31?crid=J4NGUYTD1O8H&dib=eyJ2IjoiMSJ9.k6hH761xxiF76vJ3OIRHz3Zw1DYcieWDZ0kNWnKjk8QZzzBnNvHq6MuG3nN7OdBn_FdyhnkzXsAhG2zMhNtuOiVg3uuAoCBLe2QWqVDaprrX-ucaziPowzNAMxrQyFNLi9qCyWkGKgGfyNUjFJQAEzTh-MNflZzkEF2lqgndIuvBX6fq1HH4u6W2ZNUPT07rdfmiWFQ59siBfJCSEm2SCFHc8R43FrdMW1AFs1AE2jo0H6vxibjIB_67UmseM0s9oSlelGW29H9dXeBftiAbliQ0HuIOCVSHkRvi3y9WBR4.xO-AXWjKYTzmYZy4js-aiqbfPmW0IgztiZEd1VuPPng&dib_tag=se&keywords=paternity+test+kit&qid=1766111245&sprefix=paternity+test+ki%2Caps%2C116&sr=8-31
+  https://www.amazon.com/Last-Exit-Brooklyn-Evergreen-Book/dp/0802131379
+  https://www.amazon.com/My-Forever-DNA-Paternity-Guaranteed/dp/B01FSUSIKA/ref=sr_1_1?crid=3AECMIRUB9P4H&dib=eyJ2IjoiMSJ9.HxQm-ArFLKsDC1fMfMMTQ66avW2pCqQXD8RUMONUBahc6tw8oIlAnfiCeq5u-N6EDEeGK8RveWrFu7VafQAennWy0-6FpuHWipeC_kO_hrZ_nEWE2d-6seVHdow6oxty4nJze5Kqjx74_Kvr0NMjOpvY-RNqwq0Rkqki09gbX1LHoxGHIMtQNpqi1gm8A33xOrjDR3R7m6cJsAMPT-AzT6UWzIMEm4AI9sNa2wM-iksOA1fHodZJJ2Xf5Tzc4sPc3nkBAqd1-bLzBfX6nfDEjpAv4F_PvN17Av24SUsfveE.qkVc0dfQgvkD9JBJIFxN3VJ2Tw5cnScRMhyHYZhPs2k&dib_tag=se&keywords=my%2Bforever%2Bdna&qid=1766863975&sprefix=myforeverdna%2Caps%2C215&sr=8-1&th=1
+  https://www.amazon.com/My-Forever-DNA-Paternity-Guaranteed/dp/B01FSUSIKA/ref=sr_1_1?crid=3AECMIRUB9P4H&dib=eyJ2IjoiMSJ9.HxQm-ArFLKsDC1fMfMMTQ66avW2pCqQXD8RUMONUBahc6tw8oIlAnfiCeq5u-N6EDEeGK8RveWrFu7VafQAennWy0-6FpuHWipeC_kO_hrZ_nEWE2d-6seVHdow6oxty4nJze5Kqjx74_Kvr0NMjOpvY-RNqwq0Rkqki09gbX1LHoxGHIMtQNpqi1gm8A33xOrjDR3R7m6cJsAMPT-AzT6UWzIMEm4AI9sNa2wM-iksOA1fHodZJJ2Xf5Tzc4sPc3nkBAqd1-bLzBfX6nfDEjpAv4F_PvN17Av24SUsfveE.qkVc0dfQgvkD9JBJIFxN3VJ2Tw5cnScRMhyHYZhPs2k&dib_tag=se&keywords=my+forever+dna&qid=1766863975&sprefix=myforeverdna%2Caps%2C215&sr=8-1
+  https://www.amazon.com/Paternity-Included-Business-Accurate-Confidential/dp/B01M07EA76/ref=sr_1_7?dib=eyJ2IjoiMSJ9.k6hH761xxiF76vJ3OIRHz3Zw1DYcieWDZ0kNWnKjk8TffmiXnxz4ndcsZOekpTgVV6DBr3ZSVKW6ANAmp_hM1Y4WThrNwxVSfOTQmohMmYXoopl0K8NRT35v_7eq32PLr7sCsQ6_Gy9cWK7nm4_oTsY7GWo_ijMUDdT7sglNdxJa5XViXfUEYQK-abgOc7kOtAIlU4XfHT9ruS2GT3T4P9Ahqm2c7bh0aDWZQ1EsaXy0DMR0_aq1bXZ1Kp3_if-11tjFAiCdKOU7cFjZ7kPa0SQ0HuIOCVSHkRvi3y9WBR4.nCQ-iCcY-OkPLN_YdrwFxRcSwtgc84iUayrec-lp4fM&dib_tag=se&keywords=paternity%2Btest%2Bkit&qid=1766861442&sr=8-7&th=1
+  https://www.amazon.com/Paternity-Included-Business-Accurate-Confidential/dp/B01M07EA76/ref=sr_1_7?dib=eyJ2IjoiMSJ9.k6hH761xxiF76vJ3OIRHz3Zw1DYcieWDZ0kNWnKjk8TffmiXnxz4ndcsZOekpTgVV6DBr3ZSVKW6ANAmp_hM1Y4WThrNwxVSfOTQmohMmYXoopl0K8NRT35v_7eq32PLr7sCsQ6_Gy9cWK7nm4_oTsY7GWo_ijMUDdT7sglNdxJa5XViXfUEYQK-abgOc7kOtAIlU4XfHT9ruS2GT3T4P9Ahqm2c7bh0aDWZQ1EsaXy0DMR0_aq1bXZ1Kp3_if-11tjFAiCdKOU7cFjZ7kPa0SQ0HuIOCVSHkRvi3y9WBR4.nCQ-iCcY-OkPLN_YdrwFxRcSwtgc84iUayrec-lp4fM&dib_tag=se&keywords=paternity+test+kit&qid=1766861442&sr=8-7
+  https://www.amazon.com/Pimp-Iceberg-Slim-audiobook/dp/B00502PE5E/ref=sr_1_1?crid=2MZW7WDFZPEH2&dib=eyJ2IjoiMSJ9.FrgEb-AgDugd-ulvgZVzWemmRq3jYHvrgjAsSIUFSxePgPS8iXxwKdwd1KTnNx_QvwHvW9CkSqpSfEEMVUJ-Tk4YpQGPjlMPsRIURINQadfdnjwaFMWP3EN8MgT3vCF_kxDq1GfKFd4LHHOFO1C4SdEuC7hpmJSu76cTUj4XI8V_QkvFF_Be8ms74JwV8Yw-fkuifaTInflu6tmXcPHvuooFWSUA3TABtWRNJ3nKsP4.j1wXTJU2_wxo-FbwcotzN6Bg-YkqCxrQqrYJlnKsn5k&dib_tag=se&keywords=iceberg+slim&qid=1758334040&sprefix=iceberg+slim%2Caps%2C113&sr=8-1
+  https://www.amazon.com/Trick-Baby-Iceberg-Slim-audiobook/dp/B00MOTDNI6/ref=sr_1_1?crid=3P4ZOXLLWJTG0&dib=eyJ2IjoiMSJ9.oPAlWoIOiXuPmerWy8xMJoCEY5jVZVYbxaf9xEw99RH0fWAegATm0nPi0gSvXODtQYTk8njT6DvqHuzcbDdOvuxEFPxzleBJKXfiWFDfFz83ZKKHz_zwuKZ3rcQJPEdm3nkGpR5LdwCUDkW5b-JL6kSCrAZoRRiig7PPAaBo4xOjSrf5PwSMK6om0ikMi3kC6abmE2TpUphURb98r_FI59fhEqDUov81ehv3pi9Fpwo.vAUqfufsF_F8x9LvYOddsebKwZH_UjRgm35IIUidzN4&dib_tag=se&keywords=iceberg+slim+trick+baby&qid=1758337876&sprefix=Iceberg+Slim+trick+%2Caps%2C72&sr=8-1
+  https://www.amazon.com/dp/B00O9GKKX8?plink=XwdUl7nJMeV423O0&pf_rd_r=6PXVFKBDMBWS3TAQZ239&pf_rd_p=13c2504f-673f-4fd5-85c2-706d47884b2e&ref_=adblp13nvvxx_0_4_im
+  https://www.amazon.com/ref=nav_logo
+  https://www.amazon.com/s/ref=dp_byline_sr_audible_1?ie=UTF8&search-alias=audible&field-keywords=Chester+Himes
+  https://www.amazon.com/s/ref=dp_byline_sr_audible_2?ie=UTF8&search-alias=audible&field-keywords=Iceberg+Slim
+  https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=paternity+test+kit
+  https://www.amazon.com/s/ref=nb_sb_noss_1?url=search-alias%3Daps&field-keywords=Donald+Goines&crid=9F8T6H5MXCF1&sprefix=donald+goines%2Caps%2C87
+  https://www.amazon.com/s/ref=nb_sb_noss_1?url=search-alias%3Daps&field-keywords=chesteer+hines&crid=3V7OQWVMCL1RP&sprefix=chester+hines%2Caps%2C117
+  https://www.amazon.com/s/ref=nb_sb_noss_1?url=search-alias%3Daps&field-keywords=myforeverdna&crid=3AECMIRUB9P4H&sprefix=myforeverdna%2Caps%2C215
+  https://www.amazon.com/s?crid=J4NGUYTD1O8H&i=aps&k=paternity%20test%20kit&ref=nb_sb_noss_2&sprefix=paternity%20test%20ki%2Caps%2C116&url=search-alias%3Daps
+  https://www.amazon.com/s?k=Chester+Himes&i=audible&ref=dp_byline_sr_audible_1
+  https://www.amazon.com/s?k=Donald+Goines&crid=9F8T6H5MXCF1&sprefix=donald+goines%2Caps%2C87&ref=nb_sb_noss_1
+  https://www.amazon.com/s?k=Iceberg+Slim&i=audible&ref=dp_byline_sr_audible_2
+  https://www.amazon.com/s?k=chesteer+hines&crid=3V7OQWVMCL1RP&sprefix=chester+hines%2Caps%2C117&ref=nb_sb_noss_1
+  https://www.amazon.com/s?k=homedna+toothbrush&crid=U5O92VVE936X&sprefix=homedna+toothbrush%2Caps%2C69&ref=nb_sb_noss_1
+  https://www.amazon.com/s?k=iceberg%20slim%20trick%20baby&i=aps&ref=nb_sb_ss_fb_1_19_p13n-expert-pd-ops-ranker&crid=3P4ZOXLLWJTG0&sprefix=Iceberg%20Slim%20trick%20%2Caps%2C72
+  https://www.amazon.com/s?k=iceberg+slim+trick+baby&crid=3P4ZOXLLWJTG0&sprefix=Iceberg+Slim+trick+%2Caps%2C72&ref=nb_sb_ss_fb_1_19_p13n-expert-pd-ops-ranker
+  https://www.amazon.com/s?k=myforeverdna&crid=3AECMIRUB9P4H&sprefix=myforeverdna%2Caps%2C215&ref=nb_sb_noss_1
+  https://www.amazon.com/s?k=paternity+test+kit&crid=J4NGUYTD1O8H&sprefix=paternity+test+ki%2Caps%2C116&ref=nb_sb_noss_2
+  https://www.amazon.com/s?k=paternity+test+kit&ref=nb_sb_noss
+  https://www.amazon.com/s?k=paternity+test+toothbrush&rh=p_72%3A1248903011&dc&crid=1OSQHXSU1O0VC&qid=1766111215&rnid=1248901011&sprefix=paternity+test+toothbrush%2Caps%2C77&ref=sr_nr_p_72_1&ds=v1%3ADV15nu1tm31VmIvCLmcr4vbv9ThOMdPku9L2CLlY5iA
+  https://www.amazon.com/s?k=paternity+test+toothbrush&rh=p_72%3A1248903011&dc&crid=1OSQHXSU1O0VC&qid=1766111215&rnid=1248901011&sprefix=paternity+test+toothbrush%2Caps%2C77&ref=sr_nr_p_72_1&ds=v1%3ADV15nu1tm31VmIvCLmcr4vbv9ThOMdPku9L2CLlY5iA4
+  https://www.amazon.com/stores/Cal-Newport/author/B001IGNR0U?ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true&ccs_id=f27e5ebc-49c3-4ed8-bcf8-8cfe55da44b9
+  https://www.amazon.com/stores/Hubert-Selby-Jr./author/B000AP9TKC?ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true&ccs_id=c58dc322-5e5a-4c67-ae83-a6b36055f675=
+  https://www.amazon.com/stores/author/B001IGNR0U/allbooks?ingress=0&visitId=d8fa8bfd-498d-4828-81bb-cfd617919d4b&ref_=ap_rdr
+  https://www.amazon.com/stores/author/B001IGNR0U/allbooks?ingress=0&visitId=d8fa8bfd-498d-4828-81bb-cfd617919d4b&ref_=ap_rdr&ccs_id=03033c18-25f4-46e5-9efa-fd5e64f44d78
+
+[www.blogger.com]  (4)
+  https://www.blogger.com
+  https://www.blogger.com/comment/frame/5548821535306686538?po=2036163257316763846&hl=en&blogspotRpcToken=6693085#%7B%22color%22%3A%22rgb(102%2C%20102%2C%20102)%22%2C%22backgroundColor%22%3A%22rgb(255%2C%20255%2C%20255)%22%2C%22unvisitedLinkColor%22%3A%22rgb(34%2C%20136%2C%20187)%22%2C%22fontFamily%22%3A%22%5C%22Trebuchet%20MS%5C%22%2C%20Trebuchet%2C%20Verdana%2C%20sans-serif%22%7D
+  https://www.blogger.com/u/2/blog/posts/5206656547392383800
+  https://www.blogger.com/u/2/blog/posts/6853892497953590011
+
+[www.capcut.com]  (3)
+  https://www.capcut.com/
+  https://www.capcut.com/lvpc_web/login_proxy?platform=google&lng=en&login_id=e85b49f8-9268-4f26-90eb-9ecfd09597ec&is_support_looki=true&device_platform=mac
+  https://www.capcut.com/lvpc_web/login_status#state=%7B%22client_id%22:%22128657643583-as9ej2egc82vfu0u2efr77nmpahej5h0.apps.googleusercontent.com%22,%22network%22:%22google%22,%22display%22:%22page%22,%22callback%22:%22_hellojs_92xo4sv7%22,%22state%22:%22%7B%5C%22id%5C%22:%5C%22e85b49f8-9268-4f26-90eb-9ecfd09597ec%5C%22,%5C%22device_platform%5C%22:%5C%22mac%5C%22%7D%22,%22redirect_uri%22:%22https://www.capcut.com/lvpc_web/login_status%22,%22scope%22:%22basic,email%22,%22page_uri%22:%22https://www.capcut.com/lvpc_web/login_proxy?platform%3Dgoogle%26lng%3Den%26login_id%3De85b49f8-9268-4f26-90eb-9ecfd09597ec%26is_support_looki%3Dtrue%26device_platform%3Dmac%22%7D&code=4/0Ab32j921Eay79HkS1yODhi7rI0Ge64rBhVO3ielj1x-DNPpEpGiFEfT7jqRr3eGInFa0pw&access_token=ya29.a0ATi6K2sYfjhrSErU6_iCcJLbif6UwIbNJ3P8_UqnA_sXCdy4H3j5vJurpsKH0C_JZesrt8-MBG7wKD5rYOz3r86FDpzfKF7sEYj2BlX-zyU2_U3uhhgd4cFB29RkQ9fYlKOhkQkE1WCEmdo-1gB2n1hoDrrf1MmuYfgvhVwG_UYinP5FKRP64xNgkF4M4yrcAIuPaSIaCgYKAS0SARUSFQHGX2MitsSvfffW_KMm9BHQc6GIxA0206&token_type=Bearer&expires_in=3599&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile%20openid&id_token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjkzYTkzNThjY2Y5OWYxYmIwNDBiYzYyMjFkNTQ5M2UxZmZkOGFkYTEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxMjg2NTc2NDM1ODMtYXM5ZWoyZWdjODJ2ZnUwdTJlZnI3N25tcGFoZWo1aDAuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIxMjg2NTc2NDM1ODMtYXM5ZWoyZWdjODJ2ZnUwdTJlZnI3N25tcGFoZWo1aDAuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDUyNDE5Nzc2MDgyNDQyMDg2MzkiLCJlbWFpbCI6IndhbGxhY2UuZHJld0BnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6ImlkdW85OExDeHNJcXowb0pfc2ViTkEiLCJjX2hhc2giOiJtN2VWMFhiX0lUTnMydUhING1ON2l3Iiwibm9uY2UiOiIzb2JsbWpsYyIsIm5iZiI6MTc2Mzk0NzkzNywibmFtZSI6IkFuZHJldyBXYWxsYWNlIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0tyZy1CY0UxcjA2ZFRXQjhfNVpHcmV4U0hhaHNBS1VxUV81NUM4aTVwaEE1Z0hyYm5vPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IkFuZHJldyIsImZhbWlseV9uYW1lIjoiV2FsbGFjZSIsImlh
+
+[www.cite-web.com]  (4)
+  https://www.cite-web.com
+  https://www.cite-web.com/PublicINQ/WDCFPVioInfo.asp
+  https://www.cite-web.com/PublicINQ/default.asp
+  https://www.cite-web.com/PublicINQ/default.asp#view-citations
+
+[www.diabetesselfmanagement.com]  (1)
+  https://www.diabetesselfmanagement.com/
+
+[www.dmv.virginia.gov]  (8)
+  https://www.dmv.virginia.gov
+  https://www.dmv.virginia.gov/
+  https://www.dmv.virginia.gov/online-services
+  https://www.dmv.virginia.gov/online-services7
+  https://www.dmv.virginia.gov/search?keyword=registration
+  https://www.dmv.virginia.gov/vehicle-registration-renewal
+  https://www.dmv.virginia.gov/vehicles/registration
+  https://www.dmv.virginia.gov/vehicles/registration/mail-renew
+
+[www.dot-store.org]  (1)
+  https://www.dot-store.org/articles/smart-ways-to-buy-electronics-online.html?psystem=PW&domain=jayelectronica.com&oref=https%3A%2F%2Fjayelectronica.com%2F&trafficTarget=gd
+
+[www.essenhealthcare.com]  (4)
+  https://www.essenhealthcare.com
+  https://www.essenhealthcare.com/book-a-house-call-appointment
+  https://www.essenhealthcare.com/essen-locations
+  https://www.essenhealthcare.com/primaryCare/2
+
+[www.facebook.com]  (2)
+  https://www.facebook.com
+  https://www.facebook.com/RochdaleVillageBulletin/
+
+[www.fuelition.life]  (2)
+  https://www.fuelition.life
+  https://www.fuelition.life/
+
+[www.google.com]  (136)
+  https://www.google.com
+  https://www.google.com/
+  https://www.google.com/aclk?sa=L&ai=DChsSEwiLqsv1hYeRAxX1T0cBHbdKEwIYACICCAEQAhoCcXU&ae=2&co=1&ase=2&gclid=CjwKCAiA24XJBhBXEiwAXElO34tB_3AJjOkCnzjZLVN09YxLQDLTScIEu1D8Veoic4QrKKiGl-kEpRoCitYQAvD_BwE&cid=CAAS0gHkaHOYUJ57wlSK4pCgCUEGiW9XmjZL4DVnLfApgU0jFGmki3nQSmSObg3i1NyCdTunJHJ7l34d5ba81i2lAW0HTSNXr6zpTwlUT1TS6fvPsQw2oLT-LFFHCh8WBM0w_LLwY5Weh6ey-puxH0zHkHPZwIkFVgo_vbeyewqQQeJSsS3ucGBFKh4lgSIhsAh-LzlWjqQj0iAy3E_oNvkFin-gq1gs6_C6q3ClJbk3nMmfJjXjiD75_UHy99V3_ZTm_EakGgLYE-D1Z1MmhQGHQ3ornEA&cce=2&category=acrcp_v1_71&sig=AOD64_1quFslehis0yRpRKu5dNHqzP-03g&q&nis=6&adurl&ved=2ahUKEwis08P1hYeRAxXZGFkFHUcjERwQ0Qx6BAgOEAE&ch=1&dct=1&suid=59791597019&ri=1
+  https://www.google.com/aclk?sa=L&ai=DChsSEwi_t_jcz9qTAxVoZ0cBHR7_MAMYACICCAEQABoCcXU&ae=2&aspm=1&co=1&ase=2&gclid=Cj0KCQjws83OBhD4ARIsACblj1_1m8-VokQwT9PL7aiDyzUjfF5VvW9U6ilYhV8pqhAfFb-BY4O3aaoaAmnXEALw_wcB&ei=eWLUadTKIZDQ5NoPzK7r0Qc&cid=CAAS9QHkaEacfo1-adHO2D80otGzIq7tZe0agadyyTN9DDULrSd1M3fwWoIIXSNH-DOlDtl7eT25RNzieORgS4ZhLsS-TEaRip9QhTaCMD13WKutJy96CRATDNK7gVJbCiOBNzpBVRsGXPq_DnQNP9rVxxHG9fh1YkYY17BQktGLtUUW8lZBRCFWpYg0t96x-37m_S_OsyfGD6mXcB3wftCIXkilm2T7PQtJzVzX37S-C9PEPqxVjANv2RmggBcN2psYFBXiG0ncNyxK9tbrsiD6LHTf7K5EI7QmG6I81Hir2wXWolNAIMfBh5MOX1tN3FpmBwb03SYG7A&cce=2&category=acrcp_v1_35&sig=AOD64_19PsZrJBo9k5NIb4C2XciZLSNyUQ&q&sqi=2&nis=6&adurl&ved=2ahUKEwiU6-zcz9qTAxUQKFkFHUzXOnoQ0Qx6BAgMEAE&bg=!ZmWlZQbNAAZ__0oHX_87AEgBe5WfONPEPrz85TQ-FvI3zPT_jXwOBXkeMLm5quT6Lx6XRbprplurlnSafd0hBkFmJm5i0VsBfDM6MGHiyK0NEGv96HULpIsCAAAAFFIAAAAAaAEHfgAUyLpoKGMD7WwEoC65AN2qy3osm_EKAcWrll4axgILFOrCLZS1V0ocgwkjgsgTBydTVdwZqLx6Non5neGuCj9lc6a15GzT0TJULqU8X-ZQRIelTSsvM1Ie0fov1drQrLbxQTzD8G9ZPn0VJ5n5EOp7aWCKKsanRamUW555wyc7dMq-BiESFK_Sxvexdstun2V8YTfCJu9dxb59m0GzFzYBBSyg60wlmW6yx4uMSwfSydbU3hw4PL4IqxJqByZV-MYjbHqQ3ioYlRmzQk9baPV5sNMo2IXQY6OmVVrnv81K9TbgZUK1rm7-8dKToTULd02QUfYdIKP6r-zbEMPLgpS51jal8ClGfm3vu7Su9I227MLcki7ByoQ5BF6t6w75yY_y4U6TsN5fwcKdECuP2yKHzZKaQdp1BRqxRrYO9Xd6oiPJ6m-X1iyKBtXoTJizXYa2rtBklgYRT8B9fhsiWZ4bU2VFdFnDGrhHc0wKv6lqTrpeYa12rwrjLhzL2a_sfaF-AF_AJ5O2v_VxKYqPtpI4t8IhqoXoqoHiKzmmXImP_Zv3i_42gqCspVWJsMMFLAlP4cghevltW-GwS9lNsW9eoIZHVKU6lBWPtU6uaftppWDsr-yaYgVtzFL-bTSZATr2LH-xrtDTEkJSI6l3mQ71A6L2OqWVa5E0XzCwuwHEl0F051Q-8djKcZp1BuZYZzvxaFpMBpcarSE_wqZJS5b5hp4F2IJH_x1TuaSYoItnDp2ikXhtmq5-zwReB6YPW-Vl-8FowZ7tPzf-wSf9nqpJAXFEgBv_8HE1lkiYtJ48UpGsNTLwIA_lxHFOsixX-lvWBdji_A9OzyRcS0ByaQoUuWpJe-BQujm2qldrJJmDa9Z0jgz7nxPqMFf2PoRoSbAkQegqg10tg2GdFAxSgxeKBXQJHjR6fZJiakeqcXf52kZNsl0QCEpm3aJ3uX1q2s-dPcGSRXwSpDwVvoDxnpnEO-HzlXfdJPPpuZygZIYxhFvN9DmJq_sFDQKgpidTFoLfY7vbFaGR5JJjT4ESueWa20HGNkOOchB9dA&ch=1&dct=1&suid=71459323904&ri=27
+  https://www.google.com/aclk?sa=L&pf=1&ai=DChsSEwiL4NzI94GSAxUNT0cBHWJiNyoYACICCAEQAxoCcXU&co=1&ase=2&gclid=CjwKCAiAjojLBhAlEiwAcjhrDiJhvb8BVkxmiP7T1cjjcQagNLTUEXtWipt72LrZaRWyAbihUrPmuRoCnYEQAvD_BwE&cid=CAAS0gHkaOxcZZ9uQZBOh-hjo6V6nDflfqGMiP_dMeNUqJWBWC7HHBnpyj0Ed3I9NhvXT1UA9ll0Nogv0tXUKOXKdfKqDWUY4Jk6Fl8gslWvLZuzHidZEn-9h1oarry4RAyp83ZYP0YPHOhEt4742JhqRbYxaGXDEB3_U_ZZS15iGdUfWSE3BV4f41KChDgAopt-EqZU7u1pzzs-JefVvSM_E7SfGb8dtTCsKm6ON6eJnoccq6PDjfUDEnMYny-1Q5v6bp-qHO5IhOC3XvXGtajm19XIC8E&cce=2&category=acrcp_v1_32&sig=AOD64_0LvCZcDA2PLXkNQwnvLOghkvc_0A&q&nis=6&ch=1&adurl=https://www.udio.com?utm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3D22094547323%26utm_content%3D179892276464%26utm_term%3Dsuno%2520vs%2520udio%26gad_source%3D1%26gad_campaignid%3D22094547323%26gbraid%3D0AAAAA9qNKz3yEconjIDFvd8vJb1uQ7nJU%26gclid%3DCjwKCAiAjojLBhAlEiwAcjhrDiJhvb8BVkxmiP7T1cjjcQagNLTUEXtWipt72LrZaRWyAbihUrPmuRoCnYEQAvD_BwE&ved=2ahUKEwjW6NXI94GSAxVtFVkFHRnkIMwQ0Qx6BAgMEAE
+  https://www.google.com/search?gs_ssp=eJwFwUEKgCAQAEC6Bn0hvHR21VLrCX0iRHctEgWL8PnN9AOPXAi6CfShI3TbBM2uXmqjCIHkokzYoDk0AvwcnF0MkMJ9rMWfwSVk35WSi8gezFepzGN-sf4orxq5&q=rochdale+village+senior+center&oq=rochdale+village+se&gs_lcrp=EgZjaHJvbWUqDQgBEC4YrwEYxwEYgAQyBggAEEUYOTINCAEQLhivARjHARiABDINCAIQLhivARjHARiABDIHCAMQABiABDIHCAQQABiABDIICAUQABgWGB4yBggGEEUYPDIGCAcQRRg80gEINjYzMWowajSoAgCwAgA&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?ie=UTF-8&oe=UTF-8&q=active+record&btnG=+&domains=martinfowler.com&sitesearch=&sitesearch=martinfowler.com
+  https://www.google.com/search?q=%22actual+facts%22&oq=%22actual+facts%22&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDINCAQQLhiRAhiABBiKBTIICAUQABgWGB4yCAgGEAAYFhgeMggIBxAAGBYYHjIICAgQABgWGB4yDQgJEAAYhgMYgAQYigXSAQgyNzIzajBqN6gCALACAA&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=%22gunther%27s+universal+scalability+law%22&sca_esv=a36b70f2ee78bb4e&sxsrf=ANbL-n4nHEsd4eC9YViDUNd_KiNH5XdchQ%3A1772151489632&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3sbM0Xv-BZKE_VrZb6-djVgPsTSy5UjazDfPq8BLa8BriI08eYAyMPM-9LNl6snbW15_MKDjhFctHz7rvtem8dcoY5CDVaGQk48ghVWmbsOcIDVEhJqvD_JXcVW--QR55E9ALUx6z9f1IZ4hCHVHOjL43Qw2sZ-sgQZidaMg0eQFe35jvg&aep=1&ntc=1&sa=X&ved=2ahUKEwiMhpzgsviSAxVyEGIAHRk9Bx0Q2J8OegQIEhAE&biw=2560&bih=1328&dpr=1&mtid=1-KgaeeoHOmk5NoPk_72yAg&mstk=AUtExfBk6c_U2dqVJYsnCgT2U3thmMHX_TdSDRg3uP8-4r-eTgVlO4ZJ1-DMohW1v8x8ocNmGwNo6JYs_VIVlgAWhlPMm_TGxLXWJddCHMMz7D8RJ46qYJgOnsAeinjqF4Bo1ejzwcb4XLWMc9A8bZzKDbNkLkfABG-xcqKVcpouyeWfOA84p_OgWUfB2l-aCbP_ySUAj01j6_5dRcNU365mL9kML7OwOsyau0BXuSdF8Q8fdRvBLf3cHdNmxRyJst8jIJFKsXPGX6SMS2tvJIjY5toNVWR4Gi7C8U4D14dNcdTBz_mowEoiNiJ-IodnkTmJ9slNagUrwfV0Ew&csuir=1&udm=50
+  https://www.google.com/search?q=%22gunther%27s+universal+scalability+law%22&sca_esv=a36b70f2ee78bb4e&sxsrf=ANbL-n4nHEsd4eC9YViDUNd_KiNH5XdchQ:1772151489632&udm=50&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3sbM0Xv-BZKE_VrZb6-djVgPsTSy5UjazDfPq8BLa8BriI08eYAyMPM-9LNl6snbW15_MKDjhFctHz7rvtem8dcoY5CDVaGQk48ghVWmbsOcIDVEhJqvD_JXcVW--QR55E9ALUx6z9f1IZ4hCHVHOjL43Qw2sZ-sgQZidaMg0eQFe35jvg&aep=1&ntc=1&sa=X&ved=2ahUKEwiMhpzgsviSAxVyEGIAHRk9Bx0Q2J8OegQIEhAE&biw=2560&bih=1328&dpr=1
+  https://www.google.com/search?q=%22gunther%27s+universal+scalability+law%22&sca_esv=a36b70f2ee78bb4e&sxsrf=ANbL-n5yBYK2WU5_3guf0bB5qGGcS4dwiA%3A1772151432814&ei=iOKgaZi0MZbk5NoPrdzTyQM&biw=2560&bih=1328&ved=0ahUKEwiYmJDFsviSAxUWMlkFHS3uNDkQ4dUDCBE&uact=5&oq=%22gunther%27s+universal+scalability+law%22&gs_lp=Egxnd3Mtd2l6LXNlcnAiJSJndW50aGVyJ3MgdW5pdmVyc2FsIHNjYWxhYmlsaXR5IGxhdyIyBBAAGB4yBRAAGO8FMggQABiABBiiBDIFEAAY7wVIhBNQ-gtY8RFwAXgBkAEAmAFYoAGNAaoBATK4AQPIAQD4AQGYAgOgApYBwgIKEAAYsAMY1gQYR8ICBhAAGBYYHpgDAIgGAZAGA5IHATOgB9EFsgcBMrgHkwHCBwMwLjPIBwaACAA&sclient=gws-wiz-serp
+  https://www.google.com/search?q=%22gunther%27s+universal+scalability+law%22&sca_esv=a36b70f2ee78bb4e&sxsrf=ANbL-n5yBYK2WU5_3guf0bB5qGGcS4dwiA%3A1772151432814&ei=iOKgaZi0MZbk5NoPrdzTyQM&biw=2560&bih=1328&ved=0ahUKEwiYmJDFsviSAxUWMlkFHS3uNDkQ4dUDCBE&uact=5&oq=%22gunther%27s+universal+scalability+law%22&gs_lp=Egxnd3Mtd2l6LXNlcnAiJSJndW50aGVyJ3MgdW5pdmVyc2FsIHNjYWxhYmlsaXR5IGxhdyIyBBAAGB4yBRAAGO8FMggQABiABBiiBDIFEAAY7wVIhBNQ-gtY8RFwAXgBkAEAmAFYoAGNAaoBATK4AQPIAQD4AQGYAgOgApYBwgIKEAAYsAMY1gQYR8ICBhAAGBYYHpgDAIgGAZAGA5IHATOgB9EFsgcBMrgHkwHCBwMwLjPIBwaACAA&sclient=gws-wiz-serp5
+  https://www.google.com/search?q=%28718%29+557-1399&sca_esv=2c3c6c9257d3bc5e&sxsrf=AE3TifPLyqAkJE1gsY_DAfvbQzTcPnD7oQ%3A1757460120358&ei=mLbAaNPKFZquiLMPmJeIoAM&ved=0ahUKEwjT9riR6cyPAxUaF2IAHZgLAjQQ4dUDCBI&uact=5&oq=%28718%29+557-1399&gs_lp=Egxnd3Mtd2l6LXNlcnAiDig3MTgpIDU1Ny0xMzk5SJ0OUPkLWPkLcAF4AZABAJgBKaABKaoBATG4AQPIAQD4AQGYAgGgAgPCAgoQABiwAxjWBBhHmAMAiAYBkAYIkgcBMaAHQrIHALgHAMIHAzAuMcgHAg&sclient=gws-wiz-serp
+  https://www.google.com/search?q=%E2%80%9CBlack+owned%E2%80%9D+CPA+near+me&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=(800)+541-2831&oq=(800)+541-2831&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRiPAtIBBzI4M2owajeoAgiwAgHxBX21-U-aFYiB&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=22191+to+richmond+va&oq=22191+to+richmond+va&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORjvBTIICAEQABgWGB4yCAgCEAAYFhgeMggIAxAAGBYYHjIICAQQABgWGB4yBggFEEUYPDIGCAYQRRg8MgYIBxBFGDzSAQgzNzYwajBqN6gCALACAA&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=22191+to+richmond+va&oq=22191+to+richmond+va&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORjvBTIICAEQABgWGB4yCAgCEAAYFhgeMggIAxAAGBYYHjIICAQQABgWGB4yBggFEEUYPDIGCAYQRRg8MgYIBxBFGDzSAQgzNzYwajBqN6gCALACAA&sourceid=chrome&ie=UTF-8$
+  https://www.google.com/search?q=531+calculator&oq=531+ca&gs_lcrp=EgZjaHJvbWUqBwgAEAAYgAQyBwgAEAAYgAQyBggBEEUYOTIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIGCAYQRRg8MgYIBxBFGDyoAgOwAgHxBQ94ffxQS5TP&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=531+calculator&oq=531+calc&gs_lcrp=EgZjaHJvbWUqBwgBEAAYgAQyBggAEEUYOTIHCAEQABiABDIHCAIQABiABDIICAMQABgWGB4yCAgEEAAYFhgeMggIBRAAGBYYHjIICAYQABgWGB4yCAgHEAAYFhgeMggICBAAGBYYHjIKCAkQABgKGBYYHtIBCDM2NThqMGo0qAIDsAIB8QUPeH38UEuUzw&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=8760+hours+in+a+year.+if+i+make+150k+a+year&sca_esv=4391b5723477ff50&sxsrf=AE3TifOPdj_xFQd_u0YdZ3RFp-vohpEzhA%3A1753852788557&ei=dKuJaKDqId7R5NoP5qKwEA&oq=8760+hours+in+a+year.+if+i+make+150k+&gs_lp=Egxnd3Mtd2l6LXNlcnAiJTg3NjAgaG91cnMgaW4gYSB5ZWFyLiBpZiBpIG1ha2UgMTUwayAqAggBMgUQIRigATIFECEYqwJIxtUBUIwhWMC7AXAQeAGQAQCYAV2gAc0VqgECNDK4AQPIAQD4AQH4AQKYAjqgAtcWwgIKEAAYsAMY1gQYR8ICDRAAGIAEGLADGEMYigXCAgUQABiABMICCxAAGIAEGJECGIoFwgIKEAAYgAQYQxiKBcICChAAGIAEGBQYhwLCAgsQABiABBiGAxiKBcICBhAAGBYYHsICCBAAGBYYChgewgIIEAAYgAQYogTCAgcQABiABBgNwgIIEAAYBRgNGB7CAgcQIRigARgKwgIFECEYnwWYAwCIBgGQBgqSBwI1OKAHk-gBsgcCNDK4B7IWwgcGNi40OS4zyAdp&sclient=gws-wiz-serp
+  https://www.google.com/search?q=8760+hours+in+a+year.+if+i+make+150k+a+year+whats+each+hour+worth&sca_esv=4391b5723477ff50&sxsrf=AE3TifNNaWu_DZJYBfv_Wf9Jp72a0m59ng%3A1753852823576&ei=l6uJaOr7Ip6j5NoPia6kuAg&ved=0ahUKEwiqo6b06uOOAxWeEVkFHQkXCYcQ4dUDCBA&uact=5&oq=8760+hours+in+a+year.+if+i+make+150k+a+year+whats+each+hour+worth&gs_lp=Egxnd3Mtd2l6LXNlcnAiQTg3NjAgaG91cnMgaW4gYSB5ZWFyLiBpZiBpIG1ha2UgMTUwayBhIHllYXIgd2hhdHMgZWFjaCBob3VyIHdvcnRoSKdWUPELWNJUcAV4AZABAJgBY6AB9gyqAQIyNrgBA8gBAPgBAZgCGqACwAvCAgoQABiwAxjWBBhHwgIIEAAYgAQYogTCAggQABiiBBiJBcICBRAAGO8FwgIFECEYqwKYAwCIBgGQBgiSBwQyNS4xoAfmUrIHBDIwLjG4B7ALwgcGMS4yNC4xyAcr&sclient=gws-wiz-serp
+  https://www.google.com/search?q=Area+Agency+on+Aging&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=Area+Agency+on+Aging+queens+ny&sca_esv=dfd8ad97cdb7fcc2&sxsrf=ANbL-n6hEoQAdcQaek5sS_H3F1_giVTZsQ%3A1769570382854&ei=ToB5aaznM6mp5NoPwo-kqA8&ved=0ahUKEwisxsywo62SAxWpFFkFHcIHCfUQ4dUDCBE&uact=5&oq=Area+Agency+on+Aging+queens+ny&gs_lp=Egxnd3Mtd2l6LXNlcnAiHkFyZWEgQWdlbmN5IG9uIEFnaW5nIHF1ZWVucyBueTIGEAAYFhgeMgsQABiABBiGAxiKBTILEAAYgAQYhgMYigUyCBAAGKIEGIkFMggQABiABBiiBDIIEAAYogQYiQVIry5Q0wpYqytwAXgBkAEAmAFgoAHHBaoBAjEwuAEDyAEA-AEBmAILoALiBcICChAAGLADGNYEGEfCAg0QABiwAxjWBBhHGMkDwgIOEAAYgAQYsAMYkgMYigXCAg0QABiABBiwAxhDGIoFwgIOEAAYsAMY5AIY1gTYAQHCAhkQLhiABBiwAxjRAxhDGMcBGMgDGIoF2AEBwgIZEC4YgAQYsAMYQxjHARjIAxiKBRivAdgBAcICCBAAGIAEGJIDwgILEAAYgAQYkgMYigXCAgUQABiABMICCxAuGIAEGMcBGK8BwgIIEAAYgAQYyQPCAg4QLhiABBjHARiOBRivAcICBRAAGO8FwgIaEC4YgAQYxwEYrwEYlwUY3AQY3gQY4ATYAQGYAwCIBgGQBhG6BgYIARABGAmSBwIxMaAHj0uyBwIxMLgH3AXCBwUxLjkuMcgHE4AIAA&sclient=gws-wiz-serp
+  https://www.google.com/search?q=DiabetesSelfManagement&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=Essen+med+house+calls&oq=Essen+med+house+calls&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIRCAEQLhgKGAsYrwEYxwEYgAQyCAgCEAAYFhgeMggIAxAAGBYYHjIICAQQABgWGB4yCAgFEAAYFhgeMggIBhAAGBYYHjINCAcQABiGAxiABBiKBTIKCAgQABiABBiiBNIBBzQ4M2owajSoAgCwAgE&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=Facilitated+Enrollment+for+the+Aged%2C+Blind%2C+and+Disabled+Program&oq=Facilitated+Enrollment+for+the+Aged%2C+Blind%2C+and+Disabled+Program&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQABiABNIBBzM2MWowajeoAgiwAgHxBW2pmvNTBXZY&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=Last+Exit+to+Brooklyn+is+a+1964+novel+by+American+author+Hubert+Selby&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=Nisha+Blackwell%3A&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=Queens+County+Department+of+Social+Services%3A+Phone%3A+(718)+557-1399&oq=Queens+County+Department+of+Social+Services%3A+Phone%3A+(718)+557-1399&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRiPAjIHCAIQIRiPAtIBBzI3NGowajeoAgiwAgHxBeSCTnO10pqF&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=Resemble+AI%3A&oq=Resemble+AI%3A&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTINCAEQABiRAhiABBiKBTIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBBzg5OWowajeoAgiwAgHxBT4lXk36aaXF8QU-JV5N-mmlxQ&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=Rochdale+Village+Bulleti&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=Rochdale+Village+N.O.R.C.+(Naturally+Occurring+Retirement+Community)&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=Rochdale+Village+Senior+Center&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=Rochdale+Village+Social+Services%2C+Inc&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=Rochdale+Village+Social+Services%2C+Inc&sourceid=chrome&ie=UTF-85
+  https://www.google.com/search?q=Rochdale+Village+Social+Services%2C+Inc.&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=along+came+jones&oq=along+came+jon&gs_lcrp=EgZjaHJvbWUqCggAEAAY4wIYgAQyCggAEAAY4wIYgAQyCggBEC4Y1AIYgAQyCggCEC4Y1AIYgAQyCggDEC4Y1AIYgAQyCggEEC4Y1AIYgAQyBggFEEUYOTIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQLhiABKgCALACAA&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=along+came+jones&oq=along+came+jones&gs_lcrp=EgZjaHJvbWUqCggAEAAY4wIYgAQyCggAEAAY4wIYgAQyCggBEC4Y1AIYgAQyCggCEC4Y1AIYgAQyCggDEC4Y1AIYgAQyCggEEC4Y1AIYgAQyBwgFEAAYgAQyBwgGEAAYgAQyBwgHEAAYgAQyBwgIEC4YgAQyBwgJEAAYgATSAQgyODMwajBqN6gCALACAA&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=aluta&oq=aluta&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIMCAEQIxgnGIAEGIoFMgYIAhAjGCcyBwgDEAAYgAQyBwgEEC4YgAQyBwgFEAAYgAQyEAgGEC4YrwEYxwEYgAQYjgUyBwgHEAAYgAQyDQgIEC4YxwEY0QMYgAQyCQgJEEUYOxiABNIBBzcwOWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=aluta+continua&sca_esv=aef7960d6ac611d8&sxsrf=AE3TifMfMzmJ4wkZe7JlfNLBdCREe8YAHQ%3A1763917968943&ei=kEAjad-mOeekiLMPqsqVsAc&gs_ssp=eJzj4tFP1zcsNM0yKzMvyTBg9OJLzCktSVRIzs8rycwrTQQAj3EJ_Q&oq=aluta+cont&gs_lp=Egxnd3Mtd2l6LXNlcnAiCmFsdXRhIGNvbnQqAggDMgoQIxiABBgnGIoFMgQQIxgnMgoQABiABBhDGIoFMg0QLhiABBhDGNQCGIoFMgoQABiABBhDGIoFMgoQABiABBhDGIoFMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIcEC4YgAQYQxjUAhiKBRiXBRjcBBjeBBjgBNgBAUjFMlD2Alj7B3ABeAGQAQCYAU6gAZ4CqgEBNbgBA8gBAPgBAZgCB6ACiyzCAgcQIxiwAxgnwgIKEAAYsAMY1gQYR8ICDRAAGIAEGLADGEMYigXCAg4QABiwAxjkAhjWBNgBAcICGRAuGIAEGLADGNEDGEMYxwEYyAMYigXYAQHCAhMQLhiABBiwAxhDGMgDGIoF2AEBwgILEC4YgAQYxwEYrwGYAwCIBgGQBhO6BgYIARABGAmSBwU2LjktMaAH5TmyBwE1uAe5AsIHBTAuMi41yAcg&sclient=gws-wiz-serp
+  https://www.google.com/search?q=any+way+for+a+man+to+find+out+if+a+he+is+the+father+of+his+child+by+taking+a+dna+paternity+test+without+letting+either+the+mother+or+the+child+know&sca_esv=b10a10713b465260&sxsrf=ANbL-n5B2jr7CxH0QflW2-px8-sdhqvy4A%3A1768358935815&ei=FwRnaaS6Md3k5NoPrp-jsAM&ved=0ahUKEwjkodGxgoqSAxVdMlkFHa7PCDYQ4dUDCBE&uact=5&oq=any+way+for+a+man+to+find+out+if+a+he+is+the+father+of+his+child+by+taking+a+dna+paternity+test+without+letting+either+the+mother+or+the+child+know&gs_lp=Egxnd3Mtd2l6LXNlcnAikwFhbnkgd2F5IGZvciBhIG1hbiB0byBmaW5kIG91dCBpZiBhIGhlIGlzIHRoZSBmYXRoZXIgb2YgaGlzIGNoaWxkIGJ5IHRha2luZyBhIGRuYSBwYXRlcm5pdHkgdGVzdCB3aXRob3V0IGxldHRpbmcgZWl0aGVyIHRoZSBtb3RoZXIgb3IgdGhlIGNoaWxkIGtub3dIAFAAWABwAHgAkAEAmAEAoAEAqgEAuAEDyAEA-AEBmAIAoAIAmAMAkgcAoAcAsgcAuAcAwgcAyAcAgAgA&sclient=gws-wiz-serp
+  https://www.google.com/search?q=any+way+for+a+man+to+find+out+if+a+he+is+the+father+of+his+child+by+taking+a+dna+paternity+test+without+letting+either+the+mother+or+the+child+know&sca_esv=b10a10713b465260&sxsrf=ANbL-n74CTrpLfflBtUAo-RApTpHizu-nw%3A1768358980716&udm=50&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpFZYo9qIX3pM4_jubAu4b8O2J-l05bwPYHG24xCsQH1zCe4KDu1A-wwyR3gJ4WZSQHPe3DmFiE5RObG_N2XeHKlbe5SQ3sDBVNK1qInm4MaEY8DhyMiV6f8zSsq65Sqt02KICBf4WyoVotq2WuUson_ypickvEmUB_x4m6xcFu1ER4VAz0E4O9NxAHX4LB71yEhz_HQ&aep=1&ntc=1&sa=X&ved=2ahUKEwju4IXHgoqSAxWAD1kFHU2VAfMQ2J8OegQIDxAE&biw=1419&bih=755&dpr=2&aic=0&mstk=AUtExfDlHTSSBwiZ3fD18PGDXcbZBcEJmlHMfPXtHO91lOW9UvkZdYjwjhSD1wNKwjOpRx9E9geteVMDQnoFhW_rOyi5udOD9PrEgXTgx2oqzFsQFEsOKg5oALgsnbdd_HDUEwy2nZryOYoR5gnJtNw7PbrjHB6ckEAs13XNDb5EIxFHz2daXovVGRtQpkugNJ-jBJNxqYHiNEF0NmLKYdXxMW8i91jX2Q0s0e96lQN8UXK0F_ZoklWaCH-03JyW6UFwXjsSMgVHFO78rJqUVZybVeHYZZ16naXv_Tarw3sBRL6zHrGFCqVeHj81h-IH98yBDeP78ycg-vo6vQ&csuir=1&mtid=SgRnaZ7LJvnT5NoPiuOSgAo
+  https://www.google.com/search?q=any+way+for+a+man+to+find+out+if+a+he+is+the+father+of+his+child+by+taking+a+dna+paternity+test+without+letting+either+the+mother+or+the+child+know&sca_esv=b10a10713b465260&sxsrf=ANbL-n74CTrpLfflBtUAo-RApTpHizu-nw:1768358980716&udm=50&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpFZYo9qIX3pM4_jubAu4b8O2J-l05bwPYHG24xCsQH1zCe4KDu1A-wwyR3gJ4WZSQHPe3DmFiE5RObG_N2XeHKlbe5SQ3sDBVNK1qInm4MaEY8DhyMiV6f8zSsq65Sqt02KICBf4WyoVotq2WuUson_ypickvEmUB_x4m6xcFu1ER4VAz0E4O9NxAHX4LB71yEhz_HQ&aep=1&ntc=1&sa=X&ved=2ahUKEwju4IXHgoqSAxWAD1kFHU2VAfMQ2J8OegQIDxAE&biw=1419&bih=755&dpr=2&aic=0
+  https://www.google.com/search?q=any+way+to+find+out+if+a+man+is+the+father+of+his+child+by+taking+a+dna+paternity+test+without+letting+either+the+mother+or+the+child+know&oq=any+way+to+find+out+if+a+man+is+the+father+of+his+child+by+taking+a+dna+paternity+test+without+letting+either+the+mother+or+the+child+know&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRiPAjIHCAIQIRiPAtIBCTQxODgwajBqNKgCAbACAfEF8qXw6RHY8GzxBfKl8OkR2PBs&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=arp&oq=arp&gs_lcrp=EgZjaHJvbWUyDwgAEEUYORiDARixAxiABDINCAEQABiDARixAxiABDINCAIQABiDARixAxiABDINCAMQLhjHARjRAxiABDIQCAQQABiDARixAxiABBiKBTIKCAUQABixAxiABDIKCAYQABixAxiABDIQCAcQABiDARixAxiABBiKBTIHCAgQABiABDIHCAkQABiPAtIBCDEwMThqMGo3qAIIsAIB8QWHbcqPKFenLw&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=broad+market+index+fund&sca_esv=e01ad63c021401d9&sxsrf=ANbL-n7P5HtBT3toj_0CbI75nX_-CvCQtg%3A1772988213132&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3jljrY5CkLlk8Dq3IvwBz-R5R-93bnJN-gfJetFY0A5MdV8u1lb0qHJqJA7ZNBEWfqFiSgbG3hpGEJP4iTKxgv7NALvdASc6PtO2CH-YhyzBFUmKYJjoeqhYJg3X5-miGzLK-8u8O_FsCo7XrkyeELLdRXLEUER9a_8dJYCn6fVLgvcqjg&aep=1&ntc=1&sa=X&ved=2ahUKEwiL0Inl35CTAxXALFkFHQpSBWQQ2J8OegQIFRAE&biw=2560&bih=1328&dpr=1&mstk=AUtExfDUwPzsOWt85zEwuTYG4D2lrHCT-SylnMOcY5XE0PYCNq-33LrA1rnzrfhl8D2spz6loAIDobcXnp1a99lPOypBIVd8SgXhyrliEKenfGds56oOPcj0dKrqJz_QlB9Ltwhx788itMGCFXAMOx3EuJhclPAW20a8uBNtlX7_lS3tlZIxETnT7ehMgHj0wV9lpxu-lzj099zQe6nukdU_MIhbdyBiOZ7rr18lx1M1X-CscuAt3USnvYiChtN_8dUdv_rfIpFId37q_EdRFUcPOfjelYYiwehlMLDpTKCG_qU7RjwxDDu9DxnRBeiNIX5kcx5tK9iJHfbMIg&csuir=1&mtid=N6etaZCrJKii5NoP_9GF-AE&udm=50
+  https://www.google.com/search?q=broad+market+index+fund&sca_esv=e01ad63c021401d9&sxsrf=ANbL-n7P5HtBT3toj_0CbI75nX_-CvCQtg:1772988213132&udm=50&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3jljrY5CkLlk8Dq3IvwBz-R5R-93bnJN-gfJetFY0A5MdV8u1lb0qHJqJA7ZNBEWfqFiSgbG3hpGEJP4iTKxgv7NALvdASc6PtO2CH-YhyzBFUmKYJjoeqhYJg3X5-miGzLK-8u8O_FsCo7XrkyeELLdRXLEUER9a_8dJYCn6fVLgvcqjg&aep=1&ntc=1&sa=X&ved=2ahUKEwiL0Inl35CTAxXALFkFHQpSBWQQ2J8OegQIFRAE&biw=2560&bih=1328&dpr=1
+  https://www.google.com/search?q=broad+market+index+fund&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=business+tax+consultant&oq=business+tax+consultant&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIICAYQABgHGB4yCAgHEAAYBxgeMggICBAAGAcYHjIICAkQABgHGB7SAQg2OTU4ajBqOagCALACAfEFuHVsnxr7aoc&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=by+square+mile+how+many+northeast+us+states+would+iran+cover&sca_esv=3a8cb0886472c834&biw=2560&bih=1328&sxsrf=ANbL-n6qaMVfV8ecQBOzS4byImwSle46Og%3A1772985828500&ei=5J2taaqcHojU5NoPzd_TiAY&ved=0ahUKEwiqnv_z1pCTAxUIKlkFHc3vFGEQ4dUDCBM&uact=5&oq=by+square+mile+how+many+northeast+us+states+would+iran+cover&gs_lp=Egxnd3Mtd2l6LXNlcnAiPGJ5IHNxdWFyZSBtaWxlIGhvdyBtYW55IG5vcnRoZWFzdCB1cyBzdGF0ZXMgd291bGQgaXJhbiBjb3ZlcjIFEAAY7wUyCBAAGIAEGKIEMgUQABjvBTIIEAAYgAQYogQyBRAAGO8FSNE_UJEwWMc-cAJ4AZABAJgBxQGgAawHqgEDOS4xuAEDyAEA-AEBmAIKoAKPBsICChAAGLADGNYEGEfCAgcQIxiwAhgnwgIIECEYoAEYwwTCAgoQIRigARjDBBgKmAMAiAYBkAYFkgcFOS4wLjGgB7I6sgcFNy4wLjG4B4oGwgcFMS44LjHIBxGACAA&sclient=gws-wiz-serp
+  https://www.google.com/search?q=by+square+mile+how+many+us+states+would+iran+cover&sca_esv=3a8cb0886472c834&sxsrf=ANbL-n53vFrQhD5Bvqh8Q1-R2svW9i2Zrg%3A1772983938663&ei=gpataY6ZKIzX5NoPpMX0gAc&biw=2560&bih=1328&ved=0ahUKEwiO4uzuz5CTAxWMK1kFHaQiHXAQ4dUDCBM&uact=5&oq=by+square+mile+how+many+us+states+would+iran+cover&gs_lp=Egxnd3Mtd2l6LXNlcnAiMmJ5IHNxdWFyZSBtaWxlIGhvdyBtYW55IHVzIHN0YXRlcyB3b3VsZCBpcmFuIGNvdmVyMgUQIRigATIFECEYoAFImrgBULMSWLC3AXAUeAGQAQCYAbMCoAGDMaoBCTQ5LjE3LjAuMbgBA8gBAPgBAZgCV6AC1DKoAhDCAgoQABiwAxjWBBhHwgINEAAYgAQYsAMYQxiKBcICBBAjGCfCAgoQIxiABBgnGIoFwgIKECMY8AUYJxieBsICDhAuGIAEGLEDGNEDGMcBwgIOEC4YgAQYsQMYgwEYigXCAggQLhiABBixA8ICCxAuGIAEGNEDGMcBwgIIEAAYgAQYsQPCAhAQIxjwBRiABBgnGIoFGJ4GwgINECMY8AUYgAQYJxiKBcICChAAGIAEGEMYigXCAgoQLhiABBhDGIoFwgIHECMYJxjqAsICDRAjGPAFGCcY6gIYngbCAgcQLhgnGOoCwgIWEAAYgAQYQxi0AhjnBhiKBRjqAtgBAcICHxAuGIAEGNEDGEMYtAIY5wYYxwEYyAMYigUY6gLYAQHCAhAQLhiABBjRAxjHARgnGIoFwgILEC4YgAQYsQMYgwHCAgsQABiABBiRAhiKBcICEBAuGIAEGLEDGEMYgwEYigXCAg0QLhiABBixAxhDGIoFwgIOEAAYgAQYsQMYgwEYigXCAgUQABiABMICDhAuGIAEGMcBGI4FGK8BwgIFEC4YgATCAgYQABgWGB7CAggQABgWGAoYHsICCxAAGIAEGIYDGIoFwgIIEAAYogQYiQXCAgUQABjvBcICBRAhGJ8FwgIFECEYqwLCAgcQIRigARgKwgIHECEYChirApgDBPEFOpvqsCxPcmCIBgGQBgq6BgYIARABGAGSBwk2OS4xNy4wLjGgB8SrA7IHCTQ5LjE3LjAuMbgHnjLCBwcxNS42NC44yAeWAYAIAA&sclient=gws-wiz-serp
+  https://www.google.com/search?q=c4model&oq=c4model&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgkIARAAGAoYgAQyDQgCEAAYkQIYgAQYigUyCQgDEAAYChiABDIJCAQQABgKGIAEMgkIBRAAGAoYgAQyBggGEEUYPDIGCAcQRRg80gEHOTMwajBqN6gCCLACAfEFXZizy-sNHA0&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=c4model&oq=c4model&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIJCAEQABgKGIAEMgcIAhAAGIAEMgkIAxAAGAoYgAQyCQgEEAAYChiABDIJCAUQABgKGIAEMgYIBhBFGDwyBggHEEUYPNIBCDE1MDBqMGo3qAIIsAIB8QVfJKkUL3Zhhg&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=cam+newport&oq=cam+newport&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIOCAEQLhgKGAsYsQMYgAQyCwgCEC4YChgLGIAEMg4IAxAAGAoYCxixAxiABDILCAQQABgKGAsYgAQyCwgFEC4YChgLGIAEMgsIBhAAGAoYCxiABDILCAcQLhgKGAsYgAQyCwgIEAAYChgLGIAE0gEIMTY3NGowajmoAgCwAgHxBcdVZHFvxleI&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=cam+newport+books&sca_esv=f9901c6b52e850df&sxsrf=AE3TifOyHNTYtzDwlVIperxzTajbKBk31g%3A1764439182979&ei=jjQracbHO6qg5NoPoe328AE&ved=0ahUKEwjGxuqV-JeRAxUqEFkFHaG2HR4Q4dUDCBE&uact=5&oq=cam+newport+books&gs_lp=Egxnd3Mtd2l6LXNlcnAiEWNhbSBuZXdwb3J0IGJvb2tzMgoQABiABBixAxgNMgcQABiABBgNMgcQABiABBgNMgcQABiABBgNMgcQABiABBgNMgcQABiABBgNMgcQABiABBgNMgcQABiABBgNMgYQABgNGB4yBhAAGA0YHkidDFCCAViWC3ABeAGQAQCYAV6gAeMDqgEBNrgBA8gBAPgBAZgCB6AC_gPCAgoQABiwAxjWBBhHwgIGEAAYFhgewgIFECEYoAHCAgUQIRirAsICBRAhGJ8FmAMAiAYBkAYIkgcBN6AHriayBwE2uAf6A8IHBTAuNS4yyAcQ&sclient=gws-wiz-serp
+  https://www.google.com/search?q=can+i+make+money+renting+on+turo&sca_esv=2b9a61f20e275e74&sxsrf=AE3TifOLthb_M-D8KcSLnEyRufzewWPgXQ%3A1753738896085&ei=kO6HaMvvBL_j5NoPlKnW4Qk&ved=0ahUKEwjL97e_wuCOAxW_MVkFHZSUNZwQ4dUDCBA&uact=5&oq=can+i+make+money+renting+on+turo&gs_lp=Egxnd3Mtd2l6LXNlcnAiIGNhbiBpIG1ha2UgbW9uZXkgcmVudGluZyBvbiB0dXJvMgYQABgWGB4yCxAAGIAEGIYDGIoFMgsQABiABBiGAxiKBTILEAAYgAQYhgMYigUyCBAAGIAEGKIESMMsUI0OWNEqcAR4AZABAJgB0AKgAe0WqgEIMjYuMy4yLjG4AQPIAQD4AQGYAiSgArwXwgIKEAAYsAMY1gQYR8ICDRAAGLADGNYEGEcYyQPCAg4QABiABBiwAxiSAxiKBcICChAjGIAEGCcYigXCAgoQIxjwBRgnGMkCwgIQECMY8AUYgAQYJxjJAhiKBcICDhAAGIAEGLEDGIMBGIoFwgIOEC4YgAQYsQMYgwEYigXCAhEQLhiABBixAxjRAxiDARjHAcICDhAuGIAEGLEDGNEDGMcBwgILEAAYgAQYsQMYgwHCAgQQIxgnwgILEAAYgAQYkQIYigXCAgoQABiABBhDGIoFwgIWEC4YgAQYsQMY0QMYQxiDARjHARiKBcICCBAuGIAEGLEDwgIIEAAYgAQYsQPCAgoQABiABBgUGIcCwgIFEAAYgATCAgsQLhiABBixAxiKBcICBRAuGIAEwgILEAAYgAQYsQMYigXCAgUQABjvBZgDAIgGAZAGCpIHCDI5LjQuMi4xoAeO8gGyBwgyNS40LjIuMbgHrxfCBwQwLjM2yAdF&sclient=gws-wiz-serp
+  https://www.google.com/search?q=capital+of+iran&oq=capital+of+ir&gs_lcrp=EgZjaHJvbWUqEggAEAAYRhiDARj7ARixAxiABDISCAAQABhGGIMBGPsBGLEDGIAEMgoIARAAGLEDGIAEMg0IAhAAGIMBGLEDGIAEMgYIAxBFGDkyBwgEEAAYgAQyBwgFEAAYgAQyBwgGEAAYgAQyBggHEEUYPKgCALACAA&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=capital+of+iran&oq=capital+of+iran&gs_lcrp=EgZjaHJvbWUyFAgAEEUYORhGGIMBGPsBGLEDGIAEMgcIARAAGIAEMgcIAhAAGIAEMgcIAxAAGIAEMgcIBBAAGIAEMgcIBRAAGIAEMgcIBhAAGIAEMgcIBxAAGIAEMgcICBAAGIAEMgcICRAAGIAE0gEIMjIyNGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=capital+of+iran&oq=capital+of+iran&gs_lcrp=EgZjaHJvbWUyFAgAEEUYORhGGIMBGPsBGLEDGIAEMgcIARAAGIAEMgcIAhAAGIAEMgcIAxAAGIAEMgcIBBAAGIAEMgcIBRAAGIAEMgcIBhAAGIAEMgcIBxAAGIAEMgcICBAAGIAEMgcICRAAGIAE0gEIMjIyNGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8#sv=CAMSXhoyKhBlLVkwZ1ZlMTdpb3hlS3hNMg5ZMGdWZTE3aW94ZUt4TToORjRfYjlwa2Y0eHEzZk0gBCokCg5zR3NXazZxWk95dzJUTRIQZS1ZMGdWZTE3aW94ZUt4TRgAMAEYByDu2dm1BDACSggQAhgCIAIoAg
+  https://www.google.com/search?q=capital+of+iran&oq=capital+of+iran&gs_lcrp=EgZjaHJvbWUyFAgAEEUYORhGGIMBGPsBGLEDGIAEMgcIARAAGIAEMgcIAhAAGIAEMgcIAxAAGIAEMgcIBBAAGIAEMgcIBRAAGIAEMgcIBhAAGIAEMgcIBxAAGIAEMgcICBAAGIAEMgcICRAAGIAE0gEIMjIyNGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8#sv=CAMSZxowKg5zR3NXazZxWk95dzJUTTIOc0dzV2s2cVpPeXcyVE06DlZlQmdzY0VKNEpJVnlNIAQqLwobX2dwYXRhWTZaS0l6WDVOb1BwTVgwZ0FjXzQyEg5zR3NXazZxWk95dzJUTRgAMAEYByC9hI39DzACSggQAhgCIAIoAg
+  https://www.google.com/search?q=ceberg+Slim%3A+Portrait+of+a+Pimp+(2012)%2C&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=ceberg+Slim%3A+Portrait+of+a+Pimp+(2012)%2C&sourceid=chrome&ie=UTF-87
+  https://www.google.com/search?q=change+vscode+shortcuts&oq=change+vscode+shortcuts&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTINCAEQABiRAhiABBiKBTIICAIQABgWGB4yCAgDEAAYFhgeMggIBBAAGBYYHjIICAUQABgWGB4yCAgGEAAYFhgeMggIBxAAGBYYHjIICAgQABgWGB4yCAgJEAAYFhge0gEINjYyNmowajeoAgCwAgA&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=dark+laws+of+seduction+book&oq=dark+laws+of+&gs_lcrp=EgZjaHJvbWUqBwgBEAAYgAQyBwgAEAAYgAQyBwgBEAAYgAQyBggCEEUYOTIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABNIBCTEyMDYxajBqN6gCCLACAfEFFEFmLbtQmHjxBRRBZi27UJh4&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=dysentery&oq=disintetary&gs_lcrp=EgZjaHJvbWUqDAgBEAAYDRixAxiABDIGCAAQRRg5MgwIARAAGA0YsQMYgAQyDAgCEAAYDRixAxiABDIJCAMQABgNGIAEMgwIBBAAGA0YsQMYgAQyCQgFEAAYDRiABDIJCAYQLhgNGIAEMgkIBxAAGA0YgAQyCQgIEAAYDRiABDIJCAkQABgNGIAE0gEINDI4N2owajeoAgCwAgA&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=enroll+in+medicaid&oq=enroll&gs_lcrp=EgZjaHJvbWUqDAgBEAAYQxiABBiKBTINCAAQABiDARixAxiABDIMCAEQABhDGIAEGIoFMgcIAhAAGIAEMhAIAxAAGIMBGLEDGIAEGIoFMgcIBBAAGIAEMgYIBRBFGDwyBggGEEUYPDIGCAcQRRg80gEIMjU0NGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=enroll+in+medicaid&sca_esv=e7bf22627bcd1c5c&sxsrf=AE3TifMJtIIhHDAeB91NV4BhwFy0M1mAlg%3A1757442331244&udm=50&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZud1z6kQpMfoEdCJxnpm_3W-pLdZZVzNY_L9_ftx08kwv-_tUbRt8pOUS8_MjaceHwSbE7rHQVeqUDGmcWSh5yB2GAiR5esmFu9KSzs8c6vb0H-50tDdWhTi3bhMG0s76z_XMy8OT8JS-NEI144HpUp6iCg9JllixqbWEOUv3dYnSXpDemGUF4-GLnJe0E9sQg3qnVQ&aep=1&ntc=1&sa=X&ved=2ahUKEwjY0ffupsyPAxW-EFkFHXnPGA0Q2J8OegQICBAE&biw=1290&bih=857&dpr=2&mtid=OHHAaIyGA8TV5NoPqM2asQ0&mstk=AUtExfBvjL_uAkIjLfDTovPK8toNJXaABOSjbgimoWD9k8v2FbLpPVyPhEnoZTGRayLfEbrcA2_CDUUWwS0s3slS5DqSwj2LC915akiPm7OgJ0OVxN31JISO9rfKaVCM_GBVWAiiWr5Balog-F3n7dASINbssPZuYpnQZ5S4_lBq-LwneoMWEf2J_v1sj-hWqCGpwdH2tynK7hz7cwiNKpGP1g8m5jZk34BIhkvtn0iDZwoyQi9cQ3qgOWpw1GVwTI2N0OEt8L5Rhfu_qYSi41JMs7k2e2apkeaRhIeS9pKvYsgs_kRhBqIoz92Uj8ePYZ4v-Gso_4UmBkd95Q&csuir=1
+  https://www.google.com/search?q=enroll+in+medicaid&sca_esv=e7bf22627bcd1c5c&sxsrf=AE3TifMJtIIhHDAeB91NV4BhwFy0M1mAlg:1757442331244&udm=50&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZud1z6kQpMfoEdCJxnpm_3W-pLdZZVzNY_L9_ftx08kwv-_tUbRt8pOUS8_MjaceHwSbE7rHQVeqUDGmcWSh5yB2GAiR5esmFu9KSzs8c6vb0H-50tDdWhTi3bhMG0s76z_XMy8OT8JS-NEI144HpUp6iCg9JllixqbWEOUv3dYnSXpDemGUF4-GLnJe0E9sQg3qnVQ&aep=1&ntc=1&sa=X&ved=2ahUKEwjY0ffupsyPAxW-EFkFHXnPGA0Q2J8OegQICBAE&biw=1290&bih=857&dpr=2
+  https://www.google.com/search?q=github+copilot&oq=github+cop&gs_lcrp=EgZjaHJvbWUqCggAEAAYsQMYgAQyCggAEAAYsQMYgAQyBggBEEUYOTIKCAIQABixAxiABDIHCAMQABiABDIHCAQQABiABDIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPKgCA7ACAfEF70T8LDTBJHc&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=github+copilot&oq=github+copilot&gs_lcrp=EgZjaHJvbWUyDAgAEEUYORixAxiABDIKCAEQABixAxiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPNIBCDUxMzdqMGo0qAIDsAIB8QXvRPwsNMEkdw&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=gunther%27s+universal+scalability+law&oq=Gunther%27s+Universal+Scalability+Law&gs_lcrp=EgZjaHJvbWUqBwgAEAAYgAQyBwgAEAAYgAQyBwgBEAAY7wUyCggCEAAYgAQYogQyBwgDEAAY7wXSAQgxNTY2ajBqN6gCCLACAfEF7zZlVFFIkbTxBe82ZVRRSJG0&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=gunther%27s+universal+scalability+law&oq=Gunther%27s+Universal+Scalability+Law&gs_lcrp=EgZjaHJvbWUqBwgAEAAYgAQyBwgAEAAYgAQyBwgBEAAY7wUyCggCEAAYgAQYogQyBwgDEAAY7wXSAQgxNTY2ajBqN6gCCLACAfEF7zZlVFFIkbTxBe82ZVRRSJG0&sourceid=chrome&ie=UTF-83
+  https://www.google.com/search?q=how+many+hours+in+a+year&oq=how+many+hours+in+a&gs_lcrp=EgZjaHJvbWUqBwgAEAAYgAQyBwgAEAAYgAQyBwgBEAAYgAQyBggCEEUYOTIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiPAqgCALACAA&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=how+many+hours+in+a+year&oq=how+many+hours+in+a+year&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIGCAEQBhhAMgYIAhAGGEAyBwgDEAAYgAQyBwgEEAAYgAQyBwgFEAAYgAQyBwgGEAAYgAQyBwgHEAAYgAQyBwgIEAAYgAQyBwgJEAAYgATSAQgzOTkxajBqN6gCALACAA&sourceid=chrome&ie=UTF-8(
+  https://www.google.com/search?q=how+to+do+a+discreet+paternity+test&oq=how+to+do+a+discreet+paternity+test&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIICAEQABgWGB4yCAgCEAAYFhgeMggIAxAAGBYYHjIICAQQABgWGB7SAQg4MjY0ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=https%3A%2F%2Fwww.medicare.gov+new+york&oq=https%3A%2F%2Fwww.medicare.gov+new+york&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg60gEIMjYzOGowajSoAgOwAgHxBTZjjdeljjOf8QU2Y43XpY4znw&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=i+want+to+rent+an+expensive+car&sca_esv=2b9a61f20e275e74&sxsrf=AE3TifNRz4cg7M-EUXqKrRuArMoNQIE_1g%3A1753738880995&ei=gO6HaKOrPMTR5NoPv_7SuQI&oq=i+want+to+rent+an+expen&gs_lp=Egxnd3Mtd2l6LXNlcnAiF2kgd2FudCB0byByZW50IGFuIGV4cGVuKgIIADIFECEYoAEyBRAhGKABMgUQIRigATIFECEYoAEyBRAhGJ8FSJE4UJIKWLgrcAR4AZABAJgBcqAB3Q2qAQQyMC40uAEDyAEA-AEBmAIcoAK9DsICChAAGLADGNYEGEfCAg0QABiABBiwAxhDGIoFwgIOEAAYsAMY5AIY1gTYAQHCAhkQLhiABBiwAxjRAxhDGMcBGMgDGIoF2AEBwgIEECMYJ8ICChAjGIAEGCcYigXCAgsQABiABBixAxiDAcICBRAuGIAEwgIREC4YgAQYsQMY0QMYgwEYxwHCAg4QLhiABBixAxjRAxjHAcICBBAAGAPCAgoQABiABBhDGIoFwgINEAAYgAQYsQMYQxiKBcICCBAuGIAEGLEDwgILEC4YgAQYsQMYgwHCAgsQLhiABBixAxjUAsICChAuGIAEGEMYigXCAg0QLhiABBixAxhDGIoFwgIIEAAYgAQYsQPCAgUQABiABMICCxAuGIAEGLEDGIoFwgILEAAYgAQYkQIYigXCAgoQABiABBgUGIcCwgIGEAAYFhgewgILEAAYgAQYhgMYigXCAggQABiABBiiBJgDAIgGAZAGE7oGBggBEAEYCZIHBDI0LjSgB5uLArIHBDIwLjS4B6sOwgcHMC4xNy4xMcgHTg&sclient=gws-wiz-serp
+  https://www.google.com/search?q=list+jay+electronicas+entier+discography+including+features&oq=list+jay+electronicas+entier+discography+including+features&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRigATIHCAQQIRigATIHCAUQIRigAdIBCzMyNTk0MDRqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=list+jay+electronicas+entier+discography+including+features&oq=list+jay+electronicas+entier+discography+including+features&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRigATIHCAQQIRigATIHCAUQIRigAdIBCzMyNTk0MDRqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8K
+  https://www.google.com/search?q=mureka+ai&oq=mureka&gs_lcrp=EgZjaHJvbWUqDQgBEAAYgwEYsQMYgAQyDwgAEEUYORiDARixAxiABDINCAEQABiDARixAxiABDINCAIQABiDARixAxiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDIyNThqMGo3qAIIsAIB8QXnIZGE9Lj1ow&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=nyc+human+resources+administration+(hra)&oq=NYC+Human+Resources+Administration+(HRA)&gs_lcrp=EgZjaHJvbWUqBwgAEAAYgAQyBwgAEAAYgAQyBwgBEAAYgAQyCAgCEAAYFhgeMg0IAxAAGIYDGIAEGIoFMg0IBBAAGIYDGIAEGIoFMg0IBRAAGIYDGIAEGIoFMg0IBhAAGIYDGIAEGIoFMgoIBxAAGIAEGKIEMgcICBAAGO8FMgcICRAAGO8F0gEHMTQ3ajBqN6gCCLACAfEFmG1Gwz3zsAA&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=public+domain+classic+personal+development&oq=public+domain+classic+personal+development&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRigATIHCAQQIRirAtIBCTIxNjIxajBqNKgCA7ACAfEFZ_p1EqljANo&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=quickbooks&oq=quick&gs_lcrp=EgZjaHJvbWUqCggCEAAYsQMYgAQyCQgAEEUYORiABDIGCAEQRRg7MgoIAhAAGLEDGIAEMgoIAxAAGLEDGIAEMgYIBBBFGEEyBggFEEUYQTIGCAYQRRg8MgYIBxBFGDzSAQg0MzgzajBqN6gCALACAA&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=quickbooks&oq=quickb&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIGCAEQRRg5MgYIAhBFGD0yBggDEEUYPDIGCAQQRRg8MgYIBRBFGDwyBggGEEUYQTIGCAcQRRg8qAIDsAIB8QVtp0UpgznRNw&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=quickbooks&oq=quickbooks&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIKCAEQABixAxiABDIKCAIQABixAxiABDIKCAMQABixAxiABDIGCAQQRRg8MgYIBRBFGDwyBggGEEUYPTIGCAcQRRg80gEIMTM1MGowajSoAgOwAgHxBW2nRSmDOdE3&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=quickbooks+self+employed+vs+solopreneur&sca_esv=ae6608ead96cb562&sxsrf=AE3TifMebZWWSotti0wBOHhd1d_Di1EQew%3A1763866112924&ei=AHYiaaiGOIzU5NoPys3GiAs&oq=quickbooks+self+employed+vs+&gs_lp=Egxnd3Mtd2l6LXNlcnAiHHF1aWNrYm9va3Mgc2VsZiBlbXBsb3llZCB2cyAqAggCMgsQABiABBiRAhiKBTILEAAYgAQYkQIYigUyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB5IkSBQtQRYwxVwAXgBkAEAmAFDoAHNBKoBAjExuAEDyAEA-AEBmAIMoAKABcICChAAGLADGNYEGEfCAg0QABiABBiwAxhDGIoFwgIOEAAYsAMY5AIY1gTYAQHCAhkQLhiABBiwAxjRAxhDGMcBGMgDGIoF2AEBwgIIEAAYgAQYsQPCAg0QABiABBixAxhDGIoFwgIKEAAYgAQYQxiKBcICDRAAGIAEGLEDGBQYhwLCAgoQABiABBgUGIcCmAMAiAYBkAYTugYGCAEQARgJkgcCMTKgB_BCsgcCMTG4B_wEwgcFMC42LjbIByU&sclient=gws-wiz-serp
+  https://www.google.com/search?q=remember+that+branding+is+relationship+building&oq=remember+that+branding+is+relationship+building&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigATIHCAIQIRirAjIHCAMQIRirAjIHCAQQIRiPAtIBCTExNDgwajBqN6gCCLACAfEF_4dU578AUPI&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=rochdale+village&oq=rochdale+village&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTINCAEQLhiRAhiABBiKBTIGCAIQIxgnMgYIAxAjGCcyDQgEEAAYkQIYgAQYigUyEwgFEC4YrwEYxwEYkQIYgAQYigUyBwgGEAAYgAQyBggHEEUYPdIBCDI4OTRqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=rochdale+village+elder&sca_esv=dedd7ca837f28e21&biw=2560&bih=1328&sxsrf=ANbL-n7KTLbNZ04jMN-ssakF-FQ9BZZRcw%3A1778275582732&ei=_lT-aa6qLJCuiLMPh-Ha6Aw&ved=0ahUKEwiuoa_j0KqUAxUQF2IAHYewFs0Q4dUDCBE&uact=5&oq=rochdale+village+elder&gs_lp=Egxnd3Mtd2l6LXNlcnAiFnJvY2hkYWxlIHZpbGxhZ2UgZWxkZXIyBhAAGBYYHjIGEAAYFhgeMgsQABiABBiKBRiGAzILEAAYgAQYigUYhgMyBRAAGO8FMggQABiABBiiBDIIEAAYgAQYogRI5CVQrg5Y7CRwA3gBkAEAmAFooAGTB6oBBDEyLjG4AQPIAQD4AQGYAgygAp0FwgINEC4YxwEYrwEYsAMYJ8ICChAAGEcY1gQYsAPCAhAQLhivARjHARiABBiKBRgnwgIdEC4YrwEYxwEYgAQYigUYlwUY3AQY3gQY4ATYAQHCAgQQIxgnwgILEAAYgAQYigUYkQLCAhEQLhiABBiKBRiRAhjHARivAcICBRAAGIAEwgILEC4YkQIYgAQYigXCAgsQLhivARjHARiABMICEBAuGIAEGBQYhwIYxwEYrwHCAg4QLhiRAhixAxiABBiKBcICCxAuGIAEGMcBGK8BwgIaEC4YgAQYxwEYrwEYlwUY3AQY3gQY4ATYAQHCAgUQIRigAZgDAIgGAZAGCboGBggBEAEYFJIHBDExLjGgB_eSAbIHAzguMbgHlgXCBwQyLjEwyAcSgAgB&sclient=gws-wiz-serp
+  https://www.google.com/search?q=rochdale+village+senior&sca_esv=dedd7ca837f28e21&sxsrf=ANbL-n4r4ChO4AlXwlucRG5dXgP0m60RlA%3A1778275565161&ei=7VT-aby_CY_U5NoPjNebEA&biw=2560&bih=1328&ved=0ahUKEwj86f7a0KqUAxUPKlkFHYzrBgIQ4dUDCBE&uact=5&oq=rochdale+village+senior&gs_lp=Egxnd3Mtd2l6LXNlcnAiF3JvY2hkYWxlIHZpbGxhZ2Ugc2VuaW9yMhAQLhivARjHARiABBiKBRgnMgYQABgWGB4yBRAAGO8FMggQABiABBiiBDIFEAAY7wUyHRAuGK8BGMcBGIAEGIoFGJcFGNwEGN4EGOAE2AEBSMEIUI8HWI8HcAJ4AZABAJgBSqABSqoBATG4AQPIAQD4AQGYAgOgAlHCAgoQABhHGNYEGLADmAMAiAYBkAYIugYGCAEQARgUkgcBM6AHwgiyBwExuAdNwgcDMC4zyAcFgAgB&sclient=gws-wiz-serp
+  https://www.google.com/search?q=suno+vs+udio&oq=suno+vs&gs_lcrp=EgZjaHJvbWUqBwgBEAAYgAQyBwgAEAAYgAQyBwgBEAAYgAQyBwgCEAAYgAQyBwgDEAAYgAQyBwgEEAAYgAQyBwgFEAAYgAQyBwgGEAAYgAQyBwgHEAAYgAQyBwgIEAAYgAQyBwgJEAAYgATSAQgyNTQwajBqN6gCALACAA&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=supreme+alphabet&oq=supreme+alphabet&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQLhiABDIGCAIQIxgnMgYIAxAjGCcyBwgEEAAYgAQyCggFEC4YgAQY5QQyBwgGEAAYgAQyBggHEEUYPNIBCDQ5MThqMGo3qAIIsAIB8QXnZtdOwvQdm_EF52bXTsL0HZs&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=system+design&oq=system+design&gs_lcrp=EgZjaHJvbWUyDAgAEEUYORixAxiABDIKCAEQLhixAxiABDIHCAIQABiABDIKCAMQABixAxiABDINCAQQABiDARixAxiABDIHCAUQABiABDIHCAYQABiABDIGCAcQRRg90gEIMjg3M2owajeoAgCwAgA&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=system+design+capelc&num=12&sca_esv=9d29c1b39aeb3b2c&udm=39&biw=1512&bih=857&sxsrf=AE3TifOg3AyP1m9QqoBzelBSllLOWDjvgQ%3A1765305209042&ei=eWs4adSiAo6q5NoPrr6joQI&ved=0ahUKEwiUw56vkrGRAxUOFVkFHS7fKCQQ4dUDCBQ&uact=5&oq=system+design+capelc&gs_lp=Eh1nd3Mtd2l6LW1vZGVsZXNzLXNob3J0LXZpZGVvcyIUc3lzdGVtIGRlc2lnbiBjYXBlbGMyBRAhGKABMgUQIRigATIFECEYoAEyBRAhGKABMgUQIRigAUjjE1DOCViVEXACeACQAQCYAWegAcUEqgEDNi4xuAEDyAEA-AEBmAIJoALkBMICDRAAGIAEGLEDGEMYigXCAggQABiABBixA8ICBRAAGIAEwgIGEAAYBxgewgIKEAAYgAQYQxiKBcICEBAAGIAEGLEDGEMYgwEYigXCAgsQABiABBixAxiDAcICCxAAGIAEGJECGIoFwgIGEAAYFhgewgIIEAAYFhgKGB7CAggQABiABBiiBMICBRAAGO8FwgILEAAYgAQYhgMYigWYAwCIBgGSBwM3LjKgB6wmsgcDNS4yuAfgBMIHBTAuOC4xyAcUgAgA&sclient=gws-wiz-modeless-short-videos
+  https://www.google.com/search?q=system+design+capelc&num=12&sca_esv=9d29c1b39aeb3b2c&udm=39&biw=1512&bih=857&sxsrf=AE3TifOg3AyP1m9QqoBzelBSllLOWDjvgQ%3A1765305209042&ei=eWs4adSiAo6q5NoPrr6joQI&ved=0ahUKEwiUw56vkrGRAxUOFVkFHS7fKCQQ4dUDCBQ&uact=5&oq=system+design+capelc&gs_lp=Eh1nd3Mtd2l6LW1vZGVsZXNzLXNob3J0LXZpZGVvcyIUc3lzdGVtIGRlc2lnbiBjYXBlbGMyBRAhGKABMgUQIRigATIFECEYoAEyBRAhGKABMgUQIRigAUjjE1DOCViVEXACeACQAQCYAWegAcUEqgEDNi4xuAEDyAEA-AEBmAIJoALkBMICDRAAGIAEGLEDGEMYigXCAggQABiABBixA8ICBRAAGIAEwgIGEAAYBxgewgIKEAAYgAQYQxiKBcICEBAAGIAEGLEDGEMYgwEYigXCAgsQABiABBixAxiDAcICCxAAGIAEGJECGIoFwgIGEAAYFhgewgIIEAAYFhgKGB7CAggQABiABBiiBMICBRAAGO8FwgILEAAYgAQYhgMYigWYAwCIBgGSBwM3LjKgB6wmsgcDNS4yuAfgBMIHBTAuOC4xyAcUgAgA&sclient=gws-wiz-modeless-short-videos#fpstate=ive&ip=1&vld=cid:37a2351d,vid:8o70DFnype8,st:0
+  https://www.google.com/search?q=system+design+capelc&num=12&sca_esv=9d29c1b39aeb3b2c&udm=39&biw=1512&bih=857&sxsrf=AE3TifOg3AyP1m9QqoBzelBSllLOWDjvgQ%3A1765305209042&ei=eWs4adSiAo6q5NoPrr6joQI&ved=0ahUKEwiUw56vkrGRAxUOFVkFHS7fKCQQ4dUDCBQ&uact=5&oq=system+design+capelc&gs_lp=Eh1nd3Mtd2l6LW1vZGVsZXNzLXNob3J0LXZpZGVvcyIUc3lzdGVtIGRlc2lnbiBjYXBlbGMyBRAhGKABMgUQIRigATIFECEYoAEyBRAhGKABMgUQIRigAUjjE1DOCViVEXACeACQAQCYAWegAcUEqgEDNi4xuAEDyAEA-AEBmAIJoALkBMICDRAAGIAEGLEDGEMYigXCAggQABiABBixA8ICBRAAGIAEwgIGEAAYBxgewgIKEAAYgAQYQxiKBcICEBAAGIAEGLEDGEMYgwEYigXCAgsQABiABBixAxiDAcICCxAAGIAEGJECGIoFwgIGEAAYFhgewgIIEAAYFhgKGB7CAggQABiABBiiBMICBRAAGO8FwgILEAAYgAQYhgMYigWYAwCIBgGSBwM3LjKgB6wmsgcDNS4yuAfgBMIHBTAuOC4xyAcUgAgA&sclient=gws-wiz-modeless-short-videos#fpstate=ive&ip=1&vld=cid:37a2351d,vid:8o70DFnype8,st:0$
+  https://www.google.com/search?q=system+design+capelc&num=12&sca_esv=9d29c1b39aeb3b2c&udm=39&biw=1512&bih=857&sxsrf=AE3TifOg3AyP1m9QqoBzelBSllLOWDjvgQ%3A1765305209042&ei=eWs4adSiAo6q5NoPrr6joQI&ved=0ahUKEwiUw56vkrGRAxUOFVkFHS7fKCQQ4dUDCBQ&uact=5&oq=system+design+capelc&gs_lp=Eh1nd3Mtd2l6LW1vZGVsZXNzLXNob3J0LXZpZGVvcyIUc3lzdGVtIGRlc2lnbiBjYXBlbGMyBRAhGKABMgUQIRigATIFECEYoAEyBRAhGKABMgUQIRigAUjjE1DOCViVEXACeACQAQCYAWegAcUEqgEDNi4xuAEDyAEA-AEBmAIJoALkBMICDRAAGIAEGLEDGEMYigXCAggQABiABBixA8ICBRAAGIAEwgIGEAAYBxgewgIKEAAYgAQYQxiKBcICEBAAGIAEGLEDGEMYgwEYigXCAgsQABiABBixAxiDAcICCxAAGIAEGJECGIoFwgIGEAAYFhgewgIIEAAYFhgKGB7CAggQABiABBiiBMICBRAAGO8FwgILEAAYgAQYhgMYigWYAwCIBgGSBwM3LjKgB6wmsgcDNS4yuAfgBMIHBTAuOC4xyAcUgAgA&sclient=gws-wiz-modeless-short-videos#ip=1
+  https://www.google.com/search?q=ticketmaster&oq=ticket&gs_lcrp=EgZjaHJvbWUqEAgAEAAY4wIYsQMYyQMYgAQyEAgAEAAY4wIYsQMYyQMYgAQyEwgBEC4YxwEYsQMYyQMY0QMYgAQyDAgCEEUYORixAxiABDINCAMQABixAxiABBiKBTIGCAQQBRhAMgYIBRBFGDwyBggGEEUYPDIGCAcQRRg9qAIDsAIB8QV8kbT-Sap0UA&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=ticketmaster&oq=ticketmaster&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyEwgBEC4YxwEYsQMYyQMY0QMYgAQyDQgCEAAYkgMYgAQYigUyBwgDEAAYgAQyBwgEEAAYgAQyBwgFEAAYgAQyCggGEAAYsQMYgAQyBggHEAUYQNIBCDEzNzRqMGo0qAIDsAIB8QV8kbT-Sap0UA&sourceid=chrome&ie=UTF-8&zx=1775526522584
+  https://www.google.com/search?q=tidewave&oq=tidewave&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDE1NDFqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=tofl&sca_esv=37e421cff93e3de4&biw=2560&bih=1328&sxsrf=ANbL-n5NZzX1Uifw9dxY99wlFlyY0I1xeQ%3A1774270472404&ei=CDjBabWmGNfV5NoP4tDdiQg&ved=0ahUKEwi1yvjJiLaTAxXXKlkFHWJoN4EQ4dUDCBE&uact=5&oq=tofl&gs_lp=Egxnd3Mtd2l6LXNlcnAiBHRvZmwyBRAAGIAEMgUQLhiABDIFEAAYgAQyBxAAGIAEGAoyBxAAGIAEGAoyBxAuGIAEGAoyBxAAGIAEGAoyBxAAGIAEGAoyDxAuGIAEGAoYCxjHARivATIFEAAYgARI6gpQtQZYwghwAXgBkAEAmAFqoAG6AaoBAzEuMbgBA8gBAPgBAZgCA6ACxgHCAgoQABhHGNYEGLADwgINEAAYgAQYigUYQxiwA8ICDhAAGOQCGNYEGLAD2AEBwgITEC4YgAQYigUYQxjIAxiwA9gBAcICBBAjGCfCAg0QLhiABBiKBRhDGLEDwgIKEAAYgAQYigUYQ8ICCBAAGIAEGLEDwgINEAAYgAQYFBiHAhixA8ICCBAuGIAEGLEDwgIcEC4YgAQYigUYQxixAxiXBRjcBBjeBBjfBNgBAZgDAIgGAZAGE7oGBggBEAEYCZIHAzIuMaAH3SWyBwMxLjG4B8MBwgcFMC4xLjLIBwqACAE&sclient=gws-wiz-serp
+  https://www.google.com/search?q=tofu&sca_esv=37e421cff93e3de4&sxsrf=ANbL-n6_ws3biAsCMPK58PPz2xFljcwHeA%3A1774270464095&ei=ADjBadW5Bbrj5NoP3IDlsQI&biw=2560&bih=1328&ved=0ahUKEwjVuf3FiLaTAxW6MVkFHVxAOSYQ4dUDCBE&uact=5&oq=tofu&gs_lp=Egxnd3Mtd2l6LXNlcnAiBHRvZnUyDRAuGIAEGIoFGEMYsQMyChAAGIAEGIoFGEMyCBAAGIAEGLEDMg0QABiABBiKBRhDGLEDMg0QABiABBiKBRhDGLEDMg0QABiABBiKBRhDGLEDMgsQABiABBixAxiDATIIEAAYgAQYsQMyCBAuGIAEGLEDMg4QLhiABBiKBRixAxiDATIcEC4YgAQYigUYQxixAxiXBRjcBBjeBBjfBNgBAUjZGlCtDVjoD3ACeAGQAQCYAW6gAYIDqgEDMi4yuAEDyAEA-AEBmAIGoAKXA8ICChAAGEcY1gQYsAPCAg0QABiABBiKBRhDGLADwgIOEAAY5AIY1gQYsAPYAQHCAhMQLhiABBiKBRhDGMgDGLAD2AEBwgITEC4YQxiABBiKBRjIAxiwA9gBAcICBBAjGCfCAgoQLhhDGIAEGIoFwgIKEC4YgAQYigUYQ8ICGRAuGEMYgAQYigUYlwUY3AQY3gQY4ATYAQHCAgsQLhiABBixAxiDAcICDhAAGIAEGIoFGLEDGIMBwgIXEC4YgAQYsQMYlwUY3AQY3gQY3wTYAQGYAwCIBgGQBhO6BgYIARABGAmSBwM0LjKgB-pJsgcDMi4yuAePA8IHBTAuMy4zyAcQgAgB&sclient=gws-wiz-serp
+  https://www.google.com/search?q=together&oq=together&gs_lcrp=EgZjaHJvbWUqDQgAEAAY4wIYsQMYgAQyDQgAEAAY4wIYsQMYgAQyCggBEC4YsQMYgAQyCggCEAAYsQMYgAQyEAgDEC4YrwEYxwEYgAQYjgUyEwgEEC4YgwEYxwEYsQMY0QMYgAQyBggFEEUYPTIGCAYQRRg9MgYIBxBFGD3SAQgxMDA5ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=turo+alternatives&oq=turo+al&gs_lcrp=EgZjaHJvbWUqDAgAEAAYFBiHAhiABDIMCAAQABgUGIcCGIAEMgYIARBFGDkyBwgCEAAYgAQyBwgDEAAYgAQyBwgEEAAYgAQyBwgFEAAYgAQyBwgGEAAYgAQyBwgHEAAYgAQyBwgIEAAYgAQyBwgJEAAYgASoAgCwAgA&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=turo+alternatives&oq=turo+alternatives&gs_lcrp=EgZjaHJvbWUyDggAEEUYFBg5GIcCGIAEMgwIARAAGBQYhwIYgAQyBwgCEAAYgAQyBwgDEAAYgAQyCAgEEAAYFhgeMggIBRAAGBYYHjIICAYQABgWGB4yCAgHEAAYFhgeMggICBAAGBYYHjIICAkQABgWGB7SAQg4NDE3ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=vehicle+registration+va&oq=vehi&gs_lcrp=EgZjaHJvbWUqBwgBEAAYgAQyBggAEEUYOTIHCAEQABiABDINCAIQABixAxjJAxiABDINCAMQABiSAxiABBiKBTINCAQQABiSAxiABBiKBTIHCAUQABiABDIGCAYQRRg8MgYIBxBFGDzSAQkxOTU4M2owajeoAgCwAgA&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=vehicle+registration+va&oq=vehi&gs_lcrp=EgZjaHJvbWUqBwgBEAAYgAQyBggAEEUYOTIHCAEQABiABDINCAIQABixAxjJAxiABDINCAMQABiSAxiABBiKBTINCAQQABiSAxiABBiKBTIHCAUQABiABDIGCAYQRRg8MgYIBxBFGDzSAQkxOTU4M2owajeoAgCwAgA&sourceid=chrome&ie=UTF-8#cobssid=s
+  https://www.google.com/search?q=wardley+map&sca_esv=5734fedee28d1695&udm=7&biw=1512&bih=794&sxsrf=AE3TifObEE4Y3M8cC3WmAPC-fQLdQzNzGA%3A1749936416154&ei=IOlNaP6NCcfn5NoP-tTrwQI&ved=0ahUKEwj-nduT7fGNAxXHM1kFHXrqOigQ4dUDCBA&uact=5&oq=wardley+map&gs_lp=EhZnd3Mtd2l6LW1vZGVsZXNzLXZpZGVvIgt3YXJkbGV5IG1hcDIFEAAYgAQyBRAAGIAEMgsQABiABBiGAxiKBTILEAAYgAQYhgMYigUyCxAAGIAEGIYDGIoFMggQABiABBiiBDIIEAAYgAQYogRItnJQhA9Y03BwA3gAkAEAmAFGoAHJBKoBAjExuAEDyAEA-AEBmAIOoAL4BMICBBAjGCfCAgYQABgHGB7CAgsQABiABBiRAhiKBcICCxAAGIAEGLEDGIMBwgIOEAAYgAQYsQMYgwEYigXCAgoQABiABBhDGIoFwgIIEAAYgAQYsQPCAgcQABiABBgKmAMAiAYBkgcCMTSgB501sgcCMTG4B-4EwgcFMC45LjXIByc&sclient=gws-wiz-modeless-video
+  https://www.google.com/search?q=what+are+the+most+commonly+asked+questions+black+men+ask+about+heart+disease&oq=what+are+the+most+commonly+asked+questions+black+men+ask+about+heart+disease&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRiPAtIBCjIzNjg0ajBqMTWoAgiwAgHxBZ5Bw0VLTUdp8QWeQcNFS01HaQ&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=what+are+the+most+commonly+asked+questions+black+men+ask+about+heart+disease+in+terms+of+holistic+and+natural+lifestyle+prevention+and+treatment.&sca_esv=f35bf98bded21e04&sxsrf=AE3TifNqPe33GCGJltsM73YQZcOqv2k9UA%3A1766098070393&ei=loREafLTF5ix5NoPytrP8Q4&ved=0ahUKEwjy9v6AnMiRAxWYGFkFHUrtM-4Q4dUDCBE&uact=5&oq=what+are+the+most+commonly+asked+questions+black+men+ask+about+heart+disease+in+terms+of+holistic+and+natural+lifestyle+prevention+and+treatment.&gs_lp=Egxnd3Mtd2l6LXNlcnAikQF3aGF0IGFyZSB0aGUgbW9zdCBjb21tb25seSBhc2tlZCBxdWVzdGlvbnMgYmxhY2sgbWVuIGFzayBhYm91dCBoZWFydCBkaXNlYXNlIGluIHRlcm1zIG9mIGhvbGlzdGljIGFuZCBuYXR1cmFsIGxpZmVzdHlsZSBwcmV2ZW50aW9uIGFuZCB0cmVhdG1lbnQuSIqtBFDIN1jmowRwBngAkAEAmAGUAaABnQ2qAQQyNC4xuAEDyAEA-AEBmAIAoAIAmAMAiAYBkgcAoAflCLIHALgHAMIHAMgHAIAIAA&sclient=gws-wiz-serp
+  https://www.google.com/search?q=what+can+turn+a+m4a+to+a+format+i+can+upload+to+youtube&oq=what+can+turn+a+m4a+to+a+format+i+can+upload+to+yo&gs_lcrp=EgZjaHJvbWUqBwgBECEYoAEyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRigATIHCAQQIRigATIHCAUQIRiPAjIHCAYQIRiPAtIBCTEzMzUwajBqNKgCAbACAfEFiMZZpGWWjlPxBYjGWaRllo5T&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=what+is+squibler+and+what+are+the+best+alternatives&oq=what+is+squibler+and+what+are+the+best+alternatives&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORigATIHCAEQIRigAdIBCTE1NjU4ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=what+is+squibler+and+what+are+the+best+alternatives&sca_esv=9015ac2879de739b&sxsrf=AE3TifM71sojNa2Xf0RT4u9i2q1Bew-A4w%3A1766085061947&udm=50&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZZmjZJO6nNwesPPlC3wKA5VwugU6TuK8bzQRzSUW3JrHnJBX92nYQBpAYbyhyrqpRU0Zh2hUh9RE3nbqw8qyF_fUHwopJ-b3BBmZRfy5v3RHIP3wk7T1HkNvKSUyRoUoOyCn1vsYH4HzNi8G-iCfwsNdN_HL57WG4zvZle2EVzmV6uPbHwD3e-jgktEeaUh5ty75tHg&aep=1&ntc=1&sa=X&ved=2ahUKEwjTuorG68eRAxViKVkFHRDQGNwQ2J8OegQICRAE&biw=2560&bih=1328&dpr=1&mtid=zFFEab-vBc2u5NoPo9HfgAQ&mstk=AUtExfDseyVfvDhjxY38tqgqMsgUSI0Tc0If_QeiNiUis81CFrOv1clbd8TWkIH3kJuLFsP3LthhAQIwOPuvG06NBC19unl8u29E-0-u35o_ksz9COJXpE1MCQzTEaDvNm8fsht8GDCkSyF11qpy2FKSDt6ezBKcYrIFwyNjQJGBu8CtARLXPgAsibCO51C3l7fhVuLZoP4n_07GoJz-AuhoaAfTrXcPOPOxHPO674sfYbl27mGUcjon4BhgJqoWaEhWliB6BhNUCXSToCzbFz_ePn2nK6yje3Y-N-R22BpMh0Ehh7LpsYYdPL7Wj7ubLbm93DxDrts4M8DIXg&csuir=1
+  https://www.google.com/search?q=what+is+squibler+and+what+are+the+best+alternatives&sca_esv=9015ac2879de739b&sxsrf=AE3TifM71sojNa2Xf0RT4u9i2q1Bew-A4w:1766085061947&udm=50&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZZmjZJO6nNwesPPlC3wKA5VwugU6TuK8bzQRzSUW3JrHnJBX92nYQBpAYbyhyrqpRU0Zh2hUh9RE3nbqw8qyF_fUHwopJ-b3BBmZRfy5v3RHIP3wk7T1HkNvKSUyRoUoOyCn1vsYH4HzNi8G-iCfwsNdN_HL57WG4zvZle2EVzmV6uPbHwD3e-jgktEeaUh5ty75tHg&aep=1&ntc=1&sa=X&ved=2ahUKEwjTuorG68eRAxViKVkFHRDQGNwQ2J8OegQICRAE&biw=2560&bih=1328&dpr=1
+  https://www.google.com/search?q=whats+a+platform+where+i+can+send+a+m4a&oq=whats+a+platform+where+i+can+send+a+m4a&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIJCAEQIRgKGKABMgkIAhAhGAoYoAEyCQgDECEYChigATIJCAQQIRgKGKABMgkIBRAhGAoYoAEyBwgGECEYnwUyBwgHECEYnwUyBwgIECEYnwUyBwgJECEYnwXSAQk3MjkwMmowajeoAgCwAgA&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=whats+a+platform+where+i+can+send+a+m4a+like+youtube+but+audio&sca_esv=27853f971d4a4b2c&sxsrf=AE3TifOFV61mj_tVOtPoWGhTR_FqosuBHw%3A1763947725518&ei=zbQjaY-nH7Xl5NoPma6zsAU&ved=0ahUKEwjPwdOs0YmRAxW1MlkFHRnXDFYQ4dUDCBE&uact=5&oq=whats+a+platform+where+i+can+send+a+m4a+like+youtube+but+audio&gs_lp=Egxnd3Mtd2l6LXNlcnAiPndoYXRzIGEgcGxhdGZvcm0gd2hlcmUgaSBjYW4gc2VuZCBhIG00YSBsaWtlIHlvdXR1YmUgYnV0IGF1ZGlvSIogUOoBWOwdcAF4AZABAZgBkQGgAboOqgEEMjAuM7gBA8gBAPgBAZgCFaAC8QzCAgoQABiwAxjWBBhHwgIHECEYoAEYCsICBRAhGKsCwgIFECEYnwXCAgUQIRigAZgDAOIDBRIBMSBAiAYBkAYIkgcEMTkuMqAH7pABsgcEMTguMrgH7QzCBwYzLjE3LjHIBxw&sclient=gws-wiz-serp
+  https://www.google.com/search?q=whats+a+platform+where+i+can+send+a+m4a+like+youtube+but+audio&sca_esv=27853f971d4a4b2c&sxsrf=AE3TifOFV61mj_tVOtPoWGhTR_FqosuBHw%3A1763947725518&ei=zbQjaY-nH7Xl5NoPma6zsAU&ved=0ahUKEwjPwdOs0YmRAxW1MlkFHRnXDFYQ4dUDCBE&uact=5&oq=whats+a+platform+where+i+can+send+a+m4a+like+youtube+but+audio&gs_lp=Egxnd3Mtd2l6LXNlcnAiPndoYXRzIGEgcGxhdGZvcm0gd2hlcmUgaSBjYW4gc2VuZCBhIG00YSBsaWtlIHlvdXR1YmUgYnV0IGF1ZGlvSIogUOoBWOwdcAF4AZABAZgBkQGgAboOqgEEMjAuM7gBA8gBAPgBAZgCFaAC8QzCAgoQABiwAxjWBBhHwgIHECEYoAEYCsICBRAhGKsCwgIFECEYnwXCAgUQIRigAZgDAOIDBRIBMSBAiAYBkAYIkgcEMTkuMqAH7pABsgcEMTguMrgH7QzCBwYzLjE3LjHIBxw&sclient=gws-wiz-serpN
+  https://www.google.com/search?q=whats+the+biggest+fitness+tech+brand+out+there&oq=whats+the+biggest+fitness+tech+brand+out+there&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIJCAEQIRgKGKABMgkIAhAhGAoYoAEyCQgDECEYChigATIJCAQQIRgKGKABMgkIBRAhGAoYoAEyBwgGECEYqwIyBwgHECEYjwLSAQkxMjAyOGowajSoAgCwAgE&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=whats+the+biggest+fitness+tech+brand+out+there&oq=whats+the+biggest+fitness+tech+brand+out+there&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIJCAEQIRgKGKABMgkIAhAhGAoYoAEyCQgDECEYChigATIJCAQQIRgKGKABMgkIBRAhGAoYoAEyBwgGECEYqwIyBwgHECEYjwLSAQkxMjAyOGowajSoAgCwAgE&sourceid=chrome&ie=UTF-8#cobssid=s
+  https://www.google.com/search?q=whats+the+biggest+fitness+tech+brand+out+there....+and+whats+the+biggest+mental+health+brand+out+there&sca_esv=e34a8a4f92e4e401&sxsrf=AE3TifNFGPTIa7rJZpAoKwm8bux7PpZI5g%3A1755462932500&udm=50&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZ1Y6MJ25_tmWITc7uy4KIemkjk18Cn72Gp24fGkjjh6w8f_UmwvItOb-_M1yJww2SbnHRjS3sgxwVBPbo0fTnaK82t101Usq9JwWh5qfTFWjsvgqeOdii_Yd7ZuPS7zWScSHJyN-WSgkzc5U5S442goLGHZdhnOwoZh9r4EQvC9GCDGM6Jh_SqdMD8AfVoQFuY8YnPQ&aep=1&ntc=1&sa=X&ved=2ahUKEwjtgYiE2ZKPAxXBD1kFHXL4CHgQ2J8OegQICBAD&biw=2560&bih=1328&dpr=1&mtid=HT2iaJzxEICq5NoPjNbSgQM&mstk=AUtExfDMVFm4tuQ--ULpe45XKnio3k7ppd0qTmzhcTvMq5O-qdAVRqBzDDfYQaCwv5RnEcsup-W3b8FSMLyhhm1Hz7FziAmLifA29-HCNVayoXd10JIOvWj0Tfz6Len77E6W-AgjoaDVh6aciWwkIpWNgaSMcfhlPs7WIsz2LSQTjJqdZqiYoOMczJf1gFyxWNPQAhGpUdB-ZXGjur7_XXTDARLlPw7SRL3bHIV74oss6MLCbTnSNMogkc9NgXiFxMcE_uA7HzxVn-P5Yfzps3qa-zdeW_8zYR1hODWplbINMHzSXxB0xPlhOtc1pLLpTcOqQtiVxVoVr5Oo83F4Y_l75weT3CuuWqc50w&csuir=1
+  https://www.google.com/search?q=whats+the+biggest+fitness+tech+brand+out+there....+and+whats+the+biggest+mental+health+brand+out+there&sca_esv=e34a8a4f92e4e401&sxsrf=AE3TifNFGPTIa7rJZpAoKwm8bux7PpZI5g:1755462932500&udm=50&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZ1Y6MJ25_tmWITc7uy4KIemkjk18Cn72Gp24fGkjjh6w8f_UmwvItOb-_M1yJww2SbnHRjS3sgxwVBPbo0fTnaK82t101Usq9JwWh5qfTFWjsvgqeOdii_Yd7ZuPS7zWScSHJyN-WSgkzc5U5S442goLGHZdhnOwoZh9r4EQvC9GCDGM6Jh_SqdMD8AfVoQFuY8YnPQ&aep=1&ntc=1&sa=X&ved=2ahUKEwjtgYiE2ZKPAxXBD1kFHXL4CHgQ2J8OegQICBAD&biw=2560&bih=1328&dpr=1
+  https://www.google.com/search?q=whats+the+biggest+fitness+tech+brand+out+there....+and+whats+the+biggest+mental+health+brand+out+there&sca_esv=e34a8a4f92e4e401&sxsrf=AE3TifOk504bD5mDX3-6TpOfVS6Dv0b42w%3A1755462906261&ei=-jyiaLGzD6rk5NoPjoy1iQE&ved=0ahUKEwixmMb32JKPAxUqMlkFHQ5GLREQ4dUDCBA&uact=5&oq=whats+the+biggest+fitness+tech+brand+out+there....+and+whats+the+biggest+mental+health+brand+out+there&gs_lp=Egxnd3Mtd2l6LXNlcnAiZndoYXRzIHRoZSBiaWdnZXN0IGZpdG5lc3MgdGVjaCBicmFuZCBvdXQgdGhlcmUuLi4uIGFuZCB3aGF0cyB0aGUgYmlnZ2VzdCBtZW50YWwgaGVhbHRoIGJyYW5kIG91dCB0aGVyZUj6ZFCxBljbXnAGeAGQAQCYAawBoAHKG6oBBDM5Ljm4AQPIAQD4AQGYAg-gAqYMwgIKEAAYsAMY1gQYR8ICBxAhGKABGArCAgUQIRirApgDAIgGAZAGCJIHBDQuMTGgB67SAbIHBDMuMTG4B6AMwgcFNS45LjHIBxg&sclient=gws-wiz-serp
+  https://www.google.com/search?q=whats+the+biggest+fitness+tech+brand+out+there....+and+whats+the+biggest+mental+health+brand+out+there&sca_esv=e34a8a4f92e4e401&sxsrf=AE3TifOk504bD5mDX3-6TpOfVS6Dv0b42w%3A1755462906261&ei=-jyiaLGzD6rk5NoPjoy1iQE&ved=0ahUKEwixmMb32JKPAxUqMlkFHQ5GLREQ4dUDCBA&uact=5&oq=whats+the+biggest+fitness+tech+brand+out+there....+and+whats+the+biggest+mental+health+brand+out+there&gs_lp=Egxnd3Mtd2l6LXNlcnAiZndoYXRzIHRoZSBiaWdnZXN0IGZpdG5lc3MgdGVjaCBicmFuZCBvdXQgdGhlcmUuLi4uIGFuZCB3aGF0cyB0aGUgYmlnZ2VzdCBtZW50YWwgaGVhbHRoIGJyYW5kIG91dCB0aGVyZUj6ZFCxBljbXnAGeAGQAQCYAawBoAHKG6oBBDM5Ljm4AQPIAQD4AQGYAg-gAqYMwgIKEAAYsAMY1gQYR8ICBxAhGKABGArCAgUQIRirApgDAIgGAZAGCJIHBDQuMTGgB67SAbIHBDMuMTG4B6AMwgcFNS45LjHIBxg&sclient=gws-wiz-serpv
+  https://www.google.com/search?q=zero+drop+sole&oq=zero+drop+sol&gs_lcrp=EgZjaHJvbWUqBwgAEAAYgAQyBwgAEAAYgAQyBwgBEAAYgAQyCwgCEAAYChgLGIAEMgcIAxAAGIAEMgYIBBBFGDkyCwgFEAAYChgLGIAEMgsIBhAAGAoYCxiABDILCAcQABgKGAsYgAQyBwgIEAAYgAQyBwgJEAAYgASoAgCwAgA&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?q=zero+drop+sole&oq=zero+drop+sole&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDILCAIQABgKGAsYgAQyBwgDEAAYgAQyCwgEEAAYChgLGIAEMgsIBRAAGAoYCxiABDILCAYQABgKGAsYgAQyBwgHEAAYgAQyBwgIEAAYgAQyCAgJEAAYFhge0gEIMjY0OGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8
+  https://www.google.com/search?sa=X&sca_esv=9d29c1b39aeb3b2c&sxsrf=AE3TifMqEnmq8K-HBbhqQlubjQrQQA7Pkw:1765305198775&udm=39&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZud1z6kQpMfoEdCJxnpm_3W-pLdZZVzNY_L9_ftx08kxElMEpo90JBBY0TEXYKcN_lPATbVTMCnYfcHh7XdvGab2j8Ao33wpt-2SaGmQ6eu056rCHSDec2aWxPirewVNdSLingsep27jSYrWYqBL7BUzzOtlXTetSsjOjRbepfW85adCDaIZXtumBfSR9wBmeF0GkTQ&q=system+design&ved=2ahUKEwif7quqkrGRAxVfM1kFHYDsNTEQs6gLegQIDxAB&biw=1512&bih=857&dpr=2
+  https://www.google.com/search?sca_esv=07b4fd533e682f0b&sxsrf=AE3TifMurYILlgWuJ5d3ehbpf2g6CljsOA:1760805319217&udm=7&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZ1Y6MJ25_tmWITc7uy4KIeiAkWG4OlBE2zyCTMjPbGmMU8EWskMk2JSE__efdUJ3xRFvZ0M2vJLB0hUMk5HOE2JYHbn8EkAxflxA6nxAnoThAuIcN7xDcumLPe-3cEEp0BCRKPiuNemU71V5H4BQp-rSd0ykhtsWXyWSGI_xAj-MEbBR2jUQBsnSDsPt34j9ah4jECw&q=iceberg+Slim:+Portrait+of+a+Pimp+(2012),&sa=X&ved=2ahUKEwi9hMj8lq6QAxX21vACHYgAN60QtKgLegQIERAB&biw=1389&bih=775&dpr=2
+  https://www.google.com/search?sca_esv=2ab7d617aa02d8bf&sxsrf=AE3TifM5KaWQZvNhteabuTcagnJF-RsuEw:1750539979030&q=fox+vs+coyote&udm=2&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZ1Y6MJ25_tmWITc7uy4KIeoJTKjrFjVxydQWqI2NcOhZVmrJB8DQUK5IzxA2fZbQF4YL5sNSRJGgx0e9Z9AxExzjE4_ynshmXB4KOs3cwRUeqSxtyEph1-LMoYoz7AgsxiAlRbfQlh62fpf4TvoMmLeIHIDQBlO9bBf83uliUCcabaD8ejPu9aoigNJtiQ30WOIRP0w&sa=X&ved=2ahUKEwig4fXMtYOOAxVeD1kFHeTxDrsQtKgLKAF6BAgUEAE&biw=1512&bih=794&dpr=2
+  https://www.google.com/search?sca_esv=2ab7d617aa02d8bf&sxsrf=AE3TifM5KaWQZvNhteabuTcagnJF-RsuEw:1750539979030&q=fox+vs+coyote&udm=2&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZ1Y6MJ25_tmWITc7uy4KIeoJTKjrFjVxydQWqI2NcOhZVmrJB8DQUK5IzxA2fZbQF4YL5sNSRJGgx0e9Z9AxExzjE4_ynshmXB4KOs3cwRUeqSxtyEph1-LMoYoz7AgsxiAlRbfQlh62fpf4TvoMmLeIHIDQBlO9bBf83uliUCcabaD8ejPu9aoigNJtiQ30WOIRP0w&sa=X&ved=2ahUKEwig4fXMtYOOAxVeD1kFHeTxDrsQtKgLKAF6BAgUEAE&biw=1512&bih=794&dpr=2#vhid=1ydyF7CldeNhdM&vssid=mosaic
+  https://www.google.com/search?sca_esv=2ab7d617aa02d8bf&sxsrf=AE3TifM5KaWQZvNhteabuTcagnJF-RsuEw:1750539979030&q=fox+vs+coyote&udm=2&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZ1Y6MJ25_tmWITc7uy4KIeoJTKjrFjVxydQWqI2NcOhZVmrJB8DQUK5IzxA2fZbQF4YL5sNSRJGgx0e9Z9AxExzjE4_ynshmXB4KOs3cwRUeqSxtyEph1-LMoYoz7AgsxiAlRbfQlh62fpf4TvoMmLeIHIDQBlO9bBf83uliUCcabaD8ejPu9aoigNJtiQ30WOIRP0w&sa=X&ved=2ahUKEwig4fXMtYOOAxVeD1kFHeTxDrsQtKgLKAF6BAgUEAE&biw=1512&bih=794&dpr=2#vhid=CcsRkXZyZoMJqM&vssid=mosaic
+  https://www.google.com/search?sca_esv=2ab7d617aa02d8bf&sxsrf=AE3TifM5KaWQZvNhteabuTcagnJF-RsuEw:1750539979030&q=fox+vs+coyote&udm=2&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZ1Y6MJ25_tmWITc7uy4KIeoJTKjrFjVxydQWqI2NcOhZVmrJB8DQUK5IzxA2fZbQF4YL5sNSRJGgx0e9Z9AxExzjE4_ynshmXB4KOs3cwRUeqSxtyEph1-LMoYoz7AgsxiAlRbfQlh62fpf4TvoMmLeIHIDQBlO9bBf83uliUCcabaD8ejPu9aoigNJtiQ30WOIRP0w&sa=X&ved=2ahUKEwig4fXMtYOOAxVeD1kFHeTxDrsQtKgLKAF6BAgUEAE&biw=1512&bih=794&dpr=2#vhid=sQfd48e60wF5XM&vssid=mosaic
+  https://www.google.com/search?sca_esv=5734fedee28d1695&sxsrf=AE3TifPw3fBIHImCbrFM7u1hfSBIOdd6Kg:1749936370064&q=c4+model&udm=7&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZ1Y6MJ25_tmWITc7uy4KIeiAkWG4OlBE2zyCTMjPbGmMU8EWskMk2JSE__efdUJ3xRFvZ0M2vJLB0hUMk5HOE2JYHbn8EkAxflxA6nxAnoThAuIcN7xDcumLPe-3cEEp0BCRKPiuNemU71V5H4BQp-rSd0ykhtsWXyWSGI_xAj-MEbBR2jUQBsnSDsPt34j9ah4jECw&sa=X&ved=2ahUKEwj5iN797PGNAxX7FVkFHZ1EHNwQtKgLegQILBAB&biw=1512&bih=794&dpr=1
+  https://www.google.com/search?sca_esv=5734fedee28d1695&sxsrf=AE3TifPw3fBIHImCbrFM7u1hfSBIOdd6Kg:1749936370064&q=c4+model&udm=7&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZ1Y6MJ25_tmWITc7uy4KIeiAkWG4OlBE2zyCTMjPbGmMU8EWskMk2JSE__efdUJ3xRFvZ0M2vJLB0hUMk5HOE2JYHbn8EkAxflxA6nxAnoThAuIcN7xDcumLPe-3cEEp0BCRKPiuNemU71V5H4BQp-rSd0ykhtsWXyWSGI_xAj-MEbBR2jUQBsnSDsPt34j9ah4jECw&sa=X&ved=2ahUKEwj5iN797PGNAxX7FVkFHZ1EHNwQtKgLegQILBAB&cshid=1749936411528010&biw=1512&bih=794&dpr=1
+  https://www.google.com/search?sca_esv=9d29c1b39aeb3b2c&sxsrf=AE3TifMcDOyfViQt2g9M_5lPBtNktsO6BA:1765305195993&udm=7&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZud1z6kQpMfoEdCJxnpm_3W-pLdZZVzNY_L9_ftx08kxc57ZOWlwIFHRsU-MNpN0ej2zZE5LBY9Nh3Jmnn0u16Y55PrmSk29JslG54PAwsMdo0j-aXzwSJvpb4lEz4lMYyaaVMQqeGFMycQVsTLiFxK3bLBNFzpDweHncc-92jLUhInKvGY_zN3GBPacLS1Cs1KOojw&q=system+design&sa=X&ved=2ahUKEwiyiIKpkrGRAxXmElkFHYpMCwwQtKgLegQIERAB&biw=1512&bih=857&dpr=2
+  https://www.google.com/search?sca_esv=e20ef5b3db63d22c&sxsrf=AE3TifP2ro-6lKC_skmjoOp2EhrDRaL4EQ:1757558374922&udm=7&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZud1z6kQpMfoEdCJxnpm_3W-pLdZZVzNY_L9_ftx08kxElMEpo90JBBY0TEXYKcN_IwOPyE5tikuTlZNNw-umcYKjzdvY0lVl34fNk98wQd8XAkkwe7iwSRLc9YKx25XPePDliPhHpt9Zrfv5ByDQKXCVT0ZnG-YX9KXQdydq2l7lRk_mv7GeSSXyjGFp2QPuPL1C6Q&q=along+came+jones&sa=X&sqi=2&ved=2ahUKEwjQze-U18-PAxVfEVkFHSFXLDAQtKgLegQIJhAB&biw=1512&bih=857&dpr=2
+  https://www.google.com/url?q=https://notifications.googleapis.com/email/redirect?t%3DAFG8qyWo1MIqXiuvBT82t0BWnC5Db0mx8_YTVBos2UIoYrizGgTE7u9otDyFe9mt4d39_ewqR-Uyt1DvEv60syAi60aRzvmSOxUkmkzODVAOePOxB8DN4BUlQXKDnW4Q4e8jl1akcB9uu-4P2ro86D89RcziPgzNl0-J13jhhQX1vz4wmICbM3swc3duSDsioPBcGlKBn8-7b8sN9e5qOCOSzaCmmU3sJ7uukcIkj00J%26r%3DeJxNzNEKwiAUgOG36U4NtbkFY0X0IGfHkw6cJ9Sx149RF91-_PyxtXe9KgWIvOVWZWAOiSTyqu5fe0TmSmV6rrCkcYeUAEn6QvstHHS0J-TclrzRGH_DQsjFU_kfwmAAOuiFQ22F7a0TsxmMeF20s93sndXnD09aMgI%26s%3DALHZ2r517XrGIjgnT7y8bv2Iyf4c&source=gmail&ust=1732327230641000&usg=AOvVaw3whkQCaPICqKwmRy6AVDUx
+
+[www.grandviewresearch.com]  (1)
+  https://www.grandviewresearch.com/industry-analysis/home-appliances-rental-market-report
+
+[www.health-street.net]  (3)
+  https://www.health-street.net
+  https://www.health-street.net/location/virginia-beach-va-dna-testing/
+  https://www.health-street.net/product/paternity-home/
+
+[www.health.ny.gov]  (2)
+  https://www.health.ny.gov/health_care/medicaid/
+  https://www.health.ny.gov/health_care/medicaid/fe_abd.htm
+
+[www.heygen.com]  (1)
+  https://www.heygen.com/
+
+[www.legalzoom.com]  (24)
+  https://www.legalzoom.com
+  https://www.legalzoom.com/business/intellectual-property/trademark-registration-overview.html
+  https://www.legalzoom.com/hft/checkout?packageId=5489&cartId=85049615
+  https://www.legalzoom.com/hft/trademark-gas?packageId=5489
+  https://www.legalzoom.com/hft/trademark-monitoring?packageId=5489
+  https://www.legalzoom.com/hft/trademark-name?packageId=5489
+  https://www.legalzoom.com/hft/trademark-type?packageId=5489
+  https://www.legalzoom.com/hft/transition?packageId=5489
+  https://www.legalzoom.com/my/account/a7714a89-d536-4df7-bbdd-7d399d444959
+  https://www.legalzoom.com/my/account/a7714a89-d536-4df7-bbdd-7d399d444959/orders
+  https://www.legalzoom.com/my/account/a7714a89-d536-4df7-bbdd-7d399d444959/orders2
+  https://www.legalzoom.com/my/account/a7714a89-d536-4df7-bbdd-7d399d444959/patent
+  https://www.legalzoom.com/my/account/a7714a89-d536-4df7-bbdd-7d399d444959/trademark
+  https://www.legalzoom.com/my/account/befa02c0-eb38-436c-bd4b-179ea65a78c4
+  https://www.legalzoom.com/my/account/befa02c0-eb38-436c-bd4b-179ea65a78c4/business-profile
+  https://www.legalzoom.com/my/account/befa02c0-eb38-436c-bd4b-179ea65a78c4/compliance
+  https://www.legalzoom.com/my/account/befa02c0-eb38-436c-bd4b-179ea65a78c4/compliance2
+  https://www.legalzoom.com/my/account/befa02c0-eb38-436c-bd4b-179ea65a78c4/trademark
+  https://www.legalzoom.com/my/login/mfa
+  https://www.legalzoom.com/my/login?client_id=w5ejGIxu0VPUQrLPDpYWl1cS9MXPNd1o
+  https://www.legalzoom.com/my/logout?redirecturl=https%3A%2F%2Fwww.legalzoom.com%2Fmy%2Faccount%2Fa7714a89-d536-4df7-bbdd-7d399d444959%2Fpatent
+  https://www.legalzoom.com/my/logout?redirecturl=https%3A%2F%2Fwww.legalzoom.com%2Fmy%2Faccount%2Fa7714a89-d536-4df7-bbdd-7d399d444959%2Ftrademark
+  https://www.legalzoom.com/my/logout?redirecturl=https%3A%2F%2Fwww.legalzoom.com%2Fmy%2Faccount%2Fbefa02c0-eb38-436c-bd4b-179ea65a78c4%2Fbusiness-profile
+  https://www.legalzoom.com/my/logout?redirecturl=https%3A%2F%2Fwww.legalzoom.com%2Fmy%2Faccount%2Fbefa02c0-eb38-436c-bd4b-179ea65a78c4%2Fcompliance
+
+[www.linkedin.com]  (9)
+  https://www.linkedin.com
+  https://www.linkedin.com/
+  https://www.linkedin.com/checkpoint/lg/login-submit
+  https://www.linkedin.com/company/-dev-color/
+  https://www.linkedin.com/company/-dev-color/posts/?feedView=all
+  https://www.linkedin.com/feed/
+  https://www.linkedin.com/in/andrewgwallace/recent-activity/all/
+  https://www.linkedin.com/redir/redirect/?url=https%3A%2F%2Fmartinfowler.com%2Farticles%2Fexploring-gen-ai%2Fhumans-and-agents.html&urlhash=VXdl&mt=u2PhOxM3FJANfmdfLDZd-LfdhuW37PrtMxS4qNOvNVL_GX1V2whLwAhOFbSlGsP9yAvkCg_LcpcUcBGE2YiSDCeQEiX0Z3i2ufYr2JqAgdalPu_5aXTp6gZe&isSdui=true&lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BTPPkjRlqRWK5ztLXr0ZEww%3D%3D
+  https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2Ffeed%2F
+
+[www.littlefishaccounting.com]  (2)
+  https://www.littlefishaccounting.com
+  https://www.littlefishaccounting.com/
+
+[www.medicare.gov]  (7)
+  https://www.medicare.gov
+  https://www.medicare.gov/
+  https://www.medicare.gov/basics
+  https://www.medicare.gov/basics/get-started-with-medicare
+  https://www.medicare.gov/basics/get-started-with-medicare/other-paths
+  https://www.medicare.gov/basics/your-medicare-rights
+  https://www.medicare.gov/basics/your-medicare-rights/your-protections
+
+[www.meta.ai]  (4)
+  https://www.meta.ai
+  https://www.meta.ai/
+  https://www.meta.ai/prompt/371f35b4-e61c-42da-b0ae-8645283c1ff2
+  https://www.meta.ai/prompt/422de49e-b48b-4cdd-87dc-4793a412745f
+
+[www.mureka.ai]  (3)
+  https://www.mureka.ai
+  https://www.mureka.ai/
+  https://www.mureka.ai/video-detail?songId=124481808891907
+
+[www.n4bservices.com]  (1)
+  https://www.n4bservices.com/
+
+[www.nike.com]  (6)
+  https://www.nike.com
+  https://www.nike.com/
+  https://www.nike.com/auth/login?code=O2SkMeS66iVJ8k8d_prdFf9WBUx0z32lPBKzqAgcPcBtw_tLFqubffWtWVm1bHMhnnaZ1s4cPFFl9Qwaw4dM2w&state=4e9bb7d219e44f76a67feff3ed17f27b&session_state=a895fc256950b316254a93a91b3e88570bcdec64a4e48de63601d448aa7006e4.008f2fedc195f7bca1da856f
+  https://www.nike.com/cart
+  https://www.nike.com/favorites
+  https://www.nike.com/t/free-metcon-6-womens-workout-shoes-yeO7KABq/FJ7126-001
+
+[www.npmjs.com]  (7)
+  https://www.npmjs.com
+  https://www.npmjs.com/
+  https://www.npmjs.com/login
+  https://www.npmjs.com/login/email-otp?next=%2F
+  https://www.npmjs.com/package/noget
+  https://www.npmjs.com/package/noget/access
+  https://www.npmjs.com/settings/wallacedrew/packages
+
+[www.nyc.gov]  (11)
+  https://www.nyc.gov
+  https://www.nyc.gov/assets/home/html/search-redirect.html?search-terms=Facilitated+Enrollment+for+the+Aged%2C+Blind%2C+and+Disabled+Program&sitesearch=www1.nyc.gov%2Fsite%2Fhra
+  https://www.nyc.gov/assets/ochia/downloads/pdf/adults%2065%20and%20over-living-with-a-disability-medicaid.pdf
+  https://www.nyc.gov/main/search?search-terms=Facilitated+Enrollment+for+the+Aged%2C+Blind%2C+and+Disabled+Program&sitesearch=www.nyc.gov%2Fsite%2Fhra
+  https://www.nyc.gov/main/search?search-terms=Facilitated+Enrollment+for+the+Aged%2C+Blind%2C+and+Disabled+Program&sitesearch=www.nyc.gov%2Fsite%2Fhra#q=Facilitated%20Enrollment%20for%20the%20Aged,%20Blind,%20and%20Disabled%20Program
+  https://www.nyc.gov/site/dfta/index.page
+  https://www.nyc.gov/site/dfta/services/caregiving.page
+  https://www.nyc.gov/site/doh/health/health-topics/aged-blind-disabled.page
+  https://www.nyc.gov/site/hra/index.page
+  https://www.nyc.gov/site/ochia/coverage-care/medicaid.page
+  https://www.nyc.gov/site/ochia/coverage-care/medicare.page
+
+[www.osonduconsulting.com]  (1)
+  https://www.osonduconsulting.com/
+
+[www.pachirafinancials.com]  (2)
+  https://www.pachirafinancials.com
+  https://www.pachirafinancials.com/
+
+[www.pakaccountingusa.com]  (1)
+  https://www.pakaccountingusa.com/
+
+[www.perplexity.ai]  (11)
+  https://www.perplexity.ai
+  https://www.perplexity.ai/
+  https://www.perplexity.ai/account/personalize
+  https://www.perplexity.ai/search/1-what-are-the-parts-of-a-a-fu-MEKtGFhvQBmmG_jreGHbpg
+  https://www.perplexity.ai/search/do-you-agree-with-this-static-epMh4fFVQICvSHgbtjSkng
+  https://www.perplexity.ai/search/is-it-possible-to-sell-coachin-jAIsk1cqQC2bJgLK9xHhWg
+  https://www.perplexity.ai/search/new/25f21e1c-ac60-4029-a56c-c6be44808997
+  https://www.perplexity.ai/search/new/3de06633-71b7-4eed-9501-027ab22c6b0b
+  https://www.perplexity.ai/search/new/b3db0531-d685-40e1-908e-499a410894de
+  https://www.perplexity.ai/search/new/e78cf3c6-3647-450a-a6f7-1d1f4f383d46
+  https://www.perplexity.ai/search/respond-to-the-following-conci-YXneJnTOSauIMiGDHPI42g
+
+[www.pwcva.gov]  (6)
+  https://www.pwcva.gov
+  https://www.pwcva.gov/assets/2025-10/2025%20Guide%20to%2055%2B%20and%20Assisted%20Housing.pdf
+  https://www.pwcva.gov/department/area-agency-aging
+  https://www.pwcva.gov/department/area-agency-aging/joshua-lee
+  https://www.pwcva.gov/department/area-agency-aging/senior-housing-options
+  https://www.pwcva.gov/department/housing-community-development
+
+[www.reddit.com]  (6)
+  https://www.reddit.com
+  https://www.reddit.com/r/Advice/comments/17645o6/i_paternity_tested_my_son_without_the_mothers/
+  https://www.reddit.com/r/NoStupidQuestions/comments/13cw0r5/whats_a_good_website_for_audio_only_content/
+  https://www.reddit.com/r/NoStupidQuestions/comments/13cw0r5/whats_a_good_website_for_audio_only_content/W
+  https://www.reddit.com/r/NoStupidQuestions/comments/150uyta/gf_and_i_think_had_a_baby_5_month_old_how_do_i/
+  https://www.reddit.com/r/turo/comments/11roobr/how_do_yall_make_money_doing_this/
+
+[www.resemble.ai]  (2)
+  https://www.resemble.ai
+  https://www.resemble.ai/text-to-speech-converter/?utm_source=googlesearch&utm_medium=cpc&utm_campaign=22369894470&utm_content=&utm_term=&utm_term=&utm_campaign=Text+to+Speech+Voice+Agents&utm_source=adwords&utm_medium=ppc&hsa_acc=5452295895&hsa_cam=22369894470&hsa_grp=&hsa_ad=&hsa_src=x&hsa_tgt=&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=22369896702&gbraid=0AAAAACmKfTKor74SkN-mbZ-MPaOJs-_67&gclid=CjwKCAjw7rbEBhB5EiwA1V49nUW6lkGBIFte83ks847LKn1e_oXy2WbRLSyVx2J1cD-AyxXx2FJ1sRoCGHAQAvD_BwE
+
+[www.rvsocialservices.org]  (5)
+  http://www.rvsocialservices.org
+  http://www.rvsocialservices.org/
+  http://www.rvsocialservices.org/about.html
+  http://www.rvsocialservices.org/home.html
+  http://www.rvsocialservices.org/seniors-about.html
+
+[www.squibler.io]  (8)
+  https://www.squibler.io
+  https://www.squibler.io/ai-book-writer/?campaignid=21904625203&adgroupid=&keyword=&device=c&gad_source=1&gad_campaignid=21904625908&gbraid=0AAAAACeHAPy-Uk3urvd1m3LqK5EaTG_mk&gclid=CjwKCAiA3L_JBhAlEiwAlcWO5yrHs5Fu22LGB7kQP8fbxlWzb6zJpQRVXCdY2F4_KjGrCJ5BDhsZvhoC5jsQAvD_BwE
+  https://www.squibler.io/dashboard/all-your-writing
+  https://www.squibler.io/dashboard/notifications
+  https://www.squibler.io/dashboard/projects/3166a051-c2c8-4080-924a-69b8b80fc6b2
+  https://www.squibler.io/dashboard/projects/939e0d9e-a637-4102-89bc-99142d807bd2
+  https://www.squibler.io/dashboard/template/non-fiction-book
+  https://www.squibler.io/dashboard/templates
+
+[www.ticketmaster.com]  (4)
+  https://www.ticketmaster.com
+  https://www.ticketmaster.com/?landing=c&awtrc=true&c=SEM_TMBRAND_ggl_298560299_24300724499_ticketmaster&GCID=0&gclsrc=aw.ds&gad_source=1&gad_campaignid=298560299&gbraid=0AAAAAD_KsMKZW4qRfOrL0dhcUeYqfvX3d&gclid=Cj0KCQjws83OBhD4ARIsACblj1_1m8-VokQwT9PL7aiDyzUjfF5VvW9U6ilYhV8pqhAfFb-BY4O3aaoaAmnXEALw_wcB
+  https://www.ticketmaster.com/jay-electronica-tickets/artist/206163
+  https://www.ticketmaster.com/search?q=jay+electronica
+
+[www.tridentmartialarts.com]  (3)
+  http://www.tridentmartialarts.com
+  http://www.tridentmartialarts.com/
+  http://www.tridentmartialarts.com/martial-arts/muay-thai-php/
+
+[www.udio.com]  (4)
+  https://www.udio.com
+  https://www.udio.com/?utm_source=google&utm_medium=cpc&utm_campaign=22094547323&utm_content=179892276464&utm_term=suno%20vs%20udio&gad_source=1&gad_campaignid=22094547323&gbraid=0AAAAA9qNKz3yEconjIDFvd8vJb1uQ7nJU&gclid=CjwKCAiAjojLBhAlEiwAcjhrDiJhvb8BVkxmiP7T1cjjcQagNLTUEXtWipt72LrZaRWyAbihUrPmuRoCnYEQAvD_BwE
+  https://www.udio.com/create
+  https://www.udio.com/onboarding?ref=%2Fhome
+
+[www.wealthteainc.com]  (1)
+  https://www.wealthteainc.com/
+
+[www.whoop.com]  (2)
+  https://www.whoop.com
+  https://www.whoop.com/
+
+[www.willowwealth.com]  (3)
+  https://www.willowwealth.com
+  https://www.willowwealth.com/login-redirect?redirect=/offerings
+  https://www.willowwealth.com/offerings?utm_source=yieldstreet
+
+[www.yamasakiwoodbridge.com]  (1)
+  http://www.yamasakiwoodbridge.com/
+
+[www.yelp.com]  (1)
+  https://www.yelp.com
+
+[www.yieldstreet.com]  (1)
+  https://www.yieldstreet.com/offerings/
+
+[www.youtube.com]  (51)
+  https://www.youtube.com
+  https://www.youtube.com/
+  https://www.youtube.com/@YamasakiwoodbridgeAcademy/videos
+  https://www.youtube.com/@willcotechinc
+  https://www.youtube.com/channel/UC158tLU04a7XVMCj8nykEGg
+  https://www.youtube.com/channel/UCclIthdue6djStuUP8Z4RTw%
+  https://www.youtube.com/channel/UCclIthdue6djStuUP8Z4RTw?embeds_referring_euri=http%3A%2F%2Fwww.tridentmartialarts.com%2F&source_ve_path=MzY5MjU
+  https://www.youtube.com/embed/yAKLmIKztuw?feature=oembed
+  https://www.youtube.com/feed/history
+  https://www.youtube.com/results?search_query=domain+driven+design+eric+evans+audiobook
+  https://www.youtube.com/results?search_query=ironman+friday
+  https://www.youtube.com/results?search_query=medicaid
+  https://www.youtube.com/results?search_query=nyc+medicaid
+  https://www.youtube.com/results?search_query=willcotech
+  https://www.youtube.com/shorts/p8w_pfflJAQ
+  https://www.youtube.com/upload
+  https://www.youtube.com/watch?app=desktop&v=-IzWIf4dAjg&t=454s
+  https://www.youtube.com/watch?app=desktop&v=-IzWIf4dAjg&t=454s&sttick=0
+  https://www.youtube.com/watch?app=desktop&v=Sz7c2i-9Xm4
+  https://www.youtube.com/watch?app=desktop&v=Sz7c2i-9Xm4&themeRefresh=1
+  https://www.youtube.com/watch?v=-IzWIf4dAjg&t=454s
+  https://www.youtube.com/watch?v=-IzWIf4dAjg&t=454s&themeRefresh=1
+  https://www.youtube.com/watch?v=2tT-43kdevE
+  https://www.youtube.com/watch?v=6R8euQeU-Fc
+  https://www.youtube.com/watch?v=ASbgIVNuAV0
+  https://www.youtube.com/watch?v=C_KOg5NEnFs
+  https://www.youtube.com/watch?v=E9ZJfO2i57I&t=277s
+  https://www.youtube.com/watch?v=EECqKG4qIiA
+  https://www.youtube.com/watch?v=F2wea-D86xM
+  https://www.youtube.com/watch?v=GpVBx9b0KmA
+  https://www.youtube.com/watch?v=HKHEB9Ht6SM
+  https://www.youtube.com/watch?v=IJcLmoKR6v8&t=84s
+  https://www.youtube.com/watch?v=IUwzJanDKfQ
+  https://www.youtube.com/watch?v=IbIla3vw5G0
+  https://www.youtube.com/watch?v=KkePAhnkHeg
+  https://www.youtube.com/watch?v=Mtl62-6pY_I
+  https://www.youtube.com/watch?v=Sz7c2i-9Xm4
+  https://www.youtube.com/watch?v=TDYa2pPMx0k
+  https://www.youtube.com/watch?v=Vv_sjpclsZ8
+  https://www.youtube.com/watch?v=YhfFeRMJj14
+  https://www.youtube.com/watch?v=ZUGh1OVX14Y
+  https://www.youtube.com/watch?v=cQev481ebuM
+  https://www.youtube.com/watch?v=dLOWcxBQyX8
+  https://www.youtube.com/watch?v=eFyr49TwuiI
+  https://www.youtube.com/watch?v=fuvzpaWtCmo
+  https://www.youtube.com/watch?v=kp39x_goDek&t=1209s
+  https://www.youtube.com/watch?v=mrl7krayknA
+  https://www.youtube.com/watch?v=mrl7krayknA&sttick=0
+  https://www.youtube.com/watch?v=td1KKxanvTc
+  https://www.youtube.com/watch?v=x2-rSnhpw0g
+  https://www.youtube.com/watch?v=z4E2o47YWEk
+
+[x.com]  (14)
+  https://x.com
+  https://x.com/7xvethegenius
+  https://x.com/KeyOrgSystems/status/2026778179717808289
+  https://x.com/compose/post
+  https://x.com/crazyclips_/status/2046333087450349968
+  https://x.com/crazyclips_/status/2046333087450349968a
+  https://x.com/explore
+  https://x.com/home
+  https://x.com/i/timeline
+  https://x.com/messages/compose
+  https://x.com/notifications
+  https://x.com/refactorfiend
+  https://x.com/refactorfiend/status/2042353065567674714
+  https://x.com/refactorfiend/status/2042353669803278774
+
+[yamasakiwoodbridge.com]  (7)
+  https://yamasakiwoodbridge.com
+  https://yamasakiwoodbridge.com/
+  https://yamasakiwoodbridge.com/about-us/
+  https://yamasakiwoodbridge.com/about-us/&
+  https://yamasakiwoodbridge.com/bjj/
+  https://yamasakiwoodbridge.com/memberships/
+  https://yamasakiwoodbridge.com/muay-thai/
+
+[youtube.com]  (1)
+  http://youtube.com/
+
+==============================================================================
+Profile 1 — Drewdo (drewdocode@gmail.com)
+  source files: Tabs_13335589822135190 (3 KB, 2023-08-03 22:30), Session_13335589817515119 (19 KB, 2023-08-03 22:30)
+  raw URLs: 2   after filter: 2
+==============================================================================
+
+[gds.google.com]  (2)
+  https://gds.google.com
+  https://gds.google.com/web/chip?ep=p&gdsid=1950035514&authuser=1&hl=en&continue=https://accounts.google.com/ServiceLogin?continue%3Dhttps://mail.google.com%26service%3Dmail%26hl%3Den%26authuser%3D1%26passive%3Dtrue%26sarp%3D1%26aodrpl%3D1%26checkedDomains%3Dyoutube%26checkConnection%3Dyoutube:79:0%26pstMsg%3D1&service=mail&rapt=AEjHL4NJbtG0ZzxqP2G0SJXY8A0DyIdAo1RoJmy4yey03eKEb-8FXNbQxfDRb2C29lxdV1EFgtGnjtK2mS24vEejoXQ2nVBHsA&pli=1
+
+==============================================================================
+Profile 2 — Tony (tonycalhoun790@gmail.com)
+  source files: Tabs_13377972428550789 (4 KB, 2024-12-06 10:27), Session_13377972422676542 (11 KB, 2024-12-06 10:27)
+  raw URLs: 2   after filter: 2
+==============================================================================
+
+[gds.google.com]  (2)
+  https://gds.google.com
+  https://gds.google.com/web/recoveryoptions?cardIndex=0&hl=en&authuser=2&gdsid=456916062&continue=https%3A%2F%2Faccounts.google.com%2FServiceLogin%3Fcontinue%3Dhttps%253A%252F%252Fmyaccount.google.com%252F%26hl%3Den%26authuser%3D2%26passive%3Dtrue%26sarp%3D1%26aodrpl%3D1%26checkedDomains%3Dyoutube%26checkConnection%3Dyoutube%253A54%26pstMsg%3D1&rapt=AEjHL4NHkWol7pjdbnmaQw_xTVgBwN4qJXFs06gjHf4WbEVSo4_iWvrW3Yz17uYx4601LoIXeynUj5Au4-zNyixJZillCezyRw&ep=p&landing=true
+
+==============================================================================
+Profile 3 — Minimal (drewminimal@gmail.com)
+  source files: Tabs_13408602677215207 (36 KB, 2025-11-25 22:51), Session_13408602595045599 (161 KB, 2025-11-25 22:51)
+  raw URLs: 15   after filter: 14
+==============================================================================
+
+[accounts.google.com]  (1)
+  https://accounts.google.com/ServiceLogin?continue=https://mail.google.com/mail&service=mail&hl=en&authuser=9&passive=true&sarp=1&aodrpl=1&checkedDomains=youtube&checkConnection=youtube:106&pstMsg=1
+
+[contacts.google.com]  (2)
+  https://contacts.google.com
+  https://contacts.google.com/widget/hovercard/v/2?hl=en&origin=https%3A%2F%2Fmail.google.com&usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.gapi.en.UXDNXkgCDpE.O%2Fd%3D1%2Frs%3DAHpOoo_3ykjRTrvlIBv6vfu43Rx7CYUQSA%2Fm%3D__features__#id=I__HC_94253229&_gfid=I__HC_94253229&parent=https%3A%2F%2Fmail.google.com&pfname=&rpctoken=41307909
+
+[gds.google.com]  (5)
+  https://gds.google.com
+  https://gds.google.com/
+  https://gds.google.com/web/homeaddress?cardIndex=1&hl=en&authuser=9&tda=CAA&gdsid=-1899141062&continue=https%3A%2F%2Faccounts.google.com%2FServiceLogin%3Fcontinue%3Dhttps%3A%2F%2Fmail.google.com%2Fmail%26service%3Dmail%26hl%3Den%26authuser%3D9%26passive%3Dtrue%26sarp%3D1%26aodrpl%3D1%26checkedDomains%3Dyoutube%26checkConnection%3Dyoutube%3A106%26pstMsg%3D1&asp=EgQIFhAC&rapt=AEjHL4MHFFxY-YqR9PfxNhGMIYIMmNcv_Eq3BCTtP-wCwrHy80l8dd4znrZQZnSms2qs59KrqcJIU-I4YXg5Qp7ND9CpulhNeg&ep=p
+  https://gds.google.com/web/recoveryoptions?cardIndex=0&hl=en&authuser=9&tda=CAA&gdsid=-1899141062&continue=https%3A%2F%2Faccounts.google.com%2FServiceLogin%3Fcontinue%3Dhttps%3A%2F%2Fmail.google.com%2Fmail%26service%3Dmail%26hl%3Den%26authuser%3D9%26passive%3Dtrue%26sarp%3D1%26aodrpl%3D1%26checkedDomains%3Dyoutube%26checkConnection%3Dyoutube%3A106%26pstMsg%3D1&rapt=AEjHL4MHFFxY-YqR9PfxNhGMIYIMmNcv_Eq3BCTtP-wCwrHy80l8dd4znrZQZnSms2qs59KrqcJIU-I4YXg5Qp7ND9CpulhNeg&ep=p
+  https://gds.google.com/web/recoveryoptions?cardIndex=0&hl=en&authuser=9&tda=CAA&gdsid=-1899141062&continue=https%3A%2F%2Faccounts.google.com%2FServiceLogin%3Fcontinue%3Dhttps%3A%2F%2Fmail.google.com%2Fmail%26service%3Dmail%26hl%3Den%26authuser%3D9%26passive%3Dtrue%26sarp%3D1%26aodrpl%3D1%26checkedDomains%3Dyoutube%26checkConnection%3Dyoutube%3A106%26pstMsg%3D1&rapt=AEjHL4MHFFxY-YqR9PfxNhGMIYIMmNcv_Eq3BCTtP-wCwrHy80l8dd4znrZQZnSms2qs59KrqcJIU-I4YXg5Qp7ND9CpulhNeg&ep=p&asp=EgQIFhAC
+
+[mail.google.com]  (2)
+  https://mail.google.com
+  https://mail.google.com/mail/u/0/#inbox
+
+[myaccount.google.com]  (4)
+  https://myaccount.google.com
+  https://myaccount.google.com/
+  https://myaccount.google.com/profile-picture?origin=https://mail.google.com&startPath=profile-picture&hostId=ogb&theme=light&pli=1
+  https://myaccount.google.com/profile-picture?startPath=profile-picture&hostId=ogb&origin=https%3A%2F%2Fmail.google.com
+
+==============================================================================
+GRAND TOTAL across all profiles: 1134 unique URLs
+==============================================================================

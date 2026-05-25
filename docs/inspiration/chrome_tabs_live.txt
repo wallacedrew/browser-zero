@@ -1,0 +1,197 @@
+Chrome — live tab listing — 2026-05-10 20:31:41
+Source: AppleScript query against the running Chrome process.
+Windows: 21   Tabs: 75   Active (foreground) tabs: 21
+Note: Incognito windows are invisible to AppleScript and excluded.
+==============================================================================
+=== Window 1 (1 tabs) ===
+  *   1. Food Tracker App Valuation Strategy - Claude
+         https://claude.ai/chat/8ee69e32-703e-4afc-bdf3-9bbf7c95ecd4
+
+=== Window 2 (4 tabs) ===
+      1. (untitled)
+         file:///Users/wallacedrew/chrome_tabs_live.txt
+      2. (untitled)
+         file:///Users/wallacedrew/inbox-zero-for-browser-tabs/extract_chrome_tabs.py
+      3. Extensions
+         chrome://extensions/
+  *   4. browser-zero
+         chrome-extension://ccadmcicchbgckkkeilfplnhpkbfamnl/src/dashboard/index.html
+
+=== Window 3 (14 tabs) ===
+      1. Email settings
+         https://github.com/settings/emails
+      2. Fuelition Pricing Model Strategy - Claude
+         https://claude.ai/chat/78224b98-506d-4222-999a-fa0694738754
+      3. LegalZoom Sign In | Log Into Your Account
+         https://www.legalzoom.com/my/login?client_id=w5ejGIxu0VPUQrLPDpYWl1cS9MXPNd1o
+      4. Synthesia
+         https://app.synthesia.io/#/?videosType=MyRecentVideos
+      5. HeyGen - HeyGen
+         https://app.heygen.com/home
+      6. Invideo AI - Create videos without limits
+         https://invideo.io/
+      7. Sign In | ElevenLabs
+         https://elevenlabs.io/app/sign-in?redirect=%2Fapp%2Fhome
+      8. AI Voice Generator with Text to Speech Converter | Resemble AI
+         https://www.resemble.ai/text-to-speech-converter/?utm_source=googlesearch&utm_medium=cpc&utm_campaign=22369894470&utm_content=&utm_term=&utm_term=&utm_campaign=Text+to+Speech+Voice+Agents&utm_source=adwords&utm_medium=ppc&hsa_acc=5452295895&hsa_cam=22369894470&hsa_grp=&hsa_ad=&hsa_src=x&hsa_tgt=&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=22369896702&gbraid=0AAAAACmKfTKor74SkN-mbZ-MPaOJs-_67&gclid=CjwKCAjw7rbEBhB5EiwA1V49nUW6lkGBIFte83ks847LKn1e_oXy2WbRLSyVx2J1cD-AyxXx2FJ1sRoCGHAQAvD_BwE
+      9. invideo AI - Turn ideas into videos - AI video creator
+         https://ai.invideo.io/workspace/80f1d603-de4c-4f55-a3c7-f613e3e7aebb/v40-copilot
+     10. Classic public domain personal development books - Claude
+         https://claude.ai/chat/3aaa6c4f-74e6-44f2-94ad-d961c8332c65
+     11. Suno | AI Music
+         https://suno.com/collect-birthday?__clerk_handshake=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdW5vLmNvbS9jbGFpbXMvdG9rZW5fdHlwZSI6ImhhbmRzaGFrZSIsImlzcyI6Imh0dHBzOi8vYXV0aC5zdW5vLmNvbSIsImhhbmRzaGFrZSI6WyJfX3Nlc3Npb249ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNkluTjFibTh0WVhCcExYSnpNalUyTFd0bGVTMHhJaXdpZEhsd0lqb2lTbGRVSW4wLmV5SnpkVzV2TG1OdmJTOWpiR0ZwYlhNdmRYTmxjbDlwWkNJNklqbGlNV1JoT0dNNExURmxOREF0TkdVeFl5MDVZelk1TFRJMk5tWmpaR1kwTnpBMlppSXNJbWgwZEhCek9pOHZjM1Z1Ynk1aGFTOWpiR0ZwYlhNdlkyeGxjbXRmYVdRaU9pSTVZakZrWVRoak9DMHhaVFF3TFRSbE1XTXRPV00yT1MweU5qWm1ZMlJtTkRjd05tWWlMQ0p6ZFc1dkxtTnZiUzlqYkdGcGJYTXZkRzlyWlc1ZmRIbHdaU0k2SW1GalkyVnpjeUlzSW5OMWJtOHZaR2xrSWpveE1ERXdPRE0xTURBc0ltVjRjQ0k2TVRjM056YzRPRE0zTlN3aVlYVmtJam9pYzNWdWJ5MWhjR2tpTENKemRXSWlPaUk1WWpGa1lUaGpPQzB4WlRRd0xUUmxNV010T1dNMk9TMHlOalptWTJSbU5EY3dObVlpTENKaGVuQWlPaUpvZEhSd2N6b3ZMM04xYm04dVkyOXRJaXdpWm5aaElqcGJNQ3d0TVYwc0ltbGhkQ0k2TVRjM056YzRORGMzTlN3aWFYTnpJam9pYUhSMGNITTZMeTloZFhSb0xuTjFibTh1WTI5dElpd2lhbWwwSWpvaU5EWTNZemN4WkRNdE9UaG1aaTAwTkdaa0xUazJaR1F0Wm1ZMk5qVTRaVGczWVRZeklpd2ljR3hoYmlJNklqbzZJaXdpYzNWdWJ5OXFiMmx1WldRaU9qRTNOamd3Tnpnd05qa3NJbk4xYm04dVkyOXRMMk5zWVdsdGN5OWxiV0ZwYkNJNkluZGhiR3hoWTJVdVpISmxkMEJuYldGcGJDNWpiMjBpTENKb2RIUndjem92TDNOMWJtOHVZV2t2WTJ4aGFXMXpMMlZ0WVdsc0lqb2lkMkZzYkdGalpTNWtjbVYzUUdkdFlXbHNMbU52YlNJc0luTjFibTh2YUdGdVpHeGxJam9pZDJGc2JHRmpaVjlrY21WM0lpd2ljM1Z1Ynk5MWMyVnlYMmxrSWpvaU1UTXhOelk1TmpZeklpd2ljM1Z1Ynk5MWMyVnlibUZ0WlNJNkluZGhiR3hoWTJVdVpISmxkMEJuYldGcGJDNWpiMjBpZlEuc0ktc3h4OVp3MWE0UFp3dFZzZ3J1bFY5VWJFeXdMZF9ib2hxczl6TmVWTmFkSk1DbXdPZFk2dmtBY0RRVzJsaVpyZmVZWWVCV1haQnpXN3Jjb1lnbTFJVDBmVFNzY1QzUjlDYTl6VXp6Y2ZSdE5CSWw3U05xSWc3eVI2bVV3RjFISTc2YnJXTEl3VmdpZjFuVWRIVVM2TmxuWE9xYU55Q2lUVlEwMmZVTTQ1bnBUTnh1aGc3RTRHTXRpRVUtOHBJTF9EVGgzeUZma3FVTndNRGtJRm9CaVl4c0RUMWxNaklqZDc2ZGxoekhsVXhPLWFHRUE2VXhfVkt4b0tQZW1lNk9vOVNid3NhenBXZ2RvQmptRHloWXg5STlrYkxyZzU5ZHZNMHFQcC1FYkRBWk9wUDhBNVBZVVNhcUJyX2dlMmdtNHVtWGR2bU5ycjZOYURCcHIyV0ZBOyBEb21haW49c3Vuby5jb207IGV4cGlyZXM9U3VuLCAwMyBNYXkgMjAyNiAwNjowNjoxNSBHTVQ7IFNhbWVTaXRlPUxheDsgU2VjdXJlIiwiX19jbGllbnRfdWF0PTE3Njg4NTEyNzA7IERvbWFpbj1zdW5vLmNvbTsgTWF4LUFnZT0zMTUzNjAwMDsgU2FtZVNpdGU9TGF4OyBTZWN1cmUiLCJfX2NsZXJrX2hhbmRzaGFrZT07IGV4cGlyZXM9VGh1LCAwMSBKYW4gMTk3MCAwMDowMDowMCBHTVQ7IEh0dHBPbmx5OyBNYXgtQWdlPTA7IFNhbWVTaXRlPUxheDsgU2VjdXJlIl19.T6bf3-gNcwqmsWqsiTmNFaXM4kqzkshFZmwwnGsG0xIhqYvA08L-nAANl0p2DGxMdrxtK0oU-yIQ4fLiGow_jEyaONZE01Uge545jStBx6Jhn70vdOgGDTjUFjOgZ3BetPADnRC_GMnk4yAc9AS97VmP_Whua8adx02JjbBtBuPese0U3auPggGrATjG8UpdN5aKz2ivZVYuKy9GQ6Y4OIRKm6TaTHk_0gQ90bY-7VrRcG8HOR_059muIvYWDKowcBVm1-gdLTw32JB0tIrd327myneY6X43rgCE0U-O79KwQYjCunF5Ecd9zfroKw6z2lomLx6DuTGFaGVTpL4gJw&redirect_url=%2Fme%3F__clerk_handshake%3DeyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdW5vLmNvbS9jbGFpbXMvdG9rZW5fdHlwZSI6ImhhbmRzaGFrZSIsImlzcyI6Imh0dHBzOi8vYXV0aC5zdW5vLmNvbSIsImhhbmRzaGFrZSI6WyJfX3Nlc3Npb249ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNkluTjFibTh0WVhCcExYSnpNalUyTFd0bGVTMHhJaXdpZEhsd0lqb2lTbGRVSW4wLmV5SnpkVzV2TG1OdmJTOWpiR0ZwYlhNdmRYTmxjbDlwWkNJNklqbGlNV1JoT0dNNExURmxOREF0TkdVeFl5MDVZelk1TFRJMk5tWmpaR1kwTnpBMlppSXNJbWgwZEhCek9pOHZjM1Z1Ynk1aGFTOWpiR0ZwYlhNdlkyeGxjbXRmYVdRaU9pSTVZakZrWVRoak9DMHhaVFF3TFRSbE1XTXRPV00yT1MweU5qWm1ZMlJtTkRjd05tWWlMQ0p6ZFc1dkxtTnZiUzlqYkdGcGJYTXZkRzlyWlc1ZmRIbHdaU0k2SW1GalkyVnpjeUlzSW5OMWJtOHZaR2xrSWpveE1ERXdPRE0xTURBc0ltVjRjQ0k2TVRjM056YzRPRE0zTlN3aVlYVmtJam9pYzNWdWJ5MWhjR2tpTENKemRXSWlPaUk1WWpGa1lUaGpPQzB4WlRRd0xUUmxNV010T1dNMk9TMHlOalptWTJSbU5EY3dObVlpTENKaGVuQWlPaUpvZEhSd2N6b3ZMM04xYm04dVkyOXRJaXdpWm5aaElqcGJNQ3d0TVYwc0ltbGhkQ0k2TVRjM056YzRORGMzTlN3aWFYTnpJam9pYUhSMGNITTZMeTloZFhSb0xuTjFibTh1WTI5dElpd2lhbWwwSWpvaU5EWTNZemN4WkRNdE9UaG1aaTAwTkdaa0xUazJaR1F0Wm1ZMk5qVTRaVGczWVRZeklpd2ljR3hoYmlJNklqbzZJaXdpYzNWdWJ5OXFiMmx1WldRaU9qRTNOamd3Tnpnd05qa3NJbk4xYm04dVkyOXRMMk5zWVdsdGN5OWxiV0ZwYkNJNkluZGhiR3hoWTJVdVpISmxkMEJuYldGcGJDNWpiMjBpTENKb2RIUndjem92TDNOMWJtOHVZV2t2WTJ4aGFXMXpMMlZ0WVdsc0lqb2lkMkZzYkdGalpTNWtjbVYzUUdkdFlXbHNMbU52YlNJc0luTjFibTh2YUdGdVpHeGxJam9pZDJGc2JHRmpaVjlrY21WM0lpd2ljM1Z1Ynk5MWMyVnlYMmxrSWpvaU1UTXhOelk1TmpZeklpd2ljM1Z1Ynk5MWMyVnlibUZ0WlNJNkluZGhiR3hoWTJVdVpISmxkMEJuYldGcGJDNWpiMjBpZlEuc0ktc3h4OVp3MWE0UFp3dFZzZ3J1bFY5VWJFeXdMZF9ib2hxczl6TmVWTmFkSk1DbXdPZFk2dmtBY0RRVzJsaVpyZmVZWWVCV1haQnpXN3Jjb1lnbTFJVDBmVFNzY1QzUjlDYTl6VXp6Y2ZSdE5CSWw3U05xSWc3eVI2bVV3RjFISTc2YnJXTEl3VmdpZjFuVWRIVVM2TmxuWE9xYU55Q2lUVlEwMmZVTTQ1bnBUTnh1aGc3RTRHTXRpRVUtOHBJTF9EVGgzeUZma3FVTndNRGtJRm9CaVl4c0RUMWxNaklqZDc2ZGxoekhsVXhPLWFHRUE2VXhfVkt4b0tQZW1lNk9vOVNid3NhenBXZ2RvQmptRHloWXg5STlrYkxyZzU5ZHZNMHFQcC1FYkRBWk9wUDhBNVBZVVNhcUJyX2dlMmdtNHVtWGR2bU5ycjZOYURCcHIyV0ZBOyBEb21haW49c3Vuby5jb207IGV4cGlyZXM9U3VuLCAwMyBNYXkgMjAyNiAwNjowNjoxNSBHTVQ7IFNhbWVTaXRlPUxheDsgU2VjdXJlIiwiX19jbGllbnRfdWF0PTE3Njg4NTEyNzA7IERvbWFpbj1zdW5vLmNvbTsgTWF4LUFnZT0zMTUzNjAwMDsgU2FtZVNpdGU9TGF4OyBTZWN1cmUiLCJfX2NsZXJrX2hhbmRzaGFrZT07IGV4cGlyZXM9VGh1LCAwMSBKYW4gMTk3MCAwMDowMDowMCBHTVQ7IEh0dHBPbmx5OyBNYXgtQWdlPTA7IFNhbWVTaXRlPUxheDsgU2VjdXJlIl19.T6bf3-gNcwqmsWqsiTmNFaXM4kqzkshFZmwwnGsG0xIhqYvA08L-nAANl0p2DGxMdrxtK0oU-yIQ4fLiGow_jEyaONZE01Uge545jStBx6Jhn70vdOgGDTjUFjOgZ3BetPADnRC_GMnk4yAc9AS97VmP_Whua8adx02JjbBtBuPese0U3auPggGrATjG8UpdN5aKz2ivZVYuKy9GQ6Y4OIRKm6TaTHk_0gQ90bY-7VrRcG8HOR_059muIvYWDKowcBVm1-gdLTw32JB0tIrd327myneY6X43rgCE0U-O79KwQYjCunF5Ecd9zfroKw6z2lomLx6DuTGFaGVTpL4gJw
+     12. Udio | AI Music Generator - Official Website
+         https://www.udio.com/create
+     13. Mureka: Best AI Music Generator in 2025 to Create Unique Melodies, Songs, And Lyrics with Artificial Intelligence | Best AI Composers, Music Creation Tools & Platforms
+         https://www.mureka.ai/
+  *  14. Claude
+         https://claude.ai/chat/639dd932-86bd-4126-a8b4-08158b68b713
+
+=== Window 4 (2 tabs) ===
+      1. Investing | Robinhood
+         https://robinhood.com/?classic=1
+  *   2. 050826 Financial and stock analysis consultation - Claude
+         https://claude.ai/chat/122efebb-52f8-4c62-b60b-79afff4388ec
+
+=== Window 5 (4 tabs) ===
+  *   1. Humans and Agents in Software Engineering Loops
+         https://martinfowler.com/articles/exploring-gen-ai/humans-and-agents.html
+      2. Knowledge Priming
+         https://martinfowler.com/articles/reduce-friction-ai/knowledge-priming.html
+      3. Design-First Collaboration
+         https://martinfowler.com/articles/reduce-friction-ai/design-first-collaboration.html
+      4. Why Does Development Slow? - by Kent Beck
+         https://tidyfirst.substack.com/p/why-does-development-slow
+
+=== Window 6 (2 tabs) ===
+  *   1. Jay Electronica's complete discography - Claude
+         https://claude.ai/chat/fe53dedb-091c-4577-9772-99a7540b2751
+      2. Roc Marciano complete discography - Claude
+         https://claude.ai/chat/3295a4f9-ef1c-4f29-a6a4-d35d98655af6
+
+=== Window 7 (2 tabs) ===
+      1. Coherent Campaign — Complete Marketing Funnel in Minutes
+         https://coherentcampaign.com/try-it-out
+  *   2. The coding agent for full-stack web app development - Tidewave
+         https://tidewave.ai/
+
+=== Window 8 (4 tabs) ===
+      1. Claude CLI patterns for quality - Claude
+         https://claude.ai/chat/5b47bdcd-7888-478e-9f69-eb18277d1cca
+      2. Claude CLI patterns for quality - dtk - Claude
+         https://claude.ai/chat/4e97db1b-c950-4a55-bff5-dd8f8e21bcec
+      3. Claude CLI patterns for speed over quality - dtk - Claude
+         https://claude.ai/chat/be7c6daa-6279-487c-8f4d-bd96c173f0dd
+  *   4. a skill for tweets in my persona voices - Claude
+         https://claude.ai/chat/c44bf521-ee12-4931-9a5c-02a7afb027b4
+
+=== Window 9 (8 tabs) ===
+      1. Exiting a cooperative housing agreement - Claude
+         https://claude.ai/chat/152d7d77-f4e8-4f9a-b885-8695e346b4bf
+  *   2. Home - Rochdale Village Social Services
+         http://www.rvsocialservices.org/home.html
+      3. ABOUT – Rochdale Village
+         https://rochdalevillage.com/about/
+      4. SENIOR CENTER – Rochdale Village
+         https://rochdalevillage.com/senior-center/
+      5. SENIOR CENTER – Rochdale Village
+         https://rochdalevillage.com/senior-center/
+      6. CONTACT US – Rochdale Village
+         https://rochdalevillage.com/contact-us/
+      7. N.O.R.C. OFFICE – Rochdale Village
+         https://rochdalevillage.com/n-o-r-c-office/
+      8. SENIOR CENTER – Rochdale Village
+         https://rochdalevillage.com/senior-center/
+
+=== Window 10 (5 tabs) ===
+      1. Attorney-Led Trademark Registration | LegalZoom
+         https://www.legalzoom.com/hft/checkout?packageId=5489&cartId=85049615
+      2. Sign in | LegalZoom
+         https://www.legalzoom.com/my/login?client_id=w5ejGIxu0VPUQrLPDpYWl1cS9MXPNd1o
+      3. Claude
+         https://claude.ai/chat/014e4b9d-9e50-4efb-b1c5-b18529332f20
+      4. E2E Infoproduct Microbusiness Site Architecture - Claude
+         https://claude.ai/chat/b6ccc487-e085-4545-b386-075b450f5d43
+  *   5. Personal AI Partner Ecosystem Design - Claude
+         https://claude.ai/chat/bc2ccc38-9eb9-4ce8-a03f-2665e7e1244a
+
+=== Window 11 (1 tabs) ===
+  *   1. Reverse engineering viral X posts - Claude
+         https://claude.ai/chat/45bc8496-3433-4c83-ab91-8e25ecc2ff1b
+
+=== Window 12 (8 tabs) ===
+      1. About - Rochdale Village Social Services
+         http://www.rvsocialservices.org/about.html
+      2. Medicaid Application for Elderly Parent - Claude
+         https://claude.ai/chat/62f47b33-8c78-4d1a-848e-06b108c76b68
+      3. N.O.R.C. OFFICE – Rochdale Village
+         https://rochdalevillage.com/n-o-r-c-office/
+      4. Senior Housing Options - PWC Gov
+         https://www.pwcva.gov/department/area-agency-aging/senior-housing-options
+      5. Senior Housing Options - PWC Gov
+         https://www.pwcva.gov/department/area-agency-aging/senior-housing-options
+      6. Housing & Community Development - PWC Gov
+         https://www.pwcva.gov/department/housing-community-development
+      7. 2025 Guide to 55+ and Assisted Housing.pdf
+         https://www.pwcva.gov/assets/2025-10/2025%20Guide%20to%2055%2B%20and%20Assisted%20Housing.pdf
+  *   8. Joshua Lee - PWC Gov
+         https://www.pwcva.gov/department/area-agency-aging/joshua-lee
+
+=== Window 13 (1 tabs) ===
+  *   1. Nike Free Metcon 6 Women's Workout Shoes. Nike.com
+         https://www.nike.com/t/free-metcon-6-womens-workout-shoes-yeO7KABq/FJ7126-001
+
+=== Window 14 (1 tabs) ===
+  *   1. refactor fiendery: March 2022
+         https://rasiimshabazz.blogspot.com/2022/03/
+
+=== Window 15 (2 tabs) ===
+  *   1. kinackle - K.I.N.A.C.K.L.E.: Tri-Ego AI architecture - Claude
+         https://claude.ai/chat/f815c107-fe1d-4f7c-b174-39614a04528a
+      2. AXP -Agentic software development's impact on design and delivery - Claude
+         https://claude.ai/chat/df2796cc-2208-4fc0-af88-5e24c7445172
+
+=== Window 16 (2 tabs) ===
+      1. Twenty-year artifact map and thread analysis - Claude
+         https://claude.ai/chat/87b5a8e7-8b8f-406d-91d5-7a208a5ca748
+  *   2. Effective ways to interact with AI - Claude
+         https://claude.ai/chat/d5dbf014-81a3-4203-8358-f5ca94e06b3c
+
+=== Window 17 (1 tabs) ===
+  *   1. AI-Powered Ebook Creation Platforms - Claude
+         https://claude.ai/chat/2ad74511-7bef-4364-bafd-4a4eaabab147
+
+=== Window 18 (2 tabs) ===
+  *   1. Violation by CitNum Display
+         https://www.cite-web.com/PublicINQ/WDCFPVioInfo.asp
+      2. DC Department of Motor Vehicles
+         https://prdwmq.etimspayments.com/pbw/hearingContactPhotoParking.doh?checkbox=check&clientcode=09&requestType=upload
+
+=== Window 19 (1 tabs) ===
+  *   1. Long-term maintenance costs of poor code quality at scale - Claude
+         https://claude.ai/chat/e77abd65-ffdf-4508-b949-12766ebbd6e4
+
+=== Window 20 (5 tabs) ===
+      1. Claude
+         https://claude.ai/new
+      2. Base44, Inc. Billing
+         https://billing.stripe.com/p/session/live_YWNjdF8xUUswNWxENUtnbkxRM0RhLF9UOEp4bmd5ektZUHVHOW5id2VpZ0VQVE5Fc0lqWWZ20100rEYELI10
+      3. Replit Billing
+         https://billing.stripe.com/p/session/live_YWNjdF8xNVlwTnNKQW1uWVZPdmZuLF9VNmZoSkh6dkdITFFkelUzc0tVTVJveVZjQ3A2UWFY0100TJRmTRuO
+      4. App Hub overview  |  Google Cloud Documentation
+         https://docs.cloud.google.com/app-hub/docs/overview
+  *   5. WC REBEL INF - Claude
+         https://claude.ai/chat/931dfb77-b114-49f9-a746-23f7ac2b81f4
+
+=== Window 21 (5 tabs) ===
+      1. Business projection one year ahead - Claude
+         https://claude.ai/chat/8965de6d-7fb4-406e-b9dd-52ba075bb8dc
+      2. WC REBEL INF (cont 1/n) - Claude
+         https://claude.ai/chat/404b4f05-9780-4568-a815-f9ada6de1f6f
+      3. who the open enemies - Claude
+         https://claude.ai/chat/3b08953f-ed8a-4e76-930f-b2d5a4650da9
+      4. Dream 100 influencer marketing strategy - Claude
+         https://claude.ai/chat/f4c5fb38-4f18-4d8d-9bae-d4c3430ef21a
+  *   5. LegalZoom Sign In | Log Into Your Account
+         https://www.legalzoom.com/my/login?client_id=w5ejGIxu0VPUQrLPDpYWl1cS9MXPNd1o
+

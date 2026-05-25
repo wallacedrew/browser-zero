@@ -1,0 +1,24 @@
+# Closed Chrome tabs — round 4
+# Date: 2026-05-10 20:14:15
+# Patterns: health.ny.gov, meta.ai, bodyrecomposition.com, nyc.gov, docs.google.com, replit.com, analytics.google.com
+# Total matches: 18
+# Format: pattern\ttitle\turl
+
+health.ny.gov	Facilitated Enrollers	https://www.health.ny.gov/health_care/medicaid/fe_abd.htm
+health.ny.gov	New York State Medicaid	https://www.health.ny.gov/health_care/medicaid/
+meta.ai	App Title: NIMS Idea Vet App Goal: Create a web application that teaches users the NIMS business model and provides a tool to vet their own digital product ideas. The core of the app is an interactive matrix where users can input, evaluate, and score ... | Meta AI	https://www.meta.ai/prompt/371f35b4-e61c-42da-b0ae-8645283c1ff2
+meta.ai	Meta AI	https://www.meta.ai/
+bodyrecomposition.com	A Look at Some Popular Hypertrophy Programs	https://bodyrecomposition.com/muscle-gain/popular-hypertrophy-programs
+bodyrecomposition.com	Is there a Hypertrophy Zone? -	https://bodyrecomposition.com/training/hypertrophy-zone
+nyc.gov	Medicare - OCHIA	https://www.nyc.gov/site/ochia/coverage-care/medicare.page
+nyc.gov	Medicaid - OCHIA	https://www.nyc.gov/site/ochia/coverage-care/medicaid.page
+nyc.gov	Caregiving - NYC Aging	https://www.nyc.gov/site/dfta/services/caregiving.page
+nyc.gov	Health Insurance: Aged, Blind and Disabled - NYC Health	https://www.nyc.gov/site/doh/health/health-topics/aged-blind-disabled.page
+docs.google.com	rasiim routines, habits, showing up, consistency - Google Sheets	https://docs.google.com/spreadsheets/d/1JIn-OVlwxFmdAEeHKWDxXDU2L-JdhjxSWerOi2k7vJo/edit?pli=1&gid=72064244#gid=72064244
+docs.google.com	refactorings and smells, micro macro - Google Sheets	https://docs.google.com/spreadsheets/d/1OfADMH5adlevd1RJDoqA1GM12rYUHkC6zOUattQm8VM/edit?gid=1875044640#gid=1875044640
+docs.google.com	Calorie Log 2024 - Google Sheets	https://docs.google.com/spreadsheets/d/1Q1JV6JclEstxvfSGk3yNQCOd5mIO-4xosO99wEsF8Qc/edit?gid=1451280550#gid=1451280550
+replit.com	Offline - Replit	https://replit.com/login?goto=%2Flogin%3Fgoto%3D%252F%2540AndrewWallace16%252FProduct-Planner%26error%3Dunauthorized&error=unauthorized
+replit.com	Offline - Replit	https://replit.com/login?goto=%2F~%3Fsettings.tab%3Dbilling%26settings.show%3Dtrue&error=unauthorized
+replit.com	Offline - Replit	https://replit.com/login?goto=%2F~%3Fsettings.show%3Dtrue%26settings.tab%3Dbilling&error=unauthorized
+analytics.google.com	Analytics | Home	https://analytics.google.com/analytics/web/?pli=1&authuser=3#/a137021242p451178621/reports/intelligenthome?params=_u..nav%3Dmaui
+analytics.google.com	Analytics | Home	https://analytics.google.com/analytics/web/#/a364234574p500049173/reports/intelligenthome

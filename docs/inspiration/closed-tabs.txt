@@ -1,0 +1,80 @@
+# Chrome tabs closed by close-by-pattern
+# Date: 2026-05-10 19:08:03
+# Patterns matched (substring):
+#   chatgpt.com           : 42
+#   maps.google.com      : 0
+#   google.com/maps      : 3
+#   workflowy.com        : 2
+#   perplexity.ai        : 10
+#   dmv.dc.gov           : 1
+#   platform.openai.com  : 3
+#   en.wikipedia.org     : 4
+# Total tabs to close: 65 (across 32 windows)
+# Reopen with Cmd-Shift-T or paste these URLs into a new window.
+# Format: [w<window>/t<tab>]<TAB>pattern<TAB>title<TAB>url
+
+[w7/t1]tabchatgpt.comtabCoop housing exit processtabhttps://chatgpt.com/c/68d2014a-7fe0-832c-b353-873177f8d1a3
+[w7/t2]tabperplexity.aitabyoure a coop housing attorney. i want to help my 80yo father exit the...tabhttps://www.perplexity.ai/search/youre-a-coop-housing-attorney-qxzmtnL7S6SI0xZYx0KeKQ
+[w8/t1]tabchatgpt.comtabbusiness cpa tax advisortabhttps://chatgpt.com/c/68d7fd58-59c8-8326-ac1c-64a4d5b26e69
+[w8/t7]tabchatgpt.comtabSuburban high-end products servicestabhttps://chatgpt.com/c/688812c8-7ac0-800b-a8d8-10421a749bbc
+[w8/t12]tabperplexity.aitabPerplexitytabhttps://www.perplexity.ai/search/i-define-a-certain-kind-of-bus-sXaE5JZ1TgCMxWoMjIKCEw
+[w8/t14]tabchatgpt.comtabNIMS and VISH Explainedtabhttps://chatgpt.com/c/688ca072-345c-800b-934d-be8d6b34b0d9
+[w8/t17]tabchatgpt.comtabMarketing strategy namestabhttps://chatgpt.com/c/688d5866-3cc0-8333-a7c7-1f2455a83e3c
+[w8/t20]tabperplexity.aitabPerplexitytabhttps://www.perplexity.ai/search/1-what-are-the-parts-of-a-a-fu-MEKtGFhvQBmmG_jreGHbpg
+[w8/t21]tabchatgpt.comtabE2E infoproduct site componentstabhttps://chatgpt.com/c/688c3c49-cf24-800b-827c-55a5afcf060c
+[w8/t22]tabchatgpt.comtabBest sprinting shoestabhttps://chatgpt.com/c/68a09602-dabc-8322-9e0f-c0b34f2cfcfe
+[w8/t23]tabchatgpt.comtabmy AI Council. YINtabhttps://chatgpt.com/c/68a076e4-d398-8330-8541-4650401f0a49
+[w8/t25]tabchatgpt.comtabDaily AI Check-instabhttps://chatgpt.com/c/68852f34-5ea4-800b-915b-faa5a4e0419c
+[w9/t1]tabchatgpt.comtabViral post analysistabhttps://chatgpt.com/c/6929f058-c91c-8325-bb8b-a1c5df0d8b60
+[w10/t1]taben.wikipedia.orgtabIceberg Slim - Wikipediatabhttps://en.wikipedia.org/wiki/Iceberg_Slim#Bibliography
+[w10/t3]taben.wikipedia.orgtabTransgressive fiction - Wikipediatabhttps://en.wikipedia.org/wiki/Transgressive_fiction
+[w10/t4]taben.wikipedia.orgtabLast Exit to Brooklyn - Wikipediatabhttps://en.wikipedia.org/wiki/Last_Exit_to_Brooklyn
+[w10/t7]taben.wikipedia.orgtabChester Himes - Wikipediatabhttps://en.wikipedia.org/wiki/Chester_Himes
+[w11/t16]tabperplexity.aitabsummarize this into one paragraph - [https://qns.com/2025/09/rochdale-village-re...tabhttps://www.perplexity.ai/search/summarize-this-into-one-paragr-iO2VE4RvRMS2O66QANUZEA
+[w11/t17]tabchatgpt.comtabmoving daddy here. Senior Housing Programs VAtabhttps://chatgpt.com/c/6990e1ee-2b40-8327-a5a7-2e0c78b27974
+[w11/t23]tabgoogle.com/mapstab15941 Donald Curtis Dr #112 - Google Mapstabhttps://www.google.com/maps/place/15941+Donald+Curtis+Dr+%23112,+Woodbridge,+VA+22191/@38.6077525,-77.2927949,16.57z/data=!4m5!3m4!1s0x89b6f8b6c392ecff:0xde8a703f30c9c3e!8m2!3d38.6081286!4d-77.2953813?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D
+[w11/t24]tabgoogle.com/mapstab5 County Complex Ct # 240 - Google Mapstabhttps://www.google.com/maps/place/5+County+Complex+Ct+%23+240,+Woodbridge,+VA+22192/@38.6805883,-77.3517121,19.15z/data=!4m15!1m8!3m7!1s0x89b6570c4609d41b:0xc85f6b188900ce7c!2s5+County+Complex+Ct+%23+240,+Woodbridge,+VA+22192!3b1!8m2!3d38.6806551!4d-77.3514641!16s%2Fg%2F11mbng_cjw!3m5!1s0x89b6570c4609d41b:0xc85f6b188900ce7c!8m2!3d38.6806551!4d-77.3514641!16s%2Fg%2F11mbng_cjw?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D
+[w14/t2]tabchatgpt.comtabkinackle3 Tri-Ego Decision Systemtabhttps://chatgpt.com/c/69c8616a-0f50-832f-9889-ff1d30e98add
+[w14/t4]tabchatgpt.comtabAXP - DORA Agentic Dev Findingstabhttps://chatgpt.com/c/69c9553c-b89c-8330-8d80-ca868eae7c02
+[w14/t8]tabchatgpt.comtabThe Programmer's Brain Outlinetabhttps://chatgpt.com/c/69d283f4-69a0-832f-bab7-cb8127ffe4f1
+[w16/t6]tabperplexity.aitabwhich blog platforms are used most by people who like to track their calories...tabhttps://www.perplexity.ai/search/which-blog-platforms-are-used-bdipgkeVRtOKq52cFq6hig
+[w21/t1]tabchatgpt.comtabeBook demand overviewtabhttps://chatgpt.com/c/68898807-51e8-800b-bd68-7a7342bfaa45
+[w21/t2]tabworkflowy.comtabWorkFlowy - Organize your brain.tabhttps://workflowy.com/
+[w21/t3]tabperplexity.aitabi know theyre good for building end to end software applications...tabhttps://www.perplexity.ai/search/i-know-theyre-good-for-softwar-OiflsTD5TTaBkX3n297SHA
+[w21/t5]tabchatgpt.comtabAI ebook creation toolstabhttps://chatgpt.com/c/688999b3-2e78-800b-9c18-4de4e50bdcdf
+[w21/t8]tabchatgpt.comtabEmail newsletters effectivenesstabhttps://chatgpt.com/c/688a6fb8-847c-800b-8107-c1bebb84e1ea
+[w22/t2]tabdmv.dc.govtabVirtual Hearings | dmvtabhttps://dmv.dc.gov/node/1489821#schedulehearing
+[w24/t2]tabperplexity.aitabwhat are the top 3 consumer apps for fitness, nutrition, mental health,...tabhttps://www.perplexity.ai/search/what-are-the-top-3-consumer-ap-td5.xZZuQDSv815_8IFY7g
+[w25/t1]tabgoogle.com/mapstabGoogle Mapstabhttps://www.google.com/maps/search/martial+arts+near+22191/@38.6747144,-77.335114,19z?entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D
+[w29/t1]tabchatgpt.comtabStaff Eng Ikigai Matrixtabhttps://chatgpt.com/c/689f5297-7884-8328-9b87-0166bbfa03c5
+[w29/t2]tabchatgpt.comtabSeasonal Jobs Listtabhttps://chatgpt.com/c/6988fea7-fb64-8329-8dfa-0f5f71239128
+[w29/t3]tabchatgpt.comtabMartial arts basics guidetabhttps://chatgpt.com/c/68d96d7c-dd0c-8324-84c0-60c3463ee750
+[w29/t4]tabchatgpt.comtabCheck fuelition.com sitetabhttps://chatgpt.com/c/68a9e50d-b4c4-832c-8517-a5bf964f6c06
+[w30/t1]tabchatgpt.comtabSoftware Development Best Practicestabhttps://chatgpt.com/c/699f601b-57fc-832b-b599-2146d70dca92
+[w31/t12]tabplatform.openai.comtabAPI keys - OpenAI APItabhttps://platform.openai.com/settings/organization/api-keys
+[w31/t13]tabplatform.openai.comtabUsage - OpenAI APItabhttps://platform.openai.com/settings/organization/usage
+[w31/t14]tabplatform.openai.comtabPayment methods - OpenAI APItabhttps://platform.openai.com/settings/organization/billing/payment-methods
+[w31/t21]tabworkflowy.comtabWorkFlowy - Organize your brain.tabhttps://workflowy.com/
+[w31/t28]tabchatgpt.comtabBest AI tools for writingtabhttps://chatgpt.com/c/694452ee-5c80-8325-9a9e-98804d4b1072
+[w31/t29]tabchatgpt.comtabChatGPT - Writingtabhttps://chatgpt.com/g/g-p-69447cece288819198c3ccff6f27fd4b/project
+[w31/t31]tabchatgpt.comtabCommon questions on heart diseasetabhttps://chatgpt.com/c/694486e7-fc80-832f-8752-dbeab764b857
+[w31/t32]tabperplexity.aitabwhat are the most 3 commonly asked questions that black men ask in terms of...tabhttps://www.perplexity.ai/search/what-are-the-most-3-commonly-a-GzL.SGkzSbupsYxG1GQqQQ
+[w31/t43]tabchatgpt.comtabFinancial Security in 60stabhttps://chatgpt.com/c/69ada1b0-d4c4-832d-9de6-d10e1210a1bd
+[w31/t47]tabchatgpt.comtabDividend Strategy at 50tabhttps://chatgpt.com/c/69ada191-9238-8330-9d9a-f3623e4663b5
+[w32/t1]tabchatgpt.comtabBusiness Projection Snapshottabhttps://chatgpt.com/c/6958275e-86c8-8328-960a-3b09555f6945
+[w32/t4]tabchatgpt.comtabWC REBELINFtabhttps://chatgpt.com/c/6900342f-9b08-832c-be38-983dde62b12f
+[w32/t7]tabchatgpt.comtabWC STRENGTHINTENTtabhttps://chatgpt.com/c/69039504-0934-8329-9735-74c15271e938
+[w32/t8]tabchatgpt.comtabWC REFACTORFIENDtabhttps://chatgpt.com/c/6904cbc3-6644-8329-ae65-4de38e26b24a
+[w32/t9]tabchatgpt.comtabwho the open enemiestabhttps://chatgpt.com/c/692dfd9f-73d0-832b-870a-15024770710f
+[w32/t12]tabchatgpt.comtabbefore-after-content-creationtabhttps://chatgpt.com/c/692b4892-b350-832e-946b-7261203cb5fc
+[w32/t15]tabchatgpt.comtabBooks comparison profit first built to selltabhttps://chatgpt.com/c/692b1e96-53cc-832a-bfaf-b401781d3253
+[w32/t18]tabperplexity.aitabrespond to the following, concisely and directly, and in the voice combining...tabhttps://www.perplexity.ai/search/respond-to-the-following-conci-YXneJnTOSauIMiGDHPI42g
+[w32/t19]tabchatgpt.comtablo effort hi value brandingtabhttps://chatgpt.com/c/691254ca-fb68-832e-9014-47f2e03379d6
+[w32/t25]tabchatgpt.comtabBusiness success routinestabhttps://chatgpt.com/c/692efcc6-f960-832e-b4ba-f994947b57cb
+[w32/t27]tabperplexity.aitabwhat are some good examples of gaining business success by selling daily...tabhttps://www.perplexity.ai/search/what-are-some-good-examples-of-_Ja4aDr0R6mOl9_8wg5c5Q
+[w32/t28]tabchatgpt.comtabno certifications neededtabhttps://chatgpt.com/c/66ddfd83-8738-800b-9871-77bc41ad1569
+[w32/t31]tabchatgpt.comtabbusiness cpa tax advisortabhttps://chatgpt.com/c/68d7fd58-59c8-8326-ac1c-64a4d5b26e69
+[w32/t41]tabchatgpt.comtabFinding Black accountantstabhttps://chatgpt.com/c/6937998c-40cc-832f-a028-3ae93e299188
+[w32/t52]tabchatgpt.comtabLinkedIn content strategytabhttps://chatgpt.com/c/69155b95-b320-8329-ab43-48b2a98d93ba
+[w32/t54]tabchatgpt.comtabSystem Design Katatabhttps://chatgpt.com/c/69378ae6-b1e8-8327-8eb7-1836bd168572
+[w32/t59]tabchatgpt.comtab5/3/1 web app updatetabhttps://chatgpt.com/c/692b6683-e130-832f-9cc6-859819f7a53d

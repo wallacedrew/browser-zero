@@ -1,0 +1,71 @@
+# Closed Chrome tabs — round 2
+# Date: 2026-05-10 19:31:14
+# Patterns (substring match):
+#   console.cloud.google.com : 7
+#   maps.google.com          : 0
+#   copilot.microsoft.com    : 2
+#   grok.com                 : 7
+#   gemini.google.com        : 28
+#   registry.npmjs.org       : 0
+#   accounts.google.com      : 0
+#   /search?q=               : 12
+# Total matches: 56
+# Format: pattern\ttitle\turl
+# Reopen with Cmd-Shift-T, or paste URLs into a new window.
+
+console.cloud.google.com	instance-1 – Compute Engine – today's mathematics – Google Cloud console	https://console.cloud.google.com/compute/instancesDetail/zones/us-central1-a/instances/instance-1?authuser=0&project=todays-mathematics&supportedpurview=project
+console.cloud.google.com	Client ID for Web application – Google Auth Platform – proximus – Google Cloud console	https://console.cloud.google.com/auth/clients/29447014565-8d19p4ueuge7qpk378o3qo915i5417cb.apps.googleusercontent.com?inv=1&invt=Ab5aWQ&project=test-8ad19
+console.cloud.google.com	Client ID for Web application – Google Auth Platform – replit apps – Google Cloud console	https://console.cloud.google.com/auth/clients/116473362620-qrft6fq6n3rnhi7n1b3uhus4352e6opg.apps.googleusercontent.com?inv=1&invt=Ab5aVw&project=memo-time-467401
+console.cloud.google.com	Google Cloud console	https://console.cloud.google.com/cloud-resource-manager?pendingDeletion=true&inv=1&invt=Ab5aVw
+console.cloud.google.com	VM instances – Compute Engine – today's mathematics – Google Cloud console	https://console.cloud.google.com/compute/instances?hl=en&inv=1&invt=Ab5aVw&project=todays-mathematics
+console.cloud.google.com	instance-1 – Compute Engine – today's mathematics – Google Cloud console	https://console.cloud.google.com/compute/instancesDetail/zones/us-central1-a/instances/instance-1?project=todays-mathematics&inv=1&invt=Ab5aWQ
+console.cloud.google.com	Credentials – APIs & Services – replit apps – Google Cloud console	https://console.cloud.google.com/apis/credentials?inv=1&invt=Ab5aVg&project=memo-time-467401
+copilot.microsoft.com	Microsoft Copilot: Your AI companion	https://copilot.microsoft.com/
+copilot.microsoft.com	Microsoft Copilot: Your AI companion	https://copilot.microsoft.com/chats/pTXH9hsLCVhRF2cQnpwVh
+grok.com	Quick Rasiim tweet idea - Grok	https://grok.com/c/a374bed4-5581-4a33-8550-01b1fd08b760?rid=ac31700d-68dd-4d24-9116-ff66a91fd64d
+grok.com	Viral Post: Timing, Relatability, Humor - Grok	https://grok.com/c/b0cf57cc-1f72-49a7-8f40-b5651d672165
+grok.com	Top Apps in Philosophy, Relationships, Fitness - Grok	https://grok.com/chat/bf814b2d-f47b-4224-97d6-6a02a2525d8a
+grok.com	Achieving VIP Status Through Relationships - Grok	https://grok.com/chat/2da7c277-87de-454c-bd64-5e91c86abba2
+grok.com	Best Way to Use Agentic AI for Secure, Long-Lasting Code - Grok	https://grok.com/c/06f8396a-b3b5-44db-8c0c-05e73227ca32?rid=ac585a2a-a6d7-45fa-beac-3a52ea92b089
+grok.com	Best AI Tools for Non-Fiction Writing - Grok	https://grok.com/c/15a6966f-045a-46ab-899a-9176b156566c?rid=e45d06b1-0ff2-4d72-85f4-8164dc09fc1e
+grok.com	Confident Retirement Security Estimation | Shared Grok Conversation	https://grok.com/share/c2hhcmQtMw_9c135e49-1841-472b-8915-ffb91f5cfe6d?rid=9d8029f7-36f0-4cb5-a098-4742c048e8d4
+gemini.google.com	Google Gemini	https://gemini.google.com/app/1d74af504749a62b?pli=1
+gemini.google.com	Google Gemini	https://gemini.google.com/app/e08a7c8ce9b58b90?pli=1
+gemini.google.com	Google Gemini	https://gemini.google.com/app/a188968aaab27aa1
+gemini.google.com	Google Gemini	https://gemini.google.com/app/3a06b3f4650381b1?pli=1
+gemini.google.com	Google Gemini	https://gemini.google.com/app/c841d5e950b7a53a
+gemini.google.com	Google Gemini	https://gemini.google.com/app/a405a4561dc40ad3
+gemini.google.com	Google Gemini	https://gemini.google.com/app/f285f86daf8eefbe
+gemini.google.com	Nike Wide Toe Box Running Shoes - Google Gemini	https://gemini.google.com/app/0e7931eabc7e245e
+gemini.google.com	Wide Toe Box Zero Drop Running Shoes - Google Gemini	https://gemini.google.com/app/674f5861bb20fa74
+gemini.google.com	Google Gemini	https://gemini.google.com/app/1ac5fdcb9e428f32
+gemini.google.com	Google Gemini	https://gemini.google.com/app/74e91689a6ee06e3?pli=1
+gemini.google.com	Google Gemini	https://gemini.google.com/app/713562f2004d0420?pli=1
+gemini.google.com	Google Gemini	https://gemini.google.com/app/38d5ba9efd011194
+gemini.google.com	Google Gemini	https://gemini.google.com/app/712bfa994ea66181
+gemini.google.com	Gemini	https://gemini.google.com/gem/ae27ff301ae0/bfaa0d86ebfcc3b6
+gemini.google.com	Google Gemini	https://gemini.google.com/app/99e845d028898ce0
+gemini.google.com	Google Gemini	https://gemini.google.com/app/aae49301f093b02e?pli=1
+gemini.google.com	Google Gemini	https://gemini.google.com/app/56348bff0d274883
+gemini.google.com	Google Gemini	https://gemini.google.com/app/5b84926d8fc19701
+gemini.google.com	Google Gemini	https://gemini.google.com/app/80994929a995afc6
+gemini.google.com	Google Gemini	https://gemini.google.com/app/d308e63970f72e74
+gemini.google.com	Gemini	https://gemini.google.com/app/edd618f4fb491366?pli=1
+gemini.google.com	Google Gemini	https://gemini.google.com/app/599029bd5d8ca00a
+gemini.google.com	Google Gemini	https://gemini.google.com/app/9456b451283ec206
+gemini.google.com	Google Gemini	https://gemini.google.com/app/1cab0b0300eefa6c
+gemini.google.com	Google Gemini	https://gemini.google.com/app/c9ae07ecd332ff04
+gemini.google.com	Google Gemini	https://gemini.google.com/app/d6561b419d4c8567
+gemini.google.com	Google Gemini	https://gemini.google.com/app/477c125a73d90557
+/search?q=	Rochdale Village Bulleti - Google Search	https://www.google.com/search?q=Rochdale+Village+Bulleti&sourceid=chrome&ie=UTF-8
+/search?q=	(800) 541-2831 - Google Search	https://www.google.com/search?q=(800)+541-2831&oq=(800)+541-2831&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRiPAtIBBzI4M2owajeoAgiwAgHxBX21-U-aFYiB&sourceid=chrome&ie=UTF-8
+/search?q=	Rochdale Village Social Services, Inc - Google Search	https://www.google.com/search?q=Rochdale+Village+Social+Services%2C+Inc&sourceid=chrome&ie=UTF-8
+/search?q=	22191 to richmond va - Google Search	https://www.google.com/search?q=22191+to+richmond+va&oq=22191+to+richmond+va&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORjvBTIICAEQABgWGB4yCAgCEAAYFhgeMggIAxAAGBYYHjIICAQQABgWGB4yBggFEEUYPDIGCAYQRRg8MgYIBxBFGDzSAQgzNzYwajBqN6gCALACAA&sourceid=chrome&ie=UTF-8
+/search?q=	whats a platform where i can send a m4a like youtube but audio - Google Search	https://www.google.com/search?q=whats+a+platform+where+i+can+send+a+m4a+like+youtube+but+audio&sca_esv=27853f971d4a4b2c&sxsrf=AE3TifOFV61mj_tVOtPoWGhTR_FqosuBHw%3A1763947725518&ei=zbQjaY-nH7Xl5NoPma6zsAU&ved=0ahUKEwjPwdOs0YmRAxW1MlkFHRnXDFYQ4dUDCBE&uact=5&oq=whats+a+platform+where+i+can+send+a+m4a+like+youtube+but+audio&gs_lp=Egxnd3Mtd2l6LXNlcnAiPndoYXRzIGEgcGxhdGZvcm0gd2hlcmUgaSBjYW4gc2VuZCBhIG00YSBsaWtlIHlvdXR1YmUgYnV0IGF1ZGlvSIogUOoBWOwdcAF4AZABAZgBkQGgAboOqgEEMjAuM7gBA8gBAPgBAZgCFaAC8QzCAgoQABiwAxjWBBhHwgIHECEYoAEYCsICBRAhGKsCwgIFECEYnwXCAgUQIRigAZgDAOIDBRIBMSBAiAYBkAYIkgcEMTkuMqAH7pABsgcEMTguMrgH7QzCBwYzLjE3LjHIBxw&sclient=gws-wiz-serp
+/search?q=	any way for a man to find out if a he is the father of his child by taking a dna paternity test without letting either the mother or the child know - Google Search	https://www.google.com/search?q=any+way+for+a+man+to+find+out+if+a+he+is+the+father+of+his+child+by+taking+a+dna+paternity+test+without+letting+either+the+mother+or+the+child+know&sca_esv=b10a10713b465260&sxsrf=ANbL-n74CTrpLfflBtUAo-RApTpHizu-nw%3A1768358980716&udm=50&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpFZYo9qIX3pM4_jubAu4b8O2J-l05bwPYHG24xCsQH1zCe4KDu1A-wwyR3gJ4WZSQHPe3DmFiE5RObG_N2XeHKlbe5SQ3sDBVNK1qInm4MaEY8DhyMiV6f8zSsq65Sqt02KICBf4WyoVotq2WuUson_ypickvEmUB_x4m6xcFu1ER4VAz0E4O9NxAHX4LB71yEhz_HQ&aep=1&ntc=1&sa=X&ved=2ahUKEwju4IXHgoqSAxWAD1kFHU2VAfMQ2J8OegQIDxAE&biw=1419&bih=755&dpr=2&aic=0&mstk=AUtExfDlHTSSBwiZ3fD18PGDXcbZBcEJmlHMfPXtHO91lOW9UvkZdYjwjhSD1wNKwjOpRx9E9geteVMDQnoFhW_rOyi5udOD9PrEgXTgx2oqzFsQFEsOKg5oALgsnbdd_HDUEwy2nZryOYoR5gnJtNw7PbrjHB6ckEAs13XNDb5EIxFHz2daXovVGRtQpkugNJ-jBJNxqYHiNEF0NmLKYdXxMW8i91jX2Q0s0e96lQN8UXK0F_ZoklWaCH-03JyW6UFwXjsSMgVHFO78rJqUVZybVeHYZZ16naXv_Tarw3sBRL6zHrGFCqVeHj81h-IH98yBDeP78ycg-vo6vQ&csuir=1&mtid=SgRnaZ7LJvnT5NoPiuOSgAo
+/search?q=	wardley map - Google Search	https://www.google.com/search?q=wardley+map&sca_esv=5734fedee28d1695&udm=7&biw=1512&bih=794&sxsrf=AE3TifObEE4Y3M8cC3WmAPC-fQLdQzNzGA%3A1749936416154&ei=IOlNaP6NCcfn5NoP-tTrwQI&ved=0ahUKEwj-nduT7fGNAxXHM1kFHXrqOigQ4dUDCBA&uact=5&oq=wardley+map&gs_lp=EhZnd3Mtd2l6LW1vZGVsZXNzLXZpZGVvIgt3YXJkbGV5IG1hcDIFEAAYgAQyBRAAGIAEMgsQABiABBiGAxiKBTILEAAYgAQYhgMYigUyCxAAGIAEGIYDGIoFMggQABiABBiiBDIIEAAYgAQYogRItnJQhA9Y03BwA3gAkAEAmAFGoAHJBKoBAjExuAEDyAEA-AEBmAIOoAL4BMICBBAjGCfCAgYQABgHGB7CAgsQABiABBiRAhiKBcICCxAAGIAEGLEDGIMBwgIOEAAYgAQYsQMYgwEYigXCAgoQABiABBhDGIoFwgIIEAAYgAQYsQPCAgcQABiABBgKmAMAiAYBkgcCMTSgB501sgcCMTG4B-4EwgcFMC45LjXIByc&sclient=gws-wiz-modeless-video
+/search?q=	dysentery - Google Search	https://www.google.com/search?q=dysentery&oq=disintetary&gs_lcrp=EgZjaHJvbWUqDAgBEAAYDRixAxiABDIGCAAQRRg5MgwIARAAGA0YsQMYgAQyDAgCEAAYDRixAxiABDIJCAMQABgNGIAEMgwIBBAAGA0YsQMYgAQyCQgFEAAYDRiABDIJCAYQLhgNGIAEMgkIBxAAGA0YgAQyCQgIEAAYDRiABDIJCAkQABgNGIAE0gEINDI4N2owajeoAgCwAgA&sourceid=chrome&ie=UTF-8
+/search?q=	dark laws of seduction book - Google Search	https://www.google.com/search?q=dark+laws+of+seduction+book&oq=dark+laws+of+&gs_lcrp=EgZjaHJvbWUqBwgBEAAYgAQyBwgAEAAYgAQyBwgBEAAYgAQyBggCEEUYOTIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABNIBCTEyMDYxajBqN6gCCLACAfEFFEFmLbtQmHjxBRRBZi27UJh4&sourceid=chrome&ie=UTF-8
+/search?q=	change vscode shortcuts - Google Search	https://www.google.com/search?q=change+vscode+shortcuts&oq=change+vscode+shortcuts&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTINCAEQABiRAhiABBiKBTIICAIQABgWGB4yCAgDEAAYFhgeMggIBBAAGBYYHjIICAUQABgWGB4yCAgGEAAYFhgeMggIBxAAGBYYHjIICAgQABgWGB4yCAgJEAAYFhge0gEINjYyNmowajeoAgCwAgA&sourceid=chrome&ie=UTF-8
+/search?q=	by square mile how many northeast us states would iran cover - Google Search	https://www.google.com/search?q=by+square+mile+how+many+northeast+us+states+would+iran+cover&sca_esv=3a8cb0886472c834&biw=2560&bih=1328&sxsrf=ANbL-n6qaMVfV8ecQBOzS4byImwSle46Og%3A1772985828500&ei=5J2taaqcHojU5NoPzd_TiAY&ved=0ahUKEwiqnv_z1pCTAxUIKlkFHc3vFGEQ4dUDCBM&uact=5&oq=by+square+mile+how+many+northeast+us+states+would+iran+cover&gs_lp=Egxnd3Mtd2l6LXNlcnAiPGJ5IHNxdWFyZSBtaWxlIGhvdyBtYW55IG5vcnRoZWFzdCB1cyBzdGF0ZXMgd291bGQgaXJhbiBjb3ZlcjIFEAAY7wUyCBAAGIAEGKIEMgUQABjvBTIIEAAYgAQYogQyBRAAGO8FSNE_UJEwWMc-cAJ4AZABAJgBxQGgAawHqgEDOS4xuAEDyAEA-AEBmAIKoAKPBsICChAAGLADGNYEGEfCAgcQIxiwAhgnwgIIECEYoAEYwwTCAgoQIRigARjDBBgKmAMAiAYBkAYFkgcFOS4wLjGgB7I6sgcFNy4wLjG4B4oGwgcFMS44LjHIBxGACAA&sclient=gws-wiz-serp
+/search?q=	“Black owned” CPA near me - Google Search	https://www.google.com/search?q=%E2%80%9CBlack+owned%E2%80%9D+CPA+near+me&sourceid=chrome&ie=UTF-8

@@ -1,0 +1,46 @@
+# Chrome tabs closed by close-by-pattern (pass 2)
+# Date: 2026-05-10 19:08:44
+# Patterns matched (substring):
+#   chatgpt.com           : 22
+#   maps.google.com       : 0
+#   google.com/maps       : 1
+#   workflowy.com         : 2
+#   perplexity.ai         : 4
+#   dmv.dc.gov            : 0
+#   platform.openai.com   : 1
+#   en.wikipedia.org      : 2
+# Stragglers found in pass 2: 32 (across 32 windows)
+# Format: [w<window>/t<tab>]	pattern	title	url
+
+[w7/t1]tabperplexity.aitabyoure a coop housing attorney. i want to help my 80yo father exit the...tabhttps://www.perplexity.ai/search/youre-a-coop-housing-attorney-qxzmtnL7S6SI0xZYx0KeKQ
+[w8/t6]tabchatgpt.comtabSuburban high-end products servicestabhttps://chatgpt.com/c/688812c8-7ac0-800b-a8d8-10421a749bbc
+[w8/t10]tabperplexity.aitabPerplexitytabhttps://www.perplexity.ai/search/i-define-a-certain-kind-of-bus-sXaE5JZ1TgCMxWoMjIKCEw
+[w8/t16]tabperplexity.aitabPerplexitytabhttps://www.perplexity.ai/search/1-what-are-the-parts-of-a-a-fu-MEKtGFhvQBmmG_jreGHbpg
+[w8/t17]tabchatgpt.comtabBest sprinting shoestabhttps://chatgpt.com/c/68a09602-dabc-8322-9e0f-c0b34f2cfcfe
+[w8/t18]tabchatgpt.comtabmy AI Council. YINtabhttps://chatgpt.com/c/68a076e4-d398-8330-8541-4650401f0a49
+[w10/t2]taben.wikipedia.orgtabTransgressive fiction - Wikipediatabhttps://en.wikipedia.org/wiki/Transgressive_fiction
+[w10/t4]taben.wikipedia.orgtabChester Himes - Wikipediatabhttps://en.wikipedia.org/wiki/Chester_Himes
+[w11/t16]tabchatgpt.comtabmoving daddy here. Senior Housing Programs VAtabhttps://chatgpt.com/c/6990e1ee-2b40-8327-a5a7-2e0c78b27974
+[w11/t21]tabgoogle.com/mapstab15941 Donald Curtis Dr #112 - Google Mapstabhttps://www.google.com/maps/place/15941+Donald+Curtis+Dr+%23112,+Woodbridge,+VA+22191/@38.6077525,-77.2927949,16.57z/data=!4m5!3m4!1s0x89b6f8b6c392ecff:0xde8a703f30c9c3e!8m2!3d38.6081286!4d-77.2953813?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D
+[w21/t1]tabworkflowy.comtabWorkFlowy - Organize your brain.tabhttps://workflowy.com/
+[w29/t1]tabchatgpt.comtabSeasonal Jobs Listtabhttps://chatgpt.com/c/6988fea7-fb64-8329-8dfa-0f5f71239128
+[w29/t2]tabchatgpt.comtabCheck fuelition.com sitetabhttps://chatgpt.com/c/68a9e50d-b4c4-832c-8517-a5bf964f6c06
+[w31/t12]tabplatform.openai.comtabUsage - OpenAI APItabhttps://platform.openai.com/settings/organization/usage
+[w31/t18]tabworkflowy.comtabWorkFlowy - Organize your brain.tabhttps://workflowy.com/
+[w31/t24]tabchatgpt.comtabBest AI tools for writingtabhttps://chatgpt.com/c/694452ee-5c80-8325-9a9e-98804d4b1072
+[w31/t25]tabchatgpt.comtabChatGPT - Writingtabhttps://chatgpt.com/g/g-p-69447cece288819198c3ccff6f27fd4b/project
+[w31/t27]tabchatgpt.comtabCommon questions on heart diseasetabhttps://chatgpt.com/c/694486e7-fc80-832f-8752-dbeab764b857
+[w31/t35]tabchatgpt.comtabFinancial Security in 60stabhttps://chatgpt.com/c/69ada1b0-d4c4-832d-9de6-d10e1210a1bd
+[w31/t39]tabchatgpt.comtabDividend Strategy at 50tabhttps://chatgpt.com/c/69ada191-9238-8330-9d9a-f3623e4663b5
+[w32/t3]tabchatgpt.comtabWC REBELINFtabhttps://chatgpt.com/c/6900342f-9b08-832c-be38-983dde62b12f
+[w32/t5]tabchatgpt.comtabWC STRENGTHINTENTtabhttps://chatgpt.com/c/69039504-0934-8329-9735-74c15271e938
+[w32/t6]tabchatgpt.comtabWC REFACTORFIENDtabhttps://chatgpt.com/c/6904cbc3-6644-8329-ae65-4de38e26b24a
+[w32/t8]tabchatgpt.comtabbefore-after-content-creationtabhttps://chatgpt.com/c/692b4892-b350-832e-946b-7261203cb5fc
+[w32/t10]tabchatgpt.comtabBooks comparison profit first built to selltabhttps://chatgpt.com/c/692b1e96-53cc-832a-bfaf-b401781d3253
+[w32/t12]tabperplexity.aitabrespond to the following, concisely and directly, and in the voice combining...tabhttps://www.perplexity.ai/search/respond-to-the-following-conci-YXneJnTOSauIMiGDHPI42g
+[w32/t13]tabchatgpt.comtablo effort hi value brandingtabhttps://chatgpt.com/c/691254ca-fb68-832e-9014-47f2e03379d6
+[w32/t19]tabchatgpt.comtabno certifications neededtabhttps://chatgpt.com/c/66ddfd83-8738-800b-9871-77bc41ad1569
+[w32/t22]tabchatgpt.comtabbusiness cpa tax advisortabhttps://chatgpt.com/c/68d7fd58-59c8-8326-ac1c-64a4d5b26e69
+[w32/t29]tabchatgpt.comtabFinding Black accountantstabhttps://chatgpt.com/c/6937998c-40cc-832f-a028-3ae93e299188
+[w32/t39]tabchatgpt.comtabLinkedIn content strategytabhttps://chatgpt.com/c/69155b95-b320-8329-ab43-48b2a98d93ba
+[w32/t45]tabchatgpt.comtab5/3/1 web app updatetabhttps://chatgpt.com/c/692b6683-e130-832f-9cc6-859819f7a53d

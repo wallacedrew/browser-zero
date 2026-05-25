@@ -1,0 +1,14 @@
+# Closed Chrome tabs — round 6
+# Date: 2026-05-10 20:31:38
+# Patterns: chrome://newtab
+# Total matches: 9
+
+chrome://newtab	New Tab	chrome://newtab/
+chrome://newtab	New Tab	chrome://newtab/
+chrome://newtab	New Tab	chrome://newtab/
+chrome://newtab	New Tab	chrome://newtab/
+chrome://newtab	New Tab	chrome://newtab/
+chrome://newtab	New Tab	chrome://newtab/
+chrome://newtab	New Tab	chrome://newtab/
+chrome://newtab	New Tab	chrome://newtab/
+chrome://newtab	New Tab	chrome://newtab/

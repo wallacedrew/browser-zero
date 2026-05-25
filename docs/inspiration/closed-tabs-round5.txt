@@ -1,0 +1,31 @@
+# Closed Chrome tabs — round 5
+# Date: 2026-05-10 20:22:21
+# Patterns: amazon.com, youtube.com
+# Total matches: 25
+# Format: pattern\ttitle\turl
+
+amazon.com	Amazon.com: Last Exit to Brooklyn (Evergreen Book): 9780802131379: Selby Jr., Hubert: Books	https://www.amazon.com/Last-Exit-Brooklyn-Evergreen-Book/dp/0802131379
+amazon.com	Amazon.com: Trick Baby: The Story of a White Negro (Audible Audio Edition): Cary Hite, Iceberg Slim, Urban Audiobooks: Books	https://www.amazon.com/Trick-Baby-Iceberg-Slim-audiobook/dp/B00MOTDNI6/ref=sr_1_1?crid=3P4ZOXLLWJTG0&dib=eyJ2IjoiMSJ9.oPAlWoIOiXuPmerWy8xMJoCEY5jVZVYbxaf9xEw99RH0fWAegATm0nPi0gSvXODtQYTk8njT6DvqHuzcbDdOvuxEFPxzleBJKXfiWFDfFz83ZKKHz_zwuKZ3rcQJPEdm3nkGpR5LdwCUDkW5b-JL6kSCrAZoRRiig7PPAaBo4xOjSrf5PwSMK6om0ikMi3kC6abmE2TpUphURb98r_FI59fhEqDUov81ehv3pi9Fpwo.vAUqfufsF_F8x9LvYOddsebKwZH_UjRgm35IIUidzN4&dib_tag=se&keywords=iceberg+slim+trick+baby&qid=1758337876&sprefix=Iceberg+Slim+trick+%2Caps%2C72&sr=8-1
+amazon.com	Amazon.com: The Naked Soul of Iceberg Slim (Audible Audio Edition): Bobby Spears, Iceberg Slim, Urban Audiobooks: Books	https://www.amazon.com/dp/B00O9GKKX8?plink=XwdUl7nJMeV423O0&pf_rd_r=6PXVFKBDMBWS3TAQZ239&pf_rd_p=13c2504f-673f-4fd5-85c2-706d47884b2e&ref_=adblp13nvvxx_0_4_im
+amazon.com	Amazon.com : Chester Himes	https://www.amazon.com/s?k=Chester+Himes&i=audible&ref=dp_byline_sr_audible_1
+amazon.com	Amazon.com: Black Girl Lost (Audible Audio Edition): Donald Goines, Bahni Turpin, Blackstone Audio, Inc.: Books	https://www.amazon.com/Black-Girl-Lost-Donald-Goines-audiobook/dp/B00JWXD7Z6/ref=sr_1_3?crid=9F8T6H5MXCF1&dib=eyJ2IjoiMSJ9.f3DW_J4stckkRFZ43P_rpHdnkMwHjywU3ZX4Ez7taQOgGDj2gSzvgAILrbZlyyhUO9wiJOZDkr4PAn3B1yD1K1WlVD53EDepLA6nGamu2vg2jBtM9r4EzfFOb322BA4w38_jRTaUqtKrFD5pr5NGaDtbeCHA9tfIiYgbxsSpzHoqzjyvVJwbRifPY86HN5tiCSs3xBnieTfdt85iWoSKsG4h5IrZcfdT6aUmCgbYHW_Qm274Qwfby9ps4PZZYl8geJ7Y5GUTAZQSfy2ksCqG0Zz16F9CjukKcF6an0SFJT8.lSlTsf5i-BhIY69wKPwOYxT-IvaHMjSD3Fwbu0j0kT0&dib_tag=se&keywords=Donald+Goines&qid=1758375759&sprefix=donald+goines%2Caps%2C87&sr=8-3
+amazon.com	Amazon.com: My Forever DNA® Home Paternity Test Kit | 24 Genetic DNA Markers Tested | Accurate, Private Results from Certified U.S. Laboratory | All Lab Fees & Return Shipping Included : Health & Household	https://www.amazon.com/My-Forever-DNA-Paternity-Guaranteed/dp/B01FSUSIKA/ref=sr_1_1?crid=3AECMIRUB9P4H&dib=eyJ2IjoiMSJ9.HxQm-ArFLKsDC1fMfMMTQ66avW2pCqQXD8RUMONUBahc6tw8oIlAnfiCeq5u-N6EDEeGK8RveWrFu7VafQAennWy0-6FpuHWipeC_kO_hrZ_nEWE2d-6seVHdow6oxty4nJze5Kqjx74_Kvr0NMjOpvY-RNqwq0Rkqki09gbX1LHoxGHIMtQNpqi1gm8A33xOrjDR3R7m6cJsAMPT-AzT6UWzIMEm4AI9sNa2wM-iksOA1fHodZJJ2Xf5Tzc4sPc3nkBAqd1-bLzBfX6nfDEjpAv4F_PvN17Av24SUsfveE.qkVc0dfQgvkD9JBJIFxN3VJ2Tw5cnScRMhyHYZhPs2k&dib_tag=se&keywords=my%2Bforever%2Bdna&qid=1766863975&sprefix=myforeverdna%2Caps%2C215&sr=8-1&th=1
+youtube.com	(64) Why Separate Databases? Explaining Like You're Five - YouTube	https://www.youtube.com/watch?v=F2wea-D86xM
+youtube.com	(2) Domain Driven Design Review | System Design Essentials - YouTube	https://www.youtube.com/watch?v=ZUGh1OVX14Y
+youtube.com	Visualising software architecture with the C4 model - Simon Brown, Agile on the Beach 2019 - YouTube	https://www.youtube.com/watch?v=x2-rSnhpw0g
+youtube.com	The Easiest Way to Do Wardley Mapping (A Tutorial) - YouTube	https://www.youtube.com/watch?v=IJcLmoKR6v8&t=84s
+youtube.com	roadmap to dodd 8140 03m compliance a step by step guide for agencies and contractors 720p - YouTube	https://www.youtube.com/watch?v=kp39x_goDek&t=1209s
+youtube.com	Demystifying The 8140.03 Essential Insights for Individuals, Agencies, and Contractors - YouTube	https://www.youtube.com/watch?v=E9ZJfO2i57I&t=277s
+youtube.com	WillCo Tech - YouTube	https://www.youtube.com/@willcotechinc
+youtube.com	CyberSTAR Talent Management Quick Overview - YouTube	https://www.youtube.com/watch?v=td1KKxanvTc
+youtube.com	(96) Learning over Content Consuming | Studying like a PhD - YouTube	https://www.youtube.com/watch?app=desktop&v=-IzWIf4dAjg&t=454s&sttick=0
+youtube.com	You're not stupid: A Science based System to Learn ANYTHING quickly - YouTube	https://www.youtube.com/watch?v=TDYa2pPMx0k
+youtube.com	Active Learning Strategies - YouTube	https://www.youtube.com/watch?app=desktop&v=Sz7c2i-9Xm4
+youtube.com	(1) You're 18 Minutes Away From Replacing Your 9-5 (For Good) - YouTube	https://www.youtube.com/watch?v=dLOWcxBQyX8
+youtube.com	(100) Iceberg Slim: Portrait of a Pimp - YouTube	https://www.youtube.com/watch?v=GpVBx9b0KmA
+youtube.com	(59) What's the Difference Between Medicare and Medicaid? - YouTube	https://www.youtube.com/watch?v=IUwzJanDKfQ
+youtube.com	Miriam Makeba - A Luta Continua (In Concert, 1980) - YouTube	https://www.youtube.com/watch?v=Mtl62-6pY_I
+youtube.com	(21) 6-Year-Old Louisiana Boy Checks White Male KAREN, Goes Viral - YouTube	https://www.youtube.com/watch?v=C_KOg5NEnFs
+youtube.com	(1) Learn the perfect way to act representing song title like WORKOUT by J Cole! edm SBI TECHN - YouTube	https://www.youtube.com/shorts/p8w_pfflJAQ
+youtube.com	(167) Mark Deluca and Ron king lll prepare to make history - YouTube	https://www.youtube.com/watch?v=mrl7krayknA
+youtube.com	(9) Trident MMA Productions - YouTube	https://www.youtube.com/channel/UCclIthdue6djStuUP8Z4RTw

@@ -1,0 +1,46 @@
+# Closed Chrome tabs — round 3
+# Date: 2026-05-10 20:03:57
+# Patterns: 36 substrings (see body for which hit which URL)
+# Total matches: 39
+# Format: pattern\ttitle\turl  (tab character)
+# Recover via Cmd-Shift-T or paste URLs into a new window.
+
+dmv.virginia.gov	Search | Virginia Department of Motor Vehicles	https://www.dmv.virginia.gov/search?keyword=registration
+dmv.virginia.gov	Virginia Department of Motor Vehicles | dmvNOW	https://transactions.dmv.virginia.gov/apps/webtrans/vehicle_registration/intro.aspx
+dmv.virginia.gov	Registration Step 1	https://transactions.dmv.virginia.gov/apps/webtrans/vehicle_registration/regist_entry.aspx
+dmv.virginia.gov	Registration Step 1	https://transactions.dmv.virginia.gov/apps/webtrans/vehicle_registration/regist_entry.aspx
+yamasakiwoodbridge.com	About Us - Yamasaki Academy Woodbridge	https://yamasakiwoodbridge.com/about-us/
+tridentmartialarts.com	Muay Thai Woodbridge VA | Thai Kickboxing Classes Northern VA	http://www.tridentmartialarts.com/martial-arts/muay-thai-php/
+todaysmathematics.com	Today's Mathematics	https://todaysmathematics.com/
+npmjs.com	noget - npm	https://www.npmjs.com/package/noget
+backtontr13.wordpress.com	120s-noble-drew-ali.pdf	https://backtontr13.wordpress.com/wp-content/uploads/2014/09/120s-noble-drew-ali.pdf
+genius.com	Nation of Gods and Earths – Supreme Alphabet | Genius	https://genius.com/Nation-of-gods-and-earths-supreme-alphabet-annotated
+dora.dev	DORA | Balancing AI tensions: Moving from AI adoption to effective SDLC use	https://dora.dev/insights/balancing-ai-tensions/
+thoughtworks.wistia.com	Conversation about Hexagonal Rails Part 1	https://thoughtworks.wistia.com/medias/uxjb0lwrcz
+carlhendrick.substack.com	Why Does Thinking Feel So Hard? - by Carl Hendrick	https://carlhendrick.substack.com/p/why-does-thinking-feel-so-hard
+cdn.shopify.com	Acceptable_Discreet_Alternative_DNA_Samples.png (786×1024)	https://cdn.shopify.com/s/files/1/0615/4030/2896/files/Acceptable_Discreet_Alternative_DNA_Samples.png?v=1744817964
+health-street.net	Home Paternity Test | Health Street	https://www.health-street.net/product/paternity-home/
+validitygenetics.com	Home Paternity DNA Test Kit | Validity Genetics - DNA and Paternity Testing Services	https://validitygenetics.com/dna-testing-kits/home-paternity-dna-test
+reddit.com	I paternity tested my son without the mother's knowledge and he's not mine, how does this play out? : r/Advice	https://www.reddit.com/r/Advice/comments/17645o6/i_paternity_tested_my_son_without_the_mothers/
+wealthteainc.com	WELCOME	https://wealthteainc.com/
+financiallytone.com	Services — Bookkeeping For Nonprofit Organizations	https://financiallytone.com/services
+crossaccountingsolutions.com	Expert Accounting Services | Cross Accounting Solutions	https://crossaccountingsolutions.com/
+pakaccountingusa.com	Accounting | Pak Accounting | Garner	https://www.pakaccountingusa.com/
+one.google.com	Google One Plans	https://one.google.com/ai?g1_last_touchpoint=61&g1_landing_page=75
+app.base44.com	Base44	https://app.base44.com/workspace/687d12b37cc1e325ddd6d29c/settings/plan-billing-manage
+lovable.dev	Workspace Settings | Lovable	https://lovable.dev/settings?tab=billing
+squibler.io	Squibler	https://www.squibler.io/dashboard/all-your-writing
+essenhealthcare.com	Primary Care Locations | Essen Health Care	https://www.essenhealthcare.com/primaryCare/2
+aistudio.google.com	Google AI Studio	https://aistudio.google.com/apps/temp/1?source=start&showAssistant=true&showPreview=true
+linkedin.com	(54) Activity | Andrew Wallace | LinkedIn	https://www.linkedin.com/in/andrewgwallace/recent-activity/all/
+facebook.com	(20+) Facebook	https://www.facebook.com/RochdaleVillageBulletin/
+ticketmaster.com	Jay Electronica Tickets, 2026 Concert Tour Dates | Ticketmaster	https://www.ticketmaster.com/jay-electronica-tickets/artist/206163
+recorder.google.com	Nov 23 at 5:41 PM - Recorder	https://recorder.google.com/16c20fbd-a652-47ef-8ff3-92040dfe89a7
+studio.youtube.com	Channel content - YouTube Studio	https://studio.youtube.com/channel/UCEcKq4bs9xgaMLiKIBFlXjg/videos/upload?filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D
+helloaudio.fm	Your Private Podcast Platform | Hello Audio - Hello Audio	https://helloaudio.fm/
+capcut.com	success	https://www.capcut.com/lvpc_web/login_status#state=%7B%22client_id%22:%22128657643583-as9ej2egc82vfu0u2efr77nmpahej5h0.apps.googleusercontent.com%22,%22network%22:%22google%22,%22display%22:%22page%22,%22callback%22:%22_hellojs_92xo4sv7%22,%22state%22:%22%7B%5C%22id%5C%22:%5C%22e85b49f8-9268-4f26-90eb-9ecfd09597ec%5C%22,%5C%22device_platform%5C%22:%5C%22mac%5C%22%7D%22,%22redirect_uri%22:%22https://www.capcut.com/lvpc_web/login_status%22,%22scope%22:%22basic,email%22,%22page_uri%22:%22https://www.capcut.com/lvpc_web/login_proxy?platform%3Dgoogle%26lng%3Den%26login_id%3De85b49f8-9268-4f26-90eb-9ecfd09597ec%26is_support_looki%3Dtrue%26device_platform%3Dmac%22%7D&code=4/0Ab32j921Eay79HkS1yODhi7rI0Ge64rBhVO3ielj1x-DNPpEpGiFEfT7jqRr3eGInFa0pw&access_token=ya29.a0ATi6K2sYfjhrSErU6_iCcJLbif6UwIbNJ3P8_UqnA_sXCdy4H3j5vJurpsKH0C_JZesrt8-MBG7wKD5rYOz3r86FDpzfKF7sEYj2BlX-zyU2_U3uhhgd4cFB29RkQ9fYlKOhkQkE1WCEmdo-1gB2n1hoDrrf1MmuYfgvhVwG_UYinP5FKRP64xNgkF4M4yrcAIuPaSIaCgYKAS0SARUSFQHGX2MitsSvfffW_KMm9BHQc6GIxA0206&token_type=Bearer&expires_in=3599&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile%20openid&id_token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjkzYTkzNThjY2Y5OWYxYmIwNDBiYzYyMjFkNTQ5M2UxZmZkOGFkYTEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxMjg2NTc2NDM1ODMtYXM5ZWoyZWdjODJ2ZnUwdTJlZnI3N25tcGFoZWo1aDAuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIxMjg2NTc2NDM1ODMtYXM5ZWoyZWdjODJ2ZnUwdTJlZnI3N25tcGFoZWo1aDAuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDUyNDE5Nzc2MDgyNDQyMDg2MzkiLCJlbWFpbCI6IndhbGxhY2UuZHJld0BnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6ImlkdW85OExDeHNJcXowb0pfc2ViTkEiLCJjX2hhc2giOiJtN2VWMFhiX0lUTnMydUhING1ON2l3Iiwibm9uY2UiOiIzb2JsbWpsYyIsIm5iZiI6MTc2Mzk0NzkzNywibmFtZSI6IkFuZHJldyBXYWxsYWNlIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0tyZy1CY0UxcjA2ZFRXQjhfNVpHcmV4U0hhaHNBS1VxUV81NUM4aTVwaEE1Z0hyYm5vPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IkFuZHJldyIsImZhbWlseV9uYW1lIjoiV2FsbGFjZSIsImlhdCI6MTc2Mzk0ODIzNywiZXhwIjoxNzYzOTUxODM3LCJqdGkiOiJkMTcwMWE2MGE4ODE4MjU1NWE2OGFmZDI1MWMzNjg5OTA5ZWYwNDBmIn0.fsCAkLNWqXRM8IKgX1VXuOQfIrDyveTphz0J2L98zZzgpHkpQjNjve4qfLcsLETfv1Hrkvw8PZ9qTFm7Or5D5OKWi_6lEpxS_JWe598ixtp-YHM0rZXILYH9Vh9VscvnDoBNyrQvhfmEMCPGZGG2ncQR-M2ObzfvNKzkYpGZuIXf97jVvefxn8fLWQRJOkGQ66ZIObsYG3FZoSY-wQOiSyV5WZ-K748tZyX8G0f5zcJ0Hni6ZZwH5d1ZZstsOQrt9-xtodB2krGRZFa2pFf8mL4AmgCNXWcETxrBl2X9haK6YQKulcfqCN0hr9-pgzFSfsg5DfGdqwFr0PI00P5Gdw&authuser=0&prompt=consent&version_info=CmxfU1ZJX0VQdkowYURUaVpFREdBVWlQMDFCUlVSSVpsOXhSR2h1VVZsd1EzcHlhbk13UWpoSFVHUTRhVWRYWDJGVlRXWlZXbWhRZDJGTU1qbHpUR0pUWkRkYU1sRlBVMmt4VVRCWmQxbGhUUV8
+draft.blogger.com	Post: Edit	https://draft.blogger.com/u/4/blog/post/edit/5548821535306686538/5666771413561847093
+x.com		https://x.com/refactorfiend/status/2042353669803278774
+about.me	Werd Ecallaw - Woodbridge, Virginia | about.me	https://about.me/andrew.wallace/edit/details
+aarp.org	Ask AARP	https://www.aarp.org/ask-aarp/
+manus.im	Best 10 Mens Size 12 Wide Toe Box Zero Drop Shoes - Manus	https://manus.im/app/SrUddoPd30bo0KnAI5Xwts
