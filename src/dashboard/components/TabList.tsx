@@ -1,6 +1,11 @@
 import { useEffect, useMemo, useRef, useState, type DragEvent } from 'react';
 import type { Tab, TabGroupInfo } from '../../shared/lib/types';
-import { groupTabs, type GroupBy, type TabGroup } from '../../shared/lib/grouping';
+import {
+  groupTabs,
+  groupingStrategyFor,
+  type GroupBy,
+  type TabGroup,
+} from '../../shared/lib/grouping';
 import type { Timestamp } from '../../shared/lib/Timestamp';
 import { sectionHeaderClassesForGroupColor } from '../lib/groupColors';
 import { GroupNav } from './GroupNav';
@@ -71,8 +76,9 @@ export function TabList({
       })),
     [tabs, now],
   );
+  const strategy = groupingStrategyFor(groupBy);
   const groups = groupTabs(viewModels, groupBy);
-  const dropEnabled = groupBy === 'window' || groupBy === 'tabgroup';
+  const dropEnabled = strategy.dropEnabled;
   const allowGrouping = groupBy !== 'domain';
   const groupKeys = groups.map((group) => group.key).join('|');
 
