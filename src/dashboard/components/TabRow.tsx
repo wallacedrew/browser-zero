@@ -4,6 +4,7 @@ import { Favicon } from './Favicon';
 import { GroupChip } from './GroupChip';
 import { TabCloseAction } from './TabCloseAction';
 import { TabDomain } from './TabDomain';
+import { TabLastAccessedLabel } from './TabLastAccessedLabel';
 import { TabTitleLink } from './TabTitleLink';
 
 export interface ArmedDeleteActions {
@@ -58,7 +59,7 @@ export function TabRow({
       {tab.group && <GroupChip group={tab.group} />}
       <TabTitleLink tab={tab} onClick={handleTitleClick} />
       <TabDomain domain={tab.domain} />
-      <span className="shrink-0 text-sm tabular-nums text-slate-400">{lastAccessedLabel}</span>
+      <TabLastAccessedLabel label={lastAccessedLabel} />
       <input
         type="checkbox"
         aria-label={`Select ${tab.title}`}
