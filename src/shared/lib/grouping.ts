@@ -8,6 +8,11 @@ export interface TabGroup<T extends Tab = Tab> {
   readonly tabs: readonly T[];
 }
 
+export interface DropCallbacks {
+  onDropOnWindow: (tabId: number, targetWindowId: number) => void;
+  onDropOnTabGroup: (tabId: number, targetGroupId: number | null) => void;
+}
+
 export interface GroupingStrategy {
   keyOf(tab: Tab): string;
   compareEntries<T extends Tab>(a: [string, readonly T[]], b: [string, readonly T[]]): number;
@@ -16,6 +21,7 @@ export interface GroupingStrategy {
   readonly dropEnabled: boolean;
   readonly allowGrouping: boolean;
   sectionColorOf(firstTab: Tab | undefined): string | null;
+  dispatchDrop(tabId: number, referenceTab: Tab, callbacks: DropCallbacks): void;
 }
 
 export function groupingStrategyFor(by: GroupBy): GroupingStrategy {
@@ -59,6 +65,9 @@ const WindowGrouping: GroupingStrategy = {
   dropEnabled: true,
   allowGrouping: true,
   sectionColorOf: () => null,
+  dispatchDrop: (tabId, referenceTab, callbacks) => {
+    callbacks.onDropOnWindow(tabId, referenceTab.windowId);
+  },
 };
 
 const DomainGrouping: GroupingStrategy = {
@@ -73,6 +82,9 @@ const DomainGrouping: GroupingStrategy = {
   dropEnabled: false,
   allowGrouping: false,
   sectionColorOf: () => null,
+  dispatchDrop: () => {
+    /* DomainGrouping has dropEnabled: false; this is never invoked. */
+  },
 };
 
 const UNGROUPED_KEY = 'ungrouped';
@@ -98,6 +110,10 @@ const TabGroupGrouping: GroupingStrategy = {
   dropEnabled: true,
   allowGrouping: true,
   sectionColorOf: (firstTab) => firstTab?.group?.color ?? null,
+  dispatchDrop: (tabId, referenceTab, callbacks) => {
+    const targetGroupId = referenceTab.group?.id ?? null;
+    callbacks.onDropOnTabGroup(tabId, targetGroupId);
+  },
 };
 
 const STRATEGIES: Record<GroupBy, GroupingStrategy> = {

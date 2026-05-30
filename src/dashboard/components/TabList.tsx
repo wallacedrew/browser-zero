@@ -172,12 +172,7 @@ export function TabList({
     if (!Number.isFinite(tabId) || tabId <= 0) return;
     const referenceTab = group.tabs[0];
     if (!referenceTab) return;
-    if (groupBy === 'window') {
-      onDropOnWindow(tabId, referenceTab.windowId);
-    } else if (groupBy === 'tabgroup') {
-      const targetGroupId = referenceTab.group?.id ?? null;
-      onDropOnTabGroup(tabId, targetGroupId);
-    }
+    strategy.dispatchDrop(tabId, referenceTab, { onDropOnWindow, onDropOnTabGroup });
   };
 
   return (
