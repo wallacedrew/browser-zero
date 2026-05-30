@@ -1,5 +1,10 @@
 import type { Tab, TabGroupInfo } from '../../shared/lib/types';
-import { groupTabs, groupingStrategyFor, type GroupBy } from '../../shared/lib/grouping';
+import {
+  groupTabs,
+  groupingStrategyFor,
+  type DropCallbacks,
+  type GroupBy,
+} from '../../shared/lib/grouping';
 import type { Timestamp } from '../../shared/lib/Timestamp';
 import { useDragOverGroupKey } from '../hooks/useDragOverGroupKey';
 import { useGroupCollapse } from '../hooks/useGroupCollapse';
@@ -24,8 +29,7 @@ interface Props {
   onArmDelete: (tabId: number) => void;
   onDisarm: () => void;
   onClose: (tabId: number) => void;
-  onDropOnWindow: (tabId: number, targetWindowId: number) => void;
-  onDropOnTabGroup: (tabId: number, targetGroupId: number | null) => void;
+  dropCallbacks: DropCallbacks;
   onCreateGroup: (tabIds: readonly number[], title: string) => void;
   onAssignManyToGroup: (tabIds: readonly number[], groupId: number) => void;
 }
@@ -45,8 +49,7 @@ export function TabList({
   onArmDelete,
   onDisarm,
   onClose,
-  onDropOnWindow,
-  onDropOnTabGroup,
+  dropCallbacks,
   onCreateGroup,
   onAssignManyToGroup,
 }: Props) {
@@ -100,7 +103,7 @@ export function TabList({
             dragHandlers={dragHandlersFor(group.key, (tabId) => {
               const referenceTab = group.tabs[0];
               if (!referenceTab) return;
-              strategy.dispatchDrop(tabId, referenceTab, { onDropOnWindow, onDropOnTabGroup });
+              strategy.dispatchDrop(tabId, referenceTab, dropCallbacks);
             })}
             onToggleCollapsed={() => {
               toggleCollapsed(group.key);
