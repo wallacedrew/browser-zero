@@ -27,7 +27,7 @@ const renderRow = (tab: Tab) => {
             <ul>
               <TabRow
                 tab={tab}
-                now={0}
+                lastAccessedLabel="just now"
                 selection={{ isSelected: false, toggle: noop }}
                 armedForDelete={false}
                 isDraggable={false}

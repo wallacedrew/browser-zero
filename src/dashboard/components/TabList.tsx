@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type DragEvent } from 'react';
 import type { Tab, TabGroupInfo } from '../../shared/lib/types';
 import { groupTabs, type GroupBy, type TabGroup } from '../../shared/lib/grouping';
+import { formatRelativeTime } from '../../shared/lib/formatRelativeTime';
 import { sectionHeaderClassesForGroupColor } from '../lib/groupColors';
 import { GroupNav } from './GroupNav';
 import { SectionActionPanel } from './SectionActionPanel';
@@ -312,7 +313,7 @@ export function TabList({
                   <TabRow
                     key={tab.id}
                     tab={tab}
-                    now={now}
+                    lastAccessedLabel={formatRelativeTime(tab.lastAccessed, now)}
                     selection={{ isSelected: selected.has(tab.id), toggle: onSelectionToggle }}
                     armedForDelete={tab.id === armedDeleteId}
                     isDraggable={dropEnabled}

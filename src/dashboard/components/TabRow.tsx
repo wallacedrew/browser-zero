@@ -3,7 +3,6 @@ import type { Tab } from '../../shared/lib/types';
 import { Favicon } from './Favicon';
 import { GroupChip } from './GroupChip';
 import { TabCloseAction } from './TabCloseAction';
-import { formatRelativeTime } from '../../shared/lib/formatRelativeTime';
 
 export interface ArmedDeleteActions {
   arm: (tabId: number) => void;
@@ -18,7 +17,7 @@ export interface SelectionState {
 
 interface Props {
   tab: Tab;
-  now: number;
+  lastAccessedLabel: string;
   selection: SelectionState;
   armedForDelete: boolean;
   isDraggable: boolean;
@@ -28,7 +27,7 @@ interface Props {
 
 export function TabRow({
   tab,
-  now,
+  lastAccessedLabel,
   selection,
   armedForDelete,
   isDraggable,
@@ -64,9 +63,7 @@ export function TabRow({
         {tab.title}
       </a>
       <span className="shrink-0 text-sm text-slate-500">{tab.domain}</span>
-      <span className="shrink-0 text-sm tabular-nums text-slate-400">
-        {formatRelativeTime(tab.lastAccessed, now)}
-      </span>
+      <span className="shrink-0 text-sm tabular-nums text-slate-400">{lastAccessedLabel}</span>
       <input
         type="checkbox"
         aria-label={`Select ${tab.title}`}
