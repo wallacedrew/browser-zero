@@ -79,7 +79,7 @@ export function TabList({
   const strategy = groupingStrategyFor(groupBy);
   const groups = groupTabs(viewModels, groupBy);
   const dropEnabled = strategy.dropEnabled;
-  const allowGrouping = groupBy !== 'domain';
+  const allowGrouping = strategy.allowGrouping;
   const groupKeys = groups.map((group) => group.key).join('|');
 
   // "All collapsed" is computed against the currently-visible groups, not
