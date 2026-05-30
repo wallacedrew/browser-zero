@@ -1,6 +1,6 @@
-import type { DragEvent } from 'react';
 import type { TabGroupInfo } from '../../shared/lib/types';
 import type { TabGroup } from '../../shared/lib/grouping';
+import type { DragHandlers } from '../hooks/useDragOverGroupKey';
 import type { TabRowViewModel } from '../hooks/useTabViewModels';
 import { TabGroupSectionHeader } from './TabGroupSectionHeader';
 import { TabGroupSectionTabs } from './TabGroupSectionTabs';
@@ -15,9 +15,7 @@ interface Props {
   existingGroups: ReadonlyArray<TabGroupInfo>;
   selected: ReadonlySet<number>;
   armedDeleteId: number | null;
-  onDragOver: ((event: DragEvent<HTMLElement>) => void) | undefined;
-  onDragLeave: (() => void) | undefined;
-  onDrop: ((event: DragEvent<HTMLElement>) => void) | undefined;
+  dragHandlers: DragHandlers;
   onToggleCollapsed: () => void;
   onSelectionToggle: (tabId: number) => void;
   onSelectGroup: (tabIds: readonly number[]) => void;
@@ -41,9 +39,7 @@ export function TabGroupSection({
   existingGroups,
   selected,
   armedDeleteId,
-  onDragOver,
-  onDragLeave,
-  onDrop,
+  dragHandlers,
   onToggleCollapsed,
   onSelectionToggle,
   onSelectGroup,
@@ -64,9 +60,9 @@ export function TabGroupSection({
     <section
       data-group-key={group.key}
       aria-label={group.label}
-      onDragOver={onDragOver}
-      onDragLeave={onDragLeave}
-      onDrop={onDrop}
+      onDragOver={dragHandlers.onDragOver}
+      onDragLeave={dragHandlers.onDragLeave}
+      onDrop={dragHandlers.onDrop}
       className={`py-3 transition-colors ${isDragOver ? 'bg-blue-50' : ''}`}
     >
       <TabGroupSectionHeader

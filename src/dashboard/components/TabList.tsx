@@ -1,15 +1,10 @@
-import { useState, type DragEvent } from 'react';
 import type { Tab, TabGroupInfo } from '../../shared/lib/types';
-import {
-  groupTabs,
-  groupingStrategyFor,
-  type GroupBy,
-  type TabGroup,
-} from '../../shared/lib/grouping';
+import { groupTabs, groupingStrategyFor, type GroupBy } from '../../shared/lib/grouping';
 import type { Timestamp } from '../../shared/lib/Timestamp';
+import { useDragOverGroupKey } from '../hooks/useDragOverGroupKey';
 import { useGroupCollapse } from '../hooks/useGroupCollapse';
 import { useGroupSectionNavigation } from '../hooks/useGroupSectionNavigation';
-import { useTabViewModels, type TabRowViewModel } from '../hooks/useTabViewModels';
+import { useTabViewModels } from '../hooks/useTabViewModels';
 import { CollapseAllControl } from './CollapseAllControl';
 import { GroupNav } from './GroupNav';
 import { TabGroupSection } from './TabGroupSection';
@@ -55,8 +50,6 @@ export function TabList({
   onCreateGroup,
   onAssignManyToGroup,
 }: Props) {
-  const [dragOverKey, setDragOverKey] = useState<string | null>(null);
-
   const viewModels = useTabViewModels(tabs, now);
   const strategy = groupingStrategyFor(groupBy);
   const groups = groupTabs(viewModels, groupBy);
@@ -67,6 +60,7 @@ export function TabList({
     useGroupCollapse(groupKeysList);
   const { containerRef, resolvedActiveKey, scrollToGroup } =
     useGroupSectionNavigation(groupKeysList);
+  const { dragOverKey, dragHandlersFor } = useDragOverGroupKey({ enabled: dropEnabled });
 
   if (groups.length === 0) {
     return <p className="text-slate-500">No open tabs.</p>;
@@ -81,17 +75,6 @@ export function TabList({
     // so they fall back to the slate default in GroupNav.
     color: strategy.sectionColorOf(group.tabs[0]),
   }));
-
-  const fireDrop = (event: DragEvent<HTMLElement>, group: TabGroup<TabRowViewModel>) => {
-    event.preventDefault();
-    setDragOverKey(null);
-    const raw = event.dataTransfer.getData('text/plain');
-    const tabId = Number(raw);
-    if (!Number.isFinite(tabId) || tabId <= 0) return;
-    const referenceTab = group.tabs[0];
-    if (!referenceTab) return;
-    strategy.dispatchDrop(tabId, referenceTab, { onDropOnWindow, onDropOnTabGroup });
-  };
 
   return (
     <div ref={containerRef}>
@@ -108,35 +91,17 @@ export function TabList({
             group={group}
             sectionColor={strategy.sectionColorOf(group.tabs[0])}
             isCollapsed={collapsedKeys.has(group.key)}
-            isDragOver={dropEnabled && dragOverKey === group.key}
+            isDragOver={dragOverKey === group.key}
             dropEnabled={dropEnabled}
             allowGrouping={allowGrouping}
             existingGroups={existingGroups}
             selected={selected}
             armedDeleteId={armedDeleteId}
-            onDragOver={
-              dropEnabled
-                ? (event) => {
-                    event.preventDefault();
-                    event.dataTransfer.dropEffect = 'move';
-                    if (dragOverKey !== group.key) setDragOverKey(group.key);
-                  }
-                : undefined
-            }
-            onDragLeave={
-              dropEnabled
-                ? () => {
-                    if (dragOverKey === group.key) setDragOverKey(null);
-                  }
-                : undefined
-            }
-            onDrop={
-              dropEnabled
-                ? (event) => {
-                    fireDrop(event, group);
-                  }
-                : undefined
-            }
+            dragHandlers={dragHandlersFor(group.key, (tabId) => {
+              const referenceTab = group.tabs[0];
+              if (!referenceTab) return;
+              strategy.dispatchDrop(tabId, referenceTab, { onDropOnWindow, onDropOnTabGroup });
+            })}
             onToggleCollapsed={() => {
               toggleCollapsed(group.key);
             }}
