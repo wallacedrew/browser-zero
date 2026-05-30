@@ -45,10 +45,6 @@ export function TabRow({
     onFocus(tab.id, tab.windowId);
   };
 
-  const handleSelectionChange = () => {
-    selection.toggle(tab.id);
-  };
-
   return (
     <li
       draggable={isDraggable}
@@ -75,7 +71,7 @@ export function TabRow({
         type="checkbox"
         aria-label={`Select ${tab.title}`}
         checked={selection.isSelected}
-        onChange={handleSelectionChange}
+        onChange={() => selection.toggle(tab.id)}
         className="h-5 w-5 shrink-0 rounded border-slate-300 text-slate-900 focus:ring-slate-500"
       />
       <TabCloseAction
