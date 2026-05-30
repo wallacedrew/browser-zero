@@ -7,6 +7,7 @@ import {
 } from '../../shared/lib/grouping';
 import type { Timestamp } from '../../shared/lib/Timestamp';
 import type { BulkTabActions } from '../lib/bulkTabActions';
+import type { SelectionModel } from '../lib/selectionModel';
 import { useDragOverGroupKey } from '../hooks/useDragOverGroupKey';
 import { useGroupCollapse } from '../hooks/useGroupCollapse';
 import { useGroupSectionNavigation } from '../hooks/useGroupSectionNavigation';
@@ -20,10 +21,9 @@ interface Props {
   tabs: readonly Tab[];
   now: Timestamp;
   groupBy: GroupBy;
-  selected: ReadonlySet<number>;
+  selection: SelectionModel;
   armedDeleteId: number | null;
   existingGroups: ReadonlyArray<TabGroupInfo>;
-  onSelectionToggle: (tabId: number) => void;
   onFocus: (tabId: number, windowId: number) => void;
   armedDelete: ArmedDeleteActions;
   bulkActions: BulkTabActions;
@@ -34,10 +34,9 @@ export function TabList({
   tabs,
   now,
   groupBy,
-  selected,
+  selection,
   armedDeleteId,
   existingGroups,
-  onSelectionToggle,
   onFocus,
   armedDelete,
   bulkActions,
@@ -88,7 +87,7 @@ export function TabList({
             dropEnabled={dropEnabled}
             allowGrouping={allowGrouping}
             existingGroups={existingGroups}
-            selected={selected}
+            selection={selection}
             armedDeleteId={armedDeleteId}
             dragHandlers={dragHandlersFor(group.key, (tabId) => {
               const referenceTab = group.tabs[0];
@@ -100,7 +99,6 @@ export function TabList({
             }}
             armedDelete={armedDelete}
             bulkActions={bulkActions}
-            onSelectionToggle={onSelectionToggle}
             onFocus={onFocus}
           />
         ))}

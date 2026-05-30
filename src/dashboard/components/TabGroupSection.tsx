@@ -1,6 +1,7 @@
 import type { TabGroupInfo } from '../../shared/lib/types';
 import type { TabGroup } from '../../shared/lib/grouping';
 import type { BulkTabActions } from '../lib/bulkTabActions';
+import type { SelectionModel } from '../lib/selectionModel';
 import type { DragHandlers } from '../hooks/useDragOverGroupKey';
 import type { TabRowViewModel } from '../hooks/useTabViewModels';
 import type { ArmedDeleteActions } from './TabRow';
@@ -15,13 +16,12 @@ interface Props {
   dropEnabled: boolean;
   allowGrouping: boolean;
   existingGroups: ReadonlyArray<TabGroupInfo>;
-  selected: ReadonlySet<number>;
+  selection: SelectionModel;
   armedDeleteId: number | null;
   armedDelete: ArmedDeleteActions;
   bulkActions: BulkTabActions;
   dragHandlers: DragHandlers;
   onToggleCollapsed: () => void;
-  onSelectionToggle: (tabId: number) => void;
   onFocus: (tabId: number, windowId: number) => void;
 }
 
@@ -33,17 +33,18 @@ export function TabGroupSection({
   dropEnabled,
   allowGrouping,
   existingGroups,
-  selected,
+  selection,
   armedDeleteId,
   armedDelete,
   bulkActions,
   dragHandlers,
   onToggleCollapsed,
-  onSelectionToggle,
   onFocus,
 }: Props) {
   const groupIds = group.tabs.map((tab) => tab.id);
-  const selectedIdsInGroup = group.tabs.flatMap((tab) => (selected.has(tab.id) ? [tab.id] : []));
+  const selectedIdsInGroup = group.tabs.flatMap((tab) =>
+    selection.selected.has(tab.id) ? [tab.id] : [],
+  );
   const listId = `group-list-${group.key}`;
 
   return (
@@ -72,11 +73,10 @@ export function TabGroupSection({
         listId={listId}
         hidden={isCollapsed}
         tabs={group.tabs}
-        selected={selected}
+        selection={selection}
         armedDeleteId={armedDeleteId}
         isDraggable={dropEnabled}
         armedDelete={armedDelete}
-        onSelectionToggle={onSelectionToggle}
         onFocus={onFocus}
       />
     </section>
