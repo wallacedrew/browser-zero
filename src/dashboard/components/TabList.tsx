@@ -9,6 +9,7 @@ import {
 import type { Timestamp } from '../../shared/lib/Timestamp';
 import { sectionHeaderClassesForGroupColor } from '../lib/groupColors';
 import { ChevronIcon } from './ChevronIcon';
+import { CollapseAllControl } from './CollapseAllControl';
 import { GroupNav } from './GroupNav';
 import { SectionActionPanel } from './SectionActionPanel';
 import { TabRow } from './TabRow';
@@ -179,19 +180,11 @@ export function TabList({
   return (
     <div ref={containerRef}>
       <GroupNav groups={navGroups} activeKey={resolvedActiveKey} onSelect={scrollToGroup} />
-      {groups.length > 1 && (
-        <div className="mb-2 px-3">
-          <button
-            type="button"
-            onClick={toggleAllCollapsed}
-            aria-expanded={!allCollapsed}
-            className="inline-flex items-center gap-1.5 text-sm text-slate-600 hover:text-slate-900 hover:underline"
-          >
-            <ChevronIcon collapsed={allCollapsed} />
-            {allCollapsed ? 'Expand all' : 'Collapse all'}
-          </button>
-        </div>
-      )}
+      <CollapseAllControl
+        visible={groups.length > 1}
+        allCollapsed={allCollapsed}
+        onToggle={toggleAllCollapsed}
+      />
       <div className="divide-y divide-slate-200">
         {groups.map((group) => {
           const groupIds = group.tabs.map((tab) => tab.id);
