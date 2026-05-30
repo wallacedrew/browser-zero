@@ -3,6 +3,7 @@ import type { Tab } from '../../shared/lib/types';
 import { Favicon } from './Favicon';
 import { GroupChip } from './GroupChip';
 import { TabCloseAction } from './TabCloseAction';
+import { TabTitleLink } from './TabTitleLink';
 
 export interface ArmedDeleteActions {
   arm: (tabId: number) => void;
@@ -54,14 +55,7 @@ export function TabRow({
     >
       <Favicon favIconUrl={tab.favIconUrl} />
       {tab.group && <GroupChip group={tab.group} />}
-      <a
-        href={tab.url}
-        draggable={false}
-        onClick={handleTitleClick}
-        className="min-w-0 flex-1 truncate text-base tracking-tight text-slate-900 hover:underline"
-      >
-        {tab.title}
-      </a>
+      <TabTitleLink tab={tab} onClick={handleTitleClick} />
       <span className="shrink-0 text-sm text-slate-500">{tab.domain}</span>
       <span className="shrink-0 text-sm tabular-nums text-slate-400">{lastAccessedLabel}</span>
       <input
