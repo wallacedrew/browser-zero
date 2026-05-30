@@ -1,4 +1,5 @@
 import type { TabGroupInfo } from '../../shared/lib/types';
+import type { BulkTabActions } from '../lib/bulkTabActions';
 import { sectionHeaderClassesForGroupColor } from '../lib/groupColors';
 import { ChevronIcon } from './ChevronIcon';
 import { SectionActionPanel } from './SectionActionPanel';
@@ -13,12 +14,8 @@ interface Props {
   collapsed: boolean;
   allowGrouping: boolean;
   existingGroups: ReadonlyArray<TabGroupInfo>;
+  bulkActions: BulkTabActions;
   onToggleCollapsed: () => void;
-  onSelectGroup: (tabIds: readonly number[]) => void;
-  onClearGroup: (tabIds: readonly number[]) => void;
-  onDeleteIds: (tabIds: readonly number[]) => void;
-  onCreateGroup: (tabIds: readonly number[], title: string) => void;
-  onAssignManyToGroup: (tabIds: readonly number[], groupId: number) => void;
 }
 
 export function TabGroupSectionHeader({
@@ -31,12 +28,8 @@ export function TabGroupSectionHeader({
   collapsed,
   allowGrouping,
   existingGroups,
+  bulkActions,
   onToggleCollapsed,
-  onSelectGroup,
-  onClearGroup,
-  onDeleteIds,
-  onCreateGroup,
-  onAssignManyToGroup,
 }: Props) {
   const headerClasses = sectionHeaderClassesForGroupColor(sectionColor);
   const selectedCount = selectedIds.length;
@@ -44,11 +37,11 @@ export function TabGroupSectionHeader({
   const hasAnySelected = selectedCount > 0;
 
   const handleSelectAll = () => {
-    onSelectGroup(groupIds);
+    bulkActions.select(groupIds);
   };
 
   const handleClearAll = () => {
-    onClearGroup(groupIds);
+    bulkActions.clear(groupIds);
   };
 
   return (
@@ -99,10 +92,7 @@ export function TabGroupSectionHeader({
           selectedIds={selectedIds}
           allowGrouping={allowGrouping}
           existingGroups={existingGroups}
-          onClearGroup={onClearGroup}
-          onDeleteIds={onDeleteIds}
-          onCreateGroup={onCreateGroup}
-          onAssignManyToGroup={onAssignManyToGroup}
+          bulkActions={bulkActions}
         />
       </div>
     </header>

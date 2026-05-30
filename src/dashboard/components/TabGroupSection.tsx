@@ -1,5 +1,6 @@
 import type { TabGroupInfo } from '../../shared/lib/types';
 import type { TabGroup } from '../../shared/lib/grouping';
+import type { BulkTabActions } from '../lib/bulkTabActions';
 import type { DragHandlers } from '../hooks/useDragOverGroupKey';
 import type { TabRowViewModel } from '../hooks/useTabViewModels';
 import type { ArmedDeleteActions } from './TabRow';
@@ -17,15 +18,11 @@ interface Props {
   selected: ReadonlySet<number>;
   armedDeleteId: number | null;
   armedDelete: ArmedDeleteActions;
+  bulkActions: BulkTabActions;
   dragHandlers: DragHandlers;
   onToggleCollapsed: () => void;
   onSelectionToggle: (tabId: number) => void;
-  onSelectGroup: (tabIds: readonly number[]) => void;
-  onClearGroup: (tabIds: readonly number[]) => void;
-  onDeleteIds: (tabIds: readonly number[]) => void;
   onFocus: (tabId: number, windowId: number) => void;
-  onCreateGroup: (tabIds: readonly number[], title: string) => void;
-  onAssignManyToGroup: (tabIds: readonly number[], groupId: number) => void;
 }
 
 export function TabGroupSection({
@@ -39,15 +36,11 @@ export function TabGroupSection({
   selected,
   armedDeleteId,
   armedDelete,
+  bulkActions,
   dragHandlers,
   onToggleCollapsed,
   onSelectionToggle,
-  onSelectGroup,
-  onClearGroup,
-  onDeleteIds,
   onFocus,
-  onCreateGroup,
-  onAssignManyToGroup,
 }: Props) {
   const groupIds = group.tabs.map((tab) => tab.id);
   const selectedIdsInGroup = group.tabs.flatMap((tab) => (selected.has(tab.id) ? [tab.id] : []));
@@ -72,12 +65,8 @@ export function TabGroupSection({
         collapsed={isCollapsed}
         allowGrouping={allowGrouping}
         existingGroups={existingGroups}
+        bulkActions={bulkActions}
         onToggleCollapsed={onToggleCollapsed}
-        onSelectGroup={onSelectGroup}
-        onClearGroup={onClearGroup}
-        onDeleteIds={onDeleteIds}
-        onCreateGroup={onCreateGroup}
-        onAssignManyToGroup={onAssignManyToGroup}
       />
       <TabGroupSectionTabs
         listId={listId}

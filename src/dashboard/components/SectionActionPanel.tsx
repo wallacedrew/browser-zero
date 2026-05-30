@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { TabGroupInfo } from '../../shared/lib/types';
+import type { BulkTabActions } from '../lib/bulkTabActions';
 import { GroupPicker } from './GroupPicker';
 
 interface Props {
@@ -8,10 +9,7 @@ interface Props {
   selectedIds: readonly number[];
   allowGrouping: boolean;
   existingGroups: ReadonlyArray<TabGroupInfo>;
-  onClearGroup: (tabIds: readonly number[]) => void;
-  onDeleteIds: (tabIds: readonly number[]) => void;
-  onCreateGroup: (tabIds: readonly number[], title: string) => void;
-  onAssignManyToGroup: (tabIds: readonly number[], groupId: number) => void;
+  bulkActions: BulkTabActions;
 }
 
 export function SectionActionPanel({
@@ -20,10 +18,7 @@ export function SectionActionPanel({
   selectedIds,
   allowGrouping,
   existingGroups,
-  onClearGroup,
-  onDeleteIds,
-  onCreateGroup,
-  onAssignManyToGroup,
+  bulkActions,
 }: Props) {
   const [pickerOpen, setPickerOpen] = useState(false);
 
@@ -57,7 +52,7 @@ export function SectionActionPanel({
       <button
         type="button"
         onClick={() => {
-          onDeleteIds(selectedIds);
+          bulkActions.close(selectedIds);
         }}
         className="rounded-md bg-red-600 px-2.5 py-0.5 text-sm font-medium text-white shadow-sm hover:bg-red-700"
       >
@@ -66,7 +61,7 @@ export function SectionActionPanel({
       <button
         type="button"
         onClick={() => {
-          onClearGroup(groupIds);
+          bulkActions.clear(groupIds);
         }}
         className="text-slate-500 hover:text-slate-700 hover:underline"
       >
@@ -76,11 +71,11 @@ export function SectionActionPanel({
         <GroupPicker
           existingGroups={existingGroups}
           onCreateGroup={(title) => {
-            onCreateGroup(selectedIds, title);
+            bulkActions.createGroup(selectedIds, title);
             closePicker();
           }}
           onAssignToExisting={(groupId) => {
-            onAssignManyToGroup(selectedIds, groupId);
+            bulkActions.assignToGroup(selectedIds, groupId);
             closePicker();
           }}
           onClose={closePicker}

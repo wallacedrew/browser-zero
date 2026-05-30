@@ -245,22 +245,24 @@ export function App({ tabsPort, now: nowOverride }: Props) {
           selected={selected}
           armedDeleteId={armedDeleteId}
           onSelectionToggle={handleSelectionToggle}
-          onSelectGroup={handleSelectGroup}
-          onClearGroup={handleClearGroup}
-          onDeleteIds={handleDeleteIds}
           onFocus={handleFocus}
           armedDelete={{
             arm: handleArmDelete,
             disarm: handleDisarm,
             confirm: handleClose,
           }}
+          bulkActions={{
+            select: handleSelectGroup,
+            clear: handleClearGroup,
+            close: handleDeleteIds,
+            createGroup: handleCreateGroup,
+            assignToGroup: handleAssignManyToGroup,
+          }}
           dropCallbacks={{
             onDropOnWindow: handleDropOnWindow,
             onDropOnTabGroup: handleDropOnTabGroup,
           }}
           existingGroups={existingGroups}
-          onCreateGroup={handleCreateGroup}
-          onAssignManyToGroup={handleAssignManyToGroup}
         />
       ) : (
         <p className="text-slate-400">Loading…</p>

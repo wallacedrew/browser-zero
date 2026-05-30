@@ -6,6 +6,7 @@ import {
   type GroupBy,
 } from '../../shared/lib/grouping';
 import type { Timestamp } from '../../shared/lib/Timestamp';
+import type { BulkTabActions } from '../lib/bulkTabActions';
 import { useDragOverGroupKey } from '../hooks/useDragOverGroupKey';
 import { useGroupCollapse } from '../hooks/useGroupCollapse';
 import { useGroupSectionNavigation } from '../hooks/useGroupSectionNavigation';
@@ -23,14 +24,10 @@ interface Props {
   armedDeleteId: number | null;
   existingGroups: ReadonlyArray<TabGroupInfo>;
   onSelectionToggle: (tabId: number) => void;
-  onSelectGroup: (tabIds: readonly number[]) => void;
-  onClearGroup: (tabIds: readonly number[]) => void;
-  onDeleteIds: (tabIds: readonly number[]) => void;
   onFocus: (tabId: number, windowId: number) => void;
   armedDelete: ArmedDeleteActions;
+  bulkActions: BulkTabActions;
   dropCallbacks: DropCallbacks;
-  onCreateGroup: (tabIds: readonly number[], title: string) => void;
-  onAssignManyToGroup: (tabIds: readonly number[], groupId: number) => void;
 }
 
 export function TabList({
@@ -41,14 +38,10 @@ export function TabList({
   armedDeleteId,
   existingGroups,
   onSelectionToggle,
-  onSelectGroup,
-  onClearGroup,
-  onDeleteIds,
   onFocus,
   armedDelete,
+  bulkActions,
   dropCallbacks,
-  onCreateGroup,
-  onAssignManyToGroup,
 }: Props) {
   const viewModels = useTabViewModels(tabs, now);
   const strategy = groupingStrategyFor(groupBy);
@@ -106,13 +99,9 @@ export function TabList({
               toggleCollapsed(group.key);
             }}
             armedDelete={armedDelete}
+            bulkActions={bulkActions}
             onSelectionToggle={onSelectionToggle}
-            onSelectGroup={onSelectGroup}
-            onClearGroup={onClearGroup}
-            onDeleteIds={onDeleteIds}
             onFocus={onFocus}
-            onCreateGroup={onCreateGroup}
-            onAssignManyToGroup={onAssignManyToGroup}
           />
         ))}
       </div>
