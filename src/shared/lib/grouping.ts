@@ -19,13 +19,18 @@ export function groupTabs<T extends Tab>(tabs: readonly T[], by: GroupBy): TabGr
   }
 }
 
-function groupByWindow<T extends Tab>(tabs: readonly T[]): TabGroup<T>[] {
-  const byWindow = new Map<number, T[]>();
-  for (const tab of tabs) {
-    const existing = byWindow.get(tab.windowId);
-    if (existing) existing.push(tab);
-    else byWindow.set(tab.windowId, [tab]);
+function bucketBy<T, K>(items: readonly T[], keyOf: (item: T) => K): Map<K, T[]> {
+  const buckets = new Map<K, T[]>();
+  for (const item of items) {
+    const existing = buckets.get(keyOf(item));
+    if (existing) existing.push(item);
+    else buckets.set(keyOf(item), [item]);
   }
+  return buckets;
+}
+
+function groupByWindow<T extends Tab>(tabs: readonly T[]): TabGroup<T>[] {
+  const byWindow = bucketBy(tabs, (tab) => tab.windowId);
   return [...byWindow.entries()]
     .sort(([leftId], [rightId]) => leftId - rightId)
     .map(([windowId, windowTabs], index) => ({
@@ -36,12 +41,7 @@ function groupByWindow<T extends Tab>(tabs: readonly T[]): TabGroup<T>[] {
 }
 
 function groupByDomain<T extends Tab>(tabs: readonly T[]): TabGroup<T>[] {
-  const byDomain = new Map<string, T[]>();
-  for (const tab of tabs) {
-    const existing = byDomain.get(tab.domain);
-    if (existing) existing.push(tab);
-    else byDomain.set(tab.domain, [tab]);
-  }
+  const byDomain = bucketBy(tabs, (tab) => tab.domain);
   return [...byDomain.entries()]
     .sort(([leftDomain, leftTabs], [rightDomain, rightTabs]) => {
       const countDelta = rightTabs.length - leftTabs.length;
@@ -58,13 +58,9 @@ function groupByDomain<T extends Tab>(tabs: readonly T[]): TabGroup<T>[] {
 const UNGROUPED_KEY = 'ungrouped';
 
 function groupByTabGroup<T extends Tab>(tabs: readonly T[]): TabGroup<T>[] {
-  const byTabGroup = new Map<string, T[]>();
-  for (const tab of tabs) {
-    const key = tab.group ? `g-${String(tab.group.id)}` : UNGROUPED_KEY;
-    const existing = byTabGroup.get(key);
-    if (existing) existing.push(tab);
-    else byTabGroup.set(key, [tab]);
-  }
+  const byTabGroup = bucketBy(tabs, (tab) =>
+    tab.group ? `g-${String(tab.group.id)}` : UNGROUPED_KEY,
+  );
   return [...byTabGroup.entries()]
     .sort(([leftKey, leftTabs], [rightKey, rightTabs]) => {
       const leftIsUngrouped = leftKey === UNGROUPED_KEY;
