@@ -1,7 +1,5 @@
-import type { Tab } from '../../shared/lib/types';
+import type { TabRowViewModel } from '../hooks/useTabViewModels';
 import { TabRow } from './TabRow';
-
-type TabRowViewModel = Tab & { readonly lastAccessedLabel: string };
 
 interface Props {
   listId: string;

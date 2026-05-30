@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState, type DragEvent } from 'react';
+import { useEffect, useRef, useState, type DragEvent } from 'react';
 import type { Tab, TabGroupInfo } from '../../shared/lib/types';
 import {
   groupTabs,
@@ -7,11 +7,10 @@ import {
   type TabGroup,
 } from '../../shared/lib/grouping';
 import type { Timestamp } from '../../shared/lib/Timestamp';
+import { useTabViewModels, type TabRowViewModel } from '../hooks/useTabViewModels';
 import { CollapseAllControl } from './CollapseAllControl';
 import { GroupNav } from './GroupNav';
 import { TabGroupSection } from './TabGroupSection';
-
-type TabRowViewModel = Tab & { readonly lastAccessedLabel: string };
 
 interface Props {
   tabs: readonly Tab[];
@@ -67,14 +66,7 @@ export function TabList({
       return next;
     });
   };
-  const viewModels = useMemo<readonly TabRowViewModel[]>(
-    () =>
-      tabs.map((tab) => ({
-        ...tab,
-        lastAccessedLabel: tab.lastAccessed.relativeLabelFrom(now),
-      })),
-    [tabs, now],
-  );
+  const viewModels = useTabViewModels(tabs, now);
   const strategy = groupingStrategyFor(groupBy);
   const groups = groupTabs(viewModels, groupBy);
   const dropEnabled = strategy.dropEnabled;

@@ -1,10 +1,9 @@
 import type { DragEvent } from 'react';
-import type { Tab, TabGroupInfo } from '../../shared/lib/types';
+import type { TabGroupInfo } from '../../shared/lib/types';
 import type { TabGroup } from '../../shared/lib/grouping';
+import type { TabRowViewModel } from '../hooks/useTabViewModels';
 import { TabGroupSectionHeader } from './TabGroupSectionHeader';
 import { TabGroupSectionTabs } from './TabGroupSectionTabs';
-
-type TabRowViewModel = Tab & { readonly lastAccessedLabel: string };
 
 interface Props {
   group: TabGroup<TabRowViewModel>;
