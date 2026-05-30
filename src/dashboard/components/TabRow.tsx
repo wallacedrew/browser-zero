@@ -11,13 +11,17 @@ export interface ArmedDeleteActions {
   confirm: (tabId: number) => void;
 }
 
+export interface SelectionState {
+  isSelected: boolean;
+  toggle: (tabId: number) => void;
+}
+
 interface Props {
   tab: Tab;
   now: number;
-  isSelected: boolean;
+  selection: SelectionState;
   armedForDelete: boolean;
   isDraggable: boolean;
-  onSelectionToggle: (tabId: number) => void;
   onFocus: (tabId: number, windowId: number) => void;
   armedDelete: ArmedDeleteActions;
 }
@@ -25,10 +29,9 @@ interface Props {
 export function TabRow({
   tab,
   now,
-  isSelected,
+  selection,
   armedForDelete,
   isDraggable,
-  onSelectionToggle,
   onFocus,
   armedDelete,
 }: Props) {
@@ -43,7 +46,7 @@ export function TabRow({
   };
 
   const handleSelectionChange = () => {
-    onSelectionToggle(tab.id);
+    selection.toggle(tab.id);
   };
 
   return (
@@ -71,7 +74,7 @@ export function TabRow({
       <input
         type="checkbox"
         aria-label={`Select ${tab.title}`}
-        checked={isSelected}
+        checked={selection.isSelected}
         onChange={handleSelectionChange}
         className="h-5 w-5 shrink-0 rounded border-slate-300 text-slate-900 focus:ring-slate-500"
       />

@@ -313,10 +313,9 @@ export function TabList({
                     key={tab.id}
                     tab={tab}
                     now={now}
-                    isSelected={selected.has(tab.id)}
+                    selection={{ isSelected: selected.has(tab.id), toggle: onSelectionToggle }}
                     armedForDelete={tab.id === armedDeleteId}
                     isDraggable={dropEnabled}
-                    onSelectionToggle={onSelectionToggle}
                     onFocus={onFocus}
                     armedDelete={{ arm: onArmDelete, disarm: onDisarm, confirm: onClose }}
                   />

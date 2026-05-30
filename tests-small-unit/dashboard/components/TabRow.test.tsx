@@ -28,10 +28,9 @@ const renderRow = (tab: Tab) => {
               <TabRow
                 tab={tab}
                 now={0}
-                isSelected={false}
+                selection={{ isSelected: false, toggle: noop }}
                 armedForDelete={false}
                 isDraggable={false}
-                onSelectionToggle={noop}
                 onFocus={noop}
                 armedDelete={{ arm: noop, disarm: vi.fn(), confirm: noop }}
               />
