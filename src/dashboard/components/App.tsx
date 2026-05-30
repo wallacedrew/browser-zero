@@ -249,9 +249,11 @@ export function App({ tabsPort, now: nowOverride }: Props) {
           onClearGroup={handleClearGroup}
           onDeleteIds={handleDeleteIds}
           onFocus={handleFocus}
-          onArmDelete={handleArmDelete}
-          onDisarm={handleDisarm}
-          onClose={handleClose}
+          armedDelete={{
+            arm: handleArmDelete,
+            disarm: handleDisarm,
+            confirm: handleClose,
+          }}
           dropCallbacks={{
             onDropOnWindow: handleDropOnWindow,
             onDropOnTabGroup: handleDropOnTabGroup,

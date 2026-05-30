@@ -13,6 +13,7 @@ import { useTabViewModels } from '../hooks/useTabViewModels';
 import { CollapseAllControl } from './CollapseAllControl';
 import { GroupNav } from './GroupNav';
 import { TabGroupSection } from './TabGroupSection';
+import type { ArmedDeleteActions } from './TabRow';
 
 interface Props {
   tabs: readonly Tab[];
@@ -26,9 +27,7 @@ interface Props {
   onClearGroup: (tabIds: readonly number[]) => void;
   onDeleteIds: (tabIds: readonly number[]) => void;
   onFocus: (tabId: number, windowId: number) => void;
-  onArmDelete: (tabId: number) => void;
-  onDisarm: () => void;
-  onClose: (tabId: number) => void;
+  armedDelete: ArmedDeleteActions;
   dropCallbacks: DropCallbacks;
   onCreateGroup: (tabIds: readonly number[], title: string) => void;
   onAssignManyToGroup: (tabIds: readonly number[], groupId: number) => void;
@@ -46,9 +45,7 @@ export function TabList({
   onClearGroup,
   onDeleteIds,
   onFocus,
-  onArmDelete,
-  onDisarm,
-  onClose,
+  armedDelete,
   dropCallbacks,
   onCreateGroup,
   onAssignManyToGroup,
@@ -108,14 +105,12 @@ export function TabList({
             onToggleCollapsed={() => {
               toggleCollapsed(group.key);
             }}
+            armedDelete={armedDelete}
             onSelectionToggle={onSelectionToggle}
             onSelectGroup={onSelectGroup}
             onClearGroup={onClearGroup}
             onDeleteIds={onDeleteIds}
             onFocus={onFocus}
-            onArmDelete={onArmDelete}
-            onDisarm={onDisarm}
-            onClose={onClose}
             onCreateGroup={onCreateGroup}
             onAssignManyToGroup={onAssignManyToGroup}
           />

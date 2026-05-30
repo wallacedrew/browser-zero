@@ -2,6 +2,7 @@ import type { TabGroupInfo } from '../../shared/lib/types';
 import type { TabGroup } from '../../shared/lib/grouping';
 import type { DragHandlers } from '../hooks/useDragOverGroupKey';
 import type { TabRowViewModel } from '../hooks/useTabViewModels';
+import type { ArmedDeleteActions } from './TabRow';
 import { TabGroupSectionHeader } from './TabGroupSectionHeader';
 import { TabGroupSectionTabs } from './TabGroupSectionTabs';
 
@@ -15,6 +16,7 @@ interface Props {
   existingGroups: ReadonlyArray<TabGroupInfo>;
   selected: ReadonlySet<number>;
   armedDeleteId: number | null;
+  armedDelete: ArmedDeleteActions;
   dragHandlers: DragHandlers;
   onToggleCollapsed: () => void;
   onSelectionToggle: (tabId: number) => void;
@@ -22,9 +24,6 @@ interface Props {
   onClearGroup: (tabIds: readonly number[]) => void;
   onDeleteIds: (tabIds: readonly number[]) => void;
   onFocus: (tabId: number, windowId: number) => void;
-  onArmDelete: (tabId: number) => void;
-  onDisarm: () => void;
-  onClose: (tabId: number) => void;
   onCreateGroup: (tabIds: readonly number[], title: string) => void;
   onAssignManyToGroup: (tabIds: readonly number[], groupId: number) => void;
 }
@@ -39,6 +38,7 @@ export function TabGroupSection({
   existingGroups,
   selected,
   armedDeleteId,
+  armedDelete,
   dragHandlers,
   onToggleCollapsed,
   onSelectionToggle,
@@ -46,9 +46,6 @@ export function TabGroupSection({
   onClearGroup,
   onDeleteIds,
   onFocus,
-  onArmDelete,
-  onDisarm,
-  onClose,
   onCreateGroup,
   onAssignManyToGroup,
 }: Props) {
@@ -89,11 +86,9 @@ export function TabGroupSection({
         selected={selected}
         armedDeleteId={armedDeleteId}
         isDraggable={dropEnabled}
+        armedDelete={armedDelete}
         onSelectionToggle={onSelectionToggle}
         onFocus={onFocus}
-        onArmDelete={onArmDelete}
-        onDisarm={onDisarm}
-        onClose={onClose}
       />
     </section>
   );
