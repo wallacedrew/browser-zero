@@ -1,15 +1,15 @@
+import type { ArmedDeleteState } from '../lib/armedDeleteState';
 import type { SelectionModel } from '../lib/selectionModel';
 import type { TabRowViewModel } from '../hooks/useTabViewModels';
-import { TabRow, type ArmedDeleteActions } from './TabRow';
+import { TabRow } from './TabRow';
 
 interface Props {
   listId: string;
   hidden: boolean;
   tabs: readonly TabRowViewModel[];
   selection: SelectionModel;
-  armedDeleteId: number | null;
+  armedDelete: ArmedDeleteState;
   isDraggable: boolean;
-  armedDelete: ArmedDeleteActions;
   onFocus: (tabId: number, windowId: number) => void;
 }
 
@@ -18,9 +18,8 @@ export function TabGroupSectionTabs({
   hidden,
   tabs,
   selection,
-  armedDeleteId,
-  isDraggable,
   armedDelete,
+  isDraggable,
   onFocus,
 }: Props) {
   return (
@@ -31,10 +30,10 @@ export function TabGroupSectionTabs({
           tab={tab}
           lastAccessedLabel={tab.lastAccessedLabel}
           selection={{ isSelected: selection.selected.has(tab.id), toggle: selection.toggle }}
-          armedForDelete={tab.id === armedDeleteId}
+          armedForDelete={tab.id === armedDelete.armedTabId}
           isDraggable={isDraggable}
           onFocus={onFocus}
-          armedDelete={armedDelete}
+          armedDelete={armedDelete.actions}
         />
       ))}
     </ul>

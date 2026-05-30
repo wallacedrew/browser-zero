@@ -1,10 +1,10 @@
 import type { TabGroupInfo } from '../../shared/lib/types';
 import type { TabGroup } from '../../shared/lib/grouping';
+import type { ArmedDeleteState } from '../lib/armedDeleteState';
 import type { BulkTabActions } from '../lib/bulkTabActions';
 import type { SelectionModel } from '../lib/selectionModel';
 import type { DragHandlers } from '../hooks/useDragOverGroupKey';
 import type { TabRowViewModel } from '../hooks/useTabViewModels';
-import type { ArmedDeleteActions } from './TabRow';
 import { TabGroupSectionHeader } from './TabGroupSectionHeader';
 import { TabGroupSectionTabs } from './TabGroupSectionTabs';
 
@@ -17,8 +17,7 @@ interface Props {
   allowGrouping: boolean;
   existingGroups: ReadonlyArray<TabGroupInfo>;
   selection: SelectionModel;
-  armedDeleteId: number | null;
-  armedDelete: ArmedDeleteActions;
+  armedDelete: ArmedDeleteState;
   bulkActions: BulkTabActions;
   dragHandlers: DragHandlers;
   onToggleCollapsed: () => void;
@@ -34,7 +33,6 @@ export function TabGroupSection({
   allowGrouping,
   existingGroups,
   selection,
-  armedDeleteId,
   armedDelete,
   bulkActions,
   dragHandlers,
@@ -74,9 +72,8 @@ export function TabGroupSection({
         hidden={isCollapsed}
         tabs={group.tabs}
         selection={selection}
-        armedDeleteId={armedDeleteId}
-        isDraggable={dropEnabled}
         armedDelete={armedDelete}
+        isDraggable={dropEnabled}
         onFocus={onFocus}
       />
     </section>

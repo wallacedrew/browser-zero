@@ -6,6 +6,7 @@ import {
   type GroupBy,
 } from '../../shared/lib/grouping';
 import type { Timestamp } from '../../shared/lib/Timestamp';
+import type { ArmedDeleteState } from '../lib/armedDeleteState';
 import type { BulkTabActions } from '../lib/bulkTabActions';
 import type { SelectionModel } from '../lib/selectionModel';
 import { useDragOverGroupKey } from '../hooks/useDragOverGroupKey';
@@ -15,17 +16,15 @@ import { useTabViewModels } from '../hooks/useTabViewModels';
 import { CollapseAllControl } from './CollapseAllControl';
 import { GroupNav } from './GroupNav';
 import { TabGroupSection } from './TabGroupSection';
-import type { ArmedDeleteActions } from './TabRow';
 
 interface Props {
   tabs: readonly Tab[];
   now: Timestamp;
   groupBy: GroupBy;
   selection: SelectionModel;
-  armedDeleteId: number | null;
+  armedDelete: ArmedDeleteState;
   existingGroups: ReadonlyArray<TabGroupInfo>;
   onFocus: (tabId: number, windowId: number) => void;
-  armedDelete: ArmedDeleteActions;
   bulkActions: BulkTabActions;
   dropCallbacks: DropCallbacks;
 }
@@ -35,10 +34,9 @@ export function TabList({
   now,
   groupBy,
   selection,
-  armedDeleteId,
+  armedDelete,
   existingGroups,
   onFocus,
-  armedDelete,
   bulkActions,
   dropCallbacks,
 }: Props) {
@@ -88,7 +86,6 @@ export function TabList({
             allowGrouping={allowGrouping}
             existingGroups={existingGroups}
             selection={selection}
-            armedDeleteId={armedDeleteId}
             dragHandlers={dragHandlersFor(group.key, (tabId) => {
               const referenceTab = group.tabs[0];
               if (!referenceTab) return;

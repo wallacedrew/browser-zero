@@ -243,13 +243,15 @@ export function App({ tabsPort, now: nowOverride }: Props) {
           now={now}
           groupBy={groupBy}
           selection={{ selected, toggle: handleSelectionToggle }}
-          armedDeleteId={armedDeleteId}
-          onFocus={handleFocus}
           armedDelete={{
-            arm: handleArmDelete,
-            disarm: handleDisarm,
-            confirm: handleClose,
+            armedTabId: armedDeleteId,
+            actions: {
+              arm: handleArmDelete,
+              disarm: handleDisarm,
+              confirm: handleClose,
+            },
           }}
+          onFocus={handleFocus}
           bulkActions={{
             select: handleSelectGroup,
             clear: handleClearGroup,
