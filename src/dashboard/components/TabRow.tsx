@@ -5,6 +5,7 @@ import { GroupChip } from './GroupChip';
 import { TabCloseAction } from './TabCloseAction';
 import { TabDomain } from './TabDomain';
 import { TabLastAccessedLabel } from './TabLastAccessedLabel';
+import { TabSelectCheckbox } from './TabSelectCheckbox';
 import { TabTitleLink } from './TabTitleLink';
 
 export interface ArmedDeleteActions {
@@ -60,13 +61,7 @@ export function TabRow({
       <TabTitleLink tab={tab} onClick={handleTitleClick} />
       <TabDomain domain={tab.domain} />
       <TabLastAccessedLabel label={lastAccessedLabel} />
-      <input
-        type="checkbox"
-        aria-label={`Select ${tab.title}`}
-        checked={selection.isSelected}
-        onChange={() => selection.toggle(tab.id)}
-        className="h-5 w-5 shrink-0 rounded border-slate-300 text-slate-900 focus:ring-slate-500"
-      />
+      <TabSelectCheckbox tabId={tab.id} tabTitle={tab.title} selection={selection} />
       <TabCloseAction
         tabId={tab.id}
         tabTitle={tab.title}
