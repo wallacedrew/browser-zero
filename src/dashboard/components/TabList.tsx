@@ -7,6 +7,7 @@ import {
   type TabGroup,
 } from '../../shared/lib/grouping';
 import type { Timestamp } from '../../shared/lib/Timestamp';
+import { useGroupCollapse } from '../hooks/useGroupCollapse';
 import { useTabViewModels, type TabRowViewModel } from '../hooks/useTabViewModels';
 import { CollapseAllControl } from './CollapseAllControl';
 import { GroupNav } from './GroupNav';
@@ -55,36 +56,17 @@ export function TabList({
 }: Props) {
   const [dragOverKey, setDragOverKey] = useState<string | null>(null);
   const [activeKey, setActiveKey] = useState<string | null>(null);
-  const [collapsedKeys, setCollapsedKeys] = useState<ReadonlySet<string>>(() => new Set());
   const containerRef = useRef<HTMLDivElement | null>(null);
 
-  const toggleCollapsed = (groupKey: string) => {
-    setCollapsedKeys((prev) => {
-      const next = new Set(prev);
-      if (next.has(groupKey)) next.delete(groupKey);
-      else next.add(groupKey);
-      return next;
-    });
-  };
   const viewModels = useTabViewModels(tabs, now);
   const strategy = groupingStrategyFor(groupBy);
   const groups = groupTabs(viewModels, groupBy);
   const dropEnabled = strategy.dropEnabled;
   const allowGrouping = strategy.allowGrouping;
   const groupKeys = groups.map((group) => group.key).join('|');
-
-  // "All collapsed" is computed against the currently-visible groups, not
-  // stale keys from a previous groupBy / search state — so e.g. switching
-  // to a brand-new view always reads as "all expanded" from the toggle's
-  // perspective even if collapsedKeys still holds keys from the old view.
-  const allCollapsed = groups.length > 0 && groups.every((group) => collapsedKeys.has(group.key));
-  const toggleAllCollapsed = () => {
-    if (allCollapsed) {
-      setCollapsedKeys(new Set());
-    } else {
-      setCollapsedKeys(new Set(groups.map((group) => group.key)));
-    }
-  };
+  const { collapsedKeys, allCollapsed, toggleCollapsed, toggleAllCollapsed } = useGroupCollapse(
+    groups.map((group) => group.key),
+  );
 
   // Default-active the first visible group so the page never loads with
   // zero chips highlighted, and gracefully fall back if a previously-
