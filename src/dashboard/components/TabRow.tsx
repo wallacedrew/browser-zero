@@ -57,7 +57,7 @@ export function TabRow({
       }`}
     >
       <Favicon favIconUrl={tab.favIconUrl} />
-      {tab.group && <GroupChip group={tab.group} />}
+      <GroupChip group={tab.group} />
       <TabTitleLink tab={tab} onClick={handleTitleClick} />
       <TabDomain domain={tab.domain} />
       <TabLastAccessedLabel label={lastAccessedLabel} />

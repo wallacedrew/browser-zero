@@ -2,10 +2,11 @@ import type { TabGroupInfo } from '../../shared/lib/types';
 import { dotClassForGroupColor } from '../lib/groupColors';
 
 interface Props {
-  group: TabGroupInfo;
+  group: TabGroupInfo | null;
 }
 
 export function GroupChip({ group }: Props) {
+  if (group === null) return null;
   const dotClass = dotClassForGroupColor(group.color);
   const label = group.title.length > 0 ? group.title : 'Untitled';
   return (
