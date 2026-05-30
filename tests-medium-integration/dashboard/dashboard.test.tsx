@@ -21,10 +21,12 @@ const createDataTransfer = () => {
 import { App } from '../../src/dashboard/components/App';
 import { FakeTabsPort } from './_support/FakeTabsPort';
 import type { Tab } from '../../src/shared/lib/types';
+import { Timestamp } from '../../src/shared/lib/Timestamp';
 
-const now = new Date(2026, 4, 10, 12).getTime();
-const fiveMinAgo = now - 5 * 60_000;
-const oneHourAgo = now - 60 * 60_000;
+const nowMillis = new Date(2026, 4, 10, 12).getTime();
+const now = Timestamp.fromMillis(nowMillis);
+const fiveMinAgo = Timestamp.fromMillis(nowMillis - 5 * 60_000);
+const oneHourAgo = Timestamp.fromMillis(nowMillis - 60 * 60_000);
 
 const sampleTabs: readonly Tab[] = [
   {

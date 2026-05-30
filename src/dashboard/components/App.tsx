@@ -2,19 +2,20 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import type { Tab, TabGroupInfo } from '../../shared/lib/types';
 import type { TabsPort } from '../../shared/adapters/tabsPort';
 import type { GroupBy } from '../../shared/lib/grouping';
+import { Timestamp } from '../../shared/lib/Timestamp';
 import { filterTabs } from '../../shared/lib/filterTabs';
 import { TabList } from './TabList';
 import { ViewToggle } from './ViewToggle';
 
 interface Props {
   tabsPort: TabsPort;
-  now?: number;
+  now?: Timestamp;
 }
 
 export function App({ tabsPort, now: nowOverride }: Props) {
   const [tabs, setTabs] = useState<readonly Tab[]>([]);
   const [loaded, setLoaded] = useState(false);
-  const [now, setNow] = useState<number>(() => nowOverride ?? Date.now());
+  const [now, setNow] = useState<Timestamp>(() => nowOverride ?? Timestamp.now());
   const [groupBy, setGroupBy] = useState<GroupBy>('window');
   const [search, setSearch] = useState('');
   const [selected, setSelected] = useState<ReadonlySet<number>>(() => new Set());
@@ -35,7 +36,7 @@ export function App({ tabsPort, now: nowOverride }: Props) {
   }, [tabs]);
 
   const refresh = useCallback(async () => {
-    setNow(nowOverride ?? Date.now());
+    setNow(nowOverride ?? Timestamp.now());
     const next = await tabsPort.queryAll();
     setTabs(next);
     setSelected(new Set());

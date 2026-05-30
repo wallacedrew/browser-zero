@@ -2,6 +2,7 @@ import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { TabRow } from '../../../src/dashboard/components/TabRow';
 import type { Tab } from '../../../src/shared/lib/types';
+import { Timestamp } from '../../../src/shared/lib/Timestamp';
 
 const baseTab: Tab = {
   id: 1,
@@ -10,7 +11,7 @@ const baseTab: Tab = {
   url: 'https://github.com/me/repo/pull/123',
   domain: 'github.com',
   favIconUrl: null,
-  lastAccessed: 0,
+  lastAccessed: Timestamp.fromMillis(0),
   group: null,
 };
 

@@ -1,3 +1,5 @@
+import type { Timestamp } from './Timestamp';
+
 export interface TabGroupInfo {
   readonly id: number;
   readonly title: string;
@@ -11,6 +13,6 @@ export interface Tab {
   readonly url: string;
   readonly domain: string;
   readonly favIconUrl: string | null;
-  readonly lastAccessed: number;
+  readonly lastAccessed: Timestamp;
   readonly group: TabGroupInfo | null;
 }

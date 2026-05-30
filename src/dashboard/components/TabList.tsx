@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type DragEvent } from 'react';
 import type { Tab, TabGroupInfo } from '../../shared/lib/types';
 import { groupTabs, type GroupBy, type TabGroup } from '../../shared/lib/grouping';
-import { formatRelativeTime } from '../../shared/lib/formatRelativeTime';
+import type { Timestamp } from '../../shared/lib/Timestamp';
 import { sectionHeaderClassesForGroupColor } from '../lib/groupColors';
 import { GroupNav } from './GroupNav';
 import { SectionActionPanel } from './SectionActionPanel';
@@ -11,7 +11,7 @@ type TabRowViewModel = Tab & { readonly lastAccessedLabel: string };
 
 interface Props {
   tabs: readonly Tab[];
-  now: number;
+  now: Timestamp;
   groupBy: GroupBy;
   selected: ReadonlySet<number>;
   armedDeleteId: number | null;
@@ -67,7 +67,7 @@ export function TabList({
     () =>
       tabs.map((tab) => ({
         ...tab,
-        lastAccessedLabel: formatRelativeTime(tab.lastAccessed, now),
+        lastAccessedLabel: tab.lastAccessed.relativeLabelFrom(now),
       })),
     [tabs, now],
   );

@@ -1,4 +1,5 @@
 import type { Tab } from '../../shared/lib/types';
+import { Timestamp } from '../../shared/lib/Timestamp';
 import { extractDomain } from '../../shared/lib/extractDomain';
 
 // Curated fixture for screenshots / demo mode. Anchored to a fixed
@@ -9,7 +10,8 @@ import { extractDomain } from '../../shared/lib/extractDomain';
 // NB: demoNow can be passed to <App now={demoNow} /> so "5 min ago",
 // "1 hr ago", "yesterday" all line up with the fixture's lastAccessed.
 
-export const demoNow = new Date(2026, 4, 11, 14, 0, 0).getTime();
+export const demoNowMillis = new Date(2026, 4, 11, 14, 0, 0).getTime();
+export const demoNow = Timestamp.fromMillis(demoNowMillis);
 const MINUTE = 60 * 1000;
 const HOUR = 60 * MINUTE;
 const DAY = 24 * HOUR;
@@ -278,6 +280,6 @@ export const demoTabs: readonly Tab[] = specs.map((spec) => ({
   url: spec.url,
   domain: extractDomain(spec.url),
   favIconUrl: faviconFor(spec.url),
-  lastAccessed: demoNow - spec.ageMs,
+  lastAccessed: Timestamp.fromMillis(demoNowMillis - spec.ageMs),
   group: spec.group,
 }));

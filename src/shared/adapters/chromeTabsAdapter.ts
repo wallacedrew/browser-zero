@@ -1,5 +1,6 @@
 import type { Tab, TabGroupInfo } from '../lib/types';
 import type { TabsPort } from './tabsPort';
+import { Timestamp } from '../lib/Timestamp';
 import { extractDomain } from '../lib/extractDomain';
 
 export class ChromeTabsAdapter implements TabsPort {
@@ -95,7 +96,7 @@ function toDomainTab(
     url,
     domain: extractDomain(url),
     favIconUrl: rawFavIconUrl.length > 0 ? rawFavIconUrl : null,
-    lastAccessed: chromeTab.lastAccessed ?? Date.now(),
+    lastAccessed: Timestamp.fromMillis(chromeTab.lastAccessed ?? Date.now()),
     group: resolveGroup(chromeTab.groupId, groupsById),
   };
 }
