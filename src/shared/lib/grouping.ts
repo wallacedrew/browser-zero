@@ -15,6 +15,7 @@ export interface GroupingStrategy {
   makeLabel<T extends Tab>(bucketKey: string, tabs: readonly T[], index: number): string;
   readonly dropEnabled: boolean;
   readonly allowGrouping: boolean;
+  sectionColorOf(firstTab: Tab | undefined): string | null;
 }
 
 export function groupingStrategyFor(by: GroupBy): GroupingStrategy {
@@ -57,6 +58,7 @@ const WindowGrouping: GroupingStrategy = {
   makeLabel: (_bucketKey, _tabs, index) => `Window ${String(index + 1)}`,
   dropEnabled: true,
   allowGrouping: true,
+  sectionColorOf: () => null,
 };
 
 const DomainGrouping: GroupingStrategy = {
@@ -70,6 +72,7 @@ const DomainGrouping: GroupingStrategy = {
   makeLabel: (bucketKey) => bucketKey,
   dropEnabled: false,
   allowGrouping: false,
+  sectionColorOf: () => null,
 };
 
 const UNGROUPED_KEY = 'ungrouped';
@@ -94,6 +97,7 @@ const TabGroupGrouping: GroupingStrategy = {
   },
   dropEnabled: true,
   allowGrouping: true,
+  sectionColorOf: (firstTab) => firstTab?.group?.color ?? null,
 };
 
 const STRATEGIES: Record<GroupBy, GroupingStrategy> = {

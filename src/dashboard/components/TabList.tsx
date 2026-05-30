@@ -144,7 +144,7 @@ export function TabList({
     // Only by-tab-group has an intrinsic color per group (the Chrome tab
     // group color). by-window and by-domain have no inherent group color,
     // so they fall back to the slate default in GroupNav.
-    color: groupBy === 'tabgroup' ? (group.tabs[0]?.group?.color ?? null) : null,
+    color: strategy.sectionColorOf(group.tabs[0]),
   }));
   // scrollIntoView({ block: 'start' }) lines the section up with the
   // viewport top — directly behind our sticky chip nav, occluding the
@@ -217,8 +217,7 @@ export function TabList({
           const hasUnselected = selectedInGroup < group.tabs.length;
           const hasAnySelected = selectedInGroup > 0;
           const isDragOver = dropEnabled && dragOverKey === group.key;
-          const sectionColor =
-            groupBy === 'tabgroup' ? (group.tabs[0]?.group?.color ?? null) : null;
+          const sectionColor = strategy.sectionColorOf(group.tabs[0]);
           const headerClasses = sectionHeaderClassesForGroupColor(sectionColor);
           const isCollapsed = collapsedKeys.has(group.key);
           const listId = `group-list-${group.key}`;
