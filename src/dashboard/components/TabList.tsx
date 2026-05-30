@@ -9,8 +9,7 @@ import {
 import type { Timestamp } from '../../shared/lib/Timestamp';
 import { CollapseAllControl } from './CollapseAllControl';
 import { GroupNav } from './GroupNav';
-import { TabGroupSectionHeader } from './TabGroupSectionHeader';
-import { TabGroupSectionTabs } from './TabGroupSectionTabs';
+import { TabGroupSection } from './TabGroupSection';
 
 type TabRowViewModel = Tab & { readonly lastAccessedLabel: string };
 
@@ -184,81 +183,56 @@ export function TabList({
         onToggle={toggleAllCollapsed}
       />
       <div className="divide-y divide-slate-200">
-        {groups.map((group) => {
-          const groupIds = group.tabs.map((tab) => tab.id);
-          const selectedIdsInGroup = group.tabs.flatMap((tab) =>
-            selected.has(tab.id) ? [tab.id] : [],
-          );
-          const isDragOver = dropEnabled && dragOverKey === group.key;
-          const sectionColor = strategy.sectionColorOf(group.tabs[0]);
-          const isCollapsed = collapsedKeys.has(group.key);
-          const listId = `group-list-${group.key}`;
-
-          return (
-            <section
-              key={group.key}
-              data-group-key={group.key}
-              aria-label={group.label}
-              onDragOver={
-                dropEnabled
-                  ? (event) => {
-                      event.preventDefault();
-                      event.dataTransfer.dropEffect = 'move';
-                      if (dragOverKey !== group.key) setDragOverKey(group.key);
-                    }
-                  : undefined
-              }
-              onDragLeave={
-                dropEnabled
-                  ? () => {
-                      if (dragOverKey === group.key) setDragOverKey(null);
-                    }
-                  : undefined
-              }
-              onDrop={
-                dropEnabled
-                  ? (event) => {
-                      fireDrop(event, group);
-                    }
-                  : undefined
-              }
-              className={`py-3 transition-colors ${isDragOver ? 'bg-blue-50' : ''}`}
-            >
-              <TabGroupSectionHeader
-                label={group.label}
-                tabCount={group.tabs.length}
-                groupIds={groupIds}
-                selectedIds={selectedIdsInGroup}
-                listId={listId}
-                sectionColor={sectionColor}
-                collapsed={isCollapsed}
-                allowGrouping={allowGrouping}
-                existingGroups={existingGroups}
-                onToggleCollapsed={() => {
-                  toggleCollapsed(group.key);
-                }}
-                onSelectGroup={onSelectGroup}
-                onClearGroup={onClearGroup}
-                onDeleteIds={onDeleteIds}
-                onCreateGroup={onCreateGroup}
-                onAssignManyToGroup={onAssignManyToGroup}
-              />
-              <TabGroupSectionTabs
-                listId={listId}
-                hidden={isCollapsed}
-                tabs={group.tabs}
-                selected={selected}
-                armedDeleteId={armedDeleteId}
-                isDraggable={dropEnabled}
-                onSelectionToggle={onSelectionToggle}
-                onFocus={onFocus}
-                onArmDelete={onArmDelete}
-                onDisarm={onDisarm}
-                onClose={onClose}
-              />
-            </section>
-          );
-        })}
+        {groups.map((group) => (
+          <TabGroupSection
+            key={group.key}
+            group={group}
+            sectionColor={strategy.sectionColorOf(group.tabs[0])}
+            isCollapsed={collapsedKeys.has(group.key)}
+            isDragOver={dropEnabled && dragOverKey === group.key}
+            dropEnabled={dropEnabled}
+            allowGrouping={allowGrouping}
+            existingGroups={existingGroups}
+            selected={selected}
+            armedDeleteId={armedDeleteId}
+            onDragOver={
+              dropEnabled
+                ? (event) => {
+                    event.preventDefault();
+                    event.dataTransfer.dropEffect = 'move';
+                    if (dragOverKey !== group.key) setDragOverKey(group.key);
+                  }
+                : undefined
+            }
+            onDragLeave={
+              dropEnabled
+                ? () => {
+                    if (dragOverKey === group.key) setDragOverKey(null);
+                  }
+                : undefined
+            }
+            onDrop={
+              dropEnabled
+                ? (event) => {
+                    fireDrop(event, group);
+                  }
+                : undefined
+            }
+            onToggleCollapsed={() => {
+              toggleCollapsed(group.key);
+            }}
+            onSelectionToggle={onSelectionToggle}
+            onSelectGroup={onSelectGroup}
+            onClearGroup={onClearGroup}
+            onDeleteIds={onDeleteIds}
+            onFocus={onFocus}
+            onArmDelete={onArmDelete}
+            onDisarm={onDisarm}
+            onClose={onClose}
+            onCreateGroup={onCreateGroup}
+            onAssignManyToGroup={onAssignManyToGroup}
+          />
+        ))}
       </div>
     </div>
   );
