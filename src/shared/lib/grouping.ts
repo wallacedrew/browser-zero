@@ -2,13 +2,13 @@ import type { Tab } from './types';
 
 export type GroupBy = 'window' | 'tabgroup' | 'domain';
 
-export interface TabGroup {
+export interface TabGroup<T extends Tab = Tab> {
   readonly key: string;
   readonly label: string;
-  readonly tabs: readonly Tab[];
+  readonly tabs: readonly T[];
 }
 
-export function groupTabs(tabs: readonly Tab[], by: GroupBy): TabGroup[] {
+export function groupTabs<T extends Tab>(tabs: readonly T[], by: GroupBy): TabGroup<T>[] {
   switch (by) {
     case 'window':
       return groupByWindow(tabs);
@@ -19,8 +19,8 @@ export function groupTabs(tabs: readonly Tab[], by: GroupBy): TabGroup[] {
   }
 }
 
-function groupByWindow(tabs: readonly Tab[]): TabGroup[] {
-  const byWindow = new Map<number, Tab[]>();
+function groupByWindow<T extends Tab>(tabs: readonly T[]): TabGroup<T>[] {
+  const byWindow = new Map<number, T[]>();
   for (const tab of tabs) {
     const existing = byWindow.get(tab.windowId);
     if (existing) existing.push(tab);
@@ -35,8 +35,8 @@ function groupByWindow(tabs: readonly Tab[]): TabGroup[] {
     }));
 }
 
-function groupByDomain(tabs: readonly Tab[]): TabGroup[] {
-  const byDomain = new Map<string, Tab[]>();
+function groupByDomain<T extends Tab>(tabs: readonly T[]): TabGroup<T>[] {
+  const byDomain = new Map<string, T[]>();
   for (const tab of tabs) {
     const existing = byDomain.get(tab.domain);
     if (existing) existing.push(tab);
@@ -57,8 +57,8 @@ function groupByDomain(tabs: readonly Tab[]): TabGroup[] {
 
 const UNGROUPED_KEY = 'ungrouped';
 
-function groupByTabGroup(tabs: readonly Tab[]): TabGroup[] {
-  const byTabGroup = new Map<string, Tab[]>();
+function groupByTabGroup<T extends Tab>(tabs: readonly T[]): TabGroup<T>[] {
+  const byTabGroup = new Map<string, T[]>();
   for (const tab of tabs) {
     const key = tab.group ? `g-${String(tab.group.id)}` : UNGROUPED_KEY;
     const existing = byTabGroup.get(key);

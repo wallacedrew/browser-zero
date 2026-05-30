@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type DragEvent } from 'react';
+import { useEffect, useMemo, useRef, useState, type DragEvent } from 'react';
 import type { Tab, TabGroupInfo } from '../../shared/lib/types';
 import { groupTabs, type GroupBy, type TabGroup } from '../../shared/lib/grouping';
 import { formatRelativeTime } from '../../shared/lib/formatRelativeTime';
@@ -6,6 +6,8 @@ import { sectionHeaderClassesForGroupColor } from '../lib/groupColors';
 import { GroupNav } from './GroupNav';
 import { SectionActionPanel } from './SectionActionPanel';
 import { TabRow } from './TabRow';
+
+type TabRowViewModel = Tab & { readonly lastAccessedLabel: string };
 
 interface Props {
   tabs: readonly Tab[];
@@ -61,7 +63,15 @@ export function TabList({
       return next;
     });
   };
-  const groups = groupTabs(tabs, groupBy);
+  const viewModels = useMemo<readonly TabRowViewModel[]>(
+    () =>
+      tabs.map((tab) => ({
+        ...tab,
+        lastAccessedLabel: formatRelativeTime(tab.lastAccessed, now),
+      })),
+    [tabs, now],
+  );
+  const groups = groupTabs(viewModels, groupBy);
   const dropEnabled = groupBy === 'window' || groupBy === 'tabgroup';
   const allowGrouping = groupBy !== 'domain';
   const groupKeys = groups.map((group) => group.key).join('|');
@@ -148,7 +158,7 @@ export function TabList({
     setActiveKey(groupKey);
   };
 
-  const fireDrop = (event: DragEvent<HTMLElement>, group: TabGroup) => {
+  const fireDrop = (event: DragEvent<HTMLElement>, group: TabGroup<TabRowViewModel>) => {
     event.preventDefault();
     setDragOverKey(null);
     const raw = event.dataTransfer.getData('text/plain');
@@ -313,7 +323,7 @@ export function TabList({
                   <TabRow
                     key={tab.id}
                     tab={tab}
-                    lastAccessedLabel={formatRelativeTime(tab.lastAccessed, now)}
+                    lastAccessedLabel={tab.lastAccessedLabel}
                     selection={{ isSelected: selected.has(tab.id), toggle: onSelectionToggle }}
                     armedForDelete={tab.id === armedDeleteId}
                     isDraggable={dropEnabled}
