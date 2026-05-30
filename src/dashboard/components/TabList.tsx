@@ -8,6 +8,7 @@ import {
 } from '../../shared/lib/grouping';
 import type { Timestamp } from '../../shared/lib/Timestamp';
 import { sectionHeaderClassesForGroupColor } from '../lib/groupColors';
+import { ChevronIcon } from './ChevronIcon';
 import { GroupNav } from './GroupNav';
 import { SectionActionPanel } from './SectionActionPanel';
 import { TabRow } from './TabRow';
@@ -186,18 +187,7 @@ export function TabList({
             aria-expanded={!allCollapsed}
             className="inline-flex items-center gap-1.5 text-sm text-slate-600 hover:text-slate-900 hover:underline"
           >
-            <svg
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              aria-hidden="true"
-              className={`h-3.5 w-3.5 transition-transform ${allCollapsed ? '-rotate-90' : 'rotate-0'}`}
-            >
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.06l3.71-3.83a.75.75 0 1 1 1.08 1.04l-4.25 4.39a.75.75 0 0 1-1.08 0L5.21 8.27a.75.75 0 0 1 .02-1.06z"
-              />
-            </svg>
+            <ChevronIcon collapsed={allCollapsed} />
             {allCollapsed ? 'Expand all' : 'Collapse all'}
           </button>
         </div>
@@ -261,18 +251,7 @@ export function TabList({
                       aria-controls={listId}
                       className={`flex items-center gap-2 rounded-t-md border-b-0 px-3 py-1 text-base font-semibold ${headerClasses.tab}`}
                     >
-                      <svg
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                        className={`h-3.5 w-3.5 shrink-0 transition-transform ${isCollapsed ? '-rotate-90' : 'rotate-0'}`}
-                      >
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.06l3.71-3.83a.75.75 0 1 1 1.08 1.04l-4.25 4.39a.75.75 0 0 1-1.08 0L5.21 8.27a.75.75 0 0 1 .02-1.06z"
-                        />
-                      </svg>
+                      <ChevronIcon collapsed={isCollapsed} shrink />
                       <span>{group.label}</span>
                     </button>
                   </h2>
