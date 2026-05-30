@@ -7,11 +7,9 @@ import {
   type TabGroup,
 } from '../../shared/lib/grouping';
 import type { Timestamp } from '../../shared/lib/Timestamp';
-import { sectionHeaderClassesForGroupColor } from '../lib/groupColors';
-import { ChevronIcon } from './ChevronIcon';
 import { CollapseAllControl } from './CollapseAllControl';
 import { GroupNav } from './GroupNav';
-import { SectionActionPanel } from './SectionActionPanel';
+import { TabGroupSectionHeader } from './TabGroupSectionHeader';
 import { TabRow } from './TabRow';
 
 type TabRowViewModel = Tab & { readonly lastAccessedLabel: string };
@@ -191,12 +189,8 @@ export function TabList({
           const selectedIdsInGroup = group.tabs.flatMap((tab) =>
             selected.has(tab.id) ? [tab.id] : [],
           );
-          const selectedInGroup = selectedIdsInGroup.length;
-          const hasUnselected = selectedInGroup < group.tabs.length;
-          const hasAnySelected = selectedInGroup > 0;
           const isDragOver = dropEnabled && dragOverKey === group.key;
           const sectionColor = strategy.sectionColorOf(group.tabs[0]);
-          const headerClasses = sectionHeaderClassesForGroupColor(sectionColor);
           const isCollapsed = collapsedKeys.has(group.key);
           const listId = `group-list-${group.key}`;
 
@@ -230,66 +224,25 @@ export function TabList({
               }
               className={`py-3 transition-colors ${isDragOver ? 'bg-blue-50' : ''}`}
             >
-              <header className="mb-2 space-y-1">
-                <div
-                  className={`flex items-end justify-between gap-3 border-b-2 px-3 ${headerClasses.shelf}`}
-                >
-                  <h2 className="-mb-px">
-                    <button
-                      type="button"
-                      onClick={() => {
-                        toggleCollapsed(group.key);
-                      }}
-                      aria-expanded={!isCollapsed}
-                      aria-controls={listId}
-                      className={`flex items-center gap-2 rounded-t-md border-b-0 px-3 py-1 text-base font-semibold ${headerClasses.tab}`}
-                    >
-                      <ChevronIcon collapsed={isCollapsed} shrink />
-                      <span>{group.label}</span>
-                    </button>
-                  </h2>
-                  <div className="flex items-center gap-3 pb-1 text-sm text-slate-400">
-                    <span>
-                      {group.tabs.length} tab{group.tabs.length === 1 ? '' : 's'}
-                    </span>
-                    {hasUnselected && (
-                      <button
-                        type="button"
-                        onClick={() => {
-                          onSelectGroup(groupIds);
-                        }}
-                        className="text-slate-600 hover:text-slate-900 hover:underline"
-                      >
-                        Select all
-                      </button>
-                    )}
-                    {hasAnySelected && (
-                      <button
-                        type="button"
-                        onClick={() => {
-                          onClearGroup(groupIds);
-                        }}
-                        className="text-slate-600 hover:text-slate-900 hover:underline"
-                      >
-                        Keep all
-                      </button>
-                    )}
-                  </div>
-                </div>
-                <div className="px-3">
-                  <SectionActionPanel
-                    groupLabel={group.label}
-                    groupIds={groupIds}
-                    selectedIds={selectedIdsInGroup}
-                    allowGrouping={allowGrouping}
-                    existingGroups={existingGroups}
-                    onClearGroup={onClearGroup}
-                    onDeleteIds={onDeleteIds}
-                    onCreateGroup={onCreateGroup}
-                    onAssignManyToGroup={onAssignManyToGroup}
-                  />
-                </div>
-              </header>
+              <TabGroupSectionHeader
+                label={group.label}
+                tabCount={group.tabs.length}
+                groupIds={groupIds}
+                selectedIds={selectedIdsInGroup}
+                listId={listId}
+                sectionColor={sectionColor}
+                collapsed={isCollapsed}
+                allowGrouping={allowGrouping}
+                existingGroups={existingGroups}
+                onToggleCollapsed={() => {
+                  toggleCollapsed(group.key);
+                }}
+                onSelectGroup={onSelectGroup}
+                onClearGroup={onClearGroup}
+                onDeleteIds={onDeleteIds}
+                onCreateGroup={onCreateGroup}
+                onAssignManyToGroup={onAssignManyToGroup}
+              />
               <ul id={listId} hidden={isCollapsed} className="divide-y divide-slate-100">
                 {group.tabs.map((tab) => (
                   <TabRow
