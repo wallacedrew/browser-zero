@@ -2,6 +2,7 @@ import type { DragEvent, MouseEvent } from 'react';
 import type { Tab } from '../../shared/lib/types';
 import { Favicon } from './Favicon';
 import { GroupChip } from './GroupChip';
+import { TabCloseAction } from './TabCloseAction';
 import { formatRelativeTime } from '../../shared/lib/formatRelativeTime';
 
 export interface ArmedDeleteActions {
@@ -45,14 +46,6 @@ export function TabRow({
     onSelectionToggle(tab.id);
   };
 
-  const handleConfirmClose = () => {
-    armedDelete.confirm(tab.id);
-  };
-
-  const handleArmDelete = () => {
-    armedDelete.arm(tab.id);
-  };
-
   return (
     <li
       draggable={isDraggable}
@@ -82,37 +75,12 @@ export function TabRow({
         onChange={handleSelectionChange}
         className="h-5 w-5 shrink-0 rounded border-slate-300 text-slate-900 focus:ring-slate-500"
       />
-      {armedForDelete ? (
-        <>
-          <button
-            type="button"
-            aria-label={`Confirm close ${tab.title}`}
-            data-armed-delete="true"
-            onClick={handleConfirmClose}
-            className="shrink-0 rounded-full bg-red-600 px-2.5 py-0.5 text-sm font-medium text-white shadow-sm hover:bg-red-700"
-          >
-            Close?
-          </button>
-          <button
-            type="button"
-            aria-label={`Keep ${tab.title}`}
-            data-armed-delete="true"
-            onClick={armedDelete.disarm}
-            className="shrink-0 rounded-full border border-slate-300 bg-white px-2.5 py-0.5 text-sm font-medium text-slate-700 shadow-sm hover:bg-slate-50"
-          >
-            Keep
-          </button>
-        </>
-      ) : (
-        <button
-          type="button"
-          aria-label={`Close ${tab.title}`}
-          onClick={handleArmDelete}
-          className="shrink-0 rounded p-1 text-lg leading-none text-slate-400 transition-colors hover:bg-red-50 hover:text-red-600"
-        >
-          ×
-        </button>
-      )}
+      <TabCloseAction
+        tabId={tab.id}
+        tabTitle={tab.title}
+        armed={armedForDelete}
+        actions={armedDelete}
+      />
     </li>
   );
 }
