@@ -318,9 +318,7 @@ export function TabList({
                     isDraggable={dropEnabled}
                     onSelectionToggle={onSelectionToggle}
                     onFocus={onFocus}
-                    onArmDelete={onArmDelete}
-                    onDisarm={onDisarm}
-                    onClose={onClose}
+                    armedDelete={{ arm: onArmDelete, disarm: onDisarm, confirm: onClose }}
                   />
                 ))}
               </ul>

@@ -33,9 +33,7 @@ const renderRow = (tab: Tab) => {
                 isDraggable={false}
                 onSelectionToggle={noop}
                 onFocus={noop}
-                onArmDelete={noop}
-                onDisarm={vi.fn()}
-                onClose={noop}
+                armedDelete={{ arm: noop, disarm: vi.fn(), confirm: noop }}
               />
             </ul>
           </td>

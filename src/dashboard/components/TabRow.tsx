@@ -4,6 +4,12 @@ import { Favicon } from './Favicon';
 import { GroupChip } from './GroupChip';
 import { formatRelativeTime } from '../../shared/lib/formatRelativeTime';
 
+export interface ArmedDeleteActions {
+  arm: (tabId: number) => void;
+  disarm: () => void;
+  confirm: (tabId: number) => void;
+}
+
 interface Props {
   tab: Tab;
   now: number;
@@ -12,9 +18,7 @@ interface Props {
   isDraggable: boolean;
   onSelectionToggle: (tabId: number) => void;
   onFocus: (tabId: number, windowId: number) => void;
-  onArmDelete: (tabId: number) => void;
-  onDisarm: () => void;
-  onClose: (tabId: number) => void;
+  armedDelete: ArmedDeleteActions;
 }
 
 export function TabRow({
@@ -25,9 +29,7 @@ export function TabRow({
   isDraggable,
   onSelectionToggle,
   onFocus,
-  onArmDelete,
-  onDisarm,
-  onClose,
+  armedDelete,
 }: Props) {
   const handleDragStart = (event: DragEvent<HTMLLIElement>) => {
     event.dataTransfer.setData('text/plain', String(tab.id));
@@ -44,11 +46,11 @@ export function TabRow({
   };
 
   const handleConfirmClose = () => {
-    onClose(tab.id);
+    armedDelete.confirm(tab.id);
   };
 
   const handleArmDelete = () => {
-    onArmDelete(tab.id);
+    armedDelete.arm(tab.id);
   };
 
   return (
@@ -95,7 +97,7 @@ export function TabRow({
             type="button"
             aria-label={`Keep ${tab.title}`}
             data-armed-delete="true"
-            onClick={onDisarm}
+            onClick={armedDelete.disarm}
             className="shrink-0 rounded-full border border-slate-300 bg-white px-2.5 py-0.5 text-sm font-medium text-slate-700 shadow-sm hover:bg-slate-50"
           >
             Keep
