@@ -5,6 +5,7 @@ import { GroupChip } from './GroupChip';
 import { TabCloseAction } from './TabCloseAction';
 import { TabDomain } from './TabDomain';
 import { TabLastAccessedLabel } from './TabLastAccessedLabel';
+import { TabRowContainer } from './TabRowContainer';
 import { TabSelectCheckbox } from './TabSelectCheckbox';
 import { TabTitleLink } from './TabTitleLink';
 
@@ -49,13 +50,7 @@ export function TabRow({
   };
 
   return (
-    <li
-      draggable={isDraggable}
-      onDragStart={isDraggable ? handleDragStart : undefined}
-      className={`flex items-center gap-3 px-3 py-2 even:bg-slate-50 hover:bg-slate-100 ${
-        isDraggable ? 'cursor-grab active:cursor-grabbing' : ''
-      }`}
-    >
+    <TabRowContainer isDraggable={isDraggable} onDragStart={handleDragStart}>
       <Favicon favIconUrl={tab.favIconUrl} />
       <GroupChip group={tab.group} />
       <TabTitleLink tab={tab} onClick={handleTitleClick} />
@@ -68,6 +63,6 @@ export function TabRow({
         armed={armedForDelete}
         actions={armedDelete}
       />
-    </li>
+    </TabRowContainer>
   );
 }
