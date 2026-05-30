@@ -3,6 +3,7 @@ import type { Tab } from '../../shared/lib/types';
 import { Favicon } from './Favicon';
 import { GroupChip } from './GroupChip';
 import { TabCloseAction } from './TabCloseAction';
+import { TabDomain } from './TabDomain';
 import { TabTitleLink } from './TabTitleLink';
 
 export interface ArmedDeleteActions {
@@ -56,7 +57,7 @@ export function TabRow({
       <Favicon favIconUrl={tab.favIconUrl} />
       {tab.group && <GroupChip group={tab.group} />}
       <TabTitleLink tab={tab} onClick={handleTitleClick} />
-      <span className="shrink-0 text-sm text-slate-500">{tab.domain}</span>
+      <TabDomain domain={tab.domain} />
       <span className="shrink-0 text-sm tabular-nums text-slate-400">{lastAccessedLabel}</span>
       <input
         type="checkbox"
