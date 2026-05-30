@@ -10,7 +10,7 @@ import type { Timestamp } from '../../shared/lib/Timestamp';
 import { CollapseAllControl } from './CollapseAllControl';
 import { GroupNav } from './GroupNav';
 import { TabGroupSectionHeader } from './TabGroupSectionHeader';
-import { TabRow } from './TabRow';
+import { TabGroupSectionTabs } from './TabGroupSectionTabs';
 
 type TabRowViewModel = Tab & { readonly lastAccessedLabel: string };
 
@@ -243,20 +243,19 @@ export function TabList({
                 onCreateGroup={onCreateGroup}
                 onAssignManyToGroup={onAssignManyToGroup}
               />
-              <ul id={listId} hidden={isCollapsed} className="divide-y divide-slate-100">
-                {group.tabs.map((tab) => (
-                  <TabRow
-                    key={tab.id}
-                    tab={tab}
-                    lastAccessedLabel={tab.lastAccessedLabel}
-                    selection={{ isSelected: selected.has(tab.id), toggle: onSelectionToggle }}
-                    armedForDelete={tab.id === armedDeleteId}
-                    isDraggable={dropEnabled}
-                    onFocus={onFocus}
-                    armedDelete={{ arm: onArmDelete, disarm: onDisarm, confirm: onClose }}
-                  />
-                ))}
-              </ul>
+              <TabGroupSectionTabs
+                listId={listId}
+                hidden={isCollapsed}
+                tabs={group.tabs}
+                selected={selected}
+                armedDeleteId={armedDeleteId}
+                isDraggable={dropEnabled}
+                onSelectionToggle={onSelectionToggle}
+                onFocus={onFocus}
+                onArmDelete={onArmDelete}
+                onDisarm={onDisarm}
+                onClose={onClose}
+              />
             </section>
           );
         })}
