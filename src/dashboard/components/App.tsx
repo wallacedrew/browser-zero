@@ -4,6 +4,7 @@ import type { TabsPort } from '../../shared/adapters/tabsPort';
 import type { GroupBy } from '../../shared/lib/grouping';
 import { Timestamp } from '../../shared/lib/Timestamp';
 import { filterTabs } from '../../shared/lib/filterTabs';
+import { useArmedDelete } from '../hooks/useArmedDelete';
 import { TabList } from './TabList';
 import { ViewToggle } from './ViewToggle';
 
@@ -19,7 +20,7 @@ export function App({ tabsPort, now: nowOverride }: Props) {
   const [groupBy, setGroupBy] = useState<GroupBy>('window');
   const [search, setSearch] = useState('');
   const [selected, setSelected] = useState<ReadonlySet<number>>(() => new Set());
-  const [armedDeleteId, setArmedDeleteId] = useState<number | null>(null);
+  const { armedTabId, arm: handleArmDelete, disarm: handleDisarm } = useArmedDelete();
 
   const isFiltering = search.trim().length > 0;
   const visibleTabs = useMemo(() => filterTabs(tabs, search), [tabs, search]);
@@ -50,22 +51,6 @@ export function App({ tabsPort, now: nowOverride }: Props) {
     void refresh();
   }, [refresh]);
 
-  // When an × is armed for delete, any mousedown that lands outside the armed
-  // button disarms it. Listening on mousedown (not click) so a click on the
-  // armed button itself still gets to fire its handler with the armed state.
-  useEffect(() => {
-    if (armedDeleteId === null) return;
-    const onMouseDown = (event: MouseEvent) => {
-      const target = event.target as HTMLElement | null;
-      if (target?.closest('[data-armed-delete="true"]')) return;
-      setArmedDeleteId(null);
-    };
-    document.addEventListener('mousedown', onMouseDown);
-    return () => {
-      document.removeEventListener('mousedown', onMouseDown);
-    };
-  }, [armedDeleteId]);
-
   const handleFocus = useCallback(
     (tabId: number, windowId: number) => {
       void tabsPort.focus(tabId, windowId);
@@ -87,17 +72,9 @@ export function App({ tabsPort, now: nowOverride }: Props) {
     [tabsPort],
   );
 
-  const handleArmDelete = useCallback((tabId: number) => {
-    setArmedDeleteId(tabId);
-  }, []);
-
-  const handleDisarm = useCallback(() => {
-    setArmedDeleteId(null);
-  }, []);
-
   const handleClose = useCallback(
     (tabId: number) => {
-      setArmedDeleteId(null);
+      handleDisarm();
       const remainingAfter = tabs.filter((tab) => tab.id !== tabId).length;
       setTabs((prev) => prev.filter((tab) => tab.id !== tabId));
       setSelected((prev) => {
@@ -108,7 +85,7 @@ export function App({ tabsPort, now: nowOverride }: Props) {
       });
       void closeWithLastTabGuard([tabId], remainingAfter);
     },
-    [tabs, closeWithLastTabGuard],
+    [tabs, closeWithLastTabGuard, handleDisarm],
   );
 
   const handleSelectionToggle = useCallback((tabId: number) => {
@@ -244,7 +221,7 @@ export function App({ tabsPort, now: nowOverride }: Props) {
           groupBy={groupBy}
           selection={{ selected, toggle: handleSelectionToggle }}
           armedDelete={{
-            armedTabId: armedDeleteId,
+            armedTabId,
             actions: {
               arm: handleArmDelete,
               disarm: handleDisarm,
