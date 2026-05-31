@@ -81,16 +81,18 @@ export function TabList({
             group={group}
             sectionColor={strategy.sectionColorOf(group.tabs[0])}
             isCollapsed={collapsedKeys.has(group.key)}
-            isDragOver={dragOverKey === group.key}
-            dropEnabled={dropEnabled}
+            dragState={{
+              isDragOver: dragOverKey === group.key,
+              dropEnabled,
+              handlers: dragHandlersFor(group.key, (tabId) => {
+                const referenceTab = group.tabs[0];
+                if (!referenceTab) return;
+                strategy.dispatchDrop(tabId, referenceTab, dropCallbacks);
+              }),
+            }}
             allowGrouping={allowGrouping}
             existingGroups={existingGroups}
             selection={selection}
-            dragHandlers={dragHandlersFor(group.key, (tabId) => {
-              const referenceTab = group.tabs[0];
-              if (!referenceTab) return;
-              strategy.dispatchDrop(tabId, referenceTab, dropCallbacks);
-            })}
             onToggleCollapsed={() => {
               toggleCollapsed(group.key);
             }}

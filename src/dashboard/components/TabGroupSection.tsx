@@ -3,7 +3,7 @@ import type { TabGroup } from '../../shared/lib/grouping';
 import type { ArmedDeleteState } from '../lib/armedDeleteState';
 import type { BulkTabActions } from '../lib/bulkTabActions';
 import type { SelectionModel } from '../lib/selectionModel';
-import type { DragHandlers } from '../hooks/useDragOverGroupKey';
+import type { DragState } from '../hooks/useDragOverGroupKey';
 import type { TabRowViewModel } from '../hooks/useTabViewModels';
 import { TabGroupSectionHeader } from './TabGroupSectionHeader';
 import { TabGroupSectionTabs } from './TabGroupSectionTabs';
@@ -12,14 +12,12 @@ interface Props {
   group: TabGroup<TabRowViewModel>;
   sectionColor: string | null;
   isCollapsed: boolean;
-  isDragOver: boolean;
-  dropEnabled: boolean;
+  dragState: DragState;
   allowGrouping: boolean;
   existingGroups: ReadonlyArray<TabGroupInfo>;
   selection: SelectionModel;
   armedDelete: ArmedDeleteState;
   bulkActions: BulkTabActions;
-  dragHandlers: DragHandlers;
   onToggleCollapsed: () => void;
   onFocus: (tabId: number, windowId: number) => void;
 }
@@ -28,14 +26,12 @@ export function TabGroupSection({
   group,
   sectionColor,
   isCollapsed,
-  isDragOver,
-  dropEnabled,
+  dragState,
   allowGrouping,
   existingGroups,
   selection,
   armedDelete,
   bulkActions,
-  dragHandlers,
   onToggleCollapsed,
   onFocus,
 }: Props) {
@@ -49,10 +45,10 @@ export function TabGroupSection({
     <section
       data-group-key={group.key}
       aria-label={group.label}
-      onDragOver={dragHandlers.onDragOver}
-      onDragLeave={dragHandlers.onDragLeave}
-      onDrop={dragHandlers.onDrop}
-      className={`py-3 transition-colors ${isDragOver ? 'bg-blue-50' : ''}`}
+      onDragOver={dragState.handlers.onDragOver}
+      onDragLeave={dragState.handlers.onDragLeave}
+      onDrop={dragState.handlers.onDrop}
+      className={`py-3 transition-colors ${dragState.isDragOver ? 'bg-blue-50' : ''}`}
     >
       <TabGroupSectionHeader
         label={group.label}
@@ -73,7 +69,7 @@ export function TabGroupSection({
         tabs={group.tabs}
         selection={selection}
         armedDelete={armedDelete}
-        isDraggable={dropEnabled}
+        isDraggable={dragState.dropEnabled}
         onFocus={onFocus}
       />
     </section>

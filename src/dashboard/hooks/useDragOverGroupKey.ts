@@ -6,6 +6,12 @@ export interface DragHandlers {
   onDrop?: (event: DragEvent<HTMLElement>) => void;
 }
 
+export interface DragState {
+  isDragOver: boolean;
+  dropEnabled: boolean;
+  handlers: DragHandlers;
+}
+
 export interface DragOverGroupKey {
   readonly dragOverKey: string | null;
   dragHandlersFor(groupKey: string, onDrop: (tabId: number) => void): DragHandlers;
