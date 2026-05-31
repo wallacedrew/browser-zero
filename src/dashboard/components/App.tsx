@@ -5,6 +5,7 @@ import type { GroupBy } from '../../shared/lib/grouping';
 import { Timestamp } from '../../shared/lib/Timestamp';
 import { filterTabs } from '../../shared/lib/filterTabs';
 import { useArmedDelete } from '../hooks/useArmedDelete';
+import { useSelection } from '../hooks/useSelection';
 import { TabList } from './TabList';
 import { ViewToggle } from './ViewToggle';
 
@@ -19,7 +20,13 @@ export function App({ tabsPort, now: nowOverride }: Props) {
   const [now, setNow] = useState<Timestamp>(() => nowOverride ?? Timestamp.now());
   const [groupBy, setGroupBy] = useState<GroupBy>('window');
   const [search, setSearch] = useState('');
-  const [selected, setSelected] = useState<ReadonlySet<number>>(() => new Set());
+  const {
+    selected,
+    toggle: handleSelectionToggle,
+    selectMany: handleSelectGroup,
+    clearMany: handleClearGroup,
+    clearAll: handleClearAllSelection,
+  } = useSelection();
   const { armedTabId, arm: handleArmDelete, disarm: handleDisarm } = useArmedDelete();
 
   const isFiltering = search.trim().length > 0;
@@ -40,9 +47,9 @@ export function App({ tabsPort, now: nowOverride }: Props) {
     setNow(nowOverride ?? Timestamp.now());
     const next = await tabsPort.queryAll();
     setTabs(next);
-    setSelected(new Set());
+    handleClearAllSelection();
     setLoaded(true);
-  }, [tabsPort, nowOverride]);
+  }, [tabsPort, nowOverride, handleClearAllSelection]);
 
   useEffect(() => {
     // Initial mount load. No query library yet, so this is the standard
@@ -77,42 +84,11 @@ export function App({ tabsPort, now: nowOverride }: Props) {
       handleDisarm();
       const remainingAfter = tabs.filter((tab) => tab.id !== tabId).length;
       setTabs((prev) => prev.filter((tab) => tab.id !== tabId));
-      setSelected((prev) => {
-        if (!prev.has(tabId)) return prev;
-        const next = new Set(prev);
-        next.delete(tabId);
-        return next;
-      });
+      handleClearGroup([tabId]);
       void closeWithLastTabGuard([tabId], remainingAfter);
     },
-    [tabs, closeWithLastTabGuard, handleDisarm],
+    [tabs, closeWithLastTabGuard, handleDisarm, handleClearGroup],
   );
-
-  const handleSelectionToggle = useCallback((tabId: number) => {
-    setSelected((prev) => {
-      const next = new Set(prev);
-      if (next.has(tabId)) next.delete(tabId);
-      else next.add(tabId);
-      return next;
-    });
-  }, []);
-
-  const handleSelectGroup = useCallback((tabIds: readonly number[]) => {
-    setSelected((prev) => {
-      const next = new Set(prev);
-      for (const id of tabIds) next.add(id);
-      return next;
-    });
-  }, []);
-
-  const handleClearGroup = useCallback((tabIds: readonly number[]) => {
-    setSelected((prev) => {
-      if (tabIds.every((id) => !prev.has(id))) return prev;
-      const next = new Set(prev);
-      for (const id of tabIds) next.delete(id);
-      return next;
-    });
-  }, []);
 
   const handleDropOnWindow = useCallback(
     async (tabId: number, targetWindowId: number) => {
@@ -144,20 +120,20 @@ export function App({ tabsPort, now: nowOverride }: Props) {
     async (tabIds: readonly number[], title: string) => {
       if (tabIds.length === 0) return;
       await tabsPort.createGroup(tabIds, title);
-      setSelected(new Set());
+      handleClearAllSelection();
       await refresh();
     },
-    [tabsPort, refresh],
+    [tabsPort, refresh, handleClearAllSelection],
   );
 
   const handleAssignManyToGroup = useCallback(
     async (tabIds: readonly number[], groupId: number) => {
       if (tabIds.length === 0) return;
       await tabsPort.assignManyToGroup(tabIds, groupId);
-      setSelected(new Set());
+      handleClearAllSelection();
       await refresh();
     },
-    [tabsPort, refresh],
+    [tabsPort, refresh, handleClearAllSelection],
   );
 
   const handleDeleteIds = useCallback(
@@ -169,14 +145,10 @@ export function App({ tabsPort, now: nowOverride }: Props) {
       const idSet = new Set(idsToDelete);
       const remainingAfter = tabs.filter((tab) => !idSet.has(tab.id)).length;
       setTabs((prev) => prev.filter((tab) => !idSet.has(tab.id)));
-      setSelected((prev) => {
-        const next = new Set(prev);
-        for (const id of idsToDelete) next.delete(id);
-        return next;
-      });
+      handleClearGroup(idsToDelete);
       void closeWithLastTabGuard(idsToDelete, remainingAfter);
     },
-    [tabs, closeWithLastTabGuard],
+    [tabs, closeWithLastTabGuard, handleClearGroup],
   );
 
   return (
