@@ -1,11 +1,12 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
-import type { Tab, TabGroupInfo } from '../../shared/lib/types';
+import { useCallback, useMemo, useState } from 'react';
+import type { TabGroupInfo } from '../../shared/lib/types';
 import type { TabsPort } from '../../shared/adapters/tabsPort';
 import type { GroupBy } from '../../shared/lib/grouping';
-import { Timestamp } from '../../shared/lib/Timestamp';
+import type { Timestamp } from '../../shared/lib/Timestamp';
 import { filterTabs } from '../../shared/lib/filterTabs';
 import { useArmedDelete } from '../hooks/useArmedDelete';
 import { useSelection } from '../hooks/useSelection';
+import { useTabsData } from '../hooks/useTabsData';
 import { TabList } from './TabList';
 import { ViewToggle } from './ViewToggle';
 
@@ -15,9 +16,7 @@ interface Props {
 }
 
 export function App({ tabsPort, now: nowOverride }: Props) {
-  const [tabs, setTabs] = useState<readonly Tab[]>([]);
-  const [loaded, setLoaded] = useState(false);
-  const [now, setNow] = useState<Timestamp>(() => nowOverride ?? Timestamp.now());
+  const { tabs, setTabs, loaded, now, refreshTabs } = useTabsData(tabsPort, nowOverride);
   const [groupBy, setGroupBy] = useState<GroupBy>('window');
   const [search, setSearch] = useState('');
   const {
@@ -44,19 +43,9 @@ export function App({ tabsPort, now: nowOverride }: Props) {
   }, [tabs]);
 
   const refresh = useCallback(async () => {
-    setNow(nowOverride ?? Timestamp.now());
-    const next = await tabsPort.queryAll();
-    setTabs(next);
+    await refreshTabs();
     handleClearAllSelection();
-    setLoaded(true);
-  }, [tabsPort, nowOverride, handleClearAllSelection]);
-
-  useEffect(() => {
-    // Initial mount load. No query library yet, so this is the standard
-    // useEffect→setState pattern that react-hooks/set-state-in-effect flags by default.
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    void refresh();
-  }, [refresh]);
+  }, [refreshTabs, handleClearAllSelection]);
 
   const handleFocus = useCallback(
     (tabId: number, windowId: number) => {
