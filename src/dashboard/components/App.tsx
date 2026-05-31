@@ -8,9 +8,8 @@ import { useArmedDelete } from '../hooks/useArmedDelete';
 import { useSelection } from '../hooks/useSelection';
 import { useTabsData } from '../hooks/useTabsData';
 import { useTabSummary } from '../hooks/useTabSummary';
-import { DashboardSubtitle } from './DashboardSubtitle';
+import { DashboardHeader } from './DashboardHeader';
 import { TabList } from './TabList';
-import { ViewToggle } from './ViewToggle';
 
 interface Props {
   tabsPort: TabsPort;
@@ -141,27 +140,15 @@ export function App({ tabsPort, now: nowOverride }: Props) {
 
   return (
     <main className="min-h-screen bg-white p-8">
-      <header className="mb-4 flex items-center justify-between gap-4">
-        <div>
-          <h1 className="text-3xl font-semibold text-slate-900">browser-zero</h1>
-          <DashboardSubtitle
-            totalCount={tabs.length}
-            visibleCount={visibleTabs.length}
-            isFiltering={isFiltering}
-            summary={summary}
-          />
-        </div>
-        <div className="flex items-center gap-3">
-          <ViewToggle value={groupBy} onChange={setGroupBy} />
-          <button
-            type="button"
-            onClick={() => void refresh()}
-            className="rounded-md bg-slate-900 px-3 py-1.5 text-base font-medium text-white shadow-sm hover:bg-slate-700"
-          >
-            Refresh
-          </button>
-        </div>
-      </header>
+      <DashboardHeader
+        totalCount={tabs.length}
+        visibleCount={visibleTabs.length}
+        isFiltering={isFiltering}
+        summary={summary}
+        groupBy={groupBy}
+        onGroupByChange={setGroupBy}
+        onRefresh={() => void refresh()}
+      />
       <input
         type="search"
         aria-label="Filter tabs"
