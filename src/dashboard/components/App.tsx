@@ -10,6 +10,7 @@ import { useTabsData } from '../hooks/useTabsData';
 import { useTabSummary } from '../hooks/useTabSummary';
 import { DashboardHeader } from './DashboardHeader';
 import { TabList } from './TabList';
+import { TabSearchInput } from './TabSearchInput';
 
 interface Props {
   tabsPort: TabsPort;
@@ -149,16 +150,7 @@ export function App({ tabsPort, now: nowOverride }: Props) {
         onGroupByChange={setGroupBy}
         onRefresh={() => void refresh()}
       />
-      <input
-        type="search"
-        aria-label="Filter tabs"
-        placeholder="Filter by title, URL, domain, or group…"
-        value={search}
-        onChange={(event) => {
-          setSearch(event.target.value);
-        }}
-        className="mb-4 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-base placeholder:text-slate-400 focus:border-slate-500 focus:outline-none focus:ring-1 focus:ring-slate-500"
-      />
+      <TabSearchInput value={search} onChange={setSearch} />
       {loaded ? (
         <TabList
           tabs={visibleTabs}
