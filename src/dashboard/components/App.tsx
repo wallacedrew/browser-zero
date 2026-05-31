@@ -1,10 +1,10 @@
 import { useCallback, useMemo, useState } from 'react';
-import type { TabGroupInfo } from '../../shared/lib/types';
 import type { TabsPort } from '../../shared/adapters/tabsPort';
 import type { GroupBy } from '../../shared/lib/grouping';
 import type { Timestamp } from '../../shared/lib/Timestamp';
 import { filterTabs } from '../../shared/lib/filterTabs';
 import { useArmedDelete } from '../hooks/useArmedDelete';
+import { useExistingGroups } from '../hooks/useExistingGroups';
 import { useSelection } from '../hooks/useSelection';
 import { useTabsData } from '../hooks/useTabsData';
 import { useTabSummary } from '../hooks/useTabSummary';
@@ -33,13 +33,7 @@ export function App({ tabsPort, now: nowOverride }: Props) {
   const isFiltering = search.trim().length > 0;
   const visibleTabs = useMemo(() => filterTabs(tabs, search), [tabs, search]);
   const summary = useTabSummary(isFiltering ? visibleTabs : tabs);
-  const existingGroups = useMemo<TabGroupInfo[]>(() => {
-    const seen = new Map<number, TabGroupInfo>();
-    for (const tab of tabs) {
-      if (tab.group && !seen.has(tab.group.id)) seen.set(tab.group.id, tab.group);
-    }
-    return [...seen.values()];
-  }, [tabs]);
+  const existingGroups = useExistingGroups(tabs);
 
   const refresh = useCallback(async () => {
     await refreshTabs();
