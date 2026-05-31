@@ -1,13 +1,13 @@
 import type { TabGroupInfo } from '../../shared/lib/types';
+import type { TabGroup } from '../../shared/lib/grouping';
 import type { BulkTabActions } from '../lib/bulkTabActions';
+import type { TabRowViewModel } from '../hooks/useTabViewModels';
 import { sectionHeaderClassesForGroupColor } from '../lib/groupColors';
 import { ChevronIcon } from './ChevronIcon';
 import { SectionActionPanel } from './SectionActionPanel';
 
 interface Props {
-  label: string;
-  tabCount: number;
-  groupIds: readonly number[];
+  group: TabGroup<TabRowViewModel>;
   selectedIds: readonly number[];
   listId: string;
   sectionColor: string | null;
@@ -19,9 +19,7 @@ interface Props {
 }
 
 export function TabGroupSectionHeader({
-  label,
-  tabCount,
-  groupIds,
+  group,
   selectedIds,
   listId,
   sectionColor,
@@ -31,6 +29,8 @@ export function TabGroupSectionHeader({
   bulkActions,
   onToggleCollapsed,
 }: Props) {
+  const groupIds = group.tabs.map((tab) => tab.id);
+  const tabCount = group.tabs.length;
   const headerClasses = sectionHeaderClassesForGroupColor(sectionColor);
   const selectedCount = selectedIds.length;
   const hasUnselected = selectedCount < tabCount;
@@ -58,7 +58,7 @@ export function TabGroupSectionHeader({
             className={`flex items-center gap-2 rounded-t-md border-b-0 px-3 py-1 text-base font-semibold ${headerClasses.tab}`}
           >
             <ChevronIcon collapsed={collapsed} shrink />
-            <span>{label}</span>
+            <span>{group.label}</span>
           </button>
         </h2>
         <div className="flex items-center gap-3 pb-1 text-sm text-slate-400">
@@ -87,7 +87,7 @@ export function TabGroupSectionHeader({
       </div>
       <div className="px-3">
         <SectionActionPanel
-          groupLabel={label}
+          groupLabel={group.label}
           groupIds={groupIds}
           selectedIds={selectedIds}
           allowGrouping={allowGrouping}

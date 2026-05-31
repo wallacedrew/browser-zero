@@ -35,7 +35,6 @@ export function TabGroupSection({
   onToggleCollapsed,
   onFocus,
 }: Props) {
-  const groupIds = group.tabs.map((tab) => tab.id);
   const selectedIdsInGroup = group.tabs.flatMap((tab) =>
     selection.selected.has(tab.id) ? [tab.id] : [],
   );
@@ -51,9 +50,7 @@ export function TabGroupSection({
       className={`py-3 transition-colors ${dragState.isDragOver ? 'bg-blue-50' : ''}`}
     >
       <TabGroupSectionHeader
-        label={group.label}
-        tabCount={group.tabs.length}
-        groupIds={groupIds}
+        group={group}
         selectedIds={selectedIdsInGroup}
         listId={listId}
         sectionColor={sectionColor}
