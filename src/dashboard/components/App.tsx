@@ -6,6 +6,7 @@ import { filterTabs } from '../../shared/lib/filterTabs';
 import { useArmedDelete } from '../hooks/useArmedDelete';
 import { useExistingGroups } from '../hooks/useExistingGroups';
 import { useSelection } from '../hooks/useSelection';
+import { useTabMutations } from '../hooks/useTabMutations';
 import { useTabsData } from '../hooks/useTabsData';
 import { useTabSummary } from '../hooks/useTabSummary';
 import { DashboardHeader } from './DashboardHeader';
@@ -40,98 +41,15 @@ export function App({ tabsPort, now: nowOverride }: Props) {
     handleClearAllSelection();
   }, [refreshTabs, handleClearAllSelection]);
 
-  const handleFocus = useCallback(
-    (tabId: number, windowId: number) => {
-      void tabsPort.focus(tabId, windowId);
-    },
-    [tabsPort],
-  );
-
-  // Closing the very last tab in Chrome would either close the only window or
-  // (on some platforms) quit Chrome. Open a fresh new-tab page first so the
-  // browser always has somewhere to land.
-  const closeWithLastTabGuard = useCallback(
-    async (idsToClose: readonly number[], remainingAfter: number): Promise<void> => {
-      if (idsToClose.length === 0) return;
-      if (remainingAfter === 0) {
-        await tabsPort.openNewTab();
-      }
-      await tabsPort.closeMany(idsToClose);
-    },
-    [tabsPort],
-  );
-
-  const handleClose = useCallback(
-    (tabId: number) => {
-      handleDisarm();
-      const remainingAfter = tabs.filter((tab) => tab.id !== tabId).length;
-      setTabs((prev) => prev.filter((tab) => tab.id !== tabId));
-      handleClearGroup([tabId]);
-      void closeWithLastTabGuard([tabId], remainingAfter);
-    },
-    [tabs, closeWithLastTabGuard, handleDisarm, handleClearGroup],
-  );
-
-  const handleDropOnWindow = useCallback(
-    async (tabId: number, targetWindowId: number) => {
-      const tab = tabs.find((each) => each.id === tabId);
-      if (!tab || tab.windowId === targetWindowId) return;
-      await tabsPort.moveToWindow(tabId, targetWindowId);
-      await refresh();
-    },
-    [tabs, tabsPort, refresh],
-  );
-
-  const handleDropOnTabGroup = useCallback(
-    async (tabId: number, targetGroupId: number | null) => {
-      const tab = tabs.find((each) => each.id === tabId);
-      if (!tab) return;
-      const currentGroupId = tab.group?.id ?? null;
-      if (currentGroupId === targetGroupId) return;
-      if (targetGroupId === null) {
-        await tabsPort.removeFromGroup(tabId);
-      } else {
-        await tabsPort.assignToGroup(tabId, targetGroupId);
-      }
-      await refresh();
-    },
-    [tabs, tabsPort, refresh],
-  );
-
-  const handleCreateGroup = useCallback(
-    async (tabIds: readonly number[], title: string) => {
-      if (tabIds.length === 0) return;
-      await tabsPort.createGroup(tabIds, title);
-      handleClearAllSelection();
-      await refresh();
-    },
-    [tabsPort, refresh, handleClearAllSelection],
-  );
-
-  const handleAssignManyToGroup = useCallback(
-    async (tabIds: readonly number[], groupId: number) => {
-      if (tabIds.length === 0) return;
-      await tabsPort.assignManyToGroup(tabIds, groupId);
-      handleClearAllSelection();
-      await refresh();
-    },
-    [tabsPort, refresh, handleClearAllSelection],
-  );
-
-  const handleDeleteIds = useCallback(
-    (idsToDelete: readonly number[]) => {
-      if (idsToDelete.length === 0) return;
-      if (idsToDelete.length > 1 && !window.confirm(`Close ${String(idsToDelete.length)} tabs?`)) {
-        return;
-      }
-      const idSet = new Set(idsToDelete);
-      const remainingAfter = tabs.filter((tab) => !idSet.has(tab.id)).length;
-      setTabs((prev) => prev.filter((tab) => !idSet.has(tab.id)));
-      handleClearGroup(idsToDelete);
-      void closeWithLastTabGuard(idsToDelete, remainingAfter);
-    },
-    [tabs, closeWithLastTabGuard, handleClearGroup],
-  );
+  const mutations = useTabMutations({
+    tabsPort,
+    tabs,
+    setTabs,
+    refresh,
+    clearSelection: handleClearGroup,
+    clearAllSelection: handleClearAllSelection,
+    disarmDelete: handleDisarm,
+  });
 
   return (
     <main className="min-h-screen bg-white p-8">
@@ -156,20 +74,20 @@ export function App({ tabsPort, now: nowOverride }: Props) {
             actions: {
               arm: handleArmDelete,
               disarm: handleDisarm,
-              confirm: handleClose,
+              confirm: mutations.close,
             },
           }}
-          onFocus={handleFocus}
+          onFocus={mutations.focus}
           bulkActions={{
             select: handleSelectGroup,
             clear: handleClearGroup,
-            close: handleDeleteIds,
-            createGroup: handleCreateGroup,
-            assignToGroup: handleAssignManyToGroup,
+            close: mutations.deleteMany,
+            createGroup: mutations.createGroup,
+            assignToGroup: mutations.assignManyToGroup,
           }}
           dropCallbacks={{
-            onDropOnWindow: handleDropOnWindow,
-            onDropOnTabGroup: handleDropOnTabGroup,
+            onDropOnWindow: mutations.dropOnWindow,
+            onDropOnTabGroup: mutations.dropOnTabGroup,
           }}
           existingGroups={existingGroups}
         />
