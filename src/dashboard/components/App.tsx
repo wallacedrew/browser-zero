@@ -8,6 +8,7 @@ import { useArmedDelete } from '../hooks/useArmedDelete';
 import { useSelection } from '../hooks/useSelection';
 import { useTabsData } from '../hooks/useTabsData';
 import { useTabSummary } from '../hooks/useTabSummary';
+import { DashboardSubtitle } from './DashboardSubtitle';
 import { TabList } from './TabList';
 import { ViewToggle } from './ViewToggle';
 
@@ -143,14 +144,12 @@ export function App({ tabsPort, now: nowOverride }: Props) {
       <header className="mb-4 flex items-center justify-between gap-4">
         <div>
           <h1 className="text-3xl font-semibold text-slate-900">browser-zero</h1>
-          <p className="text-base text-slate-500">
-            {isFiltering
-              ? `${visibleTabs.length} of ${tabs.length} tab${tabs.length === 1 ? '' : 's'} match`
-              : `${tabs.length} tab${tabs.length === 1 ? '' : 's'}`}
-            {summary.groupedCount > 0 && ` · ${summary.groupedCount} in groups`}
-            {summary.ungroupedCount > 0 && ` · ${summary.ungroupedCount} ungrouped`}
-            {summary.windowCount > 1 && ` · all across ${summary.windowCount} windows`}
-          </p>
+          <DashboardSubtitle
+            totalCount={tabs.length}
+            visibleCount={visibleTabs.length}
+            isFiltering={isFiltering}
+            summary={summary}
+          />
         </div>
         <div className="flex items-center gap-3">
           <ViewToggle value={groupBy} onChange={setGroupBy} />
