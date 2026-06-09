@@ -56,4 +56,22 @@ describe('analyzeForNewGroup', () => {
     expect(result?.otherWindowCount).toBe(1);
     expect(result?.orderedTabIds).toEqual([2, 4, 1, 3]);
   });
+
+  it('ignores tabIds that do not match any current tab', () => {
+    const tabs = [tab(1, 100), tab(2, 100)];
+
+    const result = analyzeForNewGroup([1, 999, 2, 42], tabs);
+
+    expect(result).toEqual({
+      hostWindowId: 100,
+      otherWindowCount: 0,
+      orderedTabIds: [1, 2],
+    });
+  });
+
+  it('returns null when every supplied tabId is stale', () => {
+    const tabs = [tab(1, 100)];
+
+    expect(analyzeForNewGroup([42, 99], tabs)).toBeNull();
+  });
 });
