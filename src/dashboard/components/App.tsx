@@ -3,6 +3,7 @@ import type { TabsPort } from '../../shared/adapters/tabsPort';
 import type { GroupBy } from '../../shared/lib/grouping';
 import type { Timestamp } from '../../shared/lib/Timestamp';
 import { filterTabs } from '../../shared/lib/filterTabs';
+import type { LayoutBy } from '../lib/layout';
 import { useArmedDelete } from '../hooks/useArmedDelete';
 import { useExistingGroups } from '../hooks/useExistingGroups';
 import { useSelection } from '../hooks/useSelection';
@@ -21,6 +22,7 @@ interface Props {
 export function App({ tabsPort, now: nowOverride }: Props) {
   const { tabs, setTabs, loaded, now, refreshTabs } = useTabsData(tabsPort, nowOverride);
   const [groupBy, setGroupBy] = useState<GroupBy>('window');
+  const [layoutBy, setLayoutBy] = useState<LayoutBy>('list');
   const [search, setSearch] = useState('');
   const {
     selected,
@@ -60,8 +62,8 @@ export function App({ tabsPort, now: nowOverride }: Props) {
         summary={summary}
         groupBy={groupBy}
         onGroupByChange={setGroupBy}
-        layoutBy="list"
-        onLayoutByChange={() => undefined}
+        layoutBy={layoutBy}
+        onLayoutByChange={setLayoutBy}
         onRefresh={() => void refresh()}
       />
       <TabSearchInput value={search} onChange={setSearch} />
@@ -70,7 +72,7 @@ export function App({ tabsPort, now: nowOverride }: Props) {
           tabs={visibleTabs}
           now={now}
           groupBy={groupBy}
-          layoutBy="list"
+          layoutBy={layoutBy}
           selection={{ selected, toggle: handleSelectionToggle }}
           armedDelete={{
             armedTabId,

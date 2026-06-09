@@ -60,7 +60,7 @@ describe('scan all tabs in a grid', () => {
     vi.spyOn(window, 'confirm').mockReturnValue(true);
   });
 
-  it.skip('renders every open tab as a card under a single "All tabs" section', async () => {
+  it('renders every open tab as a card under a single "All tabs" section', async () => {
     const port = new FakeTabsPort(sampleTabs);
     const user = userEvent.setup();
 
@@ -70,7 +70,7 @@ describe('scan all tabs in a grid', () => {
     expect(within(section).getAllByRole('listitem')).toHaveLength(3);
   });
 
-  it.skip('orders cards by most recently accessed first', async () => {
+  it('orders cards by most recently accessed first', async () => {
     const port = new FakeTabsPort(sampleTabs);
     const user = userEvent.setup();
 
@@ -82,7 +82,7 @@ describe('scan all tabs in a grid', () => {
     expect(within(cards[2]!).getByText('cats')).toBeInTheDocument();
   });
 
-  it.skip('focuses a tab when its card body is clicked', async () => {
+  it('focuses a tab when its card body is clicked', async () => {
     const port = new FakeTabsPort(sampleTabs);
     const user = userEvent.setup();
 
@@ -94,7 +94,7 @@ describe('scan all tabs in a grid', () => {
     expect(port.focusCalls).toEqual([{ tabId: 2, windowId: 100 }]);
   });
 
-  it.skip('closes a tab via its card close button after confirming', async () => {
+  it('closes a tab via its card close button after confirming', async () => {
     const port = new FakeTabsPort(sampleTabs);
     const user = userEvent.setup();
 
@@ -110,7 +110,7 @@ describe('scan all tabs in a grid', () => {
     expect(port.closeManyCalls).toEqual([[1]]);
   });
 
-  it.skip('creates a Chrome tab group from cards selected across windows', async () => {
+  it('creates a Chrome tab group from cards selected across windows', async () => {
     const port = new FakeTabsPort(sampleTabs);
     const user = userEvent.setup();
 
