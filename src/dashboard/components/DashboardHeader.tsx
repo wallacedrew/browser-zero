@@ -30,8 +30,8 @@ export function DashboardHeader({
 }: Props) {
   return (
     <header className="mb-4 flex items-center justify-between gap-4">
-      <div>
-        <h1 className="text-3xl font-semibold text-slate-900">browser-zero</h1>
+      <div className="flex items-baseline gap-3">
+        <h1 className="text-xl font-semibold text-slate-900">browser-zero</h1>
         <DashboardSubtitle
           totalCount={totalCount}
           visibleCount={visibleCount}
