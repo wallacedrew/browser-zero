@@ -41,10 +41,12 @@ export function analyzeForNewGroup(
 }
 
 function pickHostWindow(countsByWindow: ReadonlyMap<number, number>): number {
-  let bestWindow = -1;
+  let bestWindow = Number.POSITIVE_INFINITY;
   let bestCount = -1;
   for (const [windowId, count] of countsByWindow) {
-    if (count > bestCount) {
+    const isHigherCount = count > bestCount;
+    const isTiedAndLowerWindowId = count === bestCount && windowId < bestWindow;
+    if (isHigherCount || isTiedAndLowerWindowId) {
       bestWindow = windowId;
       bestCount = count;
     }

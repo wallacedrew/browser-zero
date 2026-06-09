@@ -46,4 +46,14 @@ describe('analyzeForNewGroup', () => {
       orderedTabIds: [2, 3, 4, 1, 5],
     });
   });
+
+  it('breaks ties by picking the lowest windowId as host', () => {
+    const tabs = [tab(1, 200), tab(2, 100), tab(3, 200), tab(4, 100)];
+
+    const result = analyzeForNewGroup([1, 2, 3, 4], tabs);
+
+    expect(result?.hostWindowId).toBe(100);
+    expect(result?.otherWindowCount).toBe(1);
+    expect(result?.orderedTabIds).toEqual([2, 4, 1, 3]);
+  });
 });
