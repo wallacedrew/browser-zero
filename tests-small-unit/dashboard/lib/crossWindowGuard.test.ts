@@ -1,5 +1,8 @@
 import { describe, it, expect } from 'vitest';
-import { analyzeForNewGroup } from '../../../src/dashboard/lib/crossWindowGuard';
+import {
+  analyzeForExistingGroup,
+  analyzeForNewGroup,
+} from '../../../src/dashboard/lib/crossWindowGuard';
 import type { Tab } from '../../../src/shared/lib/types';
 import { Timestamp } from '../../../src/shared/lib/Timestamp';
 
@@ -73,5 +76,43 @@ describe('analyzeForNewGroup', () => {
     const tabs = [tab(1, 100)];
 
     expect(analyzeForNewGroup([42, 99], tabs)).toBeNull();
+  });
+});
+
+function groupedTab(id: number, windowId: number, groupId: number): Tab {
+  return { ...tab(id, windowId), group: { id: groupId, title: 'Reading', color: 'blue' } };
+}
+
+describe('analyzeForExistingGroup', () => {
+  it('returns null when the selection is empty', () => {
+    expect(analyzeForExistingGroup([], [tab(1, 100)], 7)).toBeNull();
+  });
+
+  it('returns null when no current tab belongs to the target group', () => {
+    expect(analyzeForExistingGroup([1, 2], [tab(1, 100), tab(2, 100)], 7)).toBeNull();
+  });
+
+  it("hosts on the existing group's window and counts other selection windows", () => {
+    const tabs = [tab(1, 100), tab(2, 200), tab(3, 300), groupedTab(99, 200, 7)];
+
+    const result = analyzeForExistingGroup([1, 2, 3], tabs, 7);
+
+    expect(result).toEqual({
+      hostWindowId: 200,
+      otherWindowCount: 2,
+      orderedTabIds: [2, 1, 3],
+    });
+  });
+
+  it("reports no other windows when every selected tab already lives in the group's window", () => {
+    const tabs = [tab(1, 200), tab(2, 200), groupedTab(99, 200, 7)];
+
+    const result = analyzeForExistingGroup([1, 2], tabs, 7);
+
+    expect(result).toEqual({
+      hostWindowId: 200,
+      otherWindowCount: 0,
+      orderedTabIds: [1, 2],
+    });
   });
 });
