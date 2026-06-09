@@ -1076,4 +1076,48 @@ describe('dashboard', () => {
     expect(window.confirm).toHaveBeenCalled();
     expect(port.assignManyToGroupCalls).toHaveLength(0);
   });
+
+  it('skips the confirm prompt for a single-window domain selection', async () => {
+    const confirmSpy = vi.spyOn(window, 'confirm').mockReturnValue(true);
+    confirmSpy.mockClear();
+    const sameWindowGithubTabs: readonly Tab[] = [
+      {
+        id: 1,
+        windowId: 100,
+        title: 'pull/123',
+        url: 'https://github.com/me/repo/pull/123',
+        domain: 'github.com',
+        favIconUrl: null,
+        lastAccessed: fiveMinAgo,
+        group: null,
+      },
+      {
+        id: 2,
+        windowId: 100,
+        title: 'pull/456',
+        url: 'https://github.com/me/repo/pull/456',
+        domain: 'github.com',
+        favIconUrl: null,
+        lastAccessed: fiveMinAgo,
+        group: null,
+      },
+    ];
+    const port = new FakeTabsPort(sameWindowGithubTabs);
+    const user = userEvent.setup();
+
+    render(<App tabsPort={port} now={now} />);
+    await screen.findByRole('link', { name: 'pull/123' });
+
+    await user.click(screen.getByRole('radio', { name: /by domain in url/i }));
+    const section = await screen.findByRole('region', { name: 'github.com' });
+    await user.click(within(section).getByRole('button', { name: /select all/i }));
+    await user.click(within(section).getByRole('button', { name: /add to group/i }));
+    await user.type(screen.getByRole('textbox', { name: /name new group/i }), 'Reading');
+    fireEvent.submit(screen.getByRole('textbox', { name: /name new group/i }).closest('form')!);
+
+    await waitFor(() => {
+      expect(port.createGroupCalls).toHaveLength(1);
+    });
+    expect(confirmSpy).not.toHaveBeenCalled();
+  });
 });
