@@ -60,6 +60,8 @@ export function App({ tabsPort, now: nowOverride }: Props) {
         summary={summary}
         groupBy={groupBy}
         onGroupByChange={setGroupBy}
+        layoutBy="list"
+        onLayoutByChange={() => undefined}
         onRefresh={() => void refresh()}
       />
       <TabSearchInput value={search} onChange={setSearch} />

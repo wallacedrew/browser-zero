@@ -1,6 +1,8 @@
 import type { GroupBy } from '../../shared/lib/grouping';
+import type { LayoutBy } from '../lib/layout';
 import type { TabSummary } from '../hooks/useTabSummary';
 import { DashboardSubtitle } from './DashboardSubtitle';
+import { LayoutToggle } from './LayoutToggle';
 import { ViewToggle } from './ViewToggle';
 
 interface Props {
@@ -10,6 +12,8 @@ interface Props {
   summary: TabSummary;
   groupBy: GroupBy;
   onGroupByChange: (next: GroupBy) => void;
+  layoutBy: LayoutBy;
+  onLayoutByChange: (next: LayoutBy) => void;
   onRefresh: () => void;
 }
 
@@ -20,6 +24,8 @@ export function DashboardHeader({
   summary,
   groupBy,
   onGroupByChange,
+  layoutBy,
+  onLayoutByChange,
   onRefresh,
 }: Props) {
   return (
@@ -35,6 +41,7 @@ export function DashboardHeader({
       </div>
       <div className="flex items-center gap-3">
         <ViewToggle value={groupBy} onChange={onGroupByChange} />
+        <LayoutToggle value={layoutBy} onChange={onLayoutByChange} />
         <button
           type="button"
           onClick={onRefresh}
