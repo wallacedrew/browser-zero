@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { GroupNav } from '../../../src/dashboard/components/GroupNav';
 
@@ -15,6 +15,15 @@ const sampleGroups: ReadonlyArray<NavGroupFixture> = [
   { key: 'window-200', label: 'Window 2', count: 15, color: null },
   { key: 'window-300', label: 'Window 3', count: 4, color: null },
 ];
+
+// 12 chips exceeds the in-source CHIP_COLLAPSE_THRESHOLD (8) so the toggle
+// renders and the chip rail starts clipped to one row.
+const manyGroups: ReadonlyArray<NavGroupFixture> = Array.from({ length: 12 }, (_, index) => ({
+  key: `domain-${index}`,
+  label: `domain-${index}.com`,
+  count: index + 1,
+  color: null,
+}));
 
 const noop = () => undefined;
 
@@ -77,6 +86,58 @@ describe('GroupNav', () => {
     );
     expect(screen.getByRole('link', { name: 'Window 1 (15)' })).not.toHaveAttribute('aria-current');
     expect(screen.getByRole('link', { name: 'Window 3 (4)' })).not.toHaveAttribute('aria-current');
+  });
+
+  it('renders no collapse toggle when group count is at or below the threshold', () => {
+    renderNav();
+    expect(screen.queryByRole('button', { name: /show all/i })).not.toBeInTheDocument();
+    expect(screen.getByRole('navigation', { name: /jump to group/i }).className).not.toContain(
+      'max-h-[1.75rem]',
+    );
+  });
+
+  it('renders a collapse toggle and clamps the chip rail to one row when over threshold', () => {
+    renderNav({ groups: manyGroups });
+    const toggle = screen.getByRole('button', { name: /show all \(12\)/i });
+    expect(toggle).toHaveAttribute('aria-expanded', 'false');
+    const nav = screen.getByRole('navigation', { name: /jump to group/i });
+    expect(nav.className).toContain('max-h-[1.75rem]');
+    expect(nav.className).toContain('overflow-hidden');
+  });
+
+  it('expands the chip rail when the toggle is clicked', async () => {
+    const user = userEvent.setup();
+    renderNav({ groups: manyGroups });
+
+    await user.click(screen.getByRole('button', { name: /show all \(12\)/i }));
+
+    const nav = screen.getByRole('navigation', { name: /jump to group/i });
+    expect(nav.className).not.toContain('max-h-[1.75rem]');
+    expect(screen.getByRole('button', { name: /show less/i })).toHaveAttribute(
+      'aria-expanded',
+      'true',
+    );
+  });
+
+  it('re-collapses the chip rail on a second click', async () => {
+    const user = userEvent.setup();
+    renderNav({ groups: manyGroups });
+
+    await user.click(screen.getByRole('button', { name: /show all \(12\)/i }));
+    await user.click(screen.getByRole('button', { name: /show less/i }));
+
+    const nav = screen.getByRole('navigation', { name: /jump to group/i });
+    expect(nav.className).toContain('max-h-[1.75rem]');
+    expect(screen.getByRole('button', { name: /show all \(12\)/i })).toHaveAttribute(
+      'aria-expanded',
+      'false',
+    );
+  });
+
+  it('keeps every chip link in the DOM even while the rail is clipped', () => {
+    renderNav({ groups: manyGroups });
+    const nav = screen.getByRole('navigation', { name: /jump to group/i });
+    expect(within(nav).getAllByRole('link')).toHaveLength(manyGroups.length);
   });
 
   it('applies the Chrome tab group color to each chip when provided', () => {
