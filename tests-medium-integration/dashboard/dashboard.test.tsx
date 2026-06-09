@@ -972,4 +972,108 @@ describe('dashboard', () => {
     expect(call.tabIds[0]).toBe(2);
     expect(call.tabIds[1]).toBe(3);
   });
+
+  it('warns before moving tabs across windows when adding to an existing group', async () => {
+    vi.spyOn(window, 'confirm').mockReturnValue(true);
+    const multiWindowTabs: readonly Tab[] = [
+      {
+        id: 1,
+        windowId: 100,
+        title: 'pull/123',
+        url: 'https://github.com/me/repo/pull/123',
+        domain: 'github.com',
+        favIconUrl: null,
+        lastAccessed: fiveMinAgo,
+        group: null,
+      },
+      {
+        id: 2,
+        windowId: 200,
+        title: 'pull/456',
+        url: 'https://github.com/me/repo/pull/456',
+        domain: 'github.com',
+        favIconUrl: null,
+        lastAccessed: fiveMinAgo,
+        group: null,
+      },
+      {
+        id: 9,
+        windowId: 200,
+        title: 'reading-list-host',
+        url: 'https://example.com',
+        domain: 'example.com',
+        favIconUrl: null,
+        lastAccessed: fiveMinAgo,
+        group: { id: 77, title: 'Reading', color: 'blue' },
+      },
+    ];
+    const port = new FakeTabsPort(multiWindowTabs);
+    const user = userEvent.setup();
+
+    render(<App tabsPort={port} now={now} />);
+    await screen.findByRole('link', { name: 'pull/123' });
+
+    await user.click(screen.getByRole('radio', { name: /by domain in url/i }));
+    const section = await screen.findByRole('region', { name: 'github.com' });
+    await user.click(within(section).getByRole('button', { name: /select all/i }));
+    await user.click(within(section).getByRole('button', { name: /add to group/i }));
+    await user.click(screen.getByRole('menuitem', { name: /reading/i }));
+
+    expect(window.confirm).toHaveBeenCalledWith('Move 2 tabs from 1 other window into "Reading"?');
+    await waitFor(() => {
+      expect(port.assignManyToGroupCalls).toHaveLength(1);
+    });
+    expect(port.assignManyToGroupCalls[0]!.groupId).toBe(77);
+    expect(port.assignManyToGroupCalls[0]!.tabIds[0]).toBe(2);
+  });
+
+  it('cancels the assign action when the user dismisses the cross-window prompt', async () => {
+    vi.spyOn(window, 'confirm').mockReturnValue(false);
+    const multiWindowTabs: readonly Tab[] = [
+      {
+        id: 1,
+        windowId: 100,
+        title: 'pull/123',
+        url: 'https://github.com/me/repo/pull/123',
+        domain: 'github.com',
+        favIconUrl: null,
+        lastAccessed: fiveMinAgo,
+        group: null,
+      },
+      {
+        id: 2,
+        windowId: 200,
+        title: 'pull/456',
+        url: 'https://github.com/me/repo/pull/456',
+        domain: 'github.com',
+        favIconUrl: null,
+        lastAccessed: fiveMinAgo,
+        group: null,
+      },
+      {
+        id: 9,
+        windowId: 200,
+        title: 'reading-list-host',
+        url: 'https://example.com',
+        domain: 'example.com',
+        favIconUrl: null,
+        lastAccessed: fiveMinAgo,
+        group: { id: 77, title: 'Reading', color: 'blue' },
+      },
+    ];
+    const port = new FakeTabsPort(multiWindowTabs);
+    const user = userEvent.setup();
+
+    render(<App tabsPort={port} now={now} />);
+    await screen.findByRole('link', { name: 'pull/123' });
+
+    await user.click(screen.getByRole('radio', { name: /by domain in url/i }));
+    const section = await screen.findByRole('region', { name: 'github.com' });
+    await user.click(within(section).getByRole('button', { name: /select all/i }));
+    await user.click(within(section).getByRole('button', { name: /add to group/i }));
+    await user.click(screen.getByRole('menuitem', { name: /reading/i }));
+
+    expect(window.confirm).toHaveBeenCalled();
+    expect(port.assignManyToGroupCalls).toHaveLength(0);
+  });
 });
