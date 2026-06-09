@@ -19,10 +19,7 @@ export function GroupNav({ groups, activeKey, onSelect }: Props) {
   if (groups.length < 2) return null;
 
   return (
-    <nav
-      aria-label="Jump to group"
-      className="sticky top-0 z-10 mb-3 flex flex-wrap gap-2 border-b border-slate-200 bg-white/95 px-3 py-2 text-sm backdrop-blur"
-    >
+    <nav aria-label="Jump to group" className="flex flex-wrap gap-2 text-sm">
       {groups.map((group) => {
         const isActive = group.key === activeKey;
         const chipClass = isActive

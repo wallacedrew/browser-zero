@@ -1,28 +1,20 @@
-import type { Tab, TabGroupInfo } from '../../shared/lib/types';
-import {
-  groupTabs,
-  groupingStrategyFor,
-  type DropCallbacks,
-  type GroupBy,
-} from '../../shared/lib/grouping';
-import type { Timestamp } from '../../shared/lib/Timestamp';
+import type { TabGroupInfo } from '../../shared/lib/types';
+import type { DropCallbacks, GroupingStrategy, TabGroup } from '../../shared/lib/grouping';
 import type { ArmedDeleteState } from '../lib/armedDeleteState';
 import type { BulkTabActions } from '../lib/bulkTabActions';
+import type { LayoutStrategy } from '../lib/layout';
 import type { SelectionModel } from '../lib/selectionModel';
 import { useDragOverGroupKey } from '../hooks/useDragOverGroupKey';
 import { useGroupCollapse } from '../hooks/useGroupCollapse';
-import { useGroupSectionNavigation } from '../hooks/useGroupSectionNavigation';
-import { useTabViewModels } from '../hooks/useTabViewModels';
-import { layoutStrategyFor, type LayoutBy } from '../lib/layout';
+import type { TabRowViewModel } from '../hooks/useTabViewModels';
 import { CollapseAllControl } from './CollapseAllControl';
-import { GroupNav } from './GroupNav';
 import { TabGroupSection } from './TabGroupSection';
 
 interface Props {
-  tabs: readonly Tab[];
-  now: Timestamp;
-  groupBy: GroupBy;
-  layoutBy: LayoutBy;
+  groups: readonly TabGroup<TabRowViewModel>[];
+  groupKeysList: readonly string[];
+  strategy: GroupingStrategy;
+  layout: LayoutStrategy;
   selection: SelectionModel;
   armedDelete: ArmedDeleteState;
   existingGroups: ReadonlyArray<TabGroupInfo>;
@@ -32,10 +24,10 @@ interface Props {
 }
 
 export function TabList({
-  tabs,
-  now,
-  groupBy,
-  layoutBy,
+  groups,
+  groupKeysList,
+  strategy,
+  layout,
   selection,
   armedDelete,
   existingGroups,
@@ -43,36 +35,18 @@ export function TabList({
   bulkActions,
   dropCallbacks,
 }: Props) {
-  const viewModels = useTabViewModels(tabs, now);
-  const strategy = groupingStrategyFor(groupBy);
-  const layout = layoutStrategyFor(layoutBy);
-  const groups = groupTabs(viewModels, groupBy);
   const dropEnabled = strategy.dropEnabled;
   const allowGrouping = strategy.allowGrouping;
-  const groupKeysList = groups.map((group) => group.key);
   const { collapsedKeys, allCollapsed, toggleCollapsed, toggleAllCollapsed } =
     useGroupCollapse(groupKeysList);
-  const { containerRef, resolvedActiveKey, scrollToGroup } =
-    useGroupSectionNavigation(groupKeysList);
   const { dragOverKey, dragHandlersFor } = useDragOverGroupKey({ enabled: dropEnabled });
 
   if (groups.length === 0) {
     return <p className="text-slate-500">No open tabs.</p>;
   }
 
-  const navGroups = groups.map((group) => ({
-    key: group.key,
-    label: group.label,
-    count: group.tabs.length,
-    // Only by-tab-group has an intrinsic color per group (the Chrome tab
-    // group color). by-window and by-domain have no inherent group color,
-    // so they fall back to the slate default in GroupNav.
-    color: strategy.sectionColorOf(group.tabs[0]),
-  }));
-
   return (
-    <div ref={containerRef}>
-      <GroupNav groups={navGroups} activeKey={resolvedActiveKey} onSelect={scrollToGroup} />
+    <div>
       <CollapseAllControl
         visible={groups.length > 1}
         allCollapsed={allCollapsed}
