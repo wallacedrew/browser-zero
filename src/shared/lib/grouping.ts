@@ -18,6 +18,7 @@ export interface GroupingStrategy {
   compareEntries<T extends Tab>(a: [string, readonly T[]], b: [string, readonly T[]]): number;
   makeOutputKey(bucketKey: string): string;
   makeLabel<T extends Tab>(bucketKey: string, tabs: readonly T[], index: number): string;
+  sortWithinBucket<T extends Tab>(tabs: readonly T[]): readonly T[];
   readonly dropEnabled: boolean;
   readonly allowGrouping: boolean;
   sectionColorOf(firstTab: Tab | undefined): string | null;
@@ -42,7 +43,7 @@ function materializeGroups<T extends Tab>(
     .map(([bucketKey, bucketTabs], index) => ({
       key: strategy.makeOutputKey(bucketKey),
       label: strategy.makeLabel(bucketKey, bucketTabs, index),
-      tabs: bucketTabs,
+      tabs: strategy.sortWithinBucket(bucketTabs),
     }));
 }
 
@@ -62,6 +63,7 @@ const WindowGrouping: GroupingStrategy = {
   compareEntries: ([leftKey], [rightKey]) => Number(leftKey) - Number(rightKey),
   makeOutputKey: (bucketKey) => `window-${bucketKey}`,
   makeLabel: (_bucketKey, _tabs, index) => `Window ${String(index + 1)}`,
+  sortWithinBucket: <T extends Tab>(tabs: readonly T[]) => tabs,
   dropEnabled: true,
   allowGrouping: true,
   sectionColorOf: () => null,
@@ -79,6 +81,7 @@ const DomainGrouping: GroupingStrategy = {
   },
   makeOutputKey: (bucketKey) => `domain-${bucketKey}`,
   makeLabel: (bucketKey) => bucketKey,
+  sortWithinBucket: <T extends Tab>(tabs: readonly T[]) => tabs,
   dropEnabled: false,
   allowGrouping: true,
   sectionColorOf: () => null,
@@ -107,6 +110,7 @@ const TabGroupGrouping: GroupingStrategy = {
     const title = tabs[0]?.group?.title ?? '';
     return title.length > 0 ? title : 'Untitled';
   },
+  sortWithinBucket: <T extends Tab>(tabs: readonly T[]) => tabs,
   dropEnabled: true,
   allowGrouping: true,
   sectionColorOf: (firstTab) => firstTab?.group?.color ?? null,
@@ -121,6 +125,12 @@ const FlatGrouping: GroupingStrategy = {
   compareEntries: () => 0,
   makeOutputKey: () => 'flat-all',
   makeLabel: () => 'All tabs',
+  sortWithinBucket: <T extends Tab>(tabs: readonly T[]) =>
+    [...tabs].sort((a, b) => {
+      const accessedDelta = b.lastAccessed.toMillis() - a.lastAccessed.toMillis();
+      if (accessedDelta !== 0) return accessedDelta;
+      return a.id - b.id;
+    }),
   dropEnabled: false,
   allowGrouping: true,
   sectionColorOf: () => null,

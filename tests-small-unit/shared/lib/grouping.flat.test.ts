@@ -45,3 +45,32 @@ describe('FlatGrouping strategy', () => {
     expect(strategy.sectionColorOf(undefined)).toBeNull();
   });
 });
+
+describe('FlatGrouping intra-bucket sort', () => {
+  it('sorts the bucket by lastAccessed descending, ties broken by id ascending', () => {
+    const groups = groupTabs(
+      [
+        makeTab({ id: 3, windowId: 100, lastAccessed: Timestamp.fromMillis(1000) }),
+        makeTab({ id: 1, windowId: 100, lastAccessed: Timestamp.fromMillis(3000) }),
+        makeTab({ id: 2, windowId: 100, lastAccessed: Timestamp.fromMillis(3000) }),
+        makeTab({ id: 4, windowId: 100, lastAccessed: Timestamp.fromMillis(2000) }),
+      ],
+      'flat',
+    );
+
+    expect(groups[0]!.tabs.map((t) => t.id)).toEqual([1, 2, 4, 3]);
+  });
+});
+
+describe('non-flat strategies preserve input order within a bucket', () => {
+  it('does not reorder by-window tabs', () => {
+    const groups = groupTabs(
+      [
+        makeTab({ id: 3, windowId: 100, lastAccessed: Timestamp.fromMillis(1000) }),
+        makeTab({ id: 1, windowId: 100, lastAccessed: Timestamp.fromMillis(3000) }),
+      ],
+      'window',
+    );
+    expect(groups[0]!.tabs.map((t) => t.id)).toEqual([3, 1]);
+  });
+});
