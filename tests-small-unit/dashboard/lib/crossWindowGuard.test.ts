@@ -22,4 +22,16 @@ describe('analyzeForNewGroup', () => {
   it('returns null when no tabIds are supplied', () => {
     expect(analyzeForNewGroup([], [tab(1, 100)])).toBeNull();
   });
+
+  it('keeps tabId order and reports no other windows when all tabs share one window', () => {
+    const tabs = [tab(1, 100), tab(2, 100), tab(3, 100)];
+
+    const result = analyzeForNewGroup([3, 1, 2], tabs);
+
+    expect(result).toEqual({
+      hostWindowId: 100,
+      otherWindowCount: 0,
+      orderedTabIds: [3, 1, 2],
+    });
+  });
 });

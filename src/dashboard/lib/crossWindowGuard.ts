@@ -8,8 +8,22 @@ export interface CrossWindowAnalysis {
 
 export function analyzeForNewGroup(
   tabIds: readonly number[],
-  _tabs: readonly Tab[],
+  tabs: readonly Tab[],
 ): CrossWindowAnalysis | null {
   if (tabIds.length === 0) return null;
-  return null;
+
+  const windowById = new Map<number, number>();
+  for (const t of tabs) windowById.set(t.id, t.windowId);
+
+  const knownIds = tabIds.filter((id) => windowById.has(id));
+  if (knownIds.length === 0) return null;
+
+  const windowIds = new Set(knownIds.map((id) => windowById.get(id) as number));
+  const hostWindowId = [...windowIds][0] as number;
+
+  return {
+    hostWindowId,
+    otherWindowCount: windowIds.size - 1,
+    orderedTabIds: knownIds,
+  };
 }
