@@ -2,11 +2,11 @@ import type { TabGroupInfo } from '../../shared/lib/types';
 import type { TabGroup } from '../../shared/lib/grouping';
 import type { ArmedDeleteState } from '../lib/armedDeleteState';
 import type { BulkTabActions } from '../lib/bulkTabActions';
+import type { LayoutStrategy } from '../lib/layout';
 import type { SelectionModel } from '../lib/selectionModel';
 import type { DragState } from '../hooks/useDragOverGroupKey';
 import type { TabRowViewModel } from '../hooks/useTabViewModels';
 import { TabGroupSectionHeader } from './TabGroupSectionHeader';
-import { TabGroupSectionTabs } from './TabGroupSectionTabs';
 
 interface Props {
   group: TabGroup<TabRowViewModel>;
@@ -14,6 +14,7 @@ interface Props {
   isCollapsed: boolean;
   dragState: DragState;
   allowGrouping: boolean;
+  layout: LayoutStrategy;
   existingGroups: ReadonlyArray<TabGroupInfo>;
   selection: SelectionModel;
   armedDelete: ArmedDeleteState;
@@ -28,6 +29,7 @@ export function TabGroupSection({
   isCollapsed,
   dragState,
   allowGrouping,
+  layout,
   existingGroups,
   selection,
   armedDelete,
@@ -39,6 +41,7 @@ export function TabGroupSection({
     selection.selected.has(tab.id) ? [tab.id] : [],
   );
   const listId = `group-list-${group.key}`;
+  const { Body } = layout;
 
   return (
     <section
@@ -60,7 +63,7 @@ export function TabGroupSection({
         bulkActions={bulkActions}
         onToggleCollapsed={onToggleCollapsed}
       />
-      <TabGroupSectionTabs
+      <Body
         listId={listId}
         hidden={isCollapsed}
         tabs={group.tabs}
