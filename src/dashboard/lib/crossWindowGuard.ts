@@ -18,12 +18,36 @@ export function analyzeForNewGroup(
   const knownIds = tabIds.filter((id) => windowById.has(id));
   if (knownIds.length === 0) return null;
 
-  const windowIds = new Set(knownIds.map((id) => windowById.get(id) as number));
-  const hostWindowId = [...windowIds][0] as number;
+  const countsByWindow = new Map<number, number>();
+  for (const id of knownIds) {
+    const windowId = windowById.get(id) as number;
+    countsByWindow.set(windowId, (countsByWindow.get(windowId) ?? 0) + 1);
+  }
+
+  const hostWindowId = pickHostWindow(countsByWindow);
+
+  const hostFirst: number[] = [];
+  const rest: number[] = [];
+  for (const id of knownIds) {
+    if (windowById.get(id) === hostWindowId) hostFirst.push(id);
+    else rest.push(id);
+  }
 
   return {
     hostWindowId,
-    otherWindowCount: windowIds.size - 1,
-    orderedTabIds: knownIds,
+    otherWindowCount: countsByWindow.size - 1,
+    orderedTabIds: [...hostFirst, ...rest],
   };
+}
+
+function pickHostWindow(countsByWindow: ReadonlyMap<number, number>): number {
+  let bestWindow = -1;
+  let bestCount = -1;
+  for (const [windowId, count] of countsByWindow) {
+    if (count > bestCount) {
+      bestWindow = windowId;
+      bestCount = count;
+    }
+  }
+  return bestWindow;
 }

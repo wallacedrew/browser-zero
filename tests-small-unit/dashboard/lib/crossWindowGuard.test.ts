@@ -34,4 +34,16 @@ describe('analyzeForNewGroup', () => {
       orderedTabIds: [3, 1, 2],
     });
   });
+
+  it('picks the majority window as host and reorders host-window tabs first', () => {
+    const tabs = [tab(1, 100), tab(2, 200), tab(3, 200), tab(4, 200), tab(5, 100)];
+
+    const result = analyzeForNewGroup([1, 2, 3, 4, 5], tabs);
+
+    expect(result).toEqual({
+      hostWindowId: 200,
+      otherWindowCount: 1,
+      orderedTabIds: [2, 3, 4, 1, 5],
+    });
+  });
 });
