@@ -902,23 +902,4 @@ describe('dashboard', () => {
 
     expect(screen.queryByRole('navigation', { name: /jump to group/i })).not.toBeInTheDocument();
   });
-
-  it('hides the Add to group action in By domain in url view', async () => {
-    const port = new FakeTabsPort(sampleTabs);
-    const user = userEvent.setup();
-
-    render(<App tabsPort={port} now={now} />);
-    await screen.findByRole('link', { name: 'pull/123' });
-
-    await user.click(screen.getByRole('radio', { name: /by domain in url/i }));
-    await user.click(screen.getByRole('checkbox', { name: 'Select pull/123' }));
-
-    // SectionActionPanel still renders the count + Close? + Keep, but the
-    // grouping button is gated out.
-    const section = screen.getByRole('region', { name: 'github.com' });
-    expect(within(section).getByText(/1 tab selected/i)).toBeInTheDocument();
-    expect(
-      within(section).queryByRole('button', { name: /add to group/i }),
-    ).not.toBeInTheDocument();
-  });
 });

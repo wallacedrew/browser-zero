@@ -80,7 +80,7 @@ const DomainGrouping: GroupingStrategy = {
   makeOutputKey: (bucketKey) => `domain-${bucketKey}`,
   makeLabel: (bucketKey) => bucketKey,
   dropEnabled: false,
-  allowGrouping: false,
+  allowGrouping: true,
   sectionColorOf: () => null,
   dispatchDrop: () => {
     /* DomainGrouping has dropEnabled: false; this is never invoked. */
