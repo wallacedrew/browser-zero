@@ -68,6 +68,7 @@ export function App({ tabsPort, now: nowOverride }: Props) {
           tabs={visibleTabs}
           now={now}
           groupBy={groupBy}
+          layoutBy="list"
           selection={{ selected, toggle: handleSelectionToggle }}
           armedDelete={{
             armedTabId,

@@ -13,7 +13,7 @@ import { useDragOverGroupKey } from '../hooks/useDragOverGroupKey';
 import { useGroupCollapse } from '../hooks/useGroupCollapse';
 import { useGroupSectionNavigation } from '../hooks/useGroupSectionNavigation';
 import { useTabViewModels } from '../hooks/useTabViewModels';
-import { layoutStrategyFor } from '../lib/layout';
+import { layoutStrategyFor, type LayoutBy } from '../lib/layout';
 import { CollapseAllControl } from './CollapseAllControl';
 import { GroupNav } from './GroupNav';
 import { TabGroupSection } from './TabGroupSection';
@@ -22,6 +22,7 @@ interface Props {
   tabs: readonly Tab[];
   now: Timestamp;
   groupBy: GroupBy;
+  layoutBy: LayoutBy;
   selection: SelectionModel;
   armedDelete: ArmedDeleteState;
   existingGroups: ReadonlyArray<TabGroupInfo>;
@@ -34,6 +35,7 @@ export function TabList({
   tabs,
   now,
   groupBy,
+  layoutBy,
   selection,
   armedDelete,
   existingGroups,
@@ -43,7 +45,7 @@ export function TabList({
 }: Props) {
   const viewModels = useTabViewModels(tabs, now);
   const strategy = groupingStrategyFor(groupBy);
-  const layout = layoutStrategyFor('list');
+  const layout = layoutStrategyFor(layoutBy);
   const groups = groupTabs(viewModels, groupBy);
   const dropEnabled = strategy.dropEnabled;
   const allowGrouping = strategy.allowGrouping;
