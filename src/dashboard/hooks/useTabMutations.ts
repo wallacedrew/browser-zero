@@ -1,6 +1,7 @@
 import { useCallback, type Dispatch, type SetStateAction } from 'react';
 import type { Tab } from '../../shared/lib/types';
 import type { TabsPort } from '../../shared/adapters/tabsPort';
+import { analyzeForNewGroup } from '../lib/crossWindowGuard';
 
 export interface TabMutations {
   focus: (tabId: number, windowId: number) => void;
@@ -106,12 +107,20 @@ export function useTabMutations({
 
   const createGroup = useCallback(
     async (tabIds: readonly number[], title: string) => {
-      if (tabIds.length === 0) return;
-      await tabsPort.createGroup(tabIds, title);
+      const analysis = analyzeForNewGroup(tabIds, tabs);
+      if (!analysis) return;
+
+      if (analysis.otherWindowCount > 0) {
+        const target = title.length > 0 ? title : 'new group';
+        const message = crossWindowConfirmMessage(analysis, target);
+        if (!window.confirm(message)) return;
+      }
+
+      await tabsPort.createGroup(analysis.orderedTabIds, title);
       clearAllSelection();
       await refresh();
     },
-    [tabsPort, refresh, clearAllSelection],
+    [tabs, tabsPort, refresh, clearAllSelection],
   );
 
   const assignManyToGroup = useCallback(
@@ -133,4 +142,17 @@ export function useTabMutations({
     createGroup,
     assignManyToGroup,
   };
+}
+
+function crossWindowConfirmMessage(
+  analysis: { orderedTabIds: readonly number[]; otherWindowCount: number },
+  target: string,
+): string {
+  const tabCount = analysis.orderedTabIds.length;
+  const tabWord = tabCount === 1 ? 'tab' : 'tabs';
+  const windowWord = analysis.otherWindowCount === 1 ? 'window' : 'windows';
+  return (
+    `Move ${String(tabCount)} ${tabWord} from ` +
+    `${String(analysis.otherWindowCount)} other ${windowWord} into "${target}"?`
+  );
 }

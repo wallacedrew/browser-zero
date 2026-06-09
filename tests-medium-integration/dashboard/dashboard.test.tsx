@@ -902,4 +902,74 @@ describe('dashboard', () => {
 
     expect(screen.queryByRole('navigation', { name: /jump to group/i })).not.toBeInTheDocument();
   });
+
+  it('adds every github.com tab to a new Reading group from the domain view', async () => {
+    const multiWindowGithubTabs: readonly Tab[] = [
+      {
+        id: 1,
+        windowId: 100,
+        title: 'pull/123',
+        url: 'https://github.com/me/repo/pull/123',
+        domain: 'github.com',
+        favIconUrl: null,
+        lastAccessed: fiveMinAgo,
+        group: null,
+      },
+      {
+        id: 2,
+        windowId: 200,
+        title: 'pull/456',
+        url: 'https://github.com/me/repo/pull/456',
+        domain: 'github.com',
+        favIconUrl: null,
+        lastAccessed: fiveMinAgo,
+        group: null,
+      },
+      {
+        id: 3,
+        windowId: 200,
+        title: 'pull/789',
+        url: 'https://github.com/me/repo/pull/789',
+        domain: 'github.com',
+        favIconUrl: null,
+        lastAccessed: fiveMinAgo,
+        group: null,
+      },
+      {
+        id: 4,
+        windowId: 200,
+        title: 'cats',
+        url: 'https://www.youtube.com/watch?v=abc',
+        domain: 'youtube.com',
+        favIconUrl: null,
+        lastAccessed: fiveMinAgo,
+        group: null,
+      },
+    ];
+    const port = new FakeTabsPort(multiWindowGithubTabs);
+    const user = userEvent.setup();
+
+    render(<App tabsPort={port} now={now} />);
+    await screen.findByRole('link', { name: 'pull/123' });
+
+    await user.click(screen.getByRole('radio', { name: /by domain in url/i }));
+
+    const section = await screen.findByRole('region', { name: 'github.com' });
+    await user.click(within(section).getByRole('button', { name: /select all/i }));
+
+    await user.click(within(section).getByRole('button', { name: /add to group/i }));
+    await user.type(screen.getByRole('textbox', { name: /name new group/i }), 'Reading');
+    fireEvent.submit(screen.getByRole('textbox', { name: /name new group/i }).closest('form')!);
+
+    await waitFor(() => {
+      expect(port.createGroupCalls).toHaveLength(1);
+    });
+    const call = port.createGroupCalls[0]!;
+    expect(call.title).toBe('Reading');
+    expect([...call.tabIds].sort()).toEqual([1, 2, 3]);
+    // Window 200 holds 2 of 3 github tabs (ids 2 + 3), so it hosts; the host
+    // window's tabs come first so Chrome creates the group on window 200.
+    expect(call.tabIds[0]).toBe(2);
+    expect(call.tabIds[1]).toBe(3);
+  });
 });
