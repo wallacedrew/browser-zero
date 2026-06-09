@@ -14,6 +14,7 @@ const OPTIONS: ReadonlyArray<Option> = [
   { value: 'window', label: 'By window' },
   { value: 'tabgroup', label: 'By tab group' },
   { value: 'domain', label: 'By domain in url' },
+  { value: 'flat', label: 'Flat' },
 ];
 
 export function ViewToggle({ value, onChange }: Props) {
