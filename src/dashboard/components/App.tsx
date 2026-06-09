@@ -81,7 +81,7 @@ export function App({ tabsPort, now: nowOverride }: Props) {
       <div ref={navigation.containerRef}>
         <div
           data-sticky-header
-          className="sticky top-0 z-20 border-b border-slate-200 bg-white/95 px-8 pt-8 pb-3 backdrop-blur"
+          className="sticky top-0 z-20 border-b border-black bg-white/95 px-8 pt-8 pb-3 backdrop-blur"
         >
           <DashboardHeader
             totalCount={tabs.length}
