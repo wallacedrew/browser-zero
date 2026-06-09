@@ -1,6 +1,6 @@
 import type { Tab } from './types';
 
-export type GroupBy = 'window' | 'tabgroup' | 'domain';
+export type GroupBy = 'window' | 'tabgroup' | 'domain' | 'flat';
 
 export interface TabGroup<T extends Tab = Tab> {
   readonly key: string;
@@ -116,8 +116,22 @@ const TabGroupGrouping: GroupingStrategy = {
   },
 };
 
+const FlatGrouping: GroupingStrategy = {
+  keyOf: () => 'all',
+  compareEntries: () => 0,
+  makeOutputKey: () => 'flat-all',
+  makeLabel: () => 'All tabs',
+  dropEnabled: false,
+  allowGrouping: true,
+  sectionColorOf: () => null,
+  dispatchDrop: () => {
+    /* FlatGrouping has dropEnabled: false; this is never invoked. */
+  },
+};
+
 const STRATEGIES: Record<GroupBy, GroupingStrategy> = {
   window: WindowGrouping,
   domain: DomainGrouping,
   tabgroup: TabGroupGrouping,
+  flat: FlatGrouping,
 };
