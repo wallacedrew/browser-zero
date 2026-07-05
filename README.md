@@ -21,6 +21,27 @@ pnpm build
 2. Click **Load unpacked** and select the `dist/` folder.
 3. Click the `browser-zero` toolbar icon — the dashboard tab opens.
 
+## Upgrade
+
+**Web Store version** — Chrome auto-updates it in the background; nothing to do.
+
+**Unpacked version** — Chrome does not auto-update unpacked extensions, so rebuild and reload:
+
+```bash
+pnpm build          # or: pnpm build:watch — rebuilds dist/ on every save
+```
+
+Then on `chrome://extensions`, click the **↻ reload** icon on the `browser-zero` card to pick up the new bundle.
+
+> `dist/` is gitignored and can disappear between branch switches or `git clean`. If the reload shows _"File path cannot be resolved"_, just run `pnpm build` again to regenerate it.
+
+## Uninstall
+
+- Right-click the `browser-zero` toolbar icon → **Remove from Chrome**, or
+- Open `chrome://extensions` → the `browser-zero` card → **Remove**.
+
+Nothing else to clean up — browser-zero is stateless, stores no data, and leaves no residue.
+
 ## What it does
 
 - **See everything** — every open tab across every Chrome window in one list, with title, favicon, domain, and how long ago you last touched it.
