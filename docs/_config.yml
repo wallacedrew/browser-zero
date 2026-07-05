@@ -7,4 +7,5 @@ theme: jekyll-theme-minimal
 exclude:
   - architecture/
   - inspiration/
+  - superpowers/
   - store-listing.md
